@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Terme Vigliatore Statistics - Giovanni Pirrotta</title>
+  <meta name="author" content="Giovanni Pirrotta">
+
+  
+  <meta name="description" content="
+    
+        
+  
+    
+      Terme Vigliatore Statistics
+    
+    
+      
+
+        
+
+
+ June 12, 2013
+        
+      
+    
+  
+
+
+Il popolo sovrano ha...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://giovanni.pirrotta.it/blog/2013/06/12/terme-vigliatore-e-la-sua-storia-amministrativa/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Giovanni Pirrotta" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-68654531-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body  
+      >
+<header role="banner"><hgroup>
+  <h1><a href="/">Giovanni Pirrotta</a></h1>
+  
+    <h2>Just a curious person</h2>
+  
+</hgroup>
+
+</header>
+<nav role="navigation"><ul class="subscription" data-subscription="rss">
+  
+  
+</ul>
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/atom.xml">RSS</a></li>
+  <li><a href="http://github.com/gpirrotta">Github</a></li>
+  <li><a href="http://twitter.com/gpirrotta">Twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/giovannipirrotta">Linkedin</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<div id="main">
+    <div id="content">
+        <div>
+    <article class="hentry" role="article">
+        
+  <header>
+    
+      <h1 class="entry-title">Terme Vigliatore Statistics</h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ June 12, 2013
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Il popolo sovrano ha deciso.<br />
+<a href="http://it.wikipedia.org/wiki/Terme_Vigliatore">Terme Vigliatore</a> ha eletto il suo primo cittadino riconfermando il sindaco uscente.<br />
+Personalmente non ne potevo più del fermento elettorale che si era innescato da mesi e
+che vedeva i protagonisti delle varie liste, dei movimenti e degli schieramenti darsele (metaforicamente parlando) di santa ragione per accrescere il proprio bacino elettorale.<br />
+Tutto questo è ormai (e per fortuna) acqua passata!</p>
+
+<p>Da qualche tempo però, appassionato di <a href="http://it.wikipedia.org/wiki/Data_mining">data mining</a>,
+è nato in me il desiderio di effettuare ricerche statistiche sulla storia delle amministrazioni passate, per ricavarne qualcosa di interessante e curioso.</p>
+
+<!--More-->
+
+<p>Primo passo, la ricerca di fonti attendibili dalle quali prelevare i dati per iniziare le elaborazioni.</p>
+
+<p>Dopo una prima ricerca infruttuosa sul sito del <a href="http://www.comune.termevigliatore.me.it/public/">comune</a> ho trovato nel
+sito del <strong>Ministero dell’Interno</strong> e nello specifico in questa <a href="http://amministratori.interno.it/amministratori/AmmIndex5.htm">pagina</a>
+informazioni davvero interessanti.
+La pagina consente infatti di scaricare tutti gli archivi in formato standard
+<a href="http://it.wikipedia.org/wiki/Comma-separated_values">CSV</a> relativi agli amministratori comunali, provinciali e
+regionali di tutti i comuni d’Italia con rilevazioni annuali dal 1985 al 2012.</p>
+
+<p>Possiamo partire!</p>
+
+<p>Per ogni amministratore, sia esso sindaco, assessore o consigliere, l’archivio riporta, tra i tanti codici identificativi, anche alcune informazioni di carattere personale come ad esempio i seguenti dati:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- cognome
+- nome
+- sesso
+- data di nascita
+- comune italiano o stato estero di nascita
+- descrizione carica
+- descrizione partito
+- descrizione titolo di studio
+- descrizione professione
+- anno di elezione
+</code></pre>
+</div>
+
+<p>Dopo un’oretta passata tra script bash di estrazione, conversione e riconciliazione dei dati vediamo cosa ne è uscito
+fuori.</p>
+
+<p>Innanzitutto ho trovato dati relativi al comune di Terme Vigliatore solo dal 1988 fino al 2012. Inoltre,
+inspiegabilmente, il Ministero degli Interni non fornisce alcun dato del nostro paese nel 2002.
+Che sarà mai successo nel 2002?<br />
+Non verranno presi infine in considerazione gli anni relativi all’ultimo commissariamento (2005-2007) in quanto
+mancanti.</p>
+
+<p>Bene, cominciamo a farci qualche domanda e a rispondere mostrando le statistiche elaborate!</p>
+
+<p>** 1) Quante donne hanno amministrato Terme Vigliatore negli ultimi 24 anni? **</p>
+
+<p>Poche; aggiungo io, purtroppo. Su un totale di <strong>79</strong> amministratori tra sindaci, consiglieri e assessori, solo
+l’ <strong>11%</strong> di donne sono salite sullo <em>scranno</em> comunale.</p>
+
+<p><img src="/images/elezioni/distribuzione-sessi.png" alt="Image" class="center-image" /></p>
+
+<p>** 2) Qual è stato il livello di istruzione dei nostri amministratori? **</p>
+
+<p><img src="/images/elezioni/livello-istruzione.png" alt="Image" class="center-image" /></p>
+
+<p>** 3) Che lavoro facevano i nostri amministratori? **</p>
+
+<p><img src="/images/elezioni/professioni-amministratori.png" alt="Image" class="center-image" /></p>
+
+<p>** 4) Dove sono nati i nostri amministratori? **</p>
+
+<p>Fino al 28 giugno 1966 Terme Vigliatore faceva parte del comune di Castroreale, motivo per cui molti amministratori, pur essendo nati a Terme Vigliatore, risultano all’anagrafe nati a Castroreale.</p>
+
+<p><img src="/images/elezioni/luogo-nascita.png" alt="Image" class="center-image" /></p>
+
+<p>** 5) Qual era l’età media degli amministratori? **</p>
+
+<p><img src="/images/elezioni/eta-media-amministratori2.png" alt="Image" class="center-image" /></p>
+
+<p>** 6) Chi sono stati i nostri amministratori e per quanto tempo? **<br />
+(Il totale anni è dato dalla somma di ciascun amministratore considerando tutte le cariche ricoperte nel periodo di riferimento - es. 5 = 3 (da consigliere) + 2 (da assessore))</p>
+
+<p><img src="/images/elezioni/anni-in-carica-amministratori.png" alt="Image" class="center-image" /></p>
+
+<p>That’s all folks!</p>
+
+<p>Prima di chiudere volevo esprimere un augurio al sindaco e ai neo-consiglieri (soprattutto ai più giovani) affinchè la loro attività amministrativa possa innescare compiti, processi e modelli organizzativi ispirati sempre più a principi di:</p>
+
+<ul>
+  <li>
+    <p><strong>trasparenza</strong>: perchè noi cittadini dobbiamo poter misurare e valutare l’attività amministrativa, dobbiamo essere messi in condizione di monitorare e giudicare i processi decisionali adottati, con strumenti semplici e alla portata di tutti;</p>
+  </li>
+  <li>
+    <p><strong>apertura</strong>: i dati prodotti dal comune, in quanto finanziati da denaro pubblico, appartengono al cittadino e a quest’ultimo devono ritornare; l’analisi dei dati prodotti dall’attività amministrativa rappresenta la chiave oggettiva per giudicare la virtuosità di un comune, per confrontarlo con realtà simili o del comprensorio, per mettere in evidenza eventuali sprechi, per individuare ambiti da migliorare, etc;</p>
+  </li>
+  <li>
+    <p><strong>partecipazione</strong>: perchè noi cittadini dobbiamo poter essere coinvolti e resi partecipi alla gestione amministrativa mediante anche strumenti tecnologici, piattaforme online di ascolto, forum di partecipazione democratica che possano stimolare proposte e interventi effettivamente legati alle esigenze e necessità dei cittadini. Nell’era del Web, esistono decine di applicazioni informatiche, anche a costo 0, che consentirebbero di appiattire il <em>gap</em> esistente tra i cittadini e il palazzo comunale, tra elettori ed eletti;</p>
+  </li>
+  <li>
+    <p><strong>collaborazione</strong>: perchè non si consideri il comune come un’istituzione disconnessa a se stante, modello <em>isola</em>, ma invece come cellula viva all’interno di una rete collaborativa composta anche da altri enti, organizzazioni, associazioni e movimenti con i quali instaurare rapporti di crescita e benessere sociale, artistico e culturale.</p>
+  </li>
+</ul>
+
+<p>In una sola parola: <a href="http://it.wikipedia.org/wiki/Open_government"><strong>open government</strong></a>!</p>
+
+</div>
+
+
+        <footer>
+            <p class="meta">
+                
+<span class="byline author vcard">Posted by <span class="fn">Giovanni Pirrotta</span></span>
+
+                <time pubdate>
+                June 12, 2013
+                </time>
+
+                <span class="categories">
+                
+
+                
+                <a class="category" href="/categories/open-government">open government</a>,
+                
+                <a class="category" href="/categories/elezioni">elezioni</a>,
+                
+                <a class="category" href="/categories/google-maps">google maps</a>
+                
+                </span>
+            </p>
+            
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://giovanni.pirrotta.it/blog/2013/06/12/terme-vigliatore-e-la-sua-storia-amministrativa/" data-via="gpirrotta" data-counturl="http://giovanni.pirrotta.it/blog/2013/06/12/terme-vigliatore-e-la-sua-storia-amministrativa/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+            
+            <p class="meta">
+                
+                <a class="basic-alignment left" href="/blog/2013/06/03/limits-of-the-web-today/" title="Previous Post: Limits of the Web today">&laquo; Limits of the Web today</a>
+                
+                
+                <a class="basic-alignment right" href="/blog/2013/07/04/can-machines-think/" title="Next Post: Can machines think?">Can machines think? &raquo;</a>
+                
+            </p>
+        </footer>
+    </article>
+    
+    <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">Citybot: la tua città, smart, in pochi click</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/28/protezione-civile-palermo-telegram-bot/">Quando un BOT può salvarti la vita!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/18/developing-an-ontology/">Developing an Ontology</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/">Parking In Messina. quando la ZTL incontra gli Open Data</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+
+
+
+</aside>
+
+
+
+    </div>
+</div>
+<footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Giovanni Pirrotta -
+
+  <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+</p>
+
+</footer>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gpirrotta';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://giovanni.pirrotta.it/blog/2013/06/12/terme-vigliatore-e-la-sua-storia-amministrativa/';
+        var disqus_url = 'http://giovanni.pirrotta.it/blog/2013/06/12/terme-vigliatore-e-la-sua-storia-amministrativa/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<script>
+  $(document).ready(function() {  
+  var stickyNavTop = $('nav').offset().top;  
+    
+  var stickyNav = function(){  
+  var scrollTop = $(window).scrollTop();  
+         
+  if (scrollTop > stickyNavTop) {   
+      $('nav').addClass('sticky');  
+  } else {  
+      $('nav').removeClass('sticky');   
+  }  
+  };  
+    
+  stickyNav();  
+    
+  $(window).scroll(function() {  
+      stickyNav();  
+  });  
+  });  
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,652 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Citybot: la tua città, smart, in pochi click - Giovanni Pirrotta</title>
+  <meta name="author" content="Giovanni Pirrotta">
+
+  
+  <meta name="description" content="
+    
+        
+  
+    
+      Citybot: la tua città, smart, in pochi click
+    
+    
+      
+
+        
+
+
+ April 09, 2016
+        
+      
+    
+  
+
+
+A ...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Giovanni Pirrotta" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-68654531-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body  
+      >
+<header role="banner"><hgroup>
+  <h1><a href="/">Giovanni Pirrotta</a></h1>
+  
+    <h2>Just a curious person</h2>
+  
+</hgroup>
+
+</header>
+<nav role="navigation"><ul class="subscription" data-subscription="rss">
+  
+  
+</ul>
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/atom.xml">RSS</a></li>
+  <li><a href="http://github.com/gpirrotta">Github</a></li>
+  <li><a href="http://twitter.com/gpirrotta">Twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/giovannipirrotta">Linkedin</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<div id="main">
+    <div id="content">
+        <div>
+    <article class="hentry" role="article">
+        
+  <header>
+    
+      <h1 class="entry-title">Citybot: la tua città, smart, in pochi click</h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ April 09, 2016
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>A settembre 2015 ho partecipato al raduno Open Data Sicilia, svoltosi a Palermo.
+In quell’occasione sono venuto a conoscenza del progetto <a href="http://www.comunweb.it/">ComunWeb</a>, cioè una soluzione informatica omogenea per tutti i comuni e le comunità di Valle interessate a un portale di comunicazione su piattaforma condivisa.
+<!--More-->
+La parte di ComunWeb che ha destato in me maggior attenzione è stata quella relativa all’utilizzo di un <a href="http://www.comunweb.it/openpa/classes">modello di dati condiviso</a> fra tutti gli enti locali aderenti (attualmente 178), grazie al quale i
+ flussi di dati tipici di un ente, risultati interni di processi decisionali, vengono rappresentati mediante uno schema standard unico.
+ Questo passaggio, a mio avviso, è la chiave di volta dell’intero progetto perchè è propedeutico a qualsiasi discorso inerente riuso e interoperabilità, temi molto cari a un
+ <em>opendataro</em> come me. Qui non parliamo del classico <em>civic-hacker</em> che passa le notti ad aprire dataset che la pubblica amministrazione quando va bene rilascia in modalità chiusa.
+ No no, qui è la pubblica amministrazione stessa, fonte e sorgente autorevole di dati pubblici che, nell’espletamento dei compiti amministrativi quotidiani,
+ produce ed espone automaticamente i dati verso l’esterno. L’infrastruttura di ComunWeb  consente
+ di interrogare i dati dell’ente tramite <a href="http://www.comunweb.it/Supporto/Manuale-d-uso/Funzionalita-per-gli-Open-Data/Risorse-Rest-API-v1">API REST</a>
+  e con licenza Opendata. I dati ritornano di fatto al cittadino. Chapeau!</p>
+
+<p>Qualche mese più tardi  <a href="https://twitter.com/aborruso">Andrea Borruso</a> creava l’ <a href="http://albopop.it/about/">Albo Pop</a> del comune di Bagheria,
+uno strumento in grado di collegare l’albo pretorio del comune a più canali online (RSS, Twitter, BOT Telegram), replicato successivamente anche da  <a href="http://albopop.it/comune/">altri comuni</a>
+sparsi in tutta Italia e da altre <a href="http://albopop.it/altrepa/">pubbliche amministrazioni</a>.</p>
+
+<p>In rete esistono tantissimi progetti che riusano dati <em>cittadini</em> e creano valore per l’utente finale. Cito ad esempio i BOT sviluppati da <a href="http://www.piersoft.it/?p=626">Pierfrancesco Paolicelli</a>.</p>
+
+<p>In passato anch’io ho presentato soluzioni applicative, a partire da dati aperti e non, in grado di creare servizi per la cittadinanza: <a href="http://giovanni.pirrotta.it/blog/2013/07/22/openalbopretorio-apriti-sesamo/">OpenAlboPretorio</a>,
+<a href="http://giovanni.pirrotta.it/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/">Parking in Messina</a>, BOT Telegram per i
+trasporti (<a href="http://giovanni.pirrotta.it/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">Amat Palermo</a>) e per la <a href="http://giovanni.pirrotta.it/blog/2015/10/28/protezione-civile-palermo-telegram-bot/">Protezione Civile</a>.</p>
+
+<p>Tutti questi progetti erogano servizi per i cittadini, ne migliorano la vivibilità, incentivano la trasparenza
+della macchina pubblica, forniscono nuove modalità di interazione sfruttando le
+potenzialità della tecnologia, forniscono nuovi servizi al cittadino creando di fatto valore all’utente finale.</p>
+
+<p>I dati <em>cittadini</em> sono più o meno sempre gli stessi, solitamente riguardano settori come  ambiente, macchina amministrativa, cultura,  turismo, istruzione, mobilità, sicurezza, sanità, sociale, sport, urbanistica, etc. Queste tematiche sono trasversali per città di qualsiasi dimensione, a partire da essi si potrebbero sviluppare <em>effettivamente</em> un’infinità di applicazioni per migliorare <em>efficacemente</em> la vita al cittadino.</p>
+
+<p>Spesso mi arrivano email di richieste di aiuto, per l’implementazione di servizi che ho realizzato in passato in alcune città. Richieste
+di amministratori, associazioni o privati che vorrebbero vedere lo <strong>stesso identico</strong> servizio digitale anche nella loro città.</p>
+
+<p>A questo punto mi faccio delle domande.</p>
+
+<p>Perchè non far funzionare il tutto su un’<strong>unica</strong> piattaforma, sviluppare l’applicazione <strong>una</strong> volta sola e renderla disponibile a <strong>tutte</strong> le città?
+E ancora, perchè non dare ad ogni cittadino, ed ad ogni città, la possibilità di crearsi uno strumento in grado di creare valore a partire dai dati posseduti senza  essere esperti di programmazione?</p>
+
+<p>E’ da qui che sono partito, dalla consapevolezza che, individuata un’applicazione per soddisfare un’esigenza, tale soluzione possa
+essere replicata a tutte le città, in modo semplice e intuitivo.
+Piuttosto che avere tante <em>app</em> da installare sul proprio <em>smartphone</em> ho immaginato un’applicazione  <strong>HUB</strong>, un aggregatore configurabile di flussi informativi, scalabile ed estendibile, che possa contenere più servizi, per lo smistamento centralizzato di informazioni generati a partire soprattutto da opendata.</p>
+
+<p>Queste domande sono state il deterrente per la nascita di <a href="http://www.citybot.it">CityBot</a>.</p>
+
+<p><strong>Disclaimer</strong> - <em>CityBot è un prototipo sviluppato dal sottoscritto nei ritagli di tempo extralavorativi e non è ancora in versione stabile.
+Tuttavia è possibile sperimentarne già alcune funzionalità ma non è prevista ancora una data di rilascio pubblica ufficiale</em></p>
+
+<p><img src="/images/citybot.jpg" alt="Image" class="center-image" /></p>
+
+<h2 id="perchè-un-bot">Perchè un BOT?</h2>
+<p>Qualche giorno fa Skype (leggi Microsoft) ha <a href="http://blogs.skype.com/2016/03/30/skype-bots-preview-comes-to-consumers-and-developers/">annunciato</a>
+ il rilascio di un framework di sviluppo di BOT che consentirà agli sviluppatori di creare BOT dentro Skype.
+Anche <a href="https://get.slack.help/hc/en-us/articles/202026038-Slackbot-your-assistant-notepad-programmable-bot">Slack</a>, da tempo, consente
+di programmare BOT per erogare servizi all’interno della sua chat.
+Inoltre Facebook, tramite il suo <strong>Messenger</strong>, ha iniziato a fornire servizi per gli utenti, sotto forma di BOT, anche se per adesso non ha aperto
+al mondo degli sviluppatori.</p>
+
+<p>Con ciò cosa voglio dire? Voglio dire che l’attenzione da parte di importanti <em>player</em> IT verso i BOT si sta facendo <strong>molto seria</strong>!
+Proprio per questo credo fermamente che il mondo dei BOT sia una strada su cui investire tempo e risorse perchè potrebbe rivelarsi un canale su cui sviluppare
+modelli di business sostenibili.</p>
+
+<h2 id="citybot">CITYBOT</h2>
+
+<p><a href="http://www.citybot.it">CityBot</a> è un configuratore di BOT Telegram in grado di creare servizi informativi per le città,
+rapidamente e senza essere esperti di programmazione.</p>
+
+<p>CityBot fornisce attualmente le seguenti funzionalità:</p>
+
+<ul>
+  <li><strong>Flusso RSS Feed</strong> - per collegare uno o più <strong>feed RSS</strong> e tenerti aggiornato sulle informazioni istituzionali e non della tua città: albo pretorio, news dall’università, eventi, notizie in genere, etc.</li>
+  <li><strong>Flusso ComunWeb</strong> - se la città aderisce al progetto <strong>ComunWeb</strong>, a partire dai dati che il comune mette a disposizione tramite le API online,
+              è possibile creare nuovi flussi informativi in CityBot e rendere il cittadino consapevole di ciò che accade nel comune.</li>
+  <li><strong>Area di Attesa - Protezione Civile</strong> - servizio che aiuta i cittadini a raggiungere le aree di attesa predisposte dalla Protezione Civile in caso di calamità naturale ed aumentare, in maniera facile e immediata, la sicurezza della città e dei suoi abitanti.</li>
+  <li>** Pagamento parcheggi in ZTL ** - per far conoscere ai cittadini, data la loro posizione, le tariffe dei parcheggi in ZTL e nelle aree circostanti.</li>
+</ul>
+
+<p><img src="/images/citybot-44.jpg" alt="Image" class="center-image" /></p>
+
+<h2 id="creazione-di-un-nuovo-bot">Creazione di un nuovo BOT</h2>
+<p>Vediamo adesso come creare da zero un nuovo BOT e come arricchirlo di nuove funzionalità.
+Decidiamo, ad esempio, di creare il <strong>CityBot</strong> per la città di Palermo. Prima di operare su CityBot
+dobbiamo entrare in <strong>Telegram</strong> e creare un nuovo BOT. E’ un’operazione molto semplice, trovate
+tutte le informazioni sulla <a href="https://core.telegram.org/bots#botfather">documentazione ufficiale</a> di Telegram.
+Con quest’operazione otterrete il codice identificativo segreto del BOT, chiamato <strong>TOKEN</strong>, che ci servirà
+per la creazione del CityBot.</p>
+
+<p>Andando quindi su Telegram creiamo il BOT <a href="https://telegram.me/PalermoCity_Bot">PalermoCity_Bot</a>.</p>
+
+<p>Ritornando a CityBot, dopo una prima fase di registrazione, effettuiamo il login e ci ritroviamo nella pagina di benvenuto:</p>
+
+<p><img src="/images/citybot-1.jpg" alt="Image" class="center-image" /></p>
+
+<p>A questo punto clicchiamo su <strong>Crea il cityBot per la tua città</strong> e davanti a noi apparirà la seguente schermata
+che ci chiederà di inserire il nome della città del BOT e il <strong>TOKEN</strong> di Telegram, ottenuto in fase di creazione del BOT.</p>
+
+<p><img src="/images/citybot-2.jpg" alt="Image" class="center-image" /></p>
+
+<p>Inseriti <strong>nome</strong> della città e <strong>TOKEN</strong> (<em>fittizio nell’esempio</em>),</p>
+
+<p><img src="/images/citybot-3.jpg" alt="Image" class="center-image" /></p>
+
+<p>possiamo creare il BOT.
+Automaticamente la piattaforma riconoscerà il nome del BOT e ci consentirà di configurarlo in base alle nostre necessità.
+Cliccando su <strong>Configura</strong>,
+<img src="/images/citybot-4.jpg" alt="Image" class="center-image" /></p>
+
+<p>entreremo nel pannello di configurazione del BOT:</p>
+
+<p>![Image](/images/citybot-5.jpg?a %}</p>
+
+<p>Dal pannello superiore si potrà accendere il BOT, spegnerlo, eliminarlo o modificare la città.
+La parte più interessante, però, è quella dei servizi disponibili, in elenco nel pannello inferiore.
+Nella sezione <strong>Plugin disponibili</strong> sono presenti i seguenti servizi:</p>
+
+<ul>
+  <li>**Flusso RSS Feed **</li>
+  <li>**Flusso ComunWeb **</li>
+  <li>**Area di Attesa - Protezione Civile **</li>
+  <li><strong>Parcheggio Zone a Traffico Limitato (ZTL)</strong></li>
+</ul>
+
+<p>Entriamo nel dettaglio in ciascuno dei servizi.</p>
+
+<p>##Flusso RSS Feed
+L’<strong>RSS</strong> è uno dei più popolari formati per la distribuzione di contenuti Web, un flusso di testo aggiornato automaticamente sui
+nuovi articoli del sito a cui si riferisce.
+Al plugin di CityBot è possibile agganciare uno o più feed RSS, inerenti qualsiasi tipo di news: municipio, università, cronaca, politica, attualità, sport, eventi, etc.</p>
+
+<p>Nel nostro esempio decidiamo di collegare in CityBot le notizie del comune.
+Sul sito del comune di Palermo i feed RSS sono disponibili alla seguente <a href="http://www.comune.palermo.it/lista_rss.php">pagina</a>.</p>
+
+<p><img src="/images/citybot-8.jpg" alt="Image" class="center-image" /></p>
+
+<p>Decidiamo di agganciare al nostro CityBot i seguenti feed:</p>
+
+<ul>
+  <li><strong>Informazione</strong>: Comunicati stampa, scadenze, avvisi, accade a Palermo <a href="http://www.comune.palermo.it/feed/rss.xml">feed</a></li>
+  <li><strong>Bandi e Gare</strong>: <a href="http://www.comune.palermo.it/feed/rss_bandi.xml">feed</a></li>
+</ul>
+
+<p>Spostiamoci adesso su CityBot e iniziamo ad aggiungere il primo plugin al nostro CityBot scegliendo quindi <strong>flusso RSS Feed</strong>.</p>
+
+<p>Clicchiamo su <strong>Aggiungi</strong> e vedremo comparire il plugin nella sezione <strong>Plugin Aggiunti</strong>.</p>
+
+<p><img src="/images/citybot-6.jpg" alt="Image" class="center-image" /></p>
+
+<p>A questo punto configuriamo il plugin cliccando su <strong>Configura</strong> e definiamo un nome per il servizio RSS. Tale nome comparirà nel menù del BOT, per cui cerchiamo di sceglierne uno il più appropriato possibile
+al contenuto informativo da agganciare. In questo caso, ad esempio, scegliamo il nome <strong>“Comune di Palermo”</strong>.</p>
+
+<p>![Image](/images/citybot-9.jpg?a %}</p>
+
+<p>Andiamo avanti e iniziamo la configurazione dei feed RSS.</p>
+
+<p>![Image](/images/citybot-10.jpg?p %}</p>
+
+<p>Nella sezione <strong>Feed collegati</strong> clicchiamo sul bottone <strong>Aggiungi</strong> (segno più)</p>
+
+<p><img src="/images/citybot-11.jpg" alt="Image" class="center-image" /></p>
+
+<p>e inseriamo il primo feed RSS</p>
+
+<p><img src="/images/citybot-12.jpg" alt="Image" class="center-image" /></p>
+
+<p>Anche in questo caso il nome del feed corrisponderà al nome del sottocomando del BOT.
+Per il nostro esempio inseriamo il nome <strong>News</strong>.
+Il numero max di elementi del feed è configurabile ma nel nostro esempio lasciamo il valore di default 10.</p>
+
+<p>Ripetiamo la stessa operazione per il secondo feed inserendo come nome <strong>Bandi e Gare</strong></p>
+
+<p><img src="/images/citybot-13.jpg" alt="Image" class="center-image" /></p>
+
+<p>Per ogni feed possiamo verificarne il contenuto o procedere alla rimozione.</p>
+
+<p>![Image](/images/citybot-14.jpg?o %}</p>
+
+<p>Ritorniamo nel pannello di amministrazione del plugin e accendiamo il servizio.</p>
+
+<p><img src="/images/citybot-16.jpg" alt="Image" class="center-image" /></p>
+
+<p>Dopodichè accendiamo anche il BOT,</p>
+
+<p><img src="/images/citybot-17.jpg" alt="Image" class="center-image" /></p>
+
+<p>ci spostiamo sul nostro smartphone e cerchiamo il <strong>Canale</strong> <a href="https://telegram.me/PalermoCity_Bot">PalermoCity_BOT</a>.</p>
+
+<p><img src="/images/citybot-29.jpg" alt="Image" class="center-image" /></p>
+
+<p>Nella schermata compare il messaggio di benvenuto e in basso il menù dei comandi disponibili.
+A sinistra compare il comando <strong>Comune di Palermo</strong>, definito nella configurazione del flusso RSS, mentre a destra il comando,
+sempre presente nel menù principale, relativo alle informazioni di CityBot. Cliccando su quest’ultimo vedremo la seguente schermata:</p>
+
+<p><img src="/images/citybot-30.jpg" alt="Image" class="center-image" /></p>
+
+<p>Nella schermata sono presente informazioni relative a CityBot, tra cui la città di riferimento e il nome dell’utente che ha creato il BOT.
+Cliccando invece sul primo comando, cioè <strong>Comune di Palermo</strong>, apparirà il seguente menù:</p>
+
+<p><img src="/images/citybot-31.jpg" alt="Image" class="center-image" /></p>
+
+<p>Il bottone di sinistra, così come configurato precedentemente, è collegato al feed RSS relativo alle informazioni sul <strong>comune di Palermo</strong>:</p>
+
+<p><img src="/images/citybot-32.jpg" alt="Image" class="center-image" /></p>
+
+<p>Il bottone di destra è collegato invece  al feed RSS relativo alle informazioni su <strong>Bandi e gare</strong>.</p>
+
+<p><img src="/images/citybot-33.jpg" alt="Image" class="center-image" /></p>
+
+<p>##Flusso Comun Web
+ComunWeb nasce come riuso di una piattaforma realizzata per il comune di Trento, sviluppata da OpenContent
+ e usata oggi da 178 enti locali, 2.123 amministratori locali e 5.000 dipendenti comunali.
+L’infrastruttura fornita da ComunWeb consente di strutturare e organizzare in modo intelligente le informazioni trattate
+mediante l’utilizzo di un <a href="http://www.comunweb.it/openpa/classes">modello di dati condiviso</a> e di esporre tali dati con licenza opendata attraverso delle API REST.</p>
+
+<p>E’ possibile collegare CityBot ad un flusso dati ComunWeb proveniente da qualsiasi comune aderente.
+Anche se non ha molto senso agganciare un flusso ComunWeb al nostro CityBot, dato che Palermo non è fra gli enti aderenti,
+immaginiamo di configurare il nostro CityBot per una città aderente, ad esempio per la città di <a href="http://www.comune.ala.tn.it/">Ala</a> (TN).</p>
+
+<p>Interrogando le <a href="http://www.comune.ala.tn.it/api/opendata/v1/help">API</a> disponibili risaliamo ai link relativi al catalogo dei dataset, alla lista delle classi globali e a quelle utilizzate. Da quest’ultimo link decidiamo di agganciare CityBot con
+l’<a href="http://www.comune.ala.tn.it/api/opendata/v1/content/class/albo_elenco">Albo Pretorio</a> e l’elenco
+delle <a href="http://www.comune.ala.tn.it/api/opendata/v1/content/class/associazione">associazioni</a> presenti in città.</p>
+
+<p>Individuate le fonti dati spostiamoci sul pannello di configurazione di CityBot e aggiungiamo il plugin <strong>Flusso ComunWeb</strong>.</p>
+
+<p><img src="/images/citybot-18.jpg" alt="Image" class="center-image" /></p>
+
+<p>Entriamo in configurazione e, come per il <strong>Flusso RSS</strong>, inseriamo il nome che apparirà nel comando del menù principale del BOT;
+decidiamo di mettere come nome <strong>Comune di Ala (TN)</strong>.</p>
+
+<p><img src="/images/citybot-19.jpg" alt="Image" class="center-image" /></p>
+
+<p>Inseriamo i due link di interrogazione per le informazioni da collegare. Decidiamo di chiamarli <strong>Albo Pretorio</strong> e <strong>Associazioni</strong>.</p>
+
+<p><img src="/images/citybot-20.jpg" alt="Image" class="center-image" /></p>
+
+<p>Anche in questo caso accendiamo il servizio, accendiamo il BOT e ci spostiamo sullo smartphone.</p>
+
+<p>Come possiamo vedere dalla schermata, il bottone relativo al <strong>Comune di Ala</strong> è stato aggiunto a fianco a quello del <strong>Comune di Palermo</strong>.</p>
+
+<p><img src="/images/citybot-34.jpg" alt="Image" class="center-image" /></p>
+
+<p>Al nuovo bottone è associato il seguente sottomenù:</p>
+
+<p><img src="/images/citybot-35.jpg" alt="Image" class="center-image" /></p>
+
+<p>Al bottone <strong>Albo Pretorio</strong> corrisponderà il seguente flusso ComunWeb:</p>
+
+<p><img src="/images/citybot-36.jpg" alt="Image" class="center-image" /></p>
+
+<p>Al bottone <strong>Associazioni</strong> è agganciato invece quest’altro flusso:</p>
+
+<p><img src="/images/citybot-37.jpg" alt="Image" class="center-image" /></p>
+
+<h2 id="protezione-civile">Protezione Civile</h2>
+<p>Dal <a href="http://www.protezionecivile.gov.it/jcms/it/glossario.wp?contentId=GLO13370">sito</a>
+della Protezione Civile leggiamo:</p>
+
+<p><em>Le aree di attesa sono i luoghi di prima accoglienza per la popolazione; possono essere utilizzate piazze, slarghi, parcheggi, spazi pubblici o privati non soggetti a rischio (frane, alluvioni, crollo di strutture attigue, etc.), raggiungibili attraverso un percorso sicuro. Il numero delle aree da scegliere è funzione della capacità ricettiva degli spazi disponibili e del numero degli abitanti. In tali aree la popolazione riceve le prime informazioni sull’evento e i primi generi di conforto. Le Aree di Attesa della popolazione saranno utilizzate per un periodo di tempo compreso tra poche ore e qualche giorno.</em></p>
+
+<p>Il plugin <strong>Area di Attesa - Protezione Civile</strong> si pone come obiettivo quello di individuare
+in caso di emergenza, l’area di accoglienza più vicina prevista dalla Protezione Civile,
+fornendoci indicazioni relative alla distanza, percorso e tempo di percorrenza a partire
+dalla nostra posizione attuale.</p>
+
+<p>Dal pannello di CityBot aggiungiamo il plugin <strong>Area di Attesa - Protezione Civile</strong> ed entriamo
+in configurazione. Visualizzeremo la seguente schermata:</p>
+
+<p><img src="/images/citybot-21.jpg" alt="Image" class="center-image" /></p>
+
+<p>A questo punto dovremo disegnare i poligoni corrispondenti alle aree di attesa della Protezione Civile.
+Possiamo farlo in due modi:</p>
+
+<ul>
+  <li>disegnando le aree attraverso lo strumento <strong>Poligono</strong></li>
+  <li>importando la mappa da file GEOJSON</li>
+</ul>
+
+<p>Nel <strong>primo caso</strong> bisognerà individuare l’area di attesa sulla mappa,  cliccare sullo strumento <strong>Poligono</strong> in alto a destra,</p>
+
+<p><img src="/images/citybot-22.jpg" alt="Image" class="center-image" /></p>
+
+<p>e iniziare a disegnare il poligono lato per lato.-</p>
+
+<p><img src="/images/citybot-23.jpg" alt="Image" class="center-image" /></p>
+
+<p>Alla chiusura del poligono sarà necessario inserire informazioni relative all’area di attesa disegnata:</p>
+
+<p><img src="/images/citybot-24.jpg" alt="Image" class="center-image" /></p>
+
+<p>Inserite le informazioni dell’area di attesa, per aggiornare la mappa bisognerà cliccare su <strong>Aggiorna Dati</strong>.
+Dopo aver disegnato tutte le aree manualmente, per salvare la mappa in CityBot bisognerà cliccare su <strong>Salva mappa</strong>.</p>
+
+<p>Nel <strong>secondo caso</strong> basterà invece uplodare la mappa da file <a href="http://geojson.org/">GEOJSON</a>, con l’unica accortezza
+di inserire le informazioni delle aree di attesa in proprietà chiamate <strong>name</strong> e <strong>description</strong>, dentro <strong>properties</strong>.</p>
+
+<p>Esempio di caricamento delle aree di attesa da file GEOJSON:</p>
+
+<p><img src="/images/citybot-25.jpg" alt="Image" class="center-image" /></p>
+
+<p>Usciamo e ritorniamo nel pannello di amministrazione del BOT; accendiamo il servizio e spostiamoci sullo smartphone.</p>
+
+<p>Il nuovo menù principale apparirà nel seguente modo:</p>
+
+<p><img src="/images/citybot-38.jpg" alt="Image" class="center-image" /></p>
+
+<p>Cliccando su <strong>Protezione Civile</strong> saremo invitati a cliccare sull’icona graffetta e ad inserire la nostra posizione geografica.</p>
+
+<p><img src="/images/citybot-39.jpg" alt="Image" class="center-image" /></p>
+
+<p>CityBot automaticamente calcolerà l’area di accoglienza più vicina, indicando sia la distanza per raggiungerla che il tempo di percorrenza a piedi.
+Verrà fornita anche la mappa e il link del percorso da seguire, passo passo.</p>
+
+<p><img src="/images/citybot-40.jpg" alt="Image" class="center-image" /></p>
+
+<h2 id="parcheggio-zone-a-traffico-limitato-ztl">Parcheggio Zone a Traffico Limitato (ZTL)</h2>
+<p>Il problema dei parcheggi fuori e dentro le ZTL è più o meno trasversale a tutte le città.
+Vediamo adesso come sfruttare CityBot per calcolare automaticamente la tariffa oraria dei parcheggi, in base alla
+posizione GPS dello smartphone.</p>
+
+<p>Aggiungiamo quindi l’ultimo dei servizi disponibili in CityBot e procediamo alla sua configurazione.</p>
+
+<p><img src="/images/citybot-26.jpg" alt="Image" class="center-image" /></p>
+
+<p>Anche per questo plugin, come per quello precedente, è possibile disegnare le mappe delle zone di parcheggio manualmente o da
+file GEOJSON. Nel primo caso indicheremo quindi nel campo <strong>Nome</strong> il nome dell’area di pagamento (ad es. P1, P2, ZTL1, ZTL2, etc.)
+e nel campo <strong>Descrizione</strong>, il dettaglio del pedaggio da pagare (Tariffa oraria, Fascia Oraria, Validità, etc.).
+Per il nostro esempio, su <a href="https://umap.openstreetmap.fr">umap</a> troviamo la <a href="https://umap.openstreetmap.fr/it/map/mappa-parcheggi-su-strada-a-pagamento-e-ztl-palerm_58038#12/38.1269/13.3717">mappa dei parcheggi</a>
+ su strada a pagamento di Palermo; decidiamo quindi di caricare su CityBot il file GEOJSON, <em>adattando</em> opportunamente il campo <strong>properties</strong> (<em>name</em> e <em>description</em>).</p>
+
+<p><img src="/images/citybot-27.jpg" alt="Image" class="center-image" /></p>
+
+<p>Ritorniamo nel pannello del BOT,accendiamo quest’ultimo servizio e il BOT. Spostandoci adesso sullo smartphone il menù sarà adesso:</p>
+
+<p><img src="/images/citybot-41.jpg" alt="Image" class="center-image" /></p>
+
+<p>Cliccando su <strong>Pedaggio in ZTL</strong>, ci verrà chiesto di inserire la propria posizione, sempre tramite l’icona graffetta, e CityBot
+ci fornirà le informazioni relative al pedaggio da pagare in base alla nostra posizione.</p>
+
+<p><img src="/images/citybot-42.jpg" alt="Image" class="center-image" /></p>
+
+<h2 id="conclusioni">Conclusioni</h2>
+<p>In questo post ho voluto raccontare la mia visione di città digitale.
+Tutto nasce dalla convinzione che l’utilità di un servizio digitale presente in una città
+può e deve essere esportata con facilità in qualsiasi altra città in modo che tutti i cittadini possano beneficiare degli stessi vantaggi digitali.</p>
+
+<p>Da diversi mesi sto investendo tempo e risorse nello sviluppo di servizi digitali con i BOT Telegram
+e <em>CityBot</em> è un pò la <em>summa</em> delle esperienze maturate.</p>
+
+<p>In futuro ho in mente di estendere <em>CityBot</em> con le seguenti funzionalità:</p>
+
+<ul>
+  <li>plugin su altri <strong>Punti di Interesse</strong> (farmacie, ospedali, parchi, attività commerciali);</li>
+  <li>plugin <strong>Raccolta Differenziata</strong>;</li>
+  <li>plugin <strong>Meteo</strong>;</li>
+  <li>plugin <strong>Trasporti</strong> (agganciato a <a href="http://transit.land">Transit.land</a>);</li>
+  <li>attivazione <strong>Canali</strong> per notifiche push.</li>
+</ul>
+
+<p>La piattaforma di <em>CityBot</em> si trova <a href="http://www.citybot.it">qui</a>.
+Se volete provare il CityBot creato come esempio per la città di Palermo, cliccate <a href="https://telegram.me/PalermoCity_Bot">qui</a>.</p>
+
+<p>Se <em>CityBot</em> vi è piaciuto, aiutatemi a farlo conoscere con un tweet, grazie!</p>
+
+<p><a href="http://twitter.com/share?url=http://www.citybot.it&amp;text=@gpirrotta+CityBot+-+Crea+il+BOT+della+Tua+Città+in+Pochi+Click!">Twittami</a></p>
+
+<p><a href="http://twitter.com/share?url=http://www.citybot.it&amp;text=@gpirrotta+CityBot+-+Crea+il+BOT+della+Tua+Città+in+Pochi+Click!"><img src="/images/twitter.png" alt="Image" class="center-image" /></a></p>
+
+<p>Per feedback, suggerimenti e critiche non esitate a lasciarmi un commento.</p>
+
+<p>That’s all folks! Stay tuned!</p>
+</div>
+
+
+        <footer>
+            <p class="meta">
+                
+<span class="byline author vcard">Posted by <span class="fn">Giovanni Pirrotta</span></span>
+
+                <time pubdate>
+                April 09, 2016
+                </time>
+
+                <span class="categories">
+                
+
+                
+                <a class="category" href="/categories/bot">bot</a>,
+                
+                <a class="category" href="/categories/telegram">telegram</a>,
+                
+                <a class="category" href="/categories/smart-city">smart-city</a>,
+                
+                <a class="category" href="/categories/opendata">opendata</a>
+                
+                </span>
+            </p>
+            
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/" data-via="gpirrotta" data-counturl="http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+            
+            <p class="meta">
+                
+                <a class="basic-alignment left" href="/blog/2015/10/28/protezione-civile-palermo-telegram-bot/" title="Previous Post: Quando un BOT può salvarti la vita!">&laquo; Quando un BOT può salvarti la vita!</a>
+                
+                
+            </p>
+        </footer>
+    </article>
+    
+    <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">Citybot: la tua città, smart, in pochi click</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/28/protezione-civile-palermo-telegram-bot/">Quando un BOT può salvarti la vita!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/18/developing-an-ontology/">Developing an Ontology</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/">Parking In Messina. quando la ZTL incontra gli Open Data</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+
+
+
+</aside>
+
+
+
+    </div>
+</div>
+<footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Giovanni Pirrotta -
+
+  <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+</p>
+
+</footer>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gpirrotta';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/';
+        var disqus_url = 'http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<script>
+  $(document).ready(function() {  
+  var stickyNavTop = $('nav').offset().top;  
+    
+  var stickyNav = function(){  
+  var scrollTop = $(window).scrollTop();  
+         
+  if (scrollTop > stickyNavTop) {   
+      $('nav').addClass('sticky');  
+  } else {  
+      $('nav').removeClass('sticky');   
+  }  
+  };  
+    
+  stickyNav();  
+    
+  $(window).scroll(function() {  
+      stickyNav();  
+  });  
+  });  
+</script>
+
+
+</body>
+</html>

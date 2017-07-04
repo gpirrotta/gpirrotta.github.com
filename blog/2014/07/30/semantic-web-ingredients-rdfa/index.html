@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Semantic Web Ingredients: RDFa, RDF in attributes - Giovanni Pirrotta</title>
+  <meta name="author" content="Giovanni Pirrotta">
+
+  
+  <meta name="description" content="
+    
+        
+  
+    
+      Semantic Web Ingredients: RDFa, RDF in attributes
+    
+    
+      
+
+        
+
+
+ July 30, 2014
+        
+      
+    
+  
+...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Giovanni Pirrotta" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-68654531-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body  
+      >
+<header role="banner"><hgroup>
+  <h1><a href="/">Giovanni Pirrotta</a></h1>
+  
+    <h2>Just a curious person</h2>
+  
+</hgroup>
+
+</header>
+<nav role="navigation"><ul class="subscription" data-subscription="rss">
+  
+  
+</ul>
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/atom.xml">RSS</a></li>
+  <li><a href="http://github.com/gpirrotta">Github</a></li>
+  <li><a href="http://twitter.com/gpirrotta">Twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/giovannipirrotta">Linkedin</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<div id="main">
+    <div id="content">
+        <div>
+    <article class="hentry" role="article">
+        
+  <header>
+    
+      <h1 class="entry-title">Semantic Web Ingredients: RDFa, RDF in attributes</h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ July 30, 2014
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>In previous posts I introduced the <strong>RDF model</strong> as the key ingredient of the Semantic Web and other
+standard languages, such as <strong>RDF Schema</strong> and <strong>OWL</strong>, to describe concepts and relationships more
+expressively. These semantic technologies allow to extend the actual Web providing a <em>globally coherent
+notion of meaning</em>, transforming the text in concepts and relations to increase the data integration
+with external applications.
+<!--More-->#}</p>
+
+<p>We know the HTML Web languages do not explicitly encode information, then,
+to create the new Web (also called by someone Web 3.0) we must proceed as follows:</p>
+
+<ul>
+  <li>for each new Web page we have to describe the information therein contained in a new parallel
+document where we have to apply one or more specific ontologies defining the Web page data into
+resources. The result will be a machine-understandable document;</li>
+  <li>for pages currently on the Web (the majority) a solution could be that of adding a triplifier
+tool or scraping Web pages to automatically generate the relative
+semantified version of Web documents, allowing machines to process data.</li>
+</ul>
+
+<p>In both cases some problems immediately arise. Web pages may frequently change without warning and
+for each update a human intervention is necessary to align data. Publishing a relative RDF document
+for each Web page significantly increases data redundancy; this violates the <em>“Don’t Repeat Yourself”</em>
+principle (<a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a>) and this should be avoided.</p>
+
+<p>To circumvent these limits, the <em>Resource Description Framework in attributes</em> 
+W3C Recommendation (<a href="http://www.w3.org/TR/rdfa-syntax/">RDFa</a>) provided a solution to embed machine readable data on the same Web page. The concept is very
+simple; the RDFa technology allows to bring the RDF model into Web pages coding RDF statements inside XHTML tags
+as attributes. The RDFa defines a syntax for embedding an RDF graph in XHTML document using attributes for
+expressing RDF properties about concepts inside the page. So doing, the DRY principle is not violated, and
+data result to be written and published only once, either for humans or machines. Data inside pages would be
+easier to maintain since each update will require to modify only one source. In addition, structured information would
+allow a better indexing by search engines that will experience benefits in terms of efficiency.</p>
+
+<p>Now I will show an example:</p>
+
+<div class="language-c++ highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">HTML</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">An</span> <span class="n">RDFa</span> <span class="n">sample</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">The</span> <span class="n">author</span> <span class="n">of</span> <span class="o">&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="n">UML</span> <span class="n">Distilled</span><span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;</span>
+    <span class="n">is</span> <span class="o">&lt;</span><span class="n">i</span><span class="o">&gt;</span><span class="n">Martin</span> <span class="n">Fowler</span><span class="o">&lt;/</span><span class="n">i</span><span class="o">&gt;&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</code></pre>
+</div>
+
+<p>We need to unlock the metadata already in Web-pages, and RDFa provides a generic way to do this by
+building on features already in HTML. In the following code we can see how to enrich the previous
+HTML code using RDFa technology</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+  <span class="cp">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"&gt;</span>
+  <span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/1999/xhtml"</span>
+    <span class="na">xmlns:ex=</span><span class="s">"http://example.org/"</span> <span class="na">version=</span><span class="s">"XHTML+RDFa 1.0"</span> <span class="na">xml:lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;head&gt;&lt;title&gt;</span>An RDFa sample<span class="nt">&lt;/title&gt;&lt;/head&gt;</span>
+     <span class="nt">&lt;body&gt;</span>
+     <span class="nt">&lt;p&gt;&lt;div</span> <span class="na">typeof=</span><span class="s">"ex:Book"</span> <span class="na">about=</span><span class="s">"http://example.org/umld"</span><span class="nt">&gt;</span>
+      The author of <span class="nt">&lt;b&gt;&lt;span</span> <span class="na">property=</span><span class="s">"ex:title"</span><span class="nt">&gt;</span>UML Distilled<span class="nt">&lt;/span&gt;&lt;/b&gt;</span>
+      is <span class="nt">&lt;div</span> <span class="na">typeof=</span><span class="s">"ex:Person"</span> <span class="na">about=</span><span class="s">"http://example.org/mfowler"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;i&gt;&lt;span</span> <span class="na">property=</span><span class="s">"ex:name"</span><span class="nt">&gt;</span>Martin<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">property=</span><span class="s">"ex:surname"</span><span class="nt">&gt;</span>Fowler<span class="nt">&lt;/span&gt;&lt;/div&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/div&gt;&lt;/p&gt;</span>
+   <span class="nt">&lt;/body&gt;</span>
+   <span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<ul>
+  <li><strong>about</strong> attribute determines what we are talking about;</li>
+  <li><strong>property</strong> attribute defines the type of relation between resources;</li>
+  <li><strong>typeof</strong> attribute defines the class to instantiate.</li>
+</ul>
+
+<p>When a Web page is a valid RDFa document generally it is present the following icon…</p>
+
+<p><img src="/images/semantic-web/rdfa.png" alt="Image" class="center-image" /></p>
+
+<p>…and <a href="http://www.w3.org/2012/pyRdfa/Validator.html">here</a> you can find the W3C Validator tool.</p>
+
+<p>Obviously, this is just an overview. For detail I invite you to refer to
+the <a href="http://www.w3.org/TR/rdfa-syntax/">official documentation</a>.</p>
+
+<p>That’s all folks. Stay tuned!</p>
+</div>
+
+
+        <footer>
+            <p class="meta">
+                
+<span class="byline author vcard">Posted by <span class="fn">Giovanni Pirrotta</span></span>
+
+                <time pubdate>
+                July 30, 2014
+                </time>
+
+                <span class="categories">
+                
+
+                
+                <a class="category" href="/categories/rdf">rdf</a>,
+                
+                <a class="category" href="/categories/semantic-web">semantic-web</a>,
+                
+                <a class="category" href="/categories/rdfa">rdfa</a>
+                
+                </span>
+            </p>
+            
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa/" data-via="gpirrotta" data-counturl="http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+            
+            <p class="meta">
+                
+                <a class="basic-alignment left" href="/blog/2014/07/22/semantic-web-ingredients-the-web-ontology-language/" title="Previous Post: Semantic Web Ingredients: the Web Ontology Language">&laquo; Semantic Web Ingredients: the Web Ontology Language</a>
+                
+                
+                <a class="basic-alignment right" href="/blog/2014/10/17/symfony-best-practices-italian-translation/" title="Next Post: Symfony Best Practices Italian Translation">Symfony Best Practices Italian Translation &raquo;</a>
+                
+            </p>
+        </footer>
+    </article>
+    
+    <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">Citybot: la tua città, smart, in pochi click</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/28/protezione-civile-palermo-telegram-bot/">Quando un BOT può salvarti la vita!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/18/developing-an-ontology/">Developing an Ontology</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/">Parking In Messina. quando la ZTL incontra gli Open Data</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+
+
+
+</aside>
+
+
+
+    </div>
+</div>
+<footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Giovanni Pirrotta -
+
+  <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+</p>
+
+</footer>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gpirrotta';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa/';
+        var disqus_url = 'http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<script>
+  $(document).ready(function() {  
+  var stickyNavTop = $('nav').offset().top;  
+    
+  var stickyNav = function(){  
+  var scrollTop = $(window).scrollTop();  
+         
+  if (scrollTop > stickyNavTop) {   
+      $('nav').addClass('sticky');  
+  } else {  
+      $('nav').removeClass('sticky');   
+  }  
+  };  
+    
+  stickyNav();  
+    
+  $(window).scroll(function() {  
+      stickyNav();  
+  });  
+  });  
+</script>
+
+
+</body>
+</html>

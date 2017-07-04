@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Quando un BOT può salvarti la vita! - Giovanni Pirrotta</title>
+  <meta name="author" content="Giovanni Pirrotta">
+
+  
+  <meta name="description" content="
+    
+        
+  
+    
+      Quando un BOT può salvarti la vita!
+    
+    
+      
+
+        
+
+
+ October 28, 2015
+        
+      
+    
+  
+
+
+Ok, lo co...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://giovanni.pirrotta.it/blog/2015/10/28/protezione-civile-palermo-telegram-bot/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Giovanni Pirrotta" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-68654531-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body  
+      >
+<header role="banner"><hgroup>
+  <h1><a href="/">Giovanni Pirrotta</a></h1>
+  
+    <h2>Just a curious person</h2>
+  
+</hgroup>
+
+</header>
+<nav role="navigation"><ul class="subscription" data-subscription="rss">
+  
+  
+</ul>
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/atom.xml">RSS</a></li>
+  <li><a href="http://github.com/gpirrotta">Github</a></li>
+  <li><a href="http://twitter.com/gpirrotta">Twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/giovannipirrotta">Linkedin</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<div id="main">
+    <div id="content">
+        <div>
+    <article class="hentry" role="article">
+        
+  <header>
+    
+      <h1 class="entry-title">Quando un BOT può salvarti la vita!</h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ October 28, 2015
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Ok, lo confesso, mi sto facendo prendere un pò troppo la mano
+da <a href="https://telegram.org/">Telegram</a> e il suo <a href="https://core.telegram.org/bots">BOT</a>,
+ma non è colpa mia se hanno reso così semplice e disarmante creare servizi di valore con la loro chat. :-)</p>
+
+<p>Succede, però, che un lunedì mattina ricevo una email di <a href="https://twitter.com/aborruso">Andrea Borruso</a>,
+il quale mi propone, su un’idea di <a href="https://twitter.com/cirospat">Ciro Spataro</a>, di sviluppare un BOT
+che consenta ai cittadini palermitani, in caso di emergenza, di essere informati tempestivamente sulla posizione delle aree
+di accoglienza da raggiungere, predisposte dalla Protezione Civile di Palermo.</p>
+
+<!--More-->
+
+<p>Dal <a href="http://www.protezionecivile.gov.it/jcms/it/glossario.wp?contentId=GLO13371">sito</a>
+della protezione civile si legge:</p>
+
+<p><em>Le aree di accoglienza sono luoghi, individuati in aree sicure rispetto alle diverse tipologie
+di rischio e poste nelle vicinanze di risorse idriche, elettriche e fognarie, in cui vengono
+installati i primi insediamenti abitativi per alloggiare la popolazione colpita. Dovranno essere
+facilmente raggiungibili anche da mezzi di grandi dimensioni per consentirne l’allestimento e
+ la gestione. Rientrano nella definizione di aree di accoglienza o di ricovero anche le strutture
+ ricettive (hotel, residence, camping, etc.).</em></p>
+
+<p><img src="/images/protezione-civile.png" alt="Image" class="center-image" /></p>
+
+<p>Negli ultimi quaranta anni, in molte zone d’Italia e specialmente in Sicilia, si sono verificati
+eventi di dissesto idrogeologico che hanno avuto conseguenze spesso catastrofiche. Senza andare troppo lontano
+negli anni, lucido è in me il ricordo del <a href="https://it.wikipedia.org/wiki/Alluvione_di_Messina_del_2009">violento nubifragio di Messina del 2009</a>,
+in cui hanno perso la vita 35 persone.
+Di conseguenza, la possibilità di diffondere informazioni ufficiali e prioritarie  da parte delle
+istituzioni competenti, anche attraverso nuovi media che sfruttino la componente digitale
+come chiavistello per aprire canali mai raggiunti prima e arrivare, in caso di emergenza, a quanta più
+gente possibile nel più  breve tempo possibile, assume un’importanza sempre
+più decisiva e strategica per la salvaguardia di vite umane.</p>
+
+<p>In questo contesto, la disponibilità di dati aperti, gratuiti e accessibili riguardanti informazioni strategiche
+e di raccordo, soprattutto nei settori in cui la tempestività e il veicolo di
+informazioni giocano un ruolo cruciale, costituisce un elemento determinante e necessario per
+lo sviluppo di servizi vitali per il cittadino.</p>
+
+<p>Chi sicuramente ha già capito questo  è <a href="https://twitter.com/cirospat">Ciro Spataro</a> che, in veste di civic-hacker,
+ha mappato le <a href="http://umap.openstreetmap.fr/it/map/mappa-piano-protezione-civile-palermo-2014_16328#12/38.1190/13.3422">aree di accoglienza persone della Protezione Civile di Palermo</a>
+usando <a href="http://umap.openstreetmap.fr/it/">umap</a> e <a href="https://www.openstreetmap.org/">openstreetmap</a>.</p>
+
+<iframe width="100%" height="300px" frameborder="0" src="http://umap.openstreetmap.fr/it/map/mappa-piano-protezione-civile-palermo-2014_16328?scaleControl=false&amp;miniMap=false&amp;scrollWheelZoom=false&amp;zoomControl=true&amp;allowEdit=false&amp;moreControl=true&amp;datalayersControl=true&amp;onLoadPanel=undefined&amp;captionBar=false&amp;datalayers=29962"></iframe>
+<p><a href="http://umap.openstreetmap.fr/it/map/mappa-piano-protezione-civile-palermo-2014_16328">Visualliza schermo intero</a></p>
+
+<p>Poniamoci adesso questa domanda: come possiamo riutilizzare i dati della mappa in altri contesti e
+ creare servizi di valore e gratuiti per i cittadini palermitani?</p>
+
+<p>Ciro suggerisce di prendere come esempio il lavoro fatto a <a href="https://iltempe.github.io/Emergenzeprato/">Prato</a> da
+ <a href="http://pratosmart.teo-soft.com/emergenzeprato/">Matteo Tempestini</a>, cioè un BOT Telegram
+ in grado di fornire varie informazioni utili per il cittadino, tra cui la possibilità di individuare,
+ in caso di emergenza, l’area di accoglienza più vicina prevista dalla Protezione Civile.</p>
+
+<p>Ho già avuto a che fare sia con progetti legati alla georeferenziazione di posizioni geografiche e
+alla loro appartenenza rispetto ad un’area geografica (ne parlo in questo <a href="http://giovanni.pirrotta.it/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/">post</a>) sia con
+progetti legati allo sviluppo di BOT su dati relativi ai trasporti urbani
+(ne parlo in quest’altro <a href="http://giovanni.pirrotta.it/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">post</a>).</p>
+
+<p>Tecnicamente si tratta di risolvere il seguente problema: data una posizione geografica, leggi
+<em>latitudine</em> e <em>longitudine</em>, individuare l’area di accoglienza o di ricovero della popolazione
+più vicine, secondo quanto previsto dalla Protezione Civile.</p>
+
+<p>Dalla mappa mi esporto quindi tutte le aree in formato <em>geoJSON</em>, recuperando le
+coordinate dei vertici di ogni poligono. Dopodichè l’applicazione mi dovrà restituire
+l’area che ha il vertice più vicino alla posizione dell’utente.</p>
+
+<p>La logica del programma è molto semplice:</p>
+
+<ol>
+  <li>L’utente invia la propria posizione tramite il BOT</li>
+  <li>L’applicazione seleziona l’area di accoglienza più vicina
+confrontando le distanze tra la posizione dell’utente e i vertici di tutte le aree</li>
+  <li>L’applicazione restituisce:
+    <ul>
+      <li>il nome dell’area di accoglienza più vicina</li>
+      <li>la mappa geografica dell’area</li>
+      <li>la distanza in km</li>
+      <li>il tempo necessario per raggiungere l’area a piedi</li>
+      <li>il link con il percorso da seguire.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>In un mio precedente <a href="http://giovanni.pirrotta.it/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">post</a>
+ho affrontato il problema della distanza di un punto da una lista di punti utilizzando in modo
+diretto formule trigonometriche e una chiamata SQL.</p>
+
+<p>Questa volta invece utilizzerò la libreria <a href="https://github.com/thephpleague/geotools#geotools">GeoTools</a>, sviluppata da Antoine Corcy.
+La libreria fornisce molteplici funzionalità legate al mondo della georeferenziazione tra cui geocodifiche dirette e inverse, conversioni tra coordinate, distanze tra punti geografici in metri, chilometri, miglia o piedi, etc.</p>
+
+<p>Siano, ad esempio, <em>$coordA</em> e <em>$coordB</em> i due punti di cui si vuole conoscere la distanza;
+ per creare l’oggetto <em>distance</em> è necessario digitare quanto segue:</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">  Telegram</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="cp">&lt;?php</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="nv">$geotools</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\League\Geotools\Geotools</span><span class="p">();</span>
+</div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="nv">$coordA</span>   <span class="o">=</span> <span class="k">new</span> <span class="nx">\League\Geotools\Coordinate\Coordinate</span><span class="p">([</span><span class="mf">48.8234055</span><span class="p">,</span> <span class="mf">2.3072664</span><span class="p">]);</span>
+</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="nv">$coordB</span>   <span class="o">=</span> <span class="k">new</span> <span class="nx">\League\Geotools\Coordinate\Coordinate</span><span class="p">([</span><span class="mf">43.296482</span><span class="p">,</span> <span class="mf">5.36978</span><span class="p">]);</span>
+</div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="7" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="nv">$distance</span> <span class="o">=</span> <span class="nv">$geotools</span><span class="o">-&gt;</span><span class="na">distance</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">setFrom</span><span class="p">(</span><span class="nv">$coordA</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setTo</span><span class="p">(</span><span class="nv">$coordB</span><span class="p">);</span></div></div></pre></div></figure>
+
+<p>Per avere la distanza in metri (default) con il più performante tra gli algoritmi in libreria, digitiamo invece:</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">  Algoritmo flat</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="cp">&lt;?php</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="nv">$distance</span><span class="o">-&gt;</span><span class="na">flat</span><span class="p">();</span> <span class="o">//</span> <span class="mf">659166.50038742</span> <span class="p">(</span><span class="nx">meters</span><span class="p">)</span></div></div></pre></div></figure>
+
+<p>Se volessimo utilizzare invece l’algoritmo <strong>great-circle</strong>:</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">  Telegram API</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="cp">&lt;?php</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="nv">$distance</span><span class="o">-&gt;</span><span class="na">greatCircle</span><span class="p">();</span> <span class="o">//</span> <span class="mf">659021.90812846</span></div></div></pre></div></figure>
+
+<p>Per avere la distanza in chilometri utilizzando l’algoritmo <strong>haversine</strong>, l’invocazione sarà la seguente:</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">  Algoritmo haversine</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="cp">&lt;?php</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="nv">$distance</span><span class="o">-&gt;</span><span class="na">in</span><span class="p">(</span><span class="s1">'km'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">haversine</span><span class="p">();</span> <span class="o">//</span> <span class="mf">659.02190812846</span></div></div></pre></div></figure>
+
+<p>L’algoritmo <strong>vincenty</strong>, il più accurato fra tutti quelli presenti, è invocato nel
+seguente modo, con distanza in miglia:</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">  Algoritmo vincenty</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="cp">&lt;?php</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="nv">$distance</span><span class="o">-&gt;</span><span class="na">in</span><span class="p">(</span><span class="s1">'mi'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">vincenty</span><span class="p">();</span> <span class="o">//</span> <span class="mf">409.05330679648</span></div></div></pre></div></figure>
+
+<p>Per maggiori informazioni consultate la
+<a href="https://github.com/thephpleague/geotools#geotools">documentazione ufficiale</a>
+ della libreria.</p>
+
+<p>Risolto il problema di <em>come</em> calcolare la distanza, trovare l’area di accoglienza più vicina
+ diventa un’operazione banale.</p>
+
+<p>La funzionalità è affidata alla classe <em>GeoToolsDistance</em> che implementa il metodo <em>distance</em>
+come da contratto con l’interfaccia <em>DistanceInterface</em>.</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">  Metodo "distance"</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="cp">&lt;?php</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="k">public</span> <span class="k">function</span> <span class="nf">distance</span><span class="p">(</span><span class="nx">Vertex</span> <span class="nv">$from</span><span class="p">,</span> <span class="nx">Vertex</span> <span class="nv">$to</span><span class="p">)</span>
+</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="p">&#x7b;</span>
+</div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line">        <span class="nv">$coordFrom</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Coordinate</span><span class="p">([</span><span class="nv">$from</span><span class="o">-&gt;</span><span class="na">getLatitude</span><span class="p">(),</span> <span class="nv">$from</span><span class="o">-&gt;</span><span class="na">getLongitude</span><span class="p">()]);</span>
+</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line">        <span class="nv">$coordTo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Coordinate</span><span class="p">([</span><span class="nv">$to</span><span class="o">-&gt;</span><span class="na">getLatitude</span><span class="p">(),</span> <span class="nv">$to</span><span class="o">-&gt;</span><span class="na">getLongitude</span><span class="p">()]);</span>
+</div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line">        <span class="nv">$distanceCalculator</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">geotools</span><span class="o">-&gt;</span><span class="na">distance</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">setFrom</span><span class="p">(</span><span class="nv">$coordFrom</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setTo</span><span class="p">(</span><span class="nv">$coordTo</span><span class="p">);</span>
+</div></div><div data-line="7" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="8" class="code-highlight-row numbered"><div class="code-highlight-line">        <span class="k">return</span> <span class="nv">$distanceCalculator</span><span class="o">-&gt;</span><span class="na">in</span><span class="p">(</span><span class="s1">'km'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">haversine</span><span class="p">();</span>
+</div></div><div data-line="9" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="p">&#x7d;</span></div></div></pre></div></figure>
+
+<p>In input vengono presi due oggetti del dominio di classe <a href="https://github.com/gpirrotta/protezione-civile-bot/blob/master/src/GP/ProtezioneCivileBot/Model/Vertex.php">Vertex</a>. Il codice è autoesplicativo.</p>
+
+<p>Per confrontare le distanze di tutte le aree di accoglienza partiamo dall’oggetto <a href="https://github.com/gpirrotta/protezione-civile-bot/blob/master/src/GP/ProtezioneCivileBot/Model/Map.php">Map</a>
+che, dopo aver caricato in memoria la struttura dati del file <strong>GeoJSON</strong>, contenente le coordinate
+geografiche delle aree di accoglienza della protezione civile di Palermo, calcola la distanza minima all’interno del metodo
+<em>getNearestArea</em>. Il metodo prende in input la posizione dell’utente e restituisce in output l’area di accoglienza più vicina.</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">  Metodo "getNearestArea"</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="cp">&lt;?php</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="k">public</span> <span class="k">function</span> <span class="nf">getNearestArea</span><span class="p">(</span><span class="nx">Vertex</span> <span class="nv">$vertex</span><span class="p">)</span>
+</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="p">&#x7b;</span>
+</div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line">        <span class="nv">$areaNearest</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line">        <span class="nv">$distanceNearest</span> <span class="o">=</span> <span class="nx">PHP_INT_MAX</span><span class="p">;</span>
+</div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line">        <span class="k">foreach</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">aree</span> <span class="k">as</span> <span class="nv">$areaAccoglienza</span><span class="p">)</span> <span class="p">&#x7b;</span>
+</div></div><div data-line="7" class="code-highlight-row numbered"><div class="code-highlight-line">            <span class="nv">$areaAccoglienza</span><span class="o">-&gt;</span><span class="na">calculateVertexNearest</span><span class="p">(</span><span class="nv">$vertex</span><span class="p">);</span>
+</div></div><div data-line="8" class="code-highlight-row numbered"><div class="code-highlight-line">            <span class="nv">$v</span> <span class="o">=</span> <span class="nv">$areaAccoglienza</span><span class="o">-&gt;</span><span class="na">getVertexNearest</span><span class="p">();</span>
+</div></div><div data-line="9" class="code-highlight-row numbered"><div class="code-highlight-line">            <span class="k">if</span> <span class="p">(</span><span class="nv">$v</span><span class="o">-&gt;</span><span class="na">getDistance</span><span class="p">()</span> <span class="o">&lt;</span> <span class="nv">$distanceNearest</span><span class="p">)</span> <span class="p">&#x7b;</span>
+</div></div><div data-line="10" class="code-highlight-row numbered"><div class="code-highlight-line">                <span class="nv">$distanceNearest</span> <span class="o">=</span> <span class="nv">$v</span><span class="o">-&gt;</span><span class="na">getDistance</span><span class="p">();</span>
+</div></div><div data-line="11" class="code-highlight-row numbered"><div class="code-highlight-line">                <span class="nv">$areaNearest</span> <span class="o">=</span> <span class="nv">$areaAccoglienza</span><span class="p">;</span>
+</div></div><div data-line="12" class="code-highlight-row numbered"><div class="code-highlight-line">            <span class="p">&#x7d;</span>
+</div></div><div data-line="13" class="code-highlight-row numbered"><div class="code-highlight-line">        <span class="p">&#x7d;</span>
+</div></div><div data-line="14" class="code-highlight-row numbered"><div class="code-highlight-line"> </div></div><div data-line="15" class="code-highlight-row numbered"><div class="code-highlight-line">        <span class="k">return</span> <span class="nv">$areaNearest</span><span class="p">;</span>
+</div></div><div data-line="16" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="p">&#x7d;</span></div></div></pre></div></figure>
+
+<p>Per calcolare il tempo necessario per raggiungere l’area di accoglienza a piedi
+ (<em>feature consigliata da Andrea</em>) ho usato l’API <a href="https://developers.google.com/maps/documentation/distance-matrix/intro">distancematrix</a> messa a disposizione
+ da Google.</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">  API distancematrix</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line">https://maps.googleapis.com/maps/api/distancematrix/json?origins=LATITUDINE-ORIGINE,LONGITUDINE-ORIGINEs<span class="err">&amp;</span>destinations=LATITUDINE-DESTINAZIONE,LONGITUDINE-DESTINAZIONE<span class="err">&amp;</span>mode=walking<span class="err">&amp;</span>language=it-IT"</div></div></pre></div></figure>
+
+<p>L’output della chiamata restituisce informazioni relative alla distanza del viaggio e al tempo necessario per,
+ partendo dal primo punto, raggiungere il secondo punto a piedi.</p>
+
+<p>Per il percorso da seguire ho semplicemente inviato al BOT il seguente link, sostituendo opportunamente le variabili delle coordinate geografiche:</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">  API percorso viaggio</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line">http://maps.google.com/maps?f=d<span class="err">&amp;</span>hl=en<span class="err">&amp;</span>saddr=LATITUDINE-ORIGINE,LONGITUDINE-ORIGINE<span class="err">&amp;</span>daddr=LATITUDINE-DESTINAZIONE,LONGITUDINE-DESTINAZIONE<span class="err">&amp;</span>ie=UTF8<span class="err">&amp;</span>0<span class="err">&amp;</span>om=0<span class="err">&amp;</span>output=kml</div></div></pre></div></figure>
+
+<p>Mettiamo tutto in funzione e vediamo cosa apparirà su Telegram.</p>
+
+<p>Il BOT da cercare si chiama <a href="http://telegram.me/protezioneCivilePAbot">@protezioneCivilePAbot</a></p>
+
+<p>La prima cosa da fare è inviare la propria posizione cliccando sulla graffetta.</p>
+
+<p><img src="/images/protezione-civile-screenshot1.jpg" alt="Image" class="center-image" /></p>
+
+<p>A questo punto il BOT risponderà nel seguente modo:</p>
+
+<p><img src="/images/protezione-civile-screenshot2.jpg" alt="Image" class="center-image" /></p>
+
+<p>informando l’utente su quale area di accoglienza raggiungere, visualizzandola su mappa,
+su come raggiungerla e su quanto tempo ci vorrà a piedi per raggiungerla.</p>
+
+<p>Il codice della demo, lo trovate nel mio repository si <a href="https://github.com/gpirrotta/protezione-civile-bot">github</a>.</p>
+
+<p>Il progetto è scalabile per ogni città, basta avere un file GeoJSON,
+prodotto con Umap o con qualsiasi altro tool, con le aree di accoglienza della Protezione Civile.</p>
+
+<p>Un ringraziamento particolare per il progetto va a Ciro Spataro, da cui è nata l’idea e
+ad Andrea Borruso, per i suoi preziosi feedback e consigli.</p>
+
+<p>Se questo progetto vi è piaciuto un pò, mi aiutate a farlo conoscere in giro? Grazie</p>
+
+<p><em>Twittami</em></p>
+
+<p><a href="http://twitter.com/share?url=https://telegram.me/protezioneCivilePABot&amp;text=@gpirrotta+ProtezioneCivilePABot+-+Il+BOT+che+può+salvarti+la+vita+in+caso+di+emergenze"><img src="/images/twitter.png" alt="Image" class="center-image" /></a></p>
+
+<p>That’s all folks! Stay tuned!</p>
+</div>
+
+
+        <footer>
+            <p class="meta">
+                
+<span class="byline author vcard">Posted by <span class="fn">Giovanni Pirrotta</span></span>
+
+                <time pubdate>
+                October 28, 2015
+                </time>
+
+                <span class="categories">
+                
+
+                
+                <a class="category" href="/categories/protezionecivile">protezionecivile</a>,
+                
+                <a class="category" href="/categories/bot">bot</a>,
+                
+                <a class="category" href="/categories/telegram">telegram</a>,
+                
+                <a class="category" href="/categories/opendata">opendata</a>,
+                
+                <a class="category" href="/categories/osm">osm</a>
+                
+                </span>
+            </p>
+            
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://giovanni.pirrotta.it/blog/2015/10/28/protezione-civile-palermo-telegram-bot/" data-via="gpirrotta" data-counturl="http://giovanni.pirrotta.it/blog/2015/10/28/protezione-civile-palermo-telegram-bot/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+            
+            <p class="meta">
+                
+                <a class="basic-alignment left" href="/blog/2015/10/18/developing-an-ontology/" title="Previous Post: Developing an Ontology">&laquo; Developing an Ontology</a>
+                
+                
+                <a class="basic-alignment right" href="/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/" title="Next Post: Citybot: la tua città, smart, in pochi click">Citybot: la tua città, smart, in pochi click &raquo;</a>
+                
+            </p>
+        </footer>
+    </article>
+    
+    <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">Citybot: la tua città, smart, in pochi click</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/28/protezione-civile-palermo-telegram-bot/">Quando un BOT può salvarti la vita!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/18/developing-an-ontology/">Developing an Ontology</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/">Parking In Messina. quando la ZTL incontra gli Open Data</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+
+
+
+</aside>
+
+
+
+    </div>
+</div>
+<footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Giovanni Pirrotta -
+
+  <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+</p>
+
+</footer>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gpirrotta';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://giovanni.pirrotta.it/blog/2015/10/28/protezione-civile-palermo-telegram-bot/';
+        var disqus_url = 'http://giovanni.pirrotta.it/blog/2015/10/28/protezione-civile-palermo-telegram-bot/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<script>
+  $(document).ready(function() {  
+  var stickyNavTop = $('nav').offset().top;  
+    
+  var stickyNav = function(){  
+  var scrollTop = $(window).scrollTop();  
+         
+  if (scrollTop > stickyNavTop) {   
+      $('nav').addClass('sticky');  
+  } else {  
+      $('nav').removeClass('sticky');   
+  }  
+  };  
+    
+  stickyNav();  
+    
+  $(window).scroll(function() {  
+      stickyNav();  
+  });  
+  });  
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Semantic Web Ingredients: The RDF Model - Giovanni Pirrotta</title>
+  <meta name="author" content="Giovanni Pirrotta">
+
+  
+  <meta name="description" content="
+    
+        
+  
+    
+      Semantic Web Ingredients: The RDF Model
+    
+    
+      
+
+        
+
+
+ December 23, 2013
+        
+      
+    
+  
+
+
+Whil...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://giovanni.pirrotta.it/blog/2013/12/23/the-rdf-model/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Giovanni Pirrotta" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-68654531-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body  
+      >
+<header role="banner"><hgroup>
+  <h1><a href="/">Giovanni Pirrotta</a></h1>
+  
+    <h2>Just a curious person</h2>
+  
+</hgroup>
+
+</header>
+<nav role="navigation"><ul class="subscription" data-subscription="rss">
+  
+  
+</ul>
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/atom.xml">RSS</a></li>
+  <li><a href="http://github.com/gpirrotta">Github</a></li>
+  <li><a href="http://twitter.com/gpirrotta">Twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/giovannipirrotta">Linkedin</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<div id="main">
+    <div id="content">
+        <div>
+    <article class="hentry" role="article">
+        
+  <header>
+    
+      <h1 class="entry-title">Semantic Web Ingredients: The RDF Model</h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ December 23, 2013
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>While in the <a href="http://localhost:4000/blog/2013/12/20/the-rdf-model/">previous post</a> 
+I explained why XML alone is not sufficiently powerful in the Semantic Web context in
+this post I will explain how to overcome the XML semantic markup limitations.</p>
+
+<!--More-->
+<p>#}</p>
+
+<p>To solve the problem the W3C Consortium has formalized a conceptual layer called <a href="http://www.w3.org/TR/rdf-primer.">Resource Description
+Framework (RDF)</a>, 
+which aims to provide an abstract formalism to describe resources. 
+The RDF is a neutral domain/application metadata model which can be viewed as a 
+directed labeled graph and provides a valid solution to the metadata representation problems on the
+Web. The RDF model ensures interoperability between applications
+exchanging machine–understandable information on the Web.</p>
+
+<p>The first letter of <strong>RDF acronym</strong> stands for <strong>Resource</strong> but, what is a resource?
+A resource is every concrete or abstract thing identified by a <strong>URI</strong> and 
+can be really anything: an image, a document, a person,
+a book, etc.</p>
+
+<p>The <a href="http://www.w3.org/TR/
+webarch"><strong>URI</strong></a>, acronym of <code class="highlighter-rouge">Uniform Resource Identifier</code>, is instead a simple
+string identifying uniquely a generic resource that can be an image,
+a video, a service, anything, even not available online. If the resource
+is located on the Web we call it <code class="highlighter-rouge">Uniform Resource Locator</code> (<strong>URL</strong>) where
+the http protocol identifies the mechanism to access the resource. For
+instance, the address Web <code class="highlighter-rouge">http://giovanni.pirrotta.it</code> represents the URL
+of my blog. If the resource is identified
+by a name belonging to a <a href="http://www.w3.org/TR/
+webarch">namespace</a> we call it Uniform Resource
+Name (<strong>URN</strong>). The URN is used when we have to identify a resource
+without specifying a particular location but simply a membership in
+a specific domain. For example, <strong>urn:isbn:12238789879</strong> identifies a specific
+resource within ISBN codes.</p>
+
+<p>The URI syntax may change, but in general absolute URIs are written as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>	&lt;scheme&gt;:&lt;scheme-specific-part&gt;
+
+</code></pre>
+</div>
+
+<p>If a URI ends with the hash character (<strong>#</strong>), followed by a name, it is called <strong>qualified URI</strong> 
+and it used to identify many resources in the same document.</p>
+
+<p>Moreover we define as a <a href="http://www.w3.org/TR/rdf-primer">property</a> each attribute, 
+characteristic or relation useful to describe a resource. 
+To describe the domain of interest, a very
+important role is played by properties describing attributes and relations
+among resources. With properties we can specify everything about
+everything, and, since a property is also a resource, it is identified by a URI.</p>
+
+<p>Now we can define the <a href="http://www.w3.org/TR/rdf-primer">statement</a> as the basic knowledge unit in RDF. 
+It is composed by a <strong>subject</strong>, that is a resource, a <strong>predicate</strong>, which is the property, and is
+again a resource, and by an <strong>object</strong>, that can be a resource or a literal. A
+<strong>literal</strong> is simply a typed primitive value, such as string, integer, float,
+etc.</p>
+
+<p>RDF only proposes an abstract model to represent the knowledge
+on the Web without specifying any technical mechanism to realize it.
+The best way to evidentiate this formalism is to represent the defined
+statement through the use of a directed labeled graph.</p>
+
+<p><img src="/images/semantic-web/rdf-model.jpg" alt="Image" class="center-image" /></p>
+
+<p>As we can see in the figure the subject is represented by an oval node, the predicate
+is represented by an arrow, and, if the object is a resource, it is represented
+by an oval node, whereas if the object is literal, by a rectangle.</p>
+
+<p>Now I will explain how the RDF model works through an example.</p>
+
+<p>Let us assume we want to define the following statement:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Martin Fowler is the author of the book "UML Distilled"
+</code></pre>
+</div>
+
+<p>First of all we have to transform the statement in an RDF triple according
+to the following mapping:</p>
+
+<ul>
+  <li><strong>subject:</strong> we decide to identify the <code class="highlighter-rouge">UML Distilled</code> book with the http://example.org/umld URI;</li>
+  <li><strong>predicate:</strong> we decide to identify the <code class="highlighter-rouge">is the author of</code> property with the
+http://example.org/hasAuthor URI;</li>
+  <li><strong>object:</strong> we decide to identify the <code class="highlighter-rouge">Martin Fowler</code> person with the
+“Martin Fowler string Literal.</li>
+</ul>
+
+<p>We compose the following triple:</p>
+
+<p>-&gt; (http://example.org/umld, http://example.org/hasAuthor, “Martin Fowler”) &lt;-</p>
+
+<p>Note that RDF Model does not specify the way to represent the statements.
+We can use triples, graphs or whatever we retain useful for our
+purposes. For example, we can also think of the assertion as a simple
+relation</p>
+
+<p>-&gt; <strong>P(S) = O</strong> or <strong>P(S,O)</strong> &lt;-</p>
+
+<p>where <strong>P</strong> represents the property, <strong>S</strong> represents the subject and <strong>O</strong> represents
+the object.</p>
+
+<p>Applying the above relation, we have</p>
+
+<p>-&gt; http://example.org/hasAuthor(http://example.org/umld) = “Martin Fowler” &lt;-</p>
+
+<p>The same statement can be represented as the graph shown in the next figure</p>
+
+<p><img src="/images/semantic-web/rdf-model-literal.jpg" alt="Image" class="center-image" /></p>
+
+<p>The statement is formalized using the RDF model, but
+still nothing has been said about the type of resource defined.
+Now, all we know is that there is a resource with a property and a 
+literal as a property value.</p>
+
+<p>We know that the subject resource has a title and an ISBN code, and
+that also the object resource has a name and a surname. To correctly
+represent this extra information, the literal “Martin Fowler” must
+be transformed into a resource with a specific URI. In a similar way,
+as we have seen, it is possible to indefinitely extend the knowledge
+graph, thanks to the RDF model flexibility, simply adding nodes and
+arcs. As we can see in the figure, we replaced the literal with a new
+URI resource and we added new properties and relative literals values,
+better specifying the original statement.</p>
+
+<p><img src="/images/semantic-web/rdf-model-object.jpg" alt="Image" class="center-image" /></p>
+
+<p>RDF ensures a conceptual abstract model to define and use metadata;
+but to create and exchange them, a concrete syntax is necessary, and
+now XML comes into play.</p>
+
+<p>Although, from a logical point of view, XML is not sufficiently powerful to describe Web resources, 
+from a physical point of view, it proves to be an appropriate technology to
+serialize resources thanks to its rigorous syntax.</p>
+
+<p>The following document represents the <code class="highlighter-rouge">RDF/XML</code> version of the previous statement
+example:</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;rdf:RDF</span>
+  <span class="na">xmlns:rdf=</span><span class="s">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span>
+  <span class="na">xmlns:ex=</span><span class="s">"http://example.org/"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;rdf:Description</span> <span class="na">about=</span><span class="s">"http://example.org/umld"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ex:hasAuthor&gt;</span>Martin Fowler<span class="nt">&lt;/ex:hasAuthor&gt;</span>
+   <span class="nt">&lt;/rdf:Description&gt;</span>
+<span class="nt">&lt;/rdf:RDF&gt;</span>
+</code></pre>
+</div>
+
+<p>Inside an <strong>RDF/XML</strong>
+document, the <strong>rdf:RDF root</strong> node delimits the context within which all
+RDF statements are defined. In the <strong>rdf:RDF node</strong>, the text after the colon and before
+the equal, represents the namespace, namely an abbreviation we
+can use as a reference to uniquely identify the set of metadata we are
+using. The namespace mechanism does not only help us not to entirely
+rewrite the full URI when we refer to a resource, but also allows us to
+specify a set of names belonging to a specific domain, that defines an
+ontology.</p>
+
+<p>Imagine we have to define the <code class="highlighter-rouge">title</code> property for a person and the
+<code class="highlighter-rouge">title</code> property for a book. As we know, the property must be identified
+by a URI and we cannot specify, within the same document, the title
+property for both resources, since they have different meanings. To
+overcome the problem, we can use namespaces to disambiguate meaning
+differences between title properties, applying the right property
+URI according to the context. Also, we can reuse namespaces defined
+outside the RDF/XML document and accepted by the community as a
+standard. That is the beauty of the RDF interoperability.</p>
+
+<p>To describe an <code class="highlighter-rouge">RDF statement</code>, we must represent the triple subject,
+predicate and object in the RDF/XML document. To define the subject,
+we assign the subject URI to the <code class="highlighter-rouge">rdf:about</code> attribute of the <code class="highlighter-rouge">rdf:Description</code>
+tag. Inside the <code class="highlighter-rouge">rdf:Description</code> tag we must specify all properties related
+to the subject.</p>
+
+<p>Considering Martin Fowler as a resource, we will have</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;rdf:RDF</span>
+  <span class="na">xmlns:rdf=</span><span class="s">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span>
+  <span class="na">xmlns:ex=</span><span class="s">"http://example.org/"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;rdf:Description</span> <span class="na">about=</span><span class="s">"http://example.org/umld"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ex:title&gt;</span>UML Distilled<span class="nt">&lt;/ex:title&gt;</span>
+    <span class="nt">&lt;ex:isbn&gt;</span>0201325632<span class="nt">&lt;/ex:isbn&gt;</span>
+    <span class="nt">&lt;ex:hasAuthor</span> <span class="na">rdf:resource=</span><span class="s">"http://example.org/mfowler"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/rdf:Description&gt;</span>
+  <span class="nt">&lt;rdf:Description</span> <span class="na">about=</span><span class="s">"http://example.org/mfowler"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ex:firstname&gt;</span>Martin<span class="nt">&lt;/ex:firstname&gt;</span>
+    <span class="nt">&lt;ex:lastname&gt;</span>Fowler<span class="nt">&lt;/ex:lastname&gt;</span>
+  <span class="nt">&lt;/rdf:Description&gt;</span>
+<span class="nt">&lt;/rdf:RDF&gt;</span>
+</code></pre>
+</div>
+
+<p>As we can see from previous examples, we defined a new namespace,
+called <strong>ex</strong>, within the <code class="highlighter-rouge">rdf:RDF</code> tag, in order to refer to <code class="highlighter-rouge">RDF/XML</code>
+document resources in abbreviated form. With the same simplicity we
+can import other namespaces in the same document to increase the
+vocabularies available to describe resources.</p>
+
+<p>In addition to the RDF/XML syntax, other triple-oriented RDF serializations
+exist, such as the <strong>N–Triples</strong> and <strong>Notation 3</strong> (N3) formats.</p>
+
+<p>N–Triples format is simply the assertion sequence where each statement
+is in the form</p>
+
+<div class="language-c highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">subject</span><span class="o">&gt;&lt;</span><span class="n">predicate</span><span class="o">&gt;&lt;</span><span class="n">object</span><span class="o">&gt;</span><span class="p">.</span>
+</code></pre>
+</div>
+
+<p>If we wanted to describe our previous resources in N–Triples format
+this would be the result:</p>
+
+<div class="language-php highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;http:</span><span class="err">//</span><span class="na">example</span><span class="err">.</span><span class="na">org</span><span class="err">/</span><span class="na">umld</span><span class="nt">&gt;&lt;http:</span><span class="err">//</span><span class="na">example</span><span class="err">.</span><span class="na">org</span><span class="err">/</span><span class="na">hasAuthor</span><span class="nt">&gt;&lt;http:</span><span class="err">//</span><span class="na">example</span><span class="err">/</span><span class="na">mfowler</span><span class="nt">&gt;</span>.
+<span class="nt">&lt;http:</span><span class="err">//</span><span class="na">example</span><span class="err">.</span><span class="na">org</span><span class="err">/</span><span class="na">umld</span><span class="nt">&gt;&lt;http:</span><span class="err">//</span><span class="na">example</span><span class="err">.</span><span class="na">org</span><span class="err">/</span><span class="na">title</span><span class="nt">&gt;</span> "UML Distilled".
+<span class="nt">&lt;http:</span><span class="err">//</span><span class="na">example</span><span class="err">.</span><span class="na">org</span><span class="err">/</span><span class="na">umld</span><span class="nt">&gt;&lt;http:</span><span class="err">//</span><span class="na">example</span><span class="err">.</span><span class="na">org</span><span class="err">/</span><span class="na">isbn</span><span class="nt">&gt;</span> "0201325632".
+<span class="nt">&lt;http:</span><span class="err">//</span><span class="na">example</span><span class="err">.</span><span class="na">org</span><span class="err">/</span><span class="na">mfowler</span><span class="nt">&gt;&lt;http:</span><span class="err">//</span><span class="na">example</span><span class="err">.</span><span class="na">org</span><span class="err">/</span><span class="na">firstname</span><span class="nt">&gt;</span> "Martin".
+<span class="nt">&lt;http:</span><span class="err">//</span><span class="na">example</span><span class="err">.</span><span class="na">org</span><span class="err">/</span><span class="na">mfowler</span><span class="nt">&gt;&lt;http:</span><span class="err">//</span><span class="na">example</span><span class="err">.</span><span class="na">org</span><span class="err">/</span><span class="na">lastname</span><span class="nt">&gt;</span> "Fowler".
+</code></pre>
+</div>
+
+<p>Also N3 format allows to describe resources using RDF model but,
+unlike the XML syntax, ensures a better human readibility. The same
+example in N3 format reads:</p>
+
+<div class="language-c++ highlighter-rouge"><pre class="highlight"><code><span class="err">@</span><span class="n">prefix</span> <span class="n">rdf</span><span class="o">:</span> <span class="o">&lt;</span><span class="n">http</span><span class="o">:</span><span class="c1">//www.w3.org/1999/02/22-rdf-syntax-ns#&gt;.
+</span><span class="err">@</span><span class="n">prefix</span> <span class="n">ex</span><span class="o">:</span> <span class="o">&lt;</span><span class="n">http</span><span class="o">:</span><span class="c1">//example.org/&gt;.
+</span>
+<span class="n">ex</span><span class="o">:</span><span class="n">umld</span> <span class="n">ex</span><span class="o">:</span><span class="n">hasAuthor</span> <span class="n">ex</span><span class="o">:</span><span class="n">mfowler</span><span class="p">;</span>
+        <span class="n">ex</span><span class="o">:</span><span class="n">title</span> <span class="s">"UML Distilled"</span><span class="p">;</span>
+        <span class="n">ex</span><span class="o">:</span><span class="n">isbn</span>  <span class="s">"0201325632"</span><span class="p">.</span>
+<span class="n">ex</span><span class="o">:</span><span class="n">mfowler</span> <span class="n">ex</span><span class="o">:</span><span class="n">firstname</span> <span class="s">"Martin"</span><span class="p">;</span>
+           <span class="n">ex</span><span class="o">:</span><span class="n">lastname</span>  <span class="s">"Fowler"</span><span class="p">.</span>
+</code></pre>
+</div>
+
+<p>That’s all for now.</p>
+
+<p>In the next post I will focus the discussion on the <a href="http://www.w3.org/TR/rdf-schema">RDF Schema Model</a> <strong>(RDFs)</strong>.<br />
+I will explain the way to create the vocabulary of resources in order to describe the <strong>meaning</strong> of classes and properties to help machines process data efficiently.</p>
+
+<p>So stay tuned!</p>
+
+</div>
+
+
+        <footer>
+            <p class="meta">
+                
+<span class="byline author vcard">Posted by <span class="fn">Giovanni Pirrotta</span></span>
+
+                <time pubdate>
+                December 23, 2013
+                </time>
+
+                <span class="categories">
+                
+
+                
+                <a class="category" href="/categories/rdf">rdf</a>,
+                
+                <a class="category" href="/categories/semantic-web">semantic-web</a>,
+                
+                <a class="category" href="/categories/xml">xml</a>,
+                
+                <a class="category" href="/categories/n3">n3</a>,
+                
+                <a class="category" href="/categories/ntriples">ntriples</a>
+                
+                </span>
+            </p>
+            
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://giovanni.pirrotta.it/blog/2013/12/23/the-rdf-model/" data-via="gpirrotta" data-counturl="http://giovanni.pirrotta.it/blog/2013/12/23/the-rdf-model/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+            
+            <p class="meta">
+                
+                <a class="basic-alignment left" href="/blog/2013/11/20/xml-limits/" title="Previous Post: Semantic Web Ingredients: why the XML alone is not sufficiently powerful">&laquo; Semantic Web Ingredients: why the XML alone is not sufficiently powerful</a>
+                
+                
+                <a class="basic-alignment right" href="/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/" title="Next Post: Semantic Web Ingredients: the RDF Schema Model">Semantic Web Ingredients: the RDF Schema Model &raquo;</a>
+                
+            </p>
+        </footer>
+    </article>
+    
+    <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">Citybot: la tua città, smart, in pochi click</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/28/protezione-civile-palermo-telegram-bot/">Quando un BOT può salvarti la vita!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/18/developing-an-ontology/">Developing an Ontology</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/">Parking In Messina. quando la ZTL incontra gli Open Data</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+
+
+
+</aside>
+
+
+
+    </div>
+</div>
+<footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Giovanni Pirrotta -
+
+  <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+</p>
+
+</footer>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gpirrotta';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://giovanni.pirrotta.it/blog/2013/12/23/the-rdf-model/';
+        var disqus_url = 'http://giovanni.pirrotta.it/blog/2013/12/23/the-rdf-model/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<script>
+  $(document).ready(function() {  
+  var stickyNavTop = $('nav').offset().top;  
+    
+  var stickyNav = function(){  
+  var scrollTop = $(window).scrollTop();  
+         
+  if (scrollTop > stickyNavTop) {   
+      $('nav').addClass('sticky');  
+  } else {  
+      $('nav').removeClass('sticky');   
+  }  
+  };  
+    
+  stickyNav();  
+    
+  $(window).scroll(function() {  
+      stickyNav();  
+  });  
+  });  
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Developing an Ontology - Giovanni Pirrotta</title>
+  <meta name="author" content="Giovanni Pirrotta">
+
+  
+  <meta name="description" content="
+    
+        
+  
+    
+      Developing an Ontology
+    
+    
+      
+
+        
+
+
+ October 18, 2015
+        
+      
+    
+  
+
+
+The term ontology has ...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://giovanni.pirrotta.it/blog/2015/10/18/developing-an-ontology/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Giovanni Pirrotta" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-68654531-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body  
+      >
+<header role="banner"><hgroup>
+  <h1><a href="/">Giovanni Pirrotta</a></h1>
+  
+    <h2>Just a curious person</h2>
+  
+</hgroup>
+
+</header>
+<nav role="navigation"><ul class="subscription" data-subscription="rss">
+  
+  
+</ul>
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/atom.xml">RSS</a></li>
+  <li><a href="http://github.com/gpirrotta">Github</a></li>
+  <li><a href="http://twitter.com/gpirrotta">Twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/giovannipirrotta">Linkedin</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<div id="main">
+    <div id="content">
+        <div>
+    <article class="hentry" role="article">
+        
+  <header>
+    
+      <h1 class="entry-title">Developing an Ontology</h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ October 18, 2015
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>The term ontology has its origin in philosophy; in the framework of
+computer science, it represents a formal representation of knowledge
+as a set of concepts within a domain, and the relationships between
+these concepts.</p>
+
+<!--More-->
+
+<p><img src="/images/ontology.jpg" alt="Image" class="center-image" /></p>
+
+<p>In the literature we can find many other definitions to explain and define what ontology
+represents and means.</p>
+
+<ul>
+  <li>Defines the concepts and relationships used to describe and represent
+an area of knowledge (<em>Ivan Herman, W3C</em>)</li>
+  <li>A taxonomy combined with inference rules (<em>T. Berners–Lee, J.Hendler, O. Lassila, W3C</em>)</li>
+  <li>The theory or study of being as such; i.e., of the basic characteristics
+of all reality (<em>Encyclopedia Britannica</em>)</li>
+  <li>The science of something and of nothing, of being and not–being,
+of the thing and the mode of the thing, of substance and accident
+(<em>Gottfried Wilhelm Leibniz - Sämtliche schriften und briefe.</em>)</li>
+  <li>A formal definition of concepts (entities, relationships) of a given
+area of knowledge, described in a standardized form (<em>Carugo &amp;
+Pongor, 2002</em>)</li>
+  <li>A systematic arrangement of all of the important categories of objects
+or concepts which exist in some field of discourse, showing
+the relations between them. (<em>Collaborative International Dictionary
+of English</em>)</li>
+  <li>An ontology can be defined as a structured and limited concept
+catalog not unambiguously defined (<em>Uitermark</em>)</li>
+</ul>
+
+<p>The term ontology is used in artificial intelligence, in the Semantic
+Web, in systems engineering, in software engineering, in biomedical
+informatics, in library science, in enterprise bookmarking and information
+architecture as a form of knowledge representation about the
+world or some part of it.</p>
+
+<p>Ontologies have become common on the
+World Wide Web. The W3C Consortium developed the RDF Model,
+a language for encoding knowledge on Web pages to make it understandable
+to electronic agents. An ontology is the final result of a knowledge engineering process, a
+well–defined schema allows us to unambiguously define concepts and
+relationships over a specific knowledge domain.</p>
+
+<p>As an ontology is an explicit description qualitatively advanced of
+domain concepts, it can be published and reused for different purposes,
+even if they were not included when it was created. Starting
+from standardized ontologies, it becomes much easier to develop their
+more specific ontology reusing and extending the existing ones.</p>
+
+<p>Now we will see briefly the steps to follow in the knowledge engineering
+process.</p>
+
+<h2 id="domain-definition">Domain Definition</h2>
+<p>The starting point is the domain to model.</p>
+
+<ul>
+  <li>We have to specifically define the ontology domain.</li>
+  <li>We have to define what use you intend to do with the ontology.</li>
+  <li>For what types of questions the information in the ontology should
+provide answers?</li>
+  <li>Who will use and maintain the ontology?</li>
+</ul>
+
+<p>One of the ways to understand the domain of the ontology is to
+sketch a list of questions that a knowledge base relying on the ontology
+should be able to answer. This task is called <em>competency questions</em>
+(<em>Gruninger and Fox</em>) and is useful to understand if the ontology
+includes sufficient information or needs further details. The ontology
+development is an iterative process and there are many correct ways
+to model a domain, so the question list should not necessarily be exhaustive.</p>
+
+<h2 id="reusing-existing-ontology">Reusing Existing Ontology</h2>
+<p>Rather than reinvent the wheel, a very important aspect in the ontology
+development process is to consider reusing existing ontologies.
+As someone might have already defined an ontology about the same
+topic, it should be better to reuse and extend it for a specific purpose,
+thus saving a lot of hard work, instead of rewriting a new one.
+We can find hundreds of ontologies for any field of application.</p>
+
+<p>Some of the most famous ontologies in the Semantic Web area are:</p>
+
+<ul>
+  <li><a href="http://www.dublincore.org/documents/dces/"><em>Dublin Core</em></a>.
+Dublin core ontology provides a simple and standardized
+set of conventions for describing things online in ways
+that make them easier to find. Dublin Core is widely used to
+describe digital materials such as video, sound, image, text, and
+composite media like Web pages.</li>
+  <li><a href="http://xmlns.com/foaf/spec/"><em>FOAF</em></a>. The Friend of a Friend (FOAF) Ontology, defined using
+OWL language, is an RDF extension created to define people,
+their activity and their relationships with other people and other
+objects. The FOAF project is creating a Web of machine–readable
+pages describing people, the links between them and the things
+they create and do.</li>
+  <li><a href="http://www.w3.org/TR/skos-primer/">SKOS</a>. Simple Knowledge Organization System Ontology
+is a common data model for sharing and linking knowledge organization
+systems, such as thesauri, taxonomies, classification schemes and subject heading systems,
+share a similar structure, via the Web.</li>
+</ul>
+
+<h2 id="identifying-concepts">Identifying Concepts</h2>
+
+<p>At this point, the goal is to extract and list all terms relative to the
+model. After collecting the most important words, we have to identify
+terms representing concepts, preferring to use nouns, and terms representing
+relations. Moreover, we have to define the hierarchical relation
+between concepts and we can use three approaches:</p>
+
+<ul>
+  <li><strong>Top-down:</strong> we start from the more general concepts to more
+specific ones, up to the desired level of detail;</li>
+  <li><strong>Bottom-up:</strong> we start from the more specific concepts and go up
+the hierarchy to the more general concepts;</li>
+  <li><strong>Hybrid:</strong> we start from the concepts of more immediate detection,
+to specify or abstract them where necessary.</li>
+</ul>
+
+<h2 id="identifying-properties">Identifying Properties</h2>
+<p>Starting from the above same term list we have to identify relationships
+between concepts identified in the previous step. Depending on
+property type, we can identify <em>intrinsic</em> properties which are those relating
+to the concept content, independently of other things, including
+its context and <em>extrinsic</em> properties which are those depending on a
+thing’s relationship with other things.
+To correctly model a specific domain, we need to define some ontology
+constraints to ensure instance consistency and validity. The most
+commonly used constraints are:</p>
+
+<ul>
+  <li><strong>cardinality constraints</strong>: to specify the minimun and/or maximum
+relationship cardinality between concepts. For example, each son
+has exactly one mother and one father, and so forth;</li>
+  <li><strong>value type constraints</strong>: to specify the literal value types. For example
+string, number, boolean, date, etc;</li>
+  <li><strong>domain constraints</strong>: to specify what instance types the properties
+accept as subject;</li>
+  <li><strong>range constraints</strong>: to specify what instance types the properties
+accept as object.</li>
+</ul>
+
+<h2 id="reference">Reference</h2>
+
+<ul>
+  <li><em>Natalya F. Noy and Deborah L. McGuinness</em> -  Ontology
+ development 101: A guide to creating your first ontology.</li>
+  <li><em>Dean Allemang and Jim Hendler</em> -  SemanticWeb for the Working Ontologist:
+ Effective Modeling in RDFS and OWL. Morgan Kaufmann,
+ 2008</li>
+  <li><em>M. Gruninger and Fox</em> -  Methodology for the design and evaluation
+ of ontologies. In In: Proceedings of the Workshop on Basic
+ Ontological Issues in Knowledge Sharing IJCAI, Montreal, 1995.</li>
+  <li><em>John Davies, Dieter Fensel, and Frank van Harmelen</em> -  Towards the
+Semantic Web, Ontology-driven Knowledge Management. Wiley, 2002</li>
+</ul>
+</div>
+
+
+        <footer>
+            <p class="meta">
+                
+<span class="byline author vcard">Posted by <span class="fn">Giovanni Pirrotta</span></span>
+
+                <time pubdate>
+                October 18, 2015
+                </time>
+
+                <span class="categories">
+                
+
+                
+                <a class="category" href="/categories/ontology">ontology</a>,
+                
+                <a class="category" href="/categories/sw">sw</a>,
+                
+                <a class="category" href="/categories/semanticweb">semanticweb</a>,
+                
+                <a class="category" href="/categories/kr">kr</a>
+                
+                </span>
+            </p>
+            
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://giovanni.pirrotta.it/blog/2015/10/18/developing-an-ontology/" data-via="gpirrotta" data-counturl="http://giovanni.pirrotta.it/blog/2015/10/18/developing-an-ontology/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+            
+            <p class="meta">
+                
+                <a class="basic-alignment left" href="/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/" title="Previous Post: Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)">&laquo; Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)</a>
+                
+                
+                <a class="basic-alignment right" href="/blog/2015/10/28/protezione-civile-palermo-telegram-bot/" title="Next Post: Quando un BOT può salvarti la vita!">Quando un BOT può salvarti la vita! &raquo;</a>
+                
+            </p>
+        </footer>
+    </article>
+    
+    <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">Citybot: la tua città, smart, in pochi click</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/28/protezione-civile-palermo-telegram-bot/">Quando un BOT può salvarti la vita!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/18/developing-an-ontology/">Developing an Ontology</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/">Parking In Messina. quando la ZTL incontra gli Open Data</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+
+
+
+</aside>
+
+
+
+    </div>
+</div>
+<footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Giovanni Pirrotta -
+
+  <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+</p>
+
+</footer>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gpirrotta';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://giovanni.pirrotta.it/blog/2015/10/18/developing-an-ontology/';
+        var disqus_url = 'http://giovanni.pirrotta.it/blog/2015/10/18/developing-an-ontology/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<script>
+  $(document).ready(function() {  
+  var stickyNavTop = $('nav').offset().top;  
+    
+  var stickyNav = function(){  
+  var scrollTop = $(window).scrollTop();  
+         
+  if (scrollTop > stickyNavTop) {   
+      $('nav').addClass('sticky');  
+  } else {  
+      $('nav').removeClass('sticky');   
+  }  
+  };  
+    
+  stickyNav();  
+    
+  $(window).scroll(function() {  
+      stickyNav();  
+  });  
+  });  
+</script>
+
+
+</body>
+</html>

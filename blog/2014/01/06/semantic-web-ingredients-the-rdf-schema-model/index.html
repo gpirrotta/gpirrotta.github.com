@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Semantic Web Ingredients: the RDF Schema Model - Giovanni Pirrotta</title>
+  <meta name="author" content="Giovanni Pirrotta">
+
+  
+  <meta name="description" content="
+    
+        
+  
+    
+      Semantic Web Ingredients: the RDF Schema Model
+    
+    
+      
+
+        
+
+
+ January 06, 2014
+        
+      
+    
+  
+...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://giovanni.pirrotta.it/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Giovanni Pirrotta" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-68654531-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body  
+      >
+<header role="banner"><hgroup>
+  <h1><a href="/">Giovanni Pirrotta</a></h1>
+  
+    <h2>Just a curious person</h2>
+  
+</hgroup>
+
+</header>
+<nav role="navigation"><ul class="subscription" data-subscription="rss">
+  
+  
+</ul>
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/atom.xml">RSS</a></li>
+  <li><a href="http://github.com/gpirrotta">Github</a></li>
+  <li><a href="http://twitter.com/gpirrotta">Twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/giovannipirrotta">Linkedin</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<div id="main">
+    <div id="content">
+        <div>
+    <article class="hentry" role="article">
+        
+  <header>
+    
+      <h1 class="entry-title">Semantic Web Ingredients: the RDF Schema Model</h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ January 06, 2014
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>In the <a href="http://giovanni.pirrotta.it/blog/2013/12/23/the-rdf-model/">last post</a> 
+I introduced the RDF Model to define assertions as triple statements. 
+But how does a stupid machine understand what a certain
+property describing a certain resource means?</p>
+
+<!--More-->
+
+<p>The RDF Model provides only a mechanism to
+describe data as statements, but it can say nothing about the content
+of the assertion and the properties used in triples. It is clear that something
+is missing, and here is where the <strong>RDF Schema (RDFs)</strong> comes into
+play.</p>
+
+<p>The <a href="http://www.w3.org/TR/rdf-schema">RDF Schema (RDFs)</a>  is the way to describe the meaning of
+classes and properties to help machines process data efficiently. <strong>RDFs
+Vocabulary</strong> extends RDF model to provide primitives to write light
+schemas for RDF triples allowing describing taxonomies of classes and
+properties to create and define what is called the ontology of the domain
+of interest. RDFS provides some constructs to organize classes in
+a hierarchy providing mechanisms to extend them in subclasses and
+to create new schemas through incremental changes. The meaning of
+each resource is expressed through the reference to a specific vocabulary.</p>
+
+<p>Using the RDFS Vocabulary, we can define for example the class <strong>Person</strong>
+and the class <strong>Book</strong> to define the <code class="highlighter-rouge">http://example.org/mfowler</code> resource
+as an instance of the class <strong>Person</strong>, and the <code class="highlighter-rouge">http://example.org/umld</code>
+resource as an instance of the class <strong>Book</strong>.</p>
+
+<p>So, we can define the <code class="highlighter-rouge">http://example.org/hasAuthor</code> resource as a
+new property stating that it relates an instance of <strong>Book</strong> to an instance
+of <strong>Person</strong>.
+One of the interesting features of RDF Schema is the simplicity with
+which it can be extended by the namespace mechanism. Not only can
+we use different RDF Schema vocabularies, but we can also extend a
+standard version without the need of redefining all concepts.</p>
+
+<p>The most important RDFS items to define metadata schemas or ontologies are:</p>
+
+<ul>
+  <li><strong>rdfs:Resource</strong>: it is the class of everything. All things described by
+RDF are resources, instance of rdfs:Resource.</li>
+  <li><strong>rdfs:Class</strong>: the Class resource is one of the most important RDFS
+vocabulary constructs because it allows to create new classes, as a
+category or a model, of anything concrete or abstract. It is importan
+to note the reflexive nature of this resource; instancing a new
+class using the <code class="highlighter-rouge">rdf:type</code> property, the rdfs:Class instances obtained
+are themselves class objects, then again classes to instantiate.</li>
+  <li><strong>rdfs:Property</strong>: this resource is used to instantiate a new property
+or a new property subclass. Again, also this one, is a rdfs:Resource
+subclass.</li>
+  <li><strong>rdfs:Literal</strong>: an rdfs:Literal is an rdfs:Resource subclass and represents
+a typed primitive value borrow from XML Schema Datatypes (string, date, float, etc.)</li>
+  <li><strong>rdf:type</strong>: the property is used to say that a certain resource, instance
+of rdfs:Resource is an instance of a certain class. If it is
+present in the statement predicate, the object resource must be
+an <code class="highlighter-rouge">rdfs:Class</code> resource or an <code class="highlighter-rouge">rdfs:Class</code> instance. In the first case
+the subject resource will be a new class type, otherwise it will be
+a generic typed class instance.</li>
+  <li>
+    <p><strong>rdfs:subClassOf</strong>: the property rdfs:subClassOf is an instance of
+rdf:Property and it is used to state that all the instances of one
+class are instances of another. A triple of the form:</p>
+
+    <p><strong>C1 rdfs:subClassOf C2</strong></p>
+
+    <p>states that <strong>C1</strong> is an instance of <code class="highlighter-rouge">rdfs:Class</code>, <strong>C2</strong> is an instance of
+<code class="highlighter-rouge">rdfs:Class</code> and <strong>C1</strong> is a subclass of <strong>C2</strong>. The resource specifies the
+inheritance relationship between classes and can be a subclass of
+one or more classes (multiple inheritance).</p>
+  </li>
+  <li><strong>rdfs:domain</strong>: used to say that a certain resource, instance of <code class="highlighter-rouge">rdfs:Property</code>
+has domain instances of a certain class. For example, the property
+identified by the <code class="highlighter-rouge">http://example.org/hasAuthor</code> URI, instance
+of <code class="highlighter-rouge">rdfs:Property</code>, has to have as subject type the Book class.</li>
+  <li><strong>rdfs:range</strong>: used to say that a certain resource, instance of <code class="highlighter-rouge">rdfs:Property</code>,
+has as range instances of a certain class. For example, the property
+identified by the <code class="highlighter-rouge">http://example.org/hasAuthor</code> URI, instance
+of <code class="highlighter-rouge">rdfs:Property</code>, has to have as object type the <strong>Person</strong> class.</li>
+</ul>
+
+<p>The following figure represents the relationship graph of the most important
+RDFS classes:</p>
+
+<p><img src="/images/semantic-web/rdfs-model.gif" alt="Image" class="center-image" /></p>
+
+<p>Let us now see how to apply what we have just described in our previous
+statement. At the beginning we define two new classes: <code class="highlighter-rouge">ex:Book</code>
+and <code class="highlighter-rouge">ex:Person</code> instances of the <code class="highlighter-rouge">rdfs:Class</code> resource. Then, we can typify
+the <code class="highlighter-rouge">ex:umld</code> and the <code class="highlighter-rouge">ex:mfowler</code> resources, through the
+<code class="highlighter-rouge">rdf:type</code> property. As done with classes, we instanciate the property
+resources (<code class="highlighter-rouge">ex:authorOf</code>, <code class="highlighter-rouge">ex:firstname</code>, <code class="highlighter-rouge">ex:lastname</code>, <code class="highlighter-rouge">ex:title</code>, <code class="highlighter-rouge">ex:isbn</code>) as
+<code class="highlighter-rouge">rdfs:Property</code> instances, using again the <code class="highlighter-rouge">rdf:type</code> property. Also, we
+can describe some relations between properties, for example, establishing
+the domain and the range for the authorOf property. For example,
+we can explicit the authorOf property that must join instances of Book
+with instances of Person, and so forth.</p>
+
+<p>Let us show now RDFS Schema serialization. For semplicity I will
+adopt the N3 notation</p>
+
+<div class="language-c++ highlighter-rouge"><pre class="highlight"><code><span class="err">@</span><span class="n">prefix</span> <span class="n">rdf</span><span class="o">:</span> <span class="o">&lt;</span><span class="n">http</span><span class="o">:</span><span class="c1">//www.w3.org/1999/02/22-rdf-syntax-ns#&gt;.
+</span><span class="err">@</span><span class="n">prefix</span> <span class="n">rdfs</span><span class="o">:</span> <span class="o">&lt;</span><span class="n">http</span><span class="o">:</span><span class="c1">//www.w3.org/2000/01/rdf-schema#&gt;.
+</span><span class="err">@</span><span class="n">prefix</span> <span class="n">ex</span><span class="o">:</span> <span class="o">&lt;</span><span class="n">http</span><span class="o">:</span><span class="c1">//example.org/&gt;.
+</span>		
+<span class="n">ex</span><span class="o">:</span><span class="n">Book</span> <span class="n">rdf</span><span class="o">:</span><span class="n">type</span> <span class="n">rdfs</span><span class="o">:</span><span class="n">Class</span><span class="p">.</span>
+<span class="n">ex</span><span class="o">:</span><span class="n">Person</span> <span class="n">rdf</span><span class="o">:</span><span class="n">type</span> <span class="n">rdfs</span><span class="o">:</span><span class="n">Class</span><span class="p">.</span>
+		
+<span class="n">ex</span><span class="o">:</span><span class="n">fistname</span> <span class="n">rdf</span><span class="o">:</span><span class="n">type</span> <span class="n">rdfs</span><span class="o">:</span><span class="n">Property</span><span class="p">.</span>
+<span class="n">ex</span><span class="o">:</span><span class="n">lastname</span> <span class="n">rdf</span><span class="o">:</span><span class="n">type</span> <span class="n">rdfs</span><span class="o">:</span><span class="n">Property</span><span class="p">.</span>
+<span class="n">ex</span><span class="o">:</span><span class="n">title</span> <span class="n">rdf</span><span class="o">:</span><span class="n">type</span> <span class="n">rdfs</span><span class="o">:</span><span class="n">Property</span><span class="p">.</span>
+<span class="n">ex</span><span class="o">:</span><span class="n">isbn</span> <span class="n">rdf</span><span class="o">:</span><span class="n">type</span> <span class="n">rdfs</span><span class="o">:</span><span class="n">Property</span><span class="p">.</span>
+<span class="n">ex</span><span class="o">:</span><span class="n">hasAuthor</span> <span class="n">rdf</span><span class="o">:</span><span class="n">type</span> <span class="n">rdfs</span><span class="o">:</span><span class="n">Property</span><span class="p">;</span>
+		     <span class="n">rdfs</span><span class="o">:</span><span class="n">domain</span> <span class="n">ex</span><span class="o">:</span><span class="n">Book</span><span class="p">;</span>
+		     <span class="n">rdfs</span><span class="o">:</span><span class="n">range</span> <span class="n">ex</span><span class="o">:</span><span class="n">Person</span><span class="p">.</span>
+		
+<span class="n">ex</span><span class="o">:</span><span class="n">umld</span> <span class="n">rdf</span><span class="o">:</span><span class="n">type</span> <span class="n">ex</span><span class="o">:</span><span class="n">Book</span><span class="p">;</span>
+		<span class="n">ex</span><span class="o">:</span><span class="n">hasAuthor</span> <span class="n">ex</span><span class="o">:</span><span class="n">mfowler</span><span class="p">;</span>
+		<span class="n">ex</span><span class="o">:</span><span class="n">title</span> <span class="s">"UML Distilled"</span><span class="p">;</span>
+		<span class="n">ex</span><span class="o">:</span><span class="n">isbn</span> <span class="s">"0201325632"</span><span class="p">.</span>
+		
+<span class="n">ex</span><span class="o">:</span><span class="n">mfowler</span> <span class="n">rdf</span><span class="o">:</span><span class="n">type</span> <span class="n">ex</span><span class="o">:</span><span class="n">Person</span><span class="p">;</span>
+		   <span class="n">ex</span><span class="o">:</span><span class="n">firstname</span> <span class="s">"Martin"</span><span class="p">;</span>
+		   <span class="n">ex</span><span class="o">:</span><span class="n">lastname</span> <span class="s">"Fowler"</span><span class="p">.</span>
+</code></pre>
+</div>
+
+</div>
+
+
+        <footer>
+            <p class="meta">
+                
+<span class="byline author vcard">Posted by <span class="fn">Giovanni Pirrotta</span></span>
+
+                <time pubdate>
+                January 06, 2014
+                </time>
+
+                <span class="categories">
+                
+
+                
+                <a class="category" href="/categories/semantic-web">semantic-web</a>,
+                
+                <a class="category" href="/categories/rdf">rdf</a>,
+                
+                <a class="category" href="/categories/rdfs">rdfs</a>
+                
+                </span>
+            </p>
+            
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://giovanni.pirrotta.it/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/" data-via="gpirrotta" data-counturl="http://giovanni.pirrotta.it/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+            
+            <p class="meta">
+                
+                <a class="basic-alignment left" href="/blog/2013/12/23/the-rdf-model/" title="Previous Post: Semantic Web Ingredients: The RDF Model">&laquo; Semantic Web Ingredients: The RDF Model</a>
+                
+                
+                <a class="basic-alignment right" href="/blog/2014/07/22/semantic-web-ingredients-the-web-ontology-language/" title="Next Post: Semantic Web Ingredients: the Web Ontology Language">Semantic Web Ingredients: the Web Ontology Language &raquo;</a>
+                
+            </p>
+        </footer>
+    </article>
+    
+    <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">Citybot: la tua città, smart, in pochi click</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/28/protezione-civile-palermo-telegram-bot/">Quando un BOT può salvarti la vita!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/18/developing-an-ontology/">Developing an Ontology</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/">Parking In Messina. quando la ZTL incontra gli Open Data</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+
+
+
+</aside>
+
+
+
+    </div>
+</div>
+<footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Giovanni Pirrotta -
+
+  <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+</p>
+
+</footer>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gpirrotta';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://giovanni.pirrotta.it/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/';
+        var disqus_url = 'http://giovanni.pirrotta.it/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<script>
+  $(document).ready(function() {  
+  var stickyNavTop = $('nav').offset().top;  
+    
+  var stickyNav = function(){  
+  var scrollTop = $(window).scrollTop();  
+         
+  if (scrollTop > stickyNavTop) {   
+      $('nav').addClass('sticky');  
+  } else {  
+      $('nav').removeClass('sticky');   
+  }  
+  };  
+    
+  stickyNav();  
+    
+  $(window).scroll(function() {  
+      stickyNav();  
+  });  
+  });  
+</script>
+
+
+</body>
+</html>

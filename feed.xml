@@ -1,0 +1,1860 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://giovanni.pirrotta.it/feed.xml" rel="self" type="application/atom+xml" /><link href="http://giovanni.pirrotta.it/" rel="alternate" type="text/html" /><updated>2017-07-04T03:20:35+00:00</updated><id>http://giovanni.pirrotta.it/</id><title type="html">Giovanni Pirrotta</title><author><name>Giovanni Pirrotta</name></author><entry><title type="html">Citybot: la tua città, smart, in pochi click</title><link href="http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/" rel="alternate" type="text/html" title="Citybot: la tua città, smart, in pochi click" /><published>2016-04-09T11:11:00+00:00</published><updated>2016-04-09T11:11:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">&lt;p&gt;A settembre 2015 ho partecipato al raduno Open Data Sicilia, svoltosi a Palermo.
+In quell’occasione sono venuto a conoscenza del progetto &lt;a href=&quot;http://www.comunweb.it/&quot;&gt;ComunWeb&lt;/a&gt;, cioè una soluzione informatica omogenea per tutti i comuni e le comunità di Valle interessate a un portale di comunicazione su piattaforma condivisa.
+&lt;!--More--&gt;
+La parte di ComunWeb che ha destato in me maggior attenzione è stata quella relativa all’utilizzo di un &lt;a href=&quot;http://www.comunweb.it/openpa/classes&quot;&gt;modello di dati condiviso&lt;/a&gt; fra tutti gli enti locali aderenti (attualmente 178), grazie al quale i
+ flussi di dati tipici di un ente, risultati interni di processi decisionali, vengono rappresentati mediante uno schema standard unico.
+ Questo passaggio, a mio avviso, è la chiave di volta dell’intero progetto perchè è propedeutico a qualsiasi discorso inerente riuso e interoperabilità, temi molto cari a un
+ &lt;em&gt;opendataro&lt;/em&gt; come me. Qui non parliamo del classico &lt;em&gt;civic-hacker&lt;/em&gt; che passa le notti ad aprire dataset che la pubblica amministrazione quando va bene rilascia in modalità chiusa.
+ No no, qui è la pubblica amministrazione stessa, fonte e sorgente autorevole di dati pubblici che, nell’espletamento dei compiti amministrativi quotidiani,
+ produce ed espone automaticamente i dati verso l’esterno. L’infrastruttura di ComunWeb  consente
+ di interrogare i dati dell’ente tramite &lt;a href=&quot;http://www.comunweb.it/Supporto/Manuale-d-uso/Funzionalita-per-gli-Open-Data/Risorse-Rest-API-v1&quot;&gt;API REST&lt;/a&gt;
+  e con licenza Opendata. I dati ritornano di fatto al cittadino. Chapeau!&lt;/p&gt;
+
+&lt;p&gt;Qualche mese più tardi  &lt;a href=&quot;https://twitter.com/aborruso&quot;&gt;Andrea Borruso&lt;/a&gt; creava l’ &lt;a href=&quot;http://albopop.it/about/&quot;&gt;Albo Pop&lt;/a&gt; del comune di Bagheria,
+uno strumento in grado di collegare l’albo pretorio del comune a più canali online (RSS, Twitter, BOT Telegram), replicato successivamente anche da  &lt;a href=&quot;http://albopop.it/comune/&quot;&gt;altri comuni&lt;/a&gt;
+sparsi in tutta Italia e da altre &lt;a href=&quot;http://albopop.it/altrepa/&quot;&gt;pubbliche amministrazioni&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In rete esistono tantissimi progetti che riusano dati &lt;em&gt;cittadini&lt;/em&gt; e creano valore per l’utente finale. Cito ad esempio i BOT sviluppati da &lt;a href=&quot;http://www.piersoft.it/?p=626&quot;&gt;Pierfrancesco Paolicelli&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In passato anch’io ho presentato soluzioni applicative, a partire da dati aperti e non, in grado di creare servizi per la cittadinanza: &lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/07/22/openalbopretorio-apriti-sesamo/&quot;&gt;OpenAlboPretorio&lt;/a&gt;,
+&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/&quot;&gt;Parking in Messina&lt;/a&gt;, BOT Telegram per i
+trasporti (&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/&quot;&gt;Amat Palermo&lt;/a&gt;) e per la &lt;a href=&quot;http://giovanni.pirrotta.it/blog/2015/10/28/protezione-civile-palermo-telegram-bot/&quot;&gt;Protezione Civile&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tutti questi progetti erogano servizi per i cittadini, ne migliorano la vivibilità, incentivano la trasparenza
+della macchina pubblica, forniscono nuove modalità di interazione sfruttando le
+potenzialità della tecnologia, forniscono nuovi servizi al cittadino creando di fatto valore all’utente finale.&lt;/p&gt;
+
+&lt;p&gt;I dati &lt;em&gt;cittadini&lt;/em&gt; sono più o meno sempre gli stessi, solitamente riguardano settori come  ambiente, macchina amministrativa, cultura,  turismo, istruzione, mobilità, sicurezza, sanità, sociale, sport, urbanistica, etc. Queste tematiche sono trasversali per città di qualsiasi dimensione, a partire da essi si potrebbero sviluppare &lt;em&gt;effettivamente&lt;/em&gt; un’infinità di applicazioni per migliorare &lt;em&gt;efficacemente&lt;/em&gt; la vita al cittadino.&lt;/p&gt;
+
+&lt;p&gt;Spesso mi arrivano email di richieste di aiuto, per l’implementazione di servizi che ho realizzato in passato in alcune città. Richieste
+di amministratori, associazioni o privati che vorrebbero vedere lo &lt;strong&gt;stesso identico&lt;/strong&gt; servizio digitale anche nella loro città.&lt;/p&gt;
+
+&lt;p&gt;A questo punto mi faccio delle domande.&lt;/p&gt;
+
+&lt;p&gt;Perchè non far funzionare il tutto su un’&lt;strong&gt;unica&lt;/strong&gt; piattaforma, sviluppare l’applicazione &lt;strong&gt;una&lt;/strong&gt; volta sola e renderla disponibile a &lt;strong&gt;tutte&lt;/strong&gt; le città?
+E ancora, perchè non dare ad ogni cittadino, ed ad ogni città, la possibilità di crearsi uno strumento in grado di creare valore a partire dai dati posseduti senza  essere esperti di programmazione?&lt;/p&gt;
+
+&lt;p&gt;E’ da qui che sono partito, dalla consapevolezza che, individuata un’applicazione per soddisfare un’esigenza, tale soluzione possa
+essere replicata a tutte le città, in modo semplice e intuitivo.
+Piuttosto che avere tante &lt;em&gt;app&lt;/em&gt; da installare sul proprio &lt;em&gt;smartphone&lt;/em&gt; ho immaginato un’applicazione  &lt;strong&gt;HUB&lt;/strong&gt;, un aggregatore configurabile di flussi informativi, scalabile ed estendibile, che possa contenere più servizi, per lo smistamento centralizzato di informazioni generati a partire soprattutto da opendata.&lt;/p&gt;
+
+&lt;p&gt;Queste domande sono state il deterrente per la nascita di &lt;a href=&quot;http://www.citybot.it&quot;&gt;CityBot&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt; - &lt;em&gt;CityBot è un prototipo sviluppato dal sottoscritto nei ritagli di tempo extralavorativi e non è ancora in versione stabile.
+Tuttavia è possibile sperimentarne già alcune funzionalità ma non è prevista ancora una data di rilascio pubblica ufficiale&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;perchè-un-bot&quot;&gt;Perchè un BOT?&lt;/h2&gt;
+&lt;p&gt;Qualche giorno fa Skype (leggi Microsoft) ha &lt;a href=&quot;http://blogs.skype.com/2016/03/30/skype-bots-preview-comes-to-consumers-and-developers/&quot;&gt;annunciato&lt;/a&gt;
+ il rilascio di un framework di sviluppo di BOT che consentirà agli sviluppatori di creare BOT dentro Skype.
+Anche &lt;a href=&quot;https://get.slack.help/hc/en-us/articles/202026038-Slackbot-your-assistant-notepad-programmable-bot&quot;&gt;Slack&lt;/a&gt;, da tempo, consente
+di programmare BOT per erogare servizi all’interno della sua chat.
+Inoltre Facebook, tramite il suo &lt;strong&gt;Messenger&lt;/strong&gt;, ha iniziato a fornire servizi per gli utenti, sotto forma di BOT, anche se per adesso non ha aperto
+al mondo degli sviluppatori.&lt;/p&gt;
+
+&lt;p&gt;Con ciò cosa voglio dire? Voglio dire che l’attenzione da parte di importanti &lt;em&gt;player&lt;/em&gt; IT verso i BOT si sta facendo &lt;strong&gt;molto seria&lt;/strong&gt;!
+Proprio per questo credo fermamente che il mondo dei BOT sia una strada su cui investire tempo e risorse perchè potrebbe rivelarsi un canale su cui sviluppare
+modelli di business sostenibili.&lt;/p&gt;
+
+&lt;h2 id=&quot;citybot&quot;&gt;CITYBOT&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.citybot.it&quot;&gt;CityBot&lt;/a&gt; è un configuratore di BOT Telegram in grado di creare servizi informativi per le città,
+rapidamente e senza essere esperti di programmazione.&lt;/p&gt;
+
+&lt;p&gt;CityBot fornisce attualmente le seguenti funzionalità:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Flusso RSS Feed&lt;/strong&gt; - per collegare uno o più &lt;strong&gt;feed RSS&lt;/strong&gt; e tenerti aggiornato sulle informazioni istituzionali e non della tua città: albo pretorio, news dall’università, eventi, notizie in genere, etc.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Flusso ComunWeb&lt;/strong&gt; - se la città aderisce al progetto &lt;strong&gt;ComunWeb&lt;/strong&gt;, a partire dai dati che il comune mette a disposizione tramite le API online,
+              è possibile creare nuovi flussi informativi in CityBot e rendere il cittadino consapevole di ciò che accade nel comune.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Area di Attesa - Protezione Civile&lt;/strong&gt; - servizio che aiuta i cittadini a raggiungere le aree di attesa predisposte dalla Protezione Civile in caso di calamità naturale ed aumentare, in maniera facile e immediata, la sicurezza della città e dei suoi abitanti.&lt;/li&gt;
+  &lt;li&gt;** Pagamento parcheggi in ZTL ** - per far conoscere ai cittadini, data la loro posizione, le tariffe dei parcheggi in ZTL e nelle aree circostanti.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-44.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;creazione-di-un-nuovo-bot&quot;&gt;Creazione di un nuovo BOT&lt;/h2&gt;
+&lt;p&gt;Vediamo adesso come creare da zero un nuovo BOT e come arricchirlo di nuove funzionalità.
+Decidiamo, ad esempio, di creare il &lt;strong&gt;CityBot&lt;/strong&gt; per la città di Palermo. Prima di operare su CityBot
+dobbiamo entrare in &lt;strong&gt;Telegram&lt;/strong&gt; e creare un nuovo BOT. E’ un’operazione molto semplice, trovate
+tutte le informazioni sulla &lt;a href=&quot;https://core.telegram.org/bots#botfather&quot;&gt;documentazione ufficiale&lt;/a&gt; di Telegram.
+Con quest’operazione otterrete il codice identificativo segreto del BOT, chiamato &lt;strong&gt;TOKEN&lt;/strong&gt;, che ci servirà
+per la creazione del CityBot.&lt;/p&gt;
+
+&lt;p&gt;Andando quindi su Telegram creiamo il BOT &lt;a href=&quot;https://telegram.me/PalermoCity_Bot&quot;&gt;PalermoCity_Bot&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ritornando a CityBot, dopo una prima fase di registrazione, effettuiamo il login e ci ritroviamo nella pagina di benvenuto:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-1.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A questo punto clicchiamo su &lt;strong&gt;Crea il cityBot per la tua città&lt;/strong&gt; e davanti a noi apparirà la seguente schermata
+che ci chiederà di inserire il nome della città del BOT e il &lt;strong&gt;TOKEN&lt;/strong&gt; di Telegram, ottenuto in fase di creazione del BOT.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-2.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Inseriti &lt;strong&gt;nome&lt;/strong&gt; della città e &lt;strong&gt;TOKEN&lt;/strong&gt; (&lt;em&gt;fittizio nell’esempio&lt;/em&gt;),&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-3.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;possiamo creare il BOT.
+Automaticamente la piattaforma riconoscerà il nome del BOT e ci consentirà di configurarlo in base alle nostre necessità.
+Cliccando su &lt;strong&gt;Configura&lt;/strong&gt;,
+&lt;img src=&quot;/images/citybot-4.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;entreremo nel pannello di configurazione del BOT:&lt;/p&gt;
+
+&lt;p&gt;![Image](/images/citybot-5.jpg?a %}&lt;/p&gt;
+
+&lt;p&gt;Dal pannello superiore si potrà accendere il BOT, spegnerlo, eliminarlo o modificare la città.
+La parte più interessante, però, è quella dei servizi disponibili, in elenco nel pannello inferiore.
+Nella sezione &lt;strong&gt;Plugin disponibili&lt;/strong&gt; sono presenti i seguenti servizi:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;**Flusso RSS Feed **&lt;/li&gt;
+  &lt;li&gt;**Flusso ComunWeb **&lt;/li&gt;
+  &lt;li&gt;**Area di Attesa - Protezione Civile **&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Parcheggio Zone a Traffico Limitato (ZTL)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Entriamo nel dettaglio in ciascuno dei servizi.&lt;/p&gt;
+
+&lt;p&gt;##Flusso RSS Feed
+L’&lt;strong&gt;RSS&lt;/strong&gt; è uno dei più popolari formati per la distribuzione di contenuti Web, un flusso di testo aggiornato automaticamente sui
+nuovi articoli del sito a cui si riferisce.
+Al plugin di CityBot è possibile agganciare uno o più feed RSS, inerenti qualsiasi tipo di news: municipio, università, cronaca, politica, attualità, sport, eventi, etc.&lt;/p&gt;
+
+&lt;p&gt;Nel nostro esempio decidiamo di collegare in CityBot le notizie del comune.
+Sul sito del comune di Palermo i feed RSS sono disponibili alla seguente &lt;a href=&quot;http://www.comune.palermo.it/lista_rss.php&quot;&gt;pagina&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-8.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Decidiamo di agganciare al nostro CityBot i seguenti feed:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Informazione&lt;/strong&gt;: Comunicati stampa, scadenze, avvisi, accade a Palermo &lt;a href=&quot;http://www.comune.palermo.it/feed/rss.xml&quot;&gt;feed&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Bandi e Gare&lt;/strong&gt;: &lt;a href=&quot;http://www.comune.palermo.it/feed/rss_bandi.xml&quot;&gt;feed&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Spostiamoci adesso su CityBot e iniziamo ad aggiungere il primo plugin al nostro CityBot scegliendo quindi &lt;strong&gt;flusso RSS Feed&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Clicchiamo su &lt;strong&gt;Aggiungi&lt;/strong&gt; e vedremo comparire il plugin nella sezione &lt;strong&gt;Plugin Aggiunti&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-6.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A questo punto configuriamo il plugin cliccando su &lt;strong&gt;Configura&lt;/strong&gt; e definiamo un nome per il servizio RSS. Tale nome comparirà nel menù del BOT, per cui cerchiamo di sceglierne uno il più appropriato possibile
+al contenuto informativo da agganciare. In questo caso, ad esempio, scegliamo il nome &lt;strong&gt;“Comune di Palermo”&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;![Image](/images/citybot-9.jpg?a %}&lt;/p&gt;
+
+&lt;p&gt;Andiamo avanti e iniziamo la configurazione dei feed RSS.&lt;/p&gt;
+
+&lt;p&gt;![Image](/images/citybot-10.jpg?p %}&lt;/p&gt;
+
+&lt;p&gt;Nella sezione &lt;strong&gt;Feed collegati&lt;/strong&gt; clicchiamo sul bottone &lt;strong&gt;Aggiungi&lt;/strong&gt; (segno più)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-11.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;e inseriamo il primo feed RSS&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-12.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Anche in questo caso il nome del feed corrisponderà al nome del sottocomando del BOT.
+Per il nostro esempio inseriamo il nome &lt;strong&gt;News&lt;/strong&gt;.
+Il numero max di elementi del feed è configurabile ma nel nostro esempio lasciamo il valore di default 10.&lt;/p&gt;
+
+&lt;p&gt;Ripetiamo la stessa operazione per il secondo feed inserendo come nome &lt;strong&gt;Bandi e Gare&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-13.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Per ogni feed possiamo verificarne il contenuto o procedere alla rimozione.&lt;/p&gt;
+
+&lt;p&gt;![Image](/images/citybot-14.jpg?o %}&lt;/p&gt;
+
+&lt;p&gt;Ritorniamo nel pannello di amministrazione del plugin e accendiamo il servizio.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-16.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dopodichè accendiamo anche il BOT,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-17.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ci spostiamo sul nostro smartphone e cerchiamo il &lt;strong&gt;Canale&lt;/strong&gt; &lt;a href=&quot;https://telegram.me/PalermoCity_Bot&quot;&gt;PalermoCity_BOT&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-29.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nella schermata compare il messaggio di benvenuto e in basso il menù dei comandi disponibili.
+A sinistra compare il comando &lt;strong&gt;Comune di Palermo&lt;/strong&gt;, definito nella configurazione del flusso RSS, mentre a destra il comando,
+sempre presente nel menù principale, relativo alle informazioni di CityBot. Cliccando su quest’ultimo vedremo la seguente schermata:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-30.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nella schermata sono presente informazioni relative a CityBot, tra cui la città di riferimento e il nome dell’utente che ha creato il BOT.
+Cliccando invece sul primo comando, cioè &lt;strong&gt;Comune di Palermo&lt;/strong&gt;, apparirà il seguente menù:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-31.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Il bottone di sinistra, così come configurato precedentemente, è collegato al feed RSS relativo alle informazioni sul &lt;strong&gt;comune di Palermo&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-32.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Il bottone di destra è collegato invece  al feed RSS relativo alle informazioni su &lt;strong&gt;Bandi e gare&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-33.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;##Flusso Comun Web
+ComunWeb nasce come riuso di una piattaforma realizzata per il comune di Trento, sviluppata da OpenContent
+ e usata oggi da 178 enti locali, 2.123 amministratori locali e 5.000 dipendenti comunali.
+L’infrastruttura fornita da ComunWeb consente di strutturare e organizzare in modo intelligente le informazioni trattate
+mediante l’utilizzo di un &lt;a href=&quot;http://www.comunweb.it/openpa/classes&quot;&gt;modello di dati condiviso&lt;/a&gt; e di esporre tali dati con licenza opendata attraverso delle API REST.&lt;/p&gt;
+
+&lt;p&gt;E’ possibile collegare CityBot ad un flusso dati ComunWeb proveniente da qualsiasi comune aderente.
+Anche se non ha molto senso agganciare un flusso ComunWeb al nostro CityBot, dato che Palermo non è fra gli enti aderenti,
+immaginiamo di configurare il nostro CityBot per una città aderente, ad esempio per la città di &lt;a href=&quot;http://www.comune.ala.tn.it/&quot;&gt;Ala&lt;/a&gt; (TN).&lt;/p&gt;
+
+&lt;p&gt;Interrogando le &lt;a href=&quot;http://www.comune.ala.tn.it/api/opendata/v1/help&quot;&gt;API&lt;/a&gt; disponibili risaliamo ai link relativi al catalogo dei dataset, alla lista delle classi globali e a quelle utilizzate. Da quest’ultimo link decidiamo di agganciare CityBot con
+l’&lt;a href=&quot;http://www.comune.ala.tn.it/api/opendata/v1/content/class/albo_elenco&quot;&gt;Albo Pretorio&lt;/a&gt; e l’elenco
+delle &lt;a href=&quot;http://www.comune.ala.tn.it/api/opendata/v1/content/class/associazione&quot;&gt;associazioni&lt;/a&gt; presenti in città.&lt;/p&gt;
+
+&lt;p&gt;Individuate le fonti dati spostiamoci sul pannello di configurazione di CityBot e aggiungiamo il plugin &lt;strong&gt;Flusso ComunWeb&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-18.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Entriamo in configurazione e, come per il &lt;strong&gt;Flusso RSS&lt;/strong&gt;, inseriamo il nome che apparirà nel comando del menù principale del BOT;
+decidiamo di mettere come nome &lt;strong&gt;Comune di Ala (TN)&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-19.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Inseriamo i due link di interrogazione per le informazioni da collegare. Decidiamo di chiamarli &lt;strong&gt;Albo Pretorio&lt;/strong&gt; e &lt;strong&gt;Associazioni&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-20.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Anche in questo caso accendiamo il servizio, accendiamo il BOT e ci spostiamo sullo smartphone.&lt;/p&gt;
+
+&lt;p&gt;Come possiamo vedere dalla schermata, il bottone relativo al &lt;strong&gt;Comune di Ala&lt;/strong&gt; è stato aggiunto a fianco a quello del &lt;strong&gt;Comune di Palermo&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-34.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Al nuovo bottone è associato il seguente sottomenù:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-35.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Al bottone &lt;strong&gt;Albo Pretorio&lt;/strong&gt; corrisponderà il seguente flusso ComunWeb:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-36.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Al bottone &lt;strong&gt;Associazioni&lt;/strong&gt; è agganciato invece quest’altro flusso:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-37.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;protezione-civile&quot;&gt;Protezione Civile&lt;/h2&gt;
+&lt;p&gt;Dal &lt;a href=&quot;http://www.protezionecivile.gov.it/jcms/it/glossario.wp?contentId=GLO13370&quot;&gt;sito&lt;/a&gt;
+della Protezione Civile leggiamo:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Le aree di attesa sono i luoghi di prima accoglienza per la popolazione; possono essere utilizzate piazze, slarghi, parcheggi, spazi pubblici o privati non soggetti a rischio (frane, alluvioni, crollo di strutture attigue, etc.), raggiungibili attraverso un percorso sicuro. Il numero delle aree da scegliere è funzione della capacità ricettiva degli spazi disponibili e del numero degli abitanti. In tali aree la popolazione riceve le prime informazioni sull’evento e i primi generi di conforto. Le Aree di Attesa della popolazione saranno utilizzate per un periodo di tempo compreso tra poche ore e qualche giorno.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Il plugin &lt;strong&gt;Area di Attesa - Protezione Civile&lt;/strong&gt; si pone come obiettivo quello di individuare
+in caso di emergenza, l’area di accoglienza più vicina prevista dalla Protezione Civile,
+fornendoci indicazioni relative alla distanza, percorso e tempo di percorrenza a partire
+dalla nostra posizione attuale.&lt;/p&gt;
+
+&lt;p&gt;Dal pannello di CityBot aggiungiamo il plugin &lt;strong&gt;Area di Attesa - Protezione Civile&lt;/strong&gt; ed entriamo
+in configurazione. Visualizzeremo la seguente schermata:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-21.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A questo punto dovremo disegnare i poligoni corrispondenti alle aree di attesa della Protezione Civile.
+Possiamo farlo in due modi:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;disegnando le aree attraverso lo strumento &lt;strong&gt;Poligono&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;importando la mappa da file GEOJSON&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Nel &lt;strong&gt;primo caso&lt;/strong&gt; bisognerà individuare l’area di attesa sulla mappa,  cliccare sullo strumento &lt;strong&gt;Poligono&lt;/strong&gt; in alto a destra,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-22.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;e iniziare a disegnare il poligono lato per lato.-&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-23.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Alla chiusura del poligono sarà necessario inserire informazioni relative all’area di attesa disegnata:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-24.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Inserite le informazioni dell’area di attesa, per aggiornare la mappa bisognerà cliccare su &lt;strong&gt;Aggiorna Dati&lt;/strong&gt;.
+Dopo aver disegnato tutte le aree manualmente, per salvare la mappa in CityBot bisognerà cliccare su &lt;strong&gt;Salva mappa&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Nel &lt;strong&gt;secondo caso&lt;/strong&gt; basterà invece uplodare la mappa da file &lt;a href=&quot;http://geojson.org/&quot;&gt;GEOJSON&lt;/a&gt;, con l’unica accortezza
+di inserire le informazioni delle aree di attesa in proprietà chiamate &lt;strong&gt;name&lt;/strong&gt; e &lt;strong&gt;description&lt;/strong&gt;, dentro &lt;strong&gt;properties&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Esempio di caricamento delle aree di attesa da file GEOJSON:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-25.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Usciamo e ritorniamo nel pannello di amministrazione del BOT; accendiamo il servizio e spostiamoci sullo smartphone.&lt;/p&gt;
+
+&lt;p&gt;Il nuovo menù principale apparirà nel seguente modo:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-38.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cliccando su &lt;strong&gt;Protezione Civile&lt;/strong&gt; saremo invitati a cliccare sull’icona graffetta e ad inserire la nostra posizione geografica.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-39.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;CityBot automaticamente calcolerà l’area di accoglienza più vicina, indicando sia la distanza per raggiungerla che il tempo di percorrenza a piedi.
+Verrà fornita anche la mappa e il link del percorso da seguire, passo passo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-40.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;parcheggio-zone-a-traffico-limitato-ztl&quot;&gt;Parcheggio Zone a Traffico Limitato (ZTL)&lt;/h2&gt;
+&lt;p&gt;Il problema dei parcheggi fuori e dentro le ZTL è più o meno trasversale a tutte le città.
+Vediamo adesso come sfruttare CityBot per calcolare automaticamente la tariffa oraria dei parcheggi, in base alla
+posizione GPS dello smartphone.&lt;/p&gt;
+
+&lt;p&gt;Aggiungiamo quindi l’ultimo dei servizi disponibili in CityBot e procediamo alla sua configurazione.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-26.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Anche per questo plugin, come per quello precedente, è possibile disegnare le mappe delle zone di parcheggio manualmente o da
+file GEOJSON. Nel primo caso indicheremo quindi nel campo &lt;strong&gt;Nome&lt;/strong&gt; il nome dell’area di pagamento (ad es. P1, P2, ZTL1, ZTL2, etc.)
+e nel campo &lt;strong&gt;Descrizione&lt;/strong&gt;, il dettaglio del pedaggio da pagare (Tariffa oraria, Fascia Oraria, Validità, etc.).
+Per il nostro esempio, su &lt;a href=&quot;https://umap.openstreetmap.fr&quot;&gt;umap&lt;/a&gt; troviamo la &lt;a href=&quot;https://umap.openstreetmap.fr/it/map/mappa-parcheggi-su-strada-a-pagamento-e-ztl-palerm_58038#12/38.1269/13.3717&quot;&gt;mappa dei parcheggi&lt;/a&gt;
+ su strada a pagamento di Palermo; decidiamo quindi di caricare su CityBot il file GEOJSON, &lt;em&gt;adattando&lt;/em&gt; opportunamente il campo &lt;strong&gt;properties&lt;/strong&gt; (&lt;em&gt;name&lt;/em&gt; e &lt;em&gt;description&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-27.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ritorniamo nel pannello del BOT,accendiamo quest’ultimo servizio e il BOT. Spostandoci adesso sullo smartphone il menù sarà adesso:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-41.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cliccando su &lt;strong&gt;Pedaggio in ZTL&lt;/strong&gt;, ci verrà chiesto di inserire la propria posizione, sempre tramite l’icona graffetta, e CityBot
+ci fornirà le informazioni relative al pedaggio da pagare in base alla nostra posizione.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/citybot-42.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusioni&quot;&gt;Conclusioni&lt;/h2&gt;
+&lt;p&gt;In questo post ho voluto raccontare la mia visione di città digitale.
+Tutto nasce dalla convinzione che l’utilità di un servizio digitale presente in una città
+può e deve essere esportata con facilità in qualsiasi altra città in modo che tutti i cittadini possano beneficiare degli stessi vantaggi digitali.&lt;/p&gt;
+
+&lt;p&gt;Da diversi mesi sto investendo tempo e risorse nello sviluppo di servizi digitali con i BOT Telegram
+e &lt;em&gt;CityBot&lt;/em&gt; è un pò la &lt;em&gt;summa&lt;/em&gt; delle esperienze maturate.&lt;/p&gt;
+
+&lt;p&gt;In futuro ho in mente di estendere &lt;em&gt;CityBot&lt;/em&gt; con le seguenti funzionalità:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;plugin su altri &lt;strong&gt;Punti di Interesse&lt;/strong&gt; (farmacie, ospedali, parchi, attività commerciali);&lt;/li&gt;
+  &lt;li&gt;plugin &lt;strong&gt;Raccolta Differenziata&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;plugin &lt;strong&gt;Meteo&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;plugin &lt;strong&gt;Trasporti&lt;/strong&gt; (agganciato a &lt;a href=&quot;http://transit.land&quot;&gt;Transit.land&lt;/a&gt;);&lt;/li&gt;
+  &lt;li&gt;attivazione &lt;strong&gt;Canali&lt;/strong&gt; per notifiche push.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La piattaforma di &lt;em&gt;CityBot&lt;/em&gt; si trova &lt;a href=&quot;http://www.citybot.it&quot;&gt;qui&lt;/a&gt;.
+Se volete provare il CityBot creato come esempio per la città di Palermo, cliccate &lt;a href=&quot;https://telegram.me/PalermoCity_Bot&quot;&gt;qui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Se &lt;em&gt;CityBot&lt;/em&gt; vi è piaciuto, aiutatemi a farlo conoscere con un tweet, grazie!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/share?url=http://www.citybot.it&amp;amp;text=@gpirrotta+CityBot+-+Crea+il+BOT+della+Tua+Città+in+Pochi+Click!&quot;&gt;Twittami&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/share?url=http://www.citybot.it&amp;amp;text=@gpirrotta+CityBot+-+Crea+il+BOT+della+Tua+Città+in+Pochi+Click!&quot;&gt;&lt;img src=&quot;/images/twitter.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Per feedback, suggerimenti e critiche non esitate a lasciarmi un commento.&lt;/p&gt;
+
+&lt;p&gt;That’s all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">A settembre 2015 ho partecipato al raduno Open Data Sicilia, svoltosi a Palermo. In quell’occasione sono venuto a conoscenza del progetto ComunWeb, cioè una soluzione informatica omogenea per tutti i comuni e le comunità di Valle interessate a un portale di comunicazione su piattaforma condivisa.</summary></entry><entry><title type="html">Quando un BOT può salvarti la vita!</title><link href="http://giovanni.pirrotta.it/blog/2015/10/28/protezione-civile-palermo-telegram-bot/" rel="alternate" type="text/html" title="Quando un BOT può salvarti la vita!" /><published>2015-10-28T14:21:00+00:00</published><updated>2015-10-28T14:21:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2015/10/28/protezione-civile-palermo-telegram-bot</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2015/10/28/protezione-civile-palermo-telegram-bot/">&lt;p&gt;Ok, lo confesso, mi sto facendo prendere un pò troppo la mano
+da &lt;a href=&quot;https://telegram.org/&quot;&gt;Telegram&lt;/a&gt; e il suo &lt;a href=&quot;https://core.telegram.org/bots&quot;&gt;BOT&lt;/a&gt;,
+ma non è colpa mia se hanno reso così semplice e disarmante creare servizi di valore con la loro chat. :-)&lt;/p&gt;
+
+&lt;p&gt;Succede, però, che un lunedì mattina ricevo una email di &lt;a href=&quot;https://twitter.com/aborruso&quot;&gt;Andrea Borruso&lt;/a&gt;,
+il quale mi propone, su un’idea di &lt;a href=&quot;https://twitter.com/cirospat&quot;&gt;Ciro Spataro&lt;/a&gt;, di sviluppare un BOT
+che consenta ai cittadini palermitani, in caso di emergenza, di essere informati tempestivamente sulla posizione delle aree
+di accoglienza da raggiungere, predisposte dalla Protezione Civile di Palermo.&lt;/p&gt;
+
+&lt;!--More--&gt;
+
+&lt;p&gt;Dal &lt;a href=&quot;http://www.protezionecivile.gov.it/jcms/it/glossario.wp?contentId=GLO13371&quot;&gt;sito&lt;/a&gt;
+della protezione civile si legge:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Le aree di accoglienza sono luoghi, individuati in aree sicure rispetto alle diverse tipologie
+di rischio e poste nelle vicinanze di risorse idriche, elettriche e fognarie, in cui vengono
+installati i primi insediamenti abitativi per alloggiare la popolazione colpita. Dovranno essere
+facilmente raggiungibili anche da mezzi di grandi dimensioni per consentirne l’allestimento e
+ la gestione. Rientrano nella definizione di aree di accoglienza o di ricovero anche le strutture
+ ricettive (hotel, residence, camping, etc.).&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/protezione-civile.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Negli ultimi quaranta anni, in molte zone d’Italia e specialmente in Sicilia, si sono verificati
+eventi di dissesto idrogeologico che hanno avuto conseguenze spesso catastrofiche. Senza andare troppo lontano
+negli anni, lucido è in me il ricordo del &lt;a href=&quot;https://it.wikipedia.org/wiki/Alluvione_di_Messina_del_2009&quot;&gt;violento nubifragio di Messina del 2009&lt;/a&gt;,
+in cui hanno perso la vita 35 persone.
+Di conseguenza, la possibilità di diffondere informazioni ufficiali e prioritarie  da parte delle
+istituzioni competenti, anche attraverso nuovi media che sfruttino la componente digitale
+come chiavistello per aprire canali mai raggiunti prima e arrivare, in caso di emergenza, a quanta più
+gente possibile nel più  breve tempo possibile, assume un’importanza sempre
+più decisiva e strategica per la salvaguardia di vite umane.&lt;/p&gt;
+
+&lt;p&gt;In questo contesto, la disponibilità di dati aperti, gratuiti e accessibili riguardanti informazioni strategiche
+e di raccordo, soprattutto nei settori in cui la tempestività e il veicolo di
+informazioni giocano un ruolo cruciale, costituisce un elemento determinante e necessario per
+lo sviluppo di servizi vitali per il cittadino.&lt;/p&gt;
+
+&lt;p&gt;Chi sicuramente ha già capito questo  è &lt;a href=&quot;https://twitter.com/cirospat&quot;&gt;Ciro Spataro&lt;/a&gt; che, in veste di civic-hacker,
+ha mappato le &lt;a href=&quot;http://umap.openstreetmap.fr/it/map/mappa-piano-protezione-civile-palermo-2014_16328#12/38.1190/13.3422&quot;&gt;aree di accoglienza persone della Protezione Civile di Palermo&lt;/a&gt;
+usando &lt;a href=&quot;http://umap.openstreetmap.fr/it/&quot;&gt;umap&lt;/a&gt; e &lt;a href=&quot;https://www.openstreetmap.org/&quot;&gt;openstreetmap&lt;/a&gt;.&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;300px&quot; frameborder=&quot;0&quot; src=&quot;http://umap.openstreetmap.fr/it/map/mappa-piano-protezione-civile-palermo-2014_16328?scaleControl=false&amp;amp;miniMap=false&amp;amp;scrollWheelZoom=false&amp;amp;zoomControl=true&amp;amp;allowEdit=false&amp;amp;moreControl=true&amp;amp;datalayersControl=true&amp;amp;onLoadPanel=undefined&amp;amp;captionBar=false&amp;amp;datalayers=29962&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;http://umap.openstreetmap.fr/it/map/mappa-piano-protezione-civile-palermo-2014_16328&quot;&gt;Visualliza schermo intero&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Poniamoci adesso questa domanda: come possiamo riutilizzare i dati della mappa in altri contesti e
+ creare servizi di valore e gratuiti per i cittadini palermitani?&lt;/p&gt;
+
+&lt;p&gt;Ciro suggerisce di prendere come esempio il lavoro fatto a &lt;a href=&quot;https://iltempe.github.io/Emergenzeprato/&quot;&gt;Prato&lt;/a&gt; da
+ &lt;a href=&quot;http://pratosmart.teo-soft.com/emergenzeprato/&quot;&gt;Matteo Tempestini&lt;/a&gt;, cioè un BOT Telegram
+ in grado di fornire varie informazioni utili per il cittadino, tra cui la possibilità di individuare,
+ in caso di emergenza, l’area di accoglienza più vicina prevista dalla Protezione Civile.&lt;/p&gt;
+
+&lt;p&gt;Ho già avuto a che fare sia con progetti legati alla georeferenziazione di posizioni geografiche e
+alla loro appartenenza rispetto ad un’area geografica (ne parlo in questo &lt;a href=&quot;http://giovanni.pirrotta.it/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/&quot;&gt;post&lt;/a&gt;) sia con
+progetti legati allo sviluppo di BOT su dati relativi ai trasporti urbani
+(ne parlo in quest’altro &lt;a href=&quot;http://giovanni.pirrotta.it/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/&quot;&gt;post&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Tecnicamente si tratta di risolvere il seguente problema: data una posizione geografica, leggi
+&lt;em&gt;latitudine&lt;/em&gt; e &lt;em&gt;longitudine&lt;/em&gt;, individuare l’area di accoglienza o di ricovero della popolazione
+più vicine, secondo quanto previsto dalla Protezione Civile.&lt;/p&gt;
+
+&lt;p&gt;Dalla mappa mi esporto quindi tutte le aree in formato &lt;em&gt;geoJSON&lt;/em&gt;, recuperando le
+coordinate dei vertici di ogni poligono. Dopodichè l’applicazione mi dovrà restituire
+l’area che ha il vertice più vicino alla posizione dell’utente.&lt;/p&gt;
+
+&lt;p&gt;La logica del programma è molto semplice:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;L’utente invia la propria posizione tramite il BOT&lt;/li&gt;
+  &lt;li&gt;L’applicazione seleziona l’area di accoglienza più vicina
+confrontando le distanze tra la posizione dell’utente e i vertici di tutte le aree&lt;/li&gt;
+  &lt;li&gt;L’applicazione restituisce:
+    &lt;ul&gt;
+      &lt;li&gt;il nome dell’area di accoglienza più vicina&lt;/li&gt;
+      &lt;li&gt;la mappa geografica dell’area&lt;/li&gt;
+      &lt;li&gt;la distanza in km&lt;/li&gt;
+      &lt;li&gt;il tempo necessario per raggiungere l’area a piedi&lt;/li&gt;
+      &lt;li&gt;il link con il percorso da seguire.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In un mio precedente &lt;a href=&quot;http://giovanni.pirrotta.it/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/&quot;&gt;post&lt;/a&gt;
+ho affrontato il problema della distanza di un punto da una lista di punti utilizzando in modo
+diretto formule trigonometriche e una chiamata SQL.&lt;/p&gt;
+
+&lt;p&gt;Questa volta invece utilizzerò la libreria &lt;a href=&quot;https://github.com/thephpleague/geotools#geotools&quot;&gt;GeoTools&lt;/a&gt;, sviluppata da Antoine Corcy.
+La libreria fornisce molteplici funzionalità legate al mondo della georeferenziazione tra cui geocodifiche dirette e inverse, conversioni tra coordinate, distanze tra punti geografici in metri, chilometri, miglia o piedi, etc.&lt;/p&gt;
+
+&lt;p&gt;Siano, ad esempio, &lt;em&gt;$coordA&lt;/em&gt; e &lt;em&gt;$coordB&lt;/em&gt; i due punti di cui si vuole conoscere la distanza;
+ per creare l’oggetto &lt;em&gt;distance&lt;/em&gt; è necessario digitare quanto segue:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;  Telegram&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;nv&quot;&gt;$geotools&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;\League\Geotools\Geotools&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;nv&quot;&gt;$coordA&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;\League\Geotools\Coordinate\Coordinate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;48.8234055&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.3072664&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;5&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;nv&quot;&gt;$coordB&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;\League\Geotools\Coordinate\Coordinate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;43.296482&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;5.36978&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;6&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;7&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;nv&quot;&gt;$distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$geotools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setFrom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$coordA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$coordB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Per avere la distanza in metri (default) con il più performante tra gli algoritmi in libreria, digitiamo invece:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;  Algoritmo flat&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;nv&quot;&gt;$distance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;flat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;659166.50038742&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;meters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Se volessimo utilizzare invece l’algoritmo &lt;strong&gt;great-circle&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;  Telegram API&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;nv&quot;&gt;$distance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;greatCircle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;659021.90812846&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Per avere la distanza in chilometri utilizzando l’algoritmo &lt;strong&gt;haversine&lt;/strong&gt;, l’invocazione sarà la seguente:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;  Algoritmo haversine&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;nv&quot;&gt;$distance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'km'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;haversine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;659.02190812846&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;L’algoritmo &lt;strong&gt;vincenty&lt;/strong&gt;, il più accurato fra tutti quelli presenti, è invocato nel
+seguente modo, con distanza in miglia:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;  Algoritmo vincenty&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;nv&quot;&gt;$distance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'mi'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;vincenty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;409.05330679648&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Per maggiori informazioni consultate la
+&lt;a href=&quot;https://github.com/thephpleague/geotools#geotools&quot;&gt;documentazione ufficiale&lt;/a&gt;
+ della libreria.&lt;/p&gt;
+
+&lt;p&gt;Risolto il problema di &lt;em&gt;come&lt;/em&gt; calcolare la distanza, trovare l’area di accoglienza più vicina
+ diventa un’operazione banale.&lt;/p&gt;
+
+&lt;p&gt;La funzionalità è affidata alla classe &lt;em&gt;GeoToolsDistance&lt;/em&gt; che implementa il metodo &lt;em&gt;distance&lt;/em&gt;
+come da contratto con l’interfaccia &lt;em&gt;DistanceInterface&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;  Metodo &quot;distance&quot;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Vertex&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Vertex&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;        &lt;span class=&quot;nv&quot;&gt;$coordFrom&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Coordinate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLatitude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLongitude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()]);&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;5&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;        &lt;span class=&quot;nv&quot;&gt;$coordTo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Coordinate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$to&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLatitude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$to&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLongitude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()]);&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;6&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;        &lt;span class=&quot;nv&quot;&gt;$distanceCalculator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;geotools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setFrom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$coordFrom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$coordTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;7&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;8&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$distanceCalculator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'km'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;haversine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;9&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;p&quot;&gt;&amp;#x7d;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;In input vengono presi due oggetti del dominio di classe &lt;a href=&quot;https://github.com/gpirrotta/protezione-civile-bot/blob/master/src/GP/ProtezioneCivileBot/Model/Vertex.php&quot;&gt;Vertex&lt;/a&gt;. Il codice è autoesplicativo.&lt;/p&gt;
+
+&lt;p&gt;Per confrontare le distanze di tutte le aree di accoglienza partiamo dall’oggetto &lt;a href=&quot;https://github.com/gpirrotta/protezione-civile-bot/blob/master/src/GP/ProtezioneCivileBot/Model/Map.php&quot;&gt;Map&lt;/a&gt;
+che, dopo aver caricato in memoria la struttura dati del file &lt;strong&gt;GeoJSON&lt;/strong&gt;, contenente le coordinate
+geografiche delle aree di accoglienza della protezione civile di Palermo, calcola la distanza minima all’interno del metodo
+&lt;em&gt;getNearestArea&lt;/em&gt;. Il metodo prende in input la posizione dell’utente e restituisce in output l’area di accoglienza più vicina.&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;  Metodo &quot;getNearestArea&quot;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getNearestArea&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Vertex&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$vertex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;        &lt;span class=&quot;nv&quot;&gt;$areaNearest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;5&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;        &lt;span class=&quot;nv&quot;&gt;$distanceNearest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;PHP_INT_MAX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;6&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;        &lt;span class=&quot;k&quot;&gt;foreach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;aree&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$areaAccoglienza&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;7&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;            &lt;span class=&quot;nv&quot;&gt;$areaAccoglienza&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;calculateVertexNearest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$vertex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;8&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;            &lt;span class=&quot;nv&quot;&gt;$v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$areaAccoglienza&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getVertexNearest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;9&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getDistance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$distanceNearest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;#x7b;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;10&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;                &lt;span class=&quot;nv&quot;&gt;$distanceNearest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getDistance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;11&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;                &lt;span class=&quot;nv&quot;&gt;$areaNearest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$areaAccoglienza&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;12&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;            &lt;span class=&quot;p&quot;&gt;&amp;#x7d;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;13&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;        &lt;span class=&quot;p&quot;&gt;&amp;#x7d;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;14&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;15&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$areaNearest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;16&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;p&quot;&gt;&amp;#x7d;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Per calcolare il tempo necessario per raggiungere l’area di accoglienza a piedi
+ (&lt;em&gt;feature consigliata da Andrea&lt;/em&gt;) ho usato l’API &lt;a href=&quot;https://developers.google.com/maps/documentation/distance-matrix/intro&quot;&gt;distancematrix&lt;/a&gt; messa a disposizione
+ da Google.&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;  API distancematrix&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;https://maps.googleapis.com/maps/api/distancematrix/json?origins=LATITUDINE-ORIGINE,LONGITUDINE-ORIGINEs&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;destinations=LATITUDINE-DESTINAZIONE,LONGITUDINE-DESTINAZIONE&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;mode=walking&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;language=it-IT&quot;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;L’output della chiamata restituisce informazioni relative alla distanza del viaggio e al tempo necessario per,
+ partendo dal primo punto, raggiungere il secondo punto a piedi.&lt;/p&gt;
+
+&lt;p&gt;Per il percorso da seguire ho semplicemente inviato al BOT il seguente link, sostituendo opportunamente le variabili delle coordinate geografiche:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;  API percorso viaggio&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;http://maps.google.com/maps?f=d&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;hl=en&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;saddr=LATITUDINE-ORIGINE,LONGITUDINE-ORIGINE&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;daddr=LATITUDINE-DESTINAZIONE,LONGITUDINE-DESTINAZIONE&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;ie=UTF8&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;0&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;om=0&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;output=kml&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Mettiamo tutto in funzione e vediamo cosa apparirà su Telegram.&lt;/p&gt;
+
+&lt;p&gt;Il BOT da cercare si chiama &lt;a href=&quot;http://telegram.me/protezioneCivilePAbot&quot;&gt;@protezioneCivilePAbot&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;La prima cosa da fare è inviare la propria posizione cliccando sulla graffetta.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/protezione-civile-screenshot1.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A questo punto il BOT risponderà nel seguente modo:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/protezione-civile-screenshot2.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;informando l’utente su quale area di accoglienza raggiungere, visualizzandola su mappa,
+su come raggiungerla e su quanto tempo ci vorrà a piedi per raggiungerla.&lt;/p&gt;
+
+&lt;p&gt;Il codice della demo, lo trovate nel mio repository si &lt;a href=&quot;https://github.com/gpirrotta/protezione-civile-bot&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Il progetto è scalabile per ogni città, basta avere un file GeoJSON,
+prodotto con Umap o con qualsiasi altro tool, con le aree di accoglienza della Protezione Civile.&lt;/p&gt;
+
+&lt;p&gt;Un ringraziamento particolare per il progetto va a Ciro Spataro, da cui è nata l’idea e
+ad Andrea Borruso, per i suoi preziosi feedback e consigli.&lt;/p&gt;
+
+&lt;p&gt;Se questo progetto vi è piaciuto un pò, mi aiutate a farlo conoscere in giro? Grazie&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Twittami&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/share?url=https://telegram.me/protezioneCivilePABot&amp;amp;text=@gpirrotta+ProtezioneCivilePABot+-+Il+BOT+che+può+salvarti+la+vita+in+caso+di+emergenze&quot;&gt;&lt;img src=&quot;/images/twitter.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Ok, lo confesso, mi sto facendo prendere un pò troppo la mano da Telegram e il suo BOT, ma non è colpa mia se hanno reso così semplice e disarmante creare servizi di valore con la loro chat. :-) Succede, però, che un lunedì mattina ricevo una email di Andrea Borruso, il quale mi propone, su un’idea di Ciro Spataro, di sviluppare un BOT che consenta ai cittadini palermitani, in caso di emergenza, di essere informati tempestivamente sulla posizione delle aree di accoglienza da raggiungere, predisposte dalla Protezione Civile di Palermo.</summary></entry><entry><title type="html">Developing an Ontology</title><link href="http://giovanni.pirrotta.it/blog/2015/10/18/developing-an-ontology/" rel="alternate" type="text/html" title="Developing an Ontology" /><published>2015-10-18T15:23:00+00:00</published><updated>2015-10-18T15:23:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2015/10/18/developing-an-ontology</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2015/10/18/developing-an-ontology/">&lt;p&gt;The term ontology has its origin in philosophy; in the framework of
+computer science, it represents a formal representation of knowledge
+as a set of concepts within a domain, and the relationships between
+these concepts.&lt;/p&gt;
+
+&lt;!--More--&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ontology.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the literature we can find many other definitions to explain and define what ontology
+represents and means.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Defines the concepts and relationships used to describe and represent
+an area of knowledge (&lt;em&gt;Ivan Herman, W3C&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;A taxonomy combined with inference rules (&lt;em&gt;T. Berners–Lee, J.Hendler, O. Lassila, W3C&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;The theory or study of being as such; i.e., of the basic characteristics
+of all reality (&lt;em&gt;Encyclopedia Britannica&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;The science of something and of nothing, of being and not–being,
+of the thing and the mode of the thing, of substance and accident
+(&lt;em&gt;Gottfried Wilhelm Leibniz - Sämtliche schriften und briefe.&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;A formal definition of concepts (entities, relationships) of a given
+area of knowledge, described in a standardized form (&lt;em&gt;Carugo &amp;amp;
+Pongor, 2002&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;A systematic arrangement of all of the important categories of objects
+or concepts which exist in some field of discourse, showing
+the relations between them. (&lt;em&gt;Collaborative International Dictionary
+of English&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;An ontology can be defined as a structured and limited concept
+catalog not unambiguously defined (&lt;em&gt;Uitermark&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The term ontology is used in artificial intelligence, in the Semantic
+Web, in systems engineering, in software engineering, in biomedical
+informatics, in library science, in enterprise bookmarking and information
+architecture as a form of knowledge representation about the
+world or some part of it.&lt;/p&gt;
+
+&lt;p&gt;Ontologies have become common on the
+World Wide Web. The W3C Consortium developed the RDF Model,
+a language for encoding knowledge on Web pages to make it understandable
+to electronic agents. An ontology is the final result of a knowledge engineering process, a
+well–defined schema allows us to unambiguously define concepts and
+relationships over a specific knowledge domain.&lt;/p&gt;
+
+&lt;p&gt;As an ontology is an explicit description qualitatively advanced of
+domain concepts, it can be published and reused for different purposes,
+even if they were not included when it was created. Starting
+from standardized ontologies, it becomes much easier to develop their
+more specific ontology reusing and extending the existing ones.&lt;/p&gt;
+
+&lt;p&gt;Now we will see briefly the steps to follow in the knowledge engineering
+process.&lt;/p&gt;
+
+&lt;h2 id=&quot;domain-definition&quot;&gt;Domain Definition&lt;/h2&gt;
+&lt;p&gt;The starting point is the domain to model.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We have to specifically define the ontology domain.&lt;/li&gt;
+  &lt;li&gt;We have to define what use you intend to do with the ontology.&lt;/li&gt;
+  &lt;li&gt;For what types of questions the information in the ontology should
+provide answers?&lt;/li&gt;
+  &lt;li&gt;Who will use and maintain the ontology?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One of the ways to understand the domain of the ontology is to
+sketch a list of questions that a knowledge base relying on the ontology
+should be able to answer. This task is called &lt;em&gt;competency questions&lt;/em&gt;
+(&lt;em&gt;Gruninger and Fox&lt;/em&gt;) and is useful to understand if the ontology
+includes sufficient information or needs further details. The ontology
+development is an iterative process and there are many correct ways
+to model a domain, so the question list should not necessarily be exhaustive.&lt;/p&gt;
+
+&lt;h2 id=&quot;reusing-existing-ontology&quot;&gt;Reusing Existing Ontology&lt;/h2&gt;
+&lt;p&gt;Rather than reinvent the wheel, a very important aspect in the ontology
+development process is to consider reusing existing ontologies.
+As someone might have already defined an ontology about the same
+topic, it should be better to reuse and extend it for a specific purpose,
+thus saving a lot of hard work, instead of rewriting a new one.
+We can find hundreds of ontologies for any field of application.&lt;/p&gt;
+
+&lt;p&gt;Some of the most famous ontologies in the Semantic Web area are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.dublincore.org/documents/dces/&quot;&gt;&lt;em&gt;Dublin Core&lt;/em&gt;&lt;/a&gt;.
+Dublin core ontology provides a simple and standardized
+set of conventions for describing things online in ways
+that make them easier to find. Dublin Core is widely used to
+describe digital materials such as video, sound, image, text, and
+composite media like Web pages.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://xmlns.com/foaf/spec/&quot;&gt;&lt;em&gt;FOAF&lt;/em&gt;&lt;/a&gt;. The Friend of a Friend (FOAF) Ontology, defined using
+OWL language, is an RDF extension created to define people,
+their activity and their relationships with other people and other
+objects. The FOAF project is creating a Web of machine–readable
+pages describing people, the links between them and the things
+they create and do.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.w3.org/TR/skos-primer/&quot;&gt;SKOS&lt;/a&gt;. Simple Knowledge Organization System Ontology
+is a common data model for sharing and linking knowledge organization
+systems, such as thesauri, taxonomies, classification schemes and subject heading systems,
+share a similar structure, via the Web.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;identifying-concepts&quot;&gt;Identifying Concepts&lt;/h2&gt;
+
+&lt;p&gt;At this point, the goal is to extract and list all terms relative to the
+model. After collecting the most important words, we have to identify
+terms representing concepts, preferring to use nouns, and terms representing
+relations. Moreover, we have to define the hierarchical relation
+between concepts and we can use three approaches:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Top-down:&lt;/strong&gt; we start from the more general concepts to more
+specific ones, up to the desired level of detail;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Bottom-up:&lt;/strong&gt; we start from the more specific concepts and go up
+the hierarchy to the more general concepts;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hybrid:&lt;/strong&gt; we start from the concepts of more immediate detection,
+to specify or abstract them where necessary.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;identifying-properties&quot;&gt;Identifying Properties&lt;/h2&gt;
+&lt;p&gt;Starting from the above same term list we have to identify relationships
+between concepts identified in the previous step. Depending on
+property type, we can identify &lt;em&gt;intrinsic&lt;/em&gt; properties which are those relating
+to the concept content, independently of other things, including
+its context and &lt;em&gt;extrinsic&lt;/em&gt; properties which are those depending on a
+thing’s relationship with other things.
+To correctly model a specific domain, we need to define some ontology
+constraints to ensure instance consistency and validity. The most
+commonly used constraints are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;cardinality constraints&lt;/strong&gt;: to specify the minimun and/or maximum
+relationship cardinality between concepts. For example, each son
+has exactly one mother and one father, and so forth;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;value type constraints&lt;/strong&gt;: to specify the literal value types. For example
+string, number, boolean, date, etc;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;domain constraints&lt;/strong&gt;: to specify what instance types the properties
+accept as subject;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;range constraints&lt;/strong&gt;: to specify what instance types the properties
+accept as object.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Natalya F. Noy and Deborah L. McGuinness&lt;/em&gt; -  Ontology
+ development 101: A guide to creating your first ontology.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Dean Allemang and Jim Hendler&lt;/em&gt; -  SemanticWeb for the Working Ontologist:
+ Effective Modeling in RDFS and OWL. Morgan Kaufmann,
+ 2008&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;M. Gruninger and Fox&lt;/em&gt; -  Methodology for the design and evaluation
+ of ontologies. In In: Proceedings of the Workshop on Basic
+ Ontological Issues in Knowledge Sharing IJCAI, Montreal, 1995.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;John Davies, Dieter Fensel, and Frank van Harmelen&lt;/em&gt; -  Towards the
+Semantic Web, Ontology-driven Knowledge Management. Wiley, 2002&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">The term ontology has its origin in philosophy; in the framework of computer science, it represents a formal representation of knowledge as a set of concepts within a domain, and the relationships between these concepts.</summary></entry><entry><title type="html">Trasporti Amat di Palermo? C’è un Telegram per te! (aggiornato)</title><link href="http://giovanni.pirrotta.it/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/" rel="alternate" type="text/html" title="Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)" /><published>2015-10-09T17:00:00+00:00</published><updated>2015-10-09T17:00:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">&lt;p&gt;In questi ultimi tempi in rete si fa un gran parlare di &lt;strong&gt;BOT&lt;/strong&gt; (abbreviazione di robot), ovvero quei programmi che fanno credere
+all’utente di parlare con una persona reale ma che di fatto sono risponditori automatici utili per fornire servizi vari
+come ad esempio il meteo, news, quiz, sondaggi, giochi, etc.&lt;/p&gt;
+
+&lt;p&gt;Il motivo di tutto questo proliferare di BOT è dovuto principalmente all’apertura di &lt;a href=&quot;https://telegram.org/&quot;&gt;Telegram&lt;/a&gt;,
+nella sua versione 3, al mondo degli sviluppatori. Attraverso l’utilizzo di API ufficiali, infatti, è ora possibile creare,
+gestire e interagire con programmi BOT, personalizzandoli secondo le proprie esigenze.&lt;/p&gt;
+
+&lt;!--More--&gt;
+
+&lt;p&gt;Ho sempre visto un alto potenziale nell’uso di questo tipo di applicazioni e la scelta di Telegram potrebbe rivelarsi
+particolarmente azzeccata in questo senso.&lt;/p&gt;
+
+&lt;p&gt;Esattamente due anni fa anch’io ho iniziato a interessarmi di BOT, ad immaginarmi il mio smartphone come un telecomando da
+pigiare per ottenere specifici servizi: informazioni sui programmi televisivi, previsioni meteo, eventi serali della mia città,
+orari di apertura degli uffici pubblici, etc.
+Ho sviluppato quindi un BOT su &lt;a href=&quot;http://www.twitter.com&quot;&gt;Twitter&lt;/a&gt; grazie al quale, con un semplice
+tweet e una microgrammatica, riuscivo ad inviare richieste ad un’applicazione per ottenere informazioni sui programmi televisivi della serata.
+Descrivo nel dettaglio l’implementazione del progetto, che si chiama per l’appunto &lt;strong&gt;cosaceintv&lt;/strong&gt;,
+in questo &lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/10/04/cosaceintv-la-guida-tv-a-portata-di-tweet/&quot;&gt;post&lt;/a&gt;;
+il sito del progetto è &lt;a href=&quot;http://www.cosaceintv.it&quot;&gt;cosaceintv.it&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tuttavia Twitter non consente di creare  BOT in modo nativo per cui, per raggiungere
+ lo scopo, sono dovuto scendere a compromessi, chiamateli &lt;em&gt;workaround&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Ma con Telegram la situazione cambia&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Vero è che l’app non è diffusa come &lt;a href=&quot;https://www.whatsapp.com/&quot;&gt;WhatsApp&lt;/a&gt;, l’attuale &lt;em&gt;killer application&lt;/em&gt; nel settore
+dell’instant messaging, (molti si aspettavano dei segnali di apertura API da WhatsApp in occasione
+dell’ultima conferenza &lt;a href=&quot;https://fbf8.com/&quot;&gt;F8&lt;/a&gt; di Facebook, ma invece &lt;strong&gt;nisba&lt;/strong&gt;) ma è anche vero che Telegram sta guadagnando sempre più terreno grazie soprattutto a
+scelte aziendali che si stanno rivelando strategicamente vincenti, come ad esempio&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;il rilascio del sorgente in opensource,&lt;/li&gt;
+  &lt;li&gt;l’alta attenzione nei confronti della sicurezza e della privacy degli utenti,&lt;/li&gt;
+  &lt;li&gt;la possibilità di creare chat segrete e autodistruggenti dopo un tempo prestabilito,&lt;/li&gt;
+  &lt;li&gt;un design pulito e gradevole,&lt;/li&gt;
+  &lt;li&gt;la totale gratuita,&lt;/li&gt;
+  &lt;li&gt;l’assenza di pubblicità&lt;/li&gt;
+  &lt;li&gt;ed infine, non meno importante, l’ultima feature aggiunta cioè la possibilità di creare BOT per la gestione di servizi personalizzati e l’interazione in modo programmatico attraverso API.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Più che una semplice app di messaggistica Telegram è di fatto una vera e propria piattaforma e in
+ rete si trovano già applicazioni BOT di qualsiasi tipo; le più popolari si possono trovare
+ al seguente &lt;a href=&quot;http://storebot.me/top/&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Ma anche in Italia cominciano a vedersi progetti interessanti.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A Prato &lt;a href=&quot;https://twitter.com/il_tempe&quot;&gt;Matteo Tempestini&lt;/a&gt; ha sviluppato il &lt;a href=&quot;https://telegram.me/emergenzeprato_bot&quot;&gt;BOT Emergenze Prato&lt;/a&gt;
+per essere aggiornati in tempo reale su condizioni meteo, possibili allerte e segnalazioni.
+A Lecce, utilizzando gli opendata del comune e non solo, &lt;a href=&quot;https://twitter.com/piersoft&quot;&gt;Pier Paolo Paolicelli (piersoft)&lt;/a&gt; ha sviluppato
+[OpenDataLecceBot]((https://telegram.me/opendataleccebot) con il quale è possibile ottenere informazioni su meteo,
+temperatura, qualità dell’aria, orari delle scuole, tariffe aree ZTL, eventi culturali, etc.
+Il servizio trasporti bus &lt;a href=&quot;http://www.tper.it/&quot;&gt;TPER&lt;/a&gt; fornisce informazioni aggiornate sui bus di
+Bologna usando i servizi informativi e gli opendata. (&lt;a href=&quot;https://telegram.me/tperbot&quot;&gt;tperbot&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;p&gt;Incuriosito quindi da tutto questo fermento mi è venuta voglia di rimettermi in gioco anch’io con i BOT e smanettare
+un pò con questa piattaforma.
+Ho accolto, quindi, il suggerimento di &lt;strong&gt;piersoft&lt;/strong&gt; che consigliava di replicare il servizio offerto dalla TPER di Bologna sui trasporti anche per la città di Palermo,
+dato che i dati sui trasporti palermitani sono &lt;a href=&quot;http://www.amat.pa.it/index.php?option=com_content&amp;amp;view=article&amp;amp;id=1090&amp;amp;Itemid=287&quot;&gt;rilasciati&lt;/a&gt;
+dall’ azienda AMAT in formato GTFS con licenza OpenData.&lt;/p&gt;
+
+&lt;p&gt;La specifica &lt;a href=&quot;https://developers.google.com/transit/gtfs/reference&quot;&gt;GTFS&lt;/a&gt; (General Transit Feed Specification) è stata sviluppata
+da Google e definisce un formato comune per rappresentare informazioni orarie di un sistema di trasporti
+(bus, metro, treno, etc) associandole ad informazioni geografiche.&lt;/p&gt;
+
+&lt;p&gt;La specifica struttura i dati organizzandoli in un insieme di file CSV.&lt;/p&gt;
+
+&lt;p&gt;I più importanti sono i seguenti:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;agency&lt;/strong&gt; - informazioni inerenti l’azienda che gestisce i trasporti;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;routes&lt;/strong&gt; - informazioni sulle linee dei trasporti;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;trips&lt;/strong&gt; - informazioni inerenti le corse per ciascuna linea;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;stops&lt;/strong&gt; - le fermate geolocalizzate;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;stop_times&lt;/strong&gt; - l’orario di arrivo e partenza e la sequenza per ogni corsa in ciascuna fermata;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;calendar&lt;/strong&gt; - periodo del servizio trasporti su base settimanale;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;calendar_dates&lt;/strong&gt; - date in cui vi sono delle eccezioni rispetto a quanto descritto
+in &lt;em&gt;calendar&lt;/em&gt; (ad. es. feste)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Per la specifica completa si rimanda alla &lt;a href=&quot;https://developers.google.com/transit/gtfs/reference&quot;&gt;pagina ufficiale GTFS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Quindi mettiamoci al lavoro e scarichiamo i dati dal sito AMAT di Palermo.&lt;/p&gt;
+
+&lt;p&gt;###Ma cosa vedono i miei occhi???&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/crying-meme.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;~~ Dalla pagina AMAT Palermo, sezione OpenData, i dati GTFS risultano &lt;strong&gt;aggiornati al 2014&lt;/strong&gt;
+purtroppo!~~&lt;/p&gt;
+
+&lt;p&gt;~~ In un settore come quello dei trasporti, il rilascio continuo di dati aggiornati aperti
+e riutilizzabili rappresenta una condizione necessaria per lo sviluppo di qualsiasi
+applicazione che voglia essere realmente utile ed efficace per cittadini.~~&lt;/p&gt;
+
+&lt;p&gt;** Ho preso una cantonata, dopo aver pubblicato il post il buon &lt;a href=&quot;http://twitter.com/aborruso&quot;&gt;Andrea Borruso&lt;/a&gt; mi ha fatto notare
+che in rete ci sono i dati GTFS dell’azienda AMAT relativi all’anno 2015 e la pagina di riferimento è quella del Comune
+di Palermo, non quella dell’Azienda AMAT. Grazie Andrea! **&lt;/p&gt;
+
+&lt;p&gt;Ad agosto ho sviluppato una demo per spiegare come riutilizzare i dati relativi alle tariffe orarie delle ZTL
+a Messina, aumentandone di fatto il valore, se questi fossero stati rilasciati in modalità OpenData dall’azienda ATM.
+Ne parlo in questo &lt;a href=&quot;http://giovanni.pirrotta.it/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/&quot;&gt;post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Allo stesso modo spiegherò in questo post come realizzare un BOT su Telegram in grado di fornire informazioni sui
+trasporti AMAT di Palermo, un modo intelligente di riuso dei dati aperti ~~ che possa servire per &lt;em&gt;punzolare&lt;/em&gt;
+l’azienda AMAT al rilascio dei dati aggiornati.~~&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mettiamoci al lavoro!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;~~ Per prima cosa scarico il file zippato GTFS dalla &lt;a href=&quot;http://www.amat.pa.it/index.php?option=com_content&amp;amp;view=article&amp;amp;id=1090&amp;amp;Itemid=287&quot;&gt;pagina&lt;/a&gt; OpenData AMAT Palermo.~~&lt;/p&gt;
+
+&lt;p&gt;Per prima cosa scarico il file zippato GTFS dalla &lt;a href=&quot;http://www.comune.palermo.it/opendata_dld.php?id=349&quot;&gt;pagina&lt;/a&gt; OpenData del Comune di  Palermo.&lt;/p&gt;
+
+&lt;p&gt;Decido di caricare tutti i file CSV all’interno di un dabatase Mysql, per cui inizio a cercare in rete degli
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Data_definition_language&quot;&gt;statement DDL&lt;/a&gt; in modo da risparmiarmi il creare tutto a manina.
+Uno potrebbe pensare che, essendo GTFS un formato ben definito, uno schema DDL vale l’altro.&lt;/p&gt;
+
+&lt;p&gt;###Errore!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Quelli che seguono sono alcuni consigli che vi potrebbero farvi risparmiare tempo e mal di testa quando decidete di creare
+uno schema GTFS trovato in rete.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;####REGOLE D’ORO&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Analizzare &lt;strong&gt;sempre&lt;/strong&gt; e &lt;strong&gt;bene&lt;/strong&gt; la qualità dei dati da importare &lt;strong&gt;prima&lt;/strong&gt; di importarli&lt;/li&gt;
+  &lt;li&gt;GOTO 1 ;-)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;La maggior parte dei campi &lt;strong&gt;id&lt;/strong&gt; degli schemi che ho trovano in rete è in formato intero
+mentre nella maggior parte dei record dei dati GTFS AMAT il campo &lt;strong&gt;id&lt;/strong&gt; contiene anche valori
+alfanumerici, ergo trasformate tutti gli id da &lt;strong&gt;int&lt;/strong&gt; a &lt;strong&gt;varchar&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Per importare i dati automaticamente ho usato uno script in python scaricato da github.
+Trovate un fork sul mio repository github in quanto lo script conteneva un bug relativo al
+caricamento di codici
+alfanumerici contenenti il carattere &lt;strong&gt;E&lt;/strong&gt;. Lo script erroneamente parsava i codici contenenti
+il carattere &lt;strong&gt;E&lt;/strong&gt; come formato esadecimale considerandoli interi invece di stringa.
+Trovate la versione fixata nel mio &lt;a href=&quot;https://github.com/gpirrotta/py-gtfs-mysql&quot;&gt;repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A questo punto iniziamo a scrivere un pò di codice. La documentazione di riferimento per
+creare BOT con Telegram è fatta benissimo e la trovate al seguente
+&lt;a href=&quot;https://core.telegram.org/bots/api&quot;&gt;link&lt;/a&gt;.
+Per lo sviluppo del codice ho usato questa &lt;a href=&quot;https://github.com/irazasyed/telegram-bot-sdk&quot;&gt;libreria PHP&lt;/a&gt;
+ a sua volta descritta in modo molto chiaro &lt;a href=&quot;https://irazasyed.github.io/telegram-bot-sdk/&quot;&gt;qui&lt;/a&gt;. La libreria è stata sviluppata per il framework PHP
+&lt;a href=&quot;http://laravel.com/&quot;&gt;Laravel&lt;/a&gt;
+ma può essere utilizzata anche in modalità standalone.&lt;/p&gt;
+
+&lt;p&gt;La prima cosa da fare è creare il bot. Per fare questo bisogna aggiungere sul proprio
+client Telegram l’utente &lt;strong&gt;@BotFather&lt;/strong&gt; e inviargli il seguente comando &lt;strong&gt;/newbot&lt;/strong&gt;.
+Dopo aver risposto ad alcune domande, ad esempio nome ed username del BOT, viene generato
+un &lt;strong&gt;TOKEN&lt;/strong&gt; che rappresenta il ponte di collegamento tra il nostro software e Telegram.
+Per maggiori dettagli sulla creazione dei bot fate riferimento alla documentazione ufficiale.&lt;/p&gt;
+
+&lt;p&gt;Per poter interagire con Telegram scriviamo quindi:&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $telegram = new Api('BOT TOKEN');
+    $response = $telegram-&amp;gt;getMe();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Nella &lt;em&gt;response&lt;/em&gt; troveremo informazioni sul bot creato.&lt;/p&gt;
+
+&lt;p&gt;Per poter inviare messaggi all’utente bisognerà indicare, oltre al messaggio, anche l’&lt;strong&gt;ID&lt;/strong&gt; della chat in modo che
+solo l’utente che ha fatto la richiesta possa ricevere il messaggio di ritorno.&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;  Telegram&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;$response = $telegram-&amp;gt;sendMessage('CHAT_ID', 'Hello World');&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Oltre a messaggi di testo il nostro BOT può rispondere anche con immagini, audio, video, allegati, etc.:&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$response = $telegram-&amp;gt;sendPhoto('CHAT_ID', 'path/to/photo.jpg', 'Some caption');
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ma come fa l’utente a chiedere le informazioni al BOT? Inviando dei &lt;strong&gt;comandi&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Per creare un comando, usando la libreria PHP, è necessario estendere la classe &lt;strong&gt;Command&lt;/strong&gt; e implementare il metodo
+ &lt;strong&gt;handle&lt;/strong&gt;.
+Creare un comando è un’operazione veramente banale, è infatti necessario inizializzare semplicemente la variabile &lt;em&gt;name&lt;/em&gt;
+con il nome del comando che si vuole creare. Nell’esempio si sta creando il comando &lt;em&gt;/start&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Nell’esempio che segue, digitando da Telegram il comando &lt;em&gt;/start&lt;/em&gt; il BOT risponderà con &lt;strong&gt;Hello World!&lt;/strong&gt;;&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Telegram\Bot\Commands\Command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StartCommand&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Command&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$description&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Start Command to get you started&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;replyWithMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Hello World!'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Non mi soffermerò oltre su questa libreria perchè, come già detto, è presente una documentazione completa ed esaustiva.&lt;/p&gt;
+
+&lt;p&gt;Vediamo adesso le feature più importanti che dovrà avere il nostro BOT.
+Verranno descritte le più importanti scelte adottate per la logica applicativa.
+Si tratta essenzialmente di recuperare informazioni dal database e di formattare l’output, ci soffermeremo quindi
+solo sulle query &lt;em&gt;SQL&lt;/em&gt; più importanti.&lt;/p&gt;
+
+&lt;p&gt;La prima versione di &lt;strong&gt;amatPABot&lt;/strong&gt;, questo il nome del BOT, implementa due funzionalità:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Orario Linee&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fermata più vicina&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/amat-bot-2.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;###Orario Linee&lt;/p&gt;
+
+&lt;p&gt;Le informazioni sono tutte presenti nel db per cui all’interno del metodo &lt;em&gt;handle&lt;/em&gt; viene
+gestita la logica per estrarre le informazioni relative alle linee AMAT di Palermo.&lt;/p&gt;
+
+&lt;p&gt;La query SQL utilizzata per mostrare le linee:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;  SQL&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;route_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;route_long_name&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;routes&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;ORDER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;route_id&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;asc&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/amat-bot-3.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A questo punto viene mostrato l’elenco delle linee AMAT. L’utente può scegliere la linea
+di cui vuole sapere gli orari. Una volta scelta la linea un nuovo comando recupererà
+il nome delle fermate della linea (Andata e ritorno) e gli orari relativi.&lt;/p&gt;
+
+&lt;p&gt;Per recuperare gli orari delle corse uso la seguente query SQL, passandogli l’id della linea e l’id del servizio, cioè
+del periodo di riferimento nel calendario.&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;  SQL&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop_times&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trips&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop_times&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trip_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trips&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trip_id&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;and&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;       &lt;span class=&quot;n&quot;&gt;trips&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;route_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;route_id&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;service_id&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;GROUP&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop_times&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trip_id&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;A questo punto l’output ottenuto è il seguente:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/amat-bot-4.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Passiamo adesso all’altra funzionalità.&lt;/p&gt;
+
+&lt;p&gt;###Fermata più vicina&lt;/p&gt;
+
+&lt;p&gt;Per ottenere informazioni sulla fermata più vicina  dobbiamo per prima cosa cliccare sulla graffetta e inviare la
+nostra posizione geografica.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/graffetta-amat.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posizione-amat.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Fatto ciò un comando calcolerà le 5 fermate più vicine recuperandole dalla tabella &lt;em&gt;stops&lt;/em&gt; eseguendo la seguente query:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;  SQL&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop_lat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop_lon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6371&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;acos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radians&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;latitude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;cos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radians&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop_lat&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;cos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radians&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;longitude&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;5&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;radians&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop_lon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;6&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;              &lt;span class=&quot;n&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radians&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;latitude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;7&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;              &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radians&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop_lat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;8&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stops&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;9&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;HAVING&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;250000&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;10&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;ORDER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;limit&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Il valore &lt;em&gt;6371&lt;/em&gt; è la lunghezza del raggio della terra. La formula utilizzata calcola la distanza in &lt;strong&gt;KM&lt;/strong&gt;
+tra due punti espressi in latitudine e longitudine. Si tratta di una variante dell’&lt;em&gt;Haversine Formula&lt;/em&gt;,
+per maggiori informazioni fate riferimento &lt;a href=&quot;https://en.wikipedia.org/wiki/Haversine_formula&quot;&gt;qui&lt;/a&gt; e
+&lt;a href=&quot;http://www.codecodex.com/wiki/Calculate_distance_between_two_points_on_a_globe#Haversine_Formula&quot;&gt;qui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Per ogni fermata recupero anche il nome delle linee passanti.&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt;  SQL&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;route_id&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;2&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stops&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop_times&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trips&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;3&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stops&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop_times&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop_id&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;4&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;k&quot;&gt;AND&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop_times&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trip_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trips&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trip_id&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;5&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;k&quot;&gt;AND&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stops&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop_id&lt;/span&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div data-line=&quot;6&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;    &lt;span class=&quot;k&quot;&gt;GROUP&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;route_id&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;Vengono mostrate a video le 5 fermate più vicine con le relative linee passanti.
+La prima fermata viene visualizzata su una mappa (si lo so, è Google Maps e non OpenStreetMap; nativamente Telegram usa le
+mappe di Google per inviare al client le posizioni geografiche; per usare OSM si potrebbero, ad esempio, creare al volo
+immagini statiche e inviarle all’utente per la posizione delle fermate)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/risposta-fermate.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Per il &lt;em&gt;deploy&lt;/em&gt; del BOT ho usato &lt;a href=&quot;w.cloudflare.com/ssl&quot;&gt;Cloudflare&lt;/a&gt; per avere una
+connessione SSL, condizione necessaria per poter utilizzare il &lt;a href=&quot;https://core.telegram.org/bots/api#setwebhook&quot;&gt;WebHook&lt;/a&gt;
+in Telegram, invece del metodo manuale &lt;a href=&quot;https://core.telegram.org/bots/api#getting-updates&quot;&gt;getUpdates&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;###Ricapitolando&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;del&gt;I dati mostrati dal BOT non sono aggiornati al 2015 ma all’ultimo trimestre 2014;&lt;/del&gt;&lt;/li&gt;
+  &lt;li&gt;Il BOT è funzionante con i dati aggiornati al 2015;&lt;/li&gt;
+  &lt;li&gt;Sulla correttezza e consistenza dei dati non garantisco. Non prendetevela con me
+per eventuali inesattezze e/o sbagli :-)&lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;E’ possibile aggiungere tante altre funzionalità ma la vera &lt;strong&gt;mission&lt;/strong&gt; di questa prima versione è costringere
+l’AMAT di Palermo al rilascio dei dati aggiornati al 2015.&lt;/del&gt;&lt;/li&gt;
+  &lt;li&gt;Il BOT sviluppato è &lt;em&gt;ancora&lt;/em&gt; una demo. E’ possibile aggiungere altre funzionalità, il limite è la fantasia.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Per interagire con il bot dovete aggiungere al vostro client Telegram il contatto: &lt;a href=&quot;https://telegram.me/amatpabot&quot;&gt;@amatPABot&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://telegram.me/amatpabot&quot;&gt;&lt;img src=&quot;/images/AMATBOTlogo.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Il codice sorgente lo trovate &lt;a href=&quot;https://github.com/gpirrotta/amat-pa-bot&quot;&gt;qui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Attenzione, è’ una versione ancora poco stabile, non pronta per andare in produzione.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;~~ I dati non sono aggiornati quindi, &lt;em&gt;in questo momento&lt;/em&gt;, il BOT non è molto utile; però,~~ Se questo lavoro vi è
+piaciuto un pò, potreste contribuire &lt;del&gt;alla causa aiutandomi a fare un pò di tam-tam mediatico sui social network.&lt;/del&gt;
+a farlo conoscere in giro sui social, grazie.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Twittami&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/share?url=https://telegram.me/amatpabot&amp;amp;text=@gpirrotta+AmatPABot+-+AMAT+Palermo+BOT+Informazioni+trasporti+pubblici&quot;&gt;&lt;img src=&quot;/images/twitter.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Idee, critiche e suggerimenti sono benvenuti.&lt;/p&gt;
+
+&lt;p&gt;That’s all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">In questi ultimi tempi in rete si fa un gran parlare di BOT (abbreviazione di robot), ovvero quei programmi che fanno credere all’utente di parlare con una persona reale ma che di fatto sono risponditori automatici utili per fornire servizi vari come ad esempio il meteo, news, quiz, sondaggi, giochi, etc. Il motivo di tutto questo proliferare di BOT è dovuto principalmente all’apertura di Telegram, nella sua versione 3, al mondo degli sviluppatori. Attraverso l’utilizzo di API ufficiali, infatti, è ora possibile creare, gestire e interagire con programmi BOT, personalizzandoli secondo le proprie esigenze.</summary></entry><entry><title type="html">Parking In Messina. quando la ZTL incontra gli Open Data</title><link href="http://giovanni.pirrotta.it/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/" rel="alternate" type="text/html" title="Parking In Messina. quando la ZTL incontra gli Open Data" /><published>2015-08-12T06:00:00+00:00</published><updated>2015-08-12T06:00:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/">&lt;p&gt;Metti che è da una vita che non aggiorno questo blog, metti che sono sostenitore da
+tanti anni degli &lt;a href=&quot;https://it.wikipedia.org/wiki/Dati_aperti&quot; target=&quot;blank&quot;&gt;Open Data&lt;/a&gt; e di tutto ciò che gli gira attorno, metti che finalmente sono in ferie e ho
+qualche giorno libero da dedicare a qualche idea che mi porto dietro da qualche mese, bene, metti insieme tutto questo :-)&lt;/p&gt;
+
+&lt;p&gt;Ma partiamo dall’inizio, a circa un mese fa.&lt;/p&gt;
+
+&lt;!--More--&gt;
+
+&lt;p&gt;Lo scorso &lt;strong&gt;10-11-12 luglio&lt;/strong&gt; si è svolta a Patti (ME) l’&lt;a href=&quot;http://www.lostrettodigitale.org/summer-school-su-opendata-il-programma/&quot; target=&quot;blank&quot;&gt;Open Data Summer School&lt;/a&gt;,
+organizzata dallo &lt;a href=&quot;http://www.lostrettodigitale.org/&quot; target=&quot;blank&quot;&gt;Stretto Digitale &lt;/a&gt;
+nei locali del &lt;a href=&quot;https://caffegalante.wordpress.com/&quot; target=&quot;blank&quot;&gt;caffè Galante&lt;/a&gt;.
+Ovviamente non potevo lasciarmi scappare un’occasione del genere e nei tre giorni ho avuto l’opportunità di conoscere
+pilastri del movimento Open Data italiani come &lt;a href=&quot;https://twitter.com/piersoft&quot; target=&quot;blank&quot;&gt;Pier Francesco Paolicelli (Piersoft)&lt;/a&gt;,
+&lt;a href=&quot;https://twitter.com/aborruso&quot; target=&quot;blank&quot;&gt;Andrea Borruso&lt;/a&gt; e
+&lt;a href=&quot;https://twitter.com/nelsonmau&quot; target=&quot;blank&quot;&gt;Andrea Nelson Mauro&lt;/a&gt;.
+Sono stati giorni intensissimi nei quali ciascuno dei relatori ha condiviso la propria esperienza e la propria passione,
+mostrando esempi concreti di come sia possibile riusare i dati aperti in altri contesti, per accrescerne il valore originale,
+scoprendo ad esempio relazioni nuove dei dati con altre informazioni apparentemente sconnesse.
+Tutto questo servendosi di mappe, tool per estrarre e/o convertire pdf, per creare grafici, diagrammi e infografiche.
+Per un resoconto dettagliato dell’evento invito a leggere l’ottimo
+&lt;a href=&quot;https://caffegalante.wordpress.com/2015/08/10/la-summer-school-sugli-open-data-de-lo-stretto-digitale/&quot; target=&quot;blank&quot;&gt;post&lt;/a&gt; di
+&lt;a href=&quot;https://twitter.com/picomiles&quot; target=&quot;blank&quot;&gt;Nino Galante&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In passato ho avuto modo di lavorare con gli Open Data sia per motivi di ricerca in ambito Semantic Web
+(&lt;a target=&quot;blank&quot; href=&quot;http://www.linkedopendata.it/datasets/loius-linking-italian-university-statistics-project&quot;&gt;LOIUS Platform&lt;/a&gt;),
+sia per progetti personali (&lt;a target=&quot;blank&quot; href=&quot;http://giovanni.pirrotta.it/blog/2013/07/22/openalbopretorio-apriti-sesamo/&quot;&gt; OpenAlboPretorio&lt;/a&gt;,
+&lt;a target=&quot;blank&quot; href=&quot;http://giovanni.pirrotta.it/blog/2013/08/28/opengazzettaufficiale-la-legge-e-open-per-tutti/&quot;&gt;OpenGazzettaUfficiale&lt;/a&gt; - offline -,
+&lt;a target=&quot;blank&quot; href=&quot;https://github.com/gpirrotta/opensanita&quot;&gt;OpenSanita&lt;/a&gt;).
+Secondo i principi &lt;strong&gt;Open Data&lt;/strong&gt; i dati andrebbero trattati come &lt;strong&gt;beni comuni&lt;/strong&gt;, in quanto appartenenti al genere umano.
+Per definirsi &lt;strong&gt;Open Data&lt;/strong&gt; i dati&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;devono essere disponibili secondo i termini di una licenza che ne permetta l’utilizzo da parte di chiunque, anche
+ per finalità commerciali, in formato disaggregato;&lt;/li&gt;
+  &lt;li&gt;devono essere accessibili attraverso le tecnologie dell’informazione in formati aperti e in modo automatico da parte di programmi;&lt;/li&gt;
+  &lt;li&gt;devono essere resi disponibili gratuitamente.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Durante la summer school i relatori hanno presentato svariati esempi di mashup di dati,
+utilizzando diversi tool, script e programmi, integrandoli maggiormente con le mappe di &lt;a target=&quot;blank&quot; href=&quot;http://www.openstreetmap.org/&quot;&gt;OpenStreetMap &lt;/a&gt;
+(OSM), progetto collaborativo finalizzato a creare mappe a contenuto libero del mondo.
+Il progetto rappresenta una raccolta mondiale di dati geografici avente come scopo principale la creazione di mappe e cartografie.&lt;/p&gt;
+
+&lt;p&gt;Sono rimasto particolarmente colpito quando Piersoft, a proposito di Smart Cities e Open Data, ha fatto cenno
+ad una APP per smartphone, sviluppata non ricordo per quale città, in grado di calcolare la tariffa oraria per i
+parcheggi in zona ZTL, in base alla posizione GPS dello smartphone. Mi sono portato a casa quell’idea e il desiderio
+di sperimentare qualcosa del genere anche per la città in cui lavoro, ovvero Messina.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/challenge_accepted.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Andando sul sito dell’&lt;a href=&quot;http://www.atmmessina.it&quot; target=&quot;blank&quot;&gt;ATM Messina&lt;/a&gt; le uniche informazioni relative
+ alle tariffe orarie dei parcheggi in ZTL sono presenti in questa &lt;a href=&quot;http://www.atmmessina.it/altri.asp?id=5&quot; target=&quot;blank&quot;&gt;pagina&lt;/a&gt;.
+Nella stessa pagina è presente anche la piantina dei lotti ZTL di seguito mostrata.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/piantinaZTL.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Primi guai all’orizzonte.&lt;/strong&gt; In calce alla &lt;a href=&quot;http://www.atmmessina.it/altri.asp?id=5&quot; target=&quot;blank&quot;&gt;pagina del sito &lt;/a&gt;
+è riportato il seguente disclaimer:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Copyright C 2015 - ATM MESSINA -   E' vietata la riproduzione anche parziale.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/meme-why.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I dati quindi non possono essere usati neanche in modo parziale. In realtà l’ATM, essendo un &lt;strong&gt;ente strumentale&lt;/strong&gt; del comune,
+&lt;em&gt;dovrebbe&lt;/em&gt;  rilasciare i dati con licenza aperta considerato che si tratta di dati pubblici di un ente legato ad una pubblica
+amministrazione, cioè il comune di Messina.&lt;/p&gt;
+
+&lt;p&gt;L’ATM dovrebbe seguire l’esempio di altre municipalizzate italiane  (come ad esempio del comune di &lt;a href=&quot;http://www.agenziamobilita.roma.it/it/progetti/open-data/&quot; target=&quot;blank&quot;&gt;Roma&lt;/a&gt;),
+che hanno iniziato ad aprire agli sviluppatori i propri dati su traffico e mobilità, per incentivare lo sviluppo di app
+in grado di trasformare le città e renderle  più &lt;strong&gt;Smart&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tuttavia, immaginiamo per un attimo che non esista nessun copyright su questi dati, anzi immaginiamo che i dati siano rilasciati
+in modalità &lt;strong&gt;Open Data&lt;/strong&gt;.  Cosa potremmo farci? In che senso i dati aperti possono essere riusati in contesti diversi
+da quello di origine aumentandone il valore originale? In che senso i dati aperti possono fare da volano allo sviluppo di attività
+imprenditoriali private?&lt;/p&gt;
+
+&lt;p&gt;Per rispondere a tutte queste domande vedremo in questo post come implementare un ipotetico
+scenario attraverso lo sviluppo di un’applicazione reale. Scopo di questo
+esperimento è rafforzare la tesi secondo cui la pubblica amministrazione, nel rilasciare dati in modalità &lt;strong&gt;Open Data&lt;/strong&gt;
+promuove l’innovazione permanente favorendo lo sviluppo economico del terzo millennio.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;
+&lt;em&gt;L’intero progetto, chiamato “PARKING IN MESSINA”, è da intendersi volutamente a carattere DIDATTICO, SPERIMENTALE e
+assolutamente NON A SCOPO DI LUCRO.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Cominciamo allora!&lt;/p&gt;
+
+&lt;p&gt;La prima cosa che decido di fare è disegnare su openstreetmap i lotti ZTL della città di Messina.
+Per fare questo scelgo di usare il tool &lt;a href=&quot;http://umap.openstreetmap.fr/it/&quot; target=&quot;blank&quot;&gt;UMAP&lt;/a&gt;,
+un software libero in grado di creare mappe che fanno uso di OpenStreetMap come sfondo. Con UMAP è possibile aggiungere alla
+mappa punti di interesse, marcatori, linee, poligoni, colori, icone. E’ possibile inoltre sia importare che esportare i dati nei
+ formati più conosciuti (geojson, gpx, kml, osm, etc).&lt;/p&gt;
+
+&lt;p&gt;La cosa più disarmante di UMAP è la facilità di utilizzo, praticamente a portata di bambino. Per raggiungere il mio obiettivo
+ho disegnato i poligoni così come appaiono nella piantina ZTL, specificando per ciascun poligono le informazioni relative
+alla tariffa oraria del lotto.
+Prova a cliccare su uno dei lotti colorati.&lt;/p&gt;
+
+&lt;h2 id=&quot;messina-piano-tariffario-ztl&quot;&gt;Messina Piano Tariffario ZTL&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://umap.openstreetmap.fr/it/map/messina-piano-tariffario-aree-ztl_49528&quot;&gt;Visualliza schermo intero&lt;/a&gt;&amp;lt;/p&amp;gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;700px&quot; frameborder=&quot;0&quot; src=&quot;http://umap.openstreetmap.fr/it/map/messina-piano-tariffario-aree-ztl_49528?scaleControl=false&amp;amp;miniMap=false&amp;amp;scrollWheelZoom=false&amp;amp;zoomControl=true&amp;amp;allowEdit=false&amp;amp;moreControl=true&amp;amp;datalayersControl=true&amp;amp;onLoadPanel=undefined&amp;amp;captionBar=false&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;A questo punto posso entrare in ZTL a Messina, aprire la mappa appena creata con il mio smartphone,
+selezionare il lotto nel quale si trova la mia autovettura e magicamente  apparirà la tariffa oraria da pagare.&lt;/p&gt;
+
+&lt;p&gt;Tutti felici, tutti contenti, arrivederci e grazie?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/lol.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ma-anche-no&quot;&gt;Ma anche no!&lt;/h2&gt;
+
+&lt;p&gt;Quando parcheggio la mia autovettura in un’area dove non conosco la tariffa ZTL, la mappa appena creata mi evita di dover
+andare per strada alla ricerca del cartello stradale indicante la tariffa vigente in quella via, ma mi costringe a
+selezionare manualmente la regione colorata nella mappa.
+Per alcuni potrebbe bastare questo, ma dato che sono una persona moooolto &lt;strong&gt;pigra&lt;/strong&gt;, come del resto tanti informatici, il dover
+pensare a dove mi trovo e selezionare l’area colorata nella mappa rappresenta uno spreco di tempo imperdonabile.
+Deleghiamo all’applicazione il lavoro sporco!&lt;/p&gt;
+
+&lt;p&gt;Per eliminare questo spreco è necessario quindi:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;far capire all’applicazione la posizione del mio dispositivo mobile e&lt;/li&gt;
+  &lt;li&gt;se sono all’interno della ZTL di Messina,&lt;/li&gt;
+  &lt;li&gt;l’applicazione deve restituirmi le tariffe vigenti per quella via.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Procediamo per gradi.&lt;/p&gt;
+&lt;h4 id=&quot;far-capire-allapplicazione-la-posizione-del-mio-dispositivo&quot;&gt;Far capire all’applicazione la posizione del mio dispositivo&lt;/h4&gt;
+
+&lt;p&gt;Nei dispositivi con GPS, grazie alle API HTML5 di geolocalizzazione, è possibile ottenere la posizione di un utente, previo consenso dello stesso.
+La funzionalità è supportata a partire dalle seguenti versioni di browser:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/geolocation-html5-browser-support.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Il metodo da invocare per ottenere la posizione dell’utente è &lt;code class=&quot;highlighter-rouge&quot;&gt;getCurrentPosition()&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    var x = document.getElementById(&quot;demo&quot;);
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = &quot;Geolocation is not supported by this browser.&quot;;
+        }
+    }
+    function showPosition(position) {
+        x.innerHTML = &quot;Latitude: &quot; + position.coords.latitude +
+        &quot;&amp;lt;br&amp;gt;Longitude: &quot; + position.coords.longitude;
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;In questo modo otteniamo la latitudine e la longitudine della posizione in cui si trova il dispositivo.&lt;/p&gt;
+
+&lt;h4 id=&quot;se-sono-allinterno-della-ztl-di-messina&quot;&gt;Se sono all’interno della ZTL di Messina&lt;/h4&gt;
+&lt;p&gt;Qui risiede il &lt;strong&gt;core&lt;/strong&gt; dell’applicazione. Anche qui procediamo per gradi.&lt;/p&gt;
+
+&lt;p&gt;Prima di addentrarci nel caso specifico della ZTL di Messina dobbiamo astrarre l’obiettivo generalizzando il problema.
+L’obiettivo è quindi adesso: dato un punto geografico qualsiasi, espresso tramite una latitudine e una longitudine,
+stabilire se si trova all’interno di un poligono chiuso, espresso come insieme di punti geografici.&lt;/p&gt;
+
+&lt;p&gt;Per la risoluzione di questo problema esistono in letteratura diversi &lt;a target=&quot;blank&quot; href=&quot;http://paulbourke.net/geometry/polygonmesh/&quot;&gt;algoritmi geometrici&lt;/a&gt;.
+In questo contesto ho scelto di implementare in PHP la soluzione presentata da Philippe Reverdy.
+Sinteticamente, l’algoritmo calcola la somma degli angoli esistenti tra il punto da valutare e ogni coppia di punti costituenti il poligono.
+Se la somma è 2*pigreco il punto è &lt;strong&gt;interno&lt;/strong&gt; al poligono, se la somma è 0 il punto è &lt;strong&gt;esterno&lt;/strong&gt; al poligono.
+Per maggiori informazioni fate riferimento alla pagina sopra menzionata.&lt;/p&gt;
+
+&lt;p&gt;Ho rilasciato la libreria &lt;code class=&quot;highlighter-rouge&quot;&gt;GPSPolygon&lt;/code&gt; sul mio repository &lt;a href=&quot;https://github.com/gpirrotta/gpspolygon&quot; target=&quot;blank&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ho preparato anche una API Demo da invocare nel seguente modo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-http://www.pirrotta.it/gps-polygon-api/isPointInsidePolygon.php&quot;&gt;
+**Parameters**
+
+    latitude (ex: latitude=38.19396)
+    longitude (ex: longitude=15.55599)
+    polygon (ex: polygon=38.197344511074,15.556431412697;38.197129504006,15.557370185852;38.192909334811,15.55691421032;38.193706168703,15.554140806198;)
+
+Facciamo un esempio, consideriamo il poligono avente come vertici i seguenti punti geografici:
+
+    38.197344511074,15.556431412697;
+    38.197129504006,15.557370185852;
+    38.192909334811,15.55691421032;
+    38.193706168703,15.554140806198;
+    38.197344511074,15.556431412697
+
+La mappa di riferimento è la città di Messina e il poligono identificato è delimitato dalle seguenti vie:
+**viale Boccetta - Corso Cavour - Via Consolato del Mare - Via Garibaldi**.
+
+![Image](/images/messina-polygon.jpg){: .center-image }
+
+Vogliamo sapere se piazza Unione Europea, identificata con ```latitudine=38.19396``` e ```longitudine=15.55599``` si trova
+all'interno del sopramenzionato poligono.
+
+Questa l'&amp;lt;a href=&quot;http://www.pirrotta.it/gps-polygon-api/isPointInsidePolygon.php?latitude=38.19396&amp;amp;longitude=15.55599&amp;amp;polygon=38.197344511074,15.556431412697;38.197129504006,15.557370185852;38.192909334811,15.55691421032;38.193706168703,15.554140806198;38.197344511074,15.556431412697&quot; target=&quot;blank&quot;&amp;gt;URL DEMO&amp;lt;/a&amp;gt;
+da invocare e questo il risultato:
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;{
+    info: {
+        name: “GPSPolygon tool”,
+        source: “https://github.com/gpirrotta/gpspolygon”,
+        license: “MIT License - http://opensource.org/licenses/MIT”,
+        author: {
+            name: “Giovanni Pirrotta”,
+            email: “giovanni.pirrotta@gmail.com”
+        }
+    },
+    service: {
+        point: “38.19396,15.55599”,
+        polygon: [
+                [
+                “38.197344511074”,
+                “15.556431412697”
+                ],
+                [
+                “38.197129504006”,
+                “15.557370185852”
+                ],
+                [
+                “38.192909334811”,
+                “15.55691421032”
+                ],
+                [
+                “38.193706168703”,
+                “15.554140806198”
+                ],
+                [
+                “38.197344511074”,
+                “15.556431412697”
+                ]
+                ],
+        answer: “YES”
+    }
+}&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+La risposta **YES** del file JSON ci indica che piazza Unione Europea si trova dentro il poligono, così come possiamo
+vedere anche nella figura sottostante.
+
+![Image](/images/inside-polygon.jpg){: .center-image }
+
+Per maggiori informazioni e altri esempi relativi alle  **GPSPolygon DEMO API** potete fare riferimento alla
+&amp;lt;a href=&quot;http://www.pirrotta.it/gps-polygon-api/&quot; target=&quot;blank&quot;&amp;gt;pagina&amp;lt;/a&amp;gt; del progetto.
+
+Ritorniamo adesso al nostro problema originale.
+Da una parte abbiamo l'algoritmo che fa al caso nostro. Il punto geografico da valutare ci viene fornito dal servizio API
+di geolocalizzazione HTML5, tramite Javascript.
+Da dove prendiamo invece l'insieme delle coordinate geografiche dei poligoni della ZTL di Messina?
+
+La risposta è, ovviamente, dalla mappa creata in precedenza con il tool UMAP. (Ricordate quando  ho detto che era
+possibile importare/esportare i dati di UMAP nei formati più comuni?).
+
+
+![Image](/images/umap-export-json.jpg){: .center-image }
+
+A questo punto abbiamo il file &amp;lt;a  href=&quot;/ext/ztl.json&quot; target=&quot;blank&quot;&amp;gt;GEOJSON&amp;lt;/a&amp;gt;
+con tutte le coordinate geografiche delle aree ZTL disegnate con UMAP, quindi abbiamo i dati per costruirci i poligoni.
+
+Andiamo avanti!
+
+Dell'utente abbiamo detto di avere la posizione espressa sotto forma di coordinate geografiche, nulla però sappiamo sul nome
+della via in cui si trova l'utente stesso. Per ottenere questa informazione decido di usare la libreria in
+PHP &amp;lt;a href=&quot;http://geocoder-php.org/Geocoder/&quot; target=&quot;blank&quot;&amp;gt;**Geocoder**&amp;lt;/a&amp;gt;
+sviluppata da &amp;lt;a href=&quot;http://williamdurand.fr/&quot; target=&quot;blank&quot;&amp;gt;William Durand &amp;lt;/a&amp;gt;.
+A partire da una località qualsiasi la libreria restituisce le rispettive coordinate geografiche e viceversa,
+consentendo  di scegliere &amp;lt;a href=&quot;http://geocoder-php.org/Geocoder/#providers&quot; target=&quot;blank&quot;&amp;gt;uno o più provider geografici &amp;lt;/a&amp;gt;;
+ ovviamente tra i provider non poteva mancare ```OpenStreetMap```.
+
+Il codice da usare è veramente minimo:
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&amp;lt;?
+    use Geocoder\HttpAdapter\CurlHttpAdapter;
+    use Geocoder\Provider\OpenStreetMapProvider;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$curl     = new CurlHttpAdapter();
+$geocoder = new OpenStreetMapProvider($curl);
+
+$results = $geocoder-&amp;gt;getReversedData(array(38.19245, 15.55608));
+
+$street = $results[0]['streetName'];
+
+print $street; // via San Giacomo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+A questo punto abbiamo tutti i dati:
+
+*   la latitudine e la longitudine della posizione dell'utente;
+*   il nome della via in cui si trova l'utente;
+*   le coordinate di tutti i poligoni della ZTL Messina.
+
+La logica per decidere se un punto appartiene o no ad un poligono, come già detto in precedenza, verrà
+implementata utilizzando la libreria ```GPSPolygon```.
+
+Possiamo quindi passare all'ultimo punto.
+
+#### L'applicazione deve restituirmi le tariffe vigenti per quella via.
+
+Vediamo adesso come dovranno essere presentate le informazioni calcolate all'utente.
+Il flusso di funzionamento dell'applicazione è il seguente:
+
+*   L'utente avvia l'APP;
+*   Il GPS del dispositivo comunica la latitudine e la longitudine della posizione in cui si trova;
+*   L'APP, ricevute le coordinate dell'utente, recupera la via;
+*   L'APP controlla se la posizione dell'utente si trova all'interno della ZTL di Messina;
+    *   In caso positivo recupera il piano tariffario per quella via;
+*   L'utente visualizza sul proprio dispositivo la mappa in cui si trova, all'interno della quale un marker indicherà la sua posizione;
+*   L'utente visualizza sul proprio dispositivo il nome della via in cui si trova;
+*   Se la posizione dell'utente è all'interno della ZTL di Messina, esso riceve le informazioni sul piano tariffario relativo alla sua posizione;
+*   Se la posizione dell'utente è all'esterno della ZTL di Messina, esso riceve l'avviso di trovarsi fuori ZTL e che il pagamento è quindi gratuito;
+*   Se l'utente cambia parcheggio deve avere la possibilità di ricalcolare la tariffa senza spegnere l'APP.
+
+
+Per lo sviluppo della Web-App ho deciso di usare &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://goratchet.com/&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;blank&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;**Ratchet**&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;, framework
+particolarmente indicato per lo sviluppo rapido di prototipi di applicazioni su dispositivi mobili.
+
+Per la visualizzazione della mappa geografica ho usato la libreria &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://openlayers.org/&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;blank&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;OpenLayer&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt; grazie alla quale, in maniera  semplice e immediata,
+ho inserito la mappa e il marker della posizione dell'utente in questo modo:
+
+
+``` javascript
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mapdiv&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.openlayers.org/api/OpenLayers.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OpenLayers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mapdiv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addLayer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OpenLayers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;OSM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+
+        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lonLat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OpenLayers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;LonLat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1279688&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;51.5077286&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+              &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OpenLayers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Projection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;EPSG:4326&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getProjectionObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+              &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;zoom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;markers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OpenLayers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Markers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Markers&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addLayer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;markers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;nx&quot;&gt;markers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addMarker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OpenLayers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Marker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lonLat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+
+        &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setCenter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lonLat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;zoom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;simulazioni&quot;&gt;Simulazioni&lt;/h2&gt;
+
+&lt;h3 id=&quot;nexus-5-dentro-ztl&quot;&gt;Nexus 5 (dentro ZTL)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/nexus5-parking.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;nokia-lumia-520-dentro-ztl&quot;&gt;Nokia Lumia 520 (dentro ZTL)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/nokia-parking.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;iphone-5-fuori-ztl&quot;&gt;Iphone 5 (fuori ZTL)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/iphone5-parking.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;blackberry-playbook-fuori-ztl&quot;&gt;Blackberry Playbook (fuori ZTL)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/blackberry-playbook-parking.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;considerazioni-finali&quot;&gt;Considerazioni finali&lt;/h2&gt;
+&lt;p&gt;L’obiettivo è stato raggiunto e la sfida è stata vinta! :-)
+L’applicazione è solo una demo ma è già di grande utilità,
+a dimostrazione di come sia possibile, partendo da semplici dati della pubblica amministrazione,
+aumentarne il valore e creare un servizio utile per la cittadinanza, attraverso software opensource a costo zero.&lt;/p&gt;
+
+&lt;p&gt;Sicuramente possono essere aggiunte altre funzionalità, come ad esempio le posizioni sulla mappa
+degli edicolanti per l’acquisto dei gratta e sosta, la possibilità di inserire un orario di arrivo e un
+orario di partenza lasciando che l’APP stessa calcoli l’ammontare totale da pagare, informazioni di contatto dell’ATM, etc…&lt;/p&gt;
+
+&lt;p&gt;Purtroppo però, come dette sopra, i dati di partenza non sono &lt;strong&gt;Open Data&lt;/strong&gt; quindi l’applicazione non potrebbe esistere.&lt;/p&gt;
+
+&lt;p&gt;Pertanto, mi auguro che questo esempio (che ribadisco essere a scopo &lt;em&gt;DIDATTICO&lt;/em&gt; e &lt;em&gt;NON A SCOPO DI LUCRO&lt;/em&gt;) possa servire da sprono alla governance amministrativa del comune di Messina e all’ATM,
+ad innescare processi e modelli organizzativi ispirati sempre più a principi di apertura e di rilascio dei dati in modalità
+&lt;strong&gt;Open Data&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;demo&quot;&gt;DEMO&lt;/h3&gt;
+&lt;p&gt;La web-app &lt;strong&gt;PARKING IN MESSINA&lt;/strong&gt; è disponibile al seguente link: &lt;a href=&quot;http://www.pirrotta.it/parking-in-messina/&quot; target=&quot;blank&quot;&gt;DEMO&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Feedback, bug, consigli, pareri e critiche costruttive sono i benvenuti!&lt;/p&gt;
+
+&lt;p&gt;That’s all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Metti che è da una vita che non aggiorno questo blog, metti che sono sostenitore da tanti anni degli Open Data e di tutto ciò che gli gira attorno, metti che finalmente sono in ferie e ho qualche giorno libero da dedicare a qualche idea che mi porto dietro da qualche mese, bene, metti insieme tutto questo :-) Ma partiamo dall’inizio, a circa un mese fa.</summary></entry><entry><title type="html">Behat-Gherkin/Mink: one translator to rule them all</title><link href="http://giovanni.pirrotta.it/blog/2015/02/17/behat-gherkin-mink-one-translator-to-rule-them-all/" rel="alternate" type="text/html" title="Behat-Gherkin/Mink: one translator to rule them all" /><published>2015-02-17T08:12:00+00:00</published><updated>2015-02-17T08:12:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2015/02/17/behat-gherkin-mink-one-translator-to-rule-them-all</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2015/02/17/behat-gherkin-mink-one-translator-to-rule-them-all/">&lt;p&gt;Recently I started to develop my software using &lt;a href=&quot;http://it.wikipedia.org/wiki/Behavior-driven_development&quot;&gt;Behaviour-Driven Development&lt;/a&gt; approach and, since my
+ preferred programming language is PHP, I chose one of the most popular existing acceptance
+ testing tool, namely &lt;a href=&quot;http://behat.org/&quot;&gt;Behat&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--More--&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/behat.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Behat tests a feature by executing its scenarios’ steps in a context.
+It allows you to write your user stories in the natural language taking advantage of Gherkin language syntax.&lt;/p&gt;
+
+&lt;p&gt;Afterwords I chose to write user stories in my native language and Behat helped me by providing
+ Italian gherkin keyword translations. At this time it supports 62 native languages.&lt;/p&gt;
+
+&lt;p&gt;In order to know the Gherkin keyword translation for the Italian language you must digit in console:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;behat --story-syntax --lang=it
+
+# language: it
+Funzionalità: Internal operations
+  In order to stay secret
+  As a secret organization
+  We need to be able to erase past agents' memory
+
+  Contesto:
+    [Date|Dati|Data|Dato] there is agent A
+    E there is agent B
+
+  Scenario: Erasing agent memory
+    [Date|Dati|Data|Dato] there is agent J
+    E there is agent K
+    Quando I erase agent K's memory
+    Allora there should be agent J
+    Ma there should not be agent K
+
+  Schema dello scenario: Erasing other agents' memory
+    [Date|Dati|Data|Dato] there is agent &amp;lt;agent1&amp;gt;
+    E there is agent &amp;lt;agent2&amp;gt;
+    Quando I erase agent &amp;lt;agent2&amp;gt;'s memory
+    Allora there should be agent &amp;lt;agent1&amp;gt;
+    Ma there should not be agent &amp;lt;agent2&amp;gt;
+
+    Esempi:
+      | agent1 | agent2 |
+      | D      | M      |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Using behat in Web applications I like the &lt;a href=&quot;https://github.com/Behat/MinkExtension&quot;&gt;Behat extension for Mink&lt;/a&gt;,
+a browser emulator abstraction layer. It hides emulator differences behind a single consistent
+API and represents a bridge towards real browser emulators such as&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mink.behat.org/en/latest/drivers/goutte.html&quot;&gt;Goutte&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mink.behat.org/en/latest/drivers/browserkit.html&quot;&gt;BrowserKit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mink.behat.org/en/latest/drivers/selenium2.html&quot;&gt;Selenium2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mink.behat.org/en/latest/drivers/zombie.html&quot;&gt;Zombie&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mink.behat.org/en/latest/drivers/sahi.html&quot;&gt;Sahi&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mink.behat.org/en/latest/drivers/selenium.html&quot;&gt;Selenium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mink extension supports 17 different languages so I found the Italian XLIFF file, in the source code,
+ (&lt;a href=&quot;https://github.com/Behat/MinkExtension/blob/master/i18n/it.xliff&quot;&gt;see github&lt;/a&gt;) containing the patterns of Italian
+ sentences recognized by the library.&lt;/p&gt;
+
+&lt;p&gt;Apart some &lt;a href=&quot;http://blog.lepine.pro/wp-content/uploads/2012/03/behat-cheat-sheet-en.pdf&quot;&gt;English PDF cheatsheets&lt;/a&gt;
+I have not found much readable native language syntax documentation about
+Behat and Mink. (Let me know if you know).&lt;/p&gt;
+
+&lt;p&gt;So, to fill the gap, I developed the &lt;a href=&quot;http://www.pirrotta.it/behat-mink-translator&quot;&gt;Behat-Gherkin/Mink Translator&lt;/a&gt;
+in order to generate on the fly the native language syntax documentation that PHP developers can use for their job.&lt;/p&gt;
+
+&lt;p&gt;Thas’all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Recently I started to develop my software using Behaviour-Driven Development approach and, since my preferred programming language is PHP, I chose one of the most popular existing acceptance testing tool, namely Behat.</summary></entry><entry><title type="html">Semantic Web Ingredients: the SPARQL language</title><link href="http://giovanni.pirrotta.it/blog/2014/10/27/semantic-web-ingredients-the-sparql-language/" rel="alternate" type="text/html" title="Semantic Web Ingredients: the SPARQL language" /><published>2014-10-27T18:15:00+00:00</published><updated>2014-10-27T18:15:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2014/10/27/semantic-web-ingredients-the-sparql-language</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2014/10/27/semantic-web-ingredients-the-sparql-language/">&lt;p&gt;In the previous &lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa/&quot;&gt;post&lt;/a&gt; of this series I described the RDFa language specifying the most important advantages in using it. 
+Now it’s the turn of the SPARQL, a sort of SQL language for the Semantic Web world. 
+&lt;!--More--&gt;#}&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/semantic-web/sparql.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://www.w3.org/TR/rdf-sparql-query/&quot;&gt;SPARQL language&lt;/a&gt; is a W3C Recommendation defining a standard way to retrieve data from RDF graphs distributed on the Web. SPARQL performs complex &lt;code class=&quot;highlighter-rouge&quot;&gt;joins&lt;/code&gt; exploring data by querying unknown relationships. The querying criterion is based on pattern matching mechanisms, and, in particular, on &lt;code class=&quot;highlighter-rouge&quot;&gt;triple pattern&lt;/code&gt; constructs, that reflect the RDF triple assertion model and provide a flexible model for finding matches.&lt;/p&gt;
+
+&lt;p&gt;Triple patterns are just like triples, except that any of the parts of a triple can be replaced with a variable. For example, in the following pattern &lt;code class=&quot;highlighter-rouge&quot;&gt;?book ex:title ?title&lt;/code&gt;, in place of the subject and of the object, two variables are involed, marked with &lt;code class=&quot;highlighter-rouge&quot;&gt;?&lt;/code&gt;, that act as unknown variables while the &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:title&lt;/code&gt; property acts as a constant. SPARQL variables can match any resources or literals in the RDF dataset.&lt;/p&gt;
+
+&lt;p&gt;The SPARQL skeleton is:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# prefix declarations
+PREFIX ex: &amp;lt;http://example.org/&amp;gt;
+...
+# dataset definition
+FROM ...
+
+# result clause
+SELECT ...
+
+# query pattern
+WHERE {
+...
+}
+
+# query modifiers
+ORDER BY ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In the graph &lt;code class=&quot;highlighter-rouge&quot;&gt;http://example.org/books.rdf&lt;/code&gt; we want to find all book resources (&lt;code class=&quot;highlighter-rouge&quot;&gt;?book&lt;/code&gt;) and all person resources (&lt;code class=&quot;highlighter-rouge&quot;&gt;?person&lt;/code&gt;) linked with the &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:hasAuthor&lt;/code&gt; predicate. So, book titles (&lt;code class=&quot;highlighter-rouge&quot;&gt;?book_title&lt;/code&gt;) associated with relative authors’ name and surname (&lt;code class=&quot;highlighter-rouge&quot;&gt;?person_name&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;person_surname&lt;/code&gt;) are returned.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PREFIX ex: &amp;lt;http://example.org/&amp;gt;
+SELECT ?book_title ?person_name ?person_surname
+FROM &amp;lt;http://example.org/books.rdf&amp;gt;
+WHERE {
+       ?book a ex:Book;
+             ex:title ?book_title;
+             ex:hasAuthor ?person.
+       ?person ex:name ?person_name;
+               ex:surname ?person_surname.
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-sparql-structure&quot;&gt;The SPARQL structure&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;PREFIX&lt;/strong&gt; clause defines prefixes and namespaces, for abbreviating URIs;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;SELECT&lt;/strong&gt; clause defines the information we want to retrieve from the statement repository;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;FROM&lt;/strong&gt; clause defines the RDF graph(s) to explore. It can be a local or remote source; we can also set the &lt;strong&gt;FROM NAMED&lt;/strong&gt; and &lt;strong&gt;GRAPH&lt;/strong&gt; clauses to specify multiple data sources;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;WHERE&lt;/strong&gt; clause defines the graph pattern to find a match in the dataset; it represents the most important SPARQL clause in the query;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ORDER BY&lt;/strong&gt; ordering, slicing and other rearranging query results.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is the result:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;------------------------------------------------------------------------
+| book_title                             | person_name | person_surname |
+========================================================================
+|&quot;UML Distilled&quot;                         | &quot;Martin&quot;    | &quot;Fowler&quot;       |
+------------------------------------------------------------------------
+|&quot;Test-Driven Development: By Example&quot;   | &quot;Kent&quot;      | &quot;Beck&quot;         |
+------------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;SPARQL language is similar to &lt;a href=&quot;http://www.contrib.andrew.cmu.edu/~shadow/sql/sql1992.txt&quot;&gt;SQL language&lt;/a&gt;. SPARQL selects data from the dataset by using a SELECT statement to determine which subset of selected data is returned. Also, SPARQL uses a WHERE clause to define graph patterns to find a match for in the query data set. Also the binding between variables and instances will generally return in table format but we can also specify other formats, such as JSON, RDF/XML, etc.&lt;/p&gt;
+
+&lt;p&gt;That’s all for now. In the next posts I will introduce how to develop a new ontology using the Semantic Web ingredients learned in the previous posts of this series. So, stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">In the previous post of this series I described the RDFa language specifying the most important advantages in using it. Now it’s the turn of the SPARQL, a sort of SQL language for the Semantic Web world.</summary></entry><entry><title type="html">Symfony Best Practices Italian Translation</title><link href="http://giovanni.pirrotta.it/blog/2014/10/17/symfony-best-practices-italian-translation/" rel="alternate" type="text/html" title="Symfony Best Practices Italian Translation" /><published>2014-10-17T17:00:00+00:00</published><updated>2014-10-17T17:00:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2014/10/17/symfony-best-practices-italian-translation</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2014/10/17/symfony-best-practices-italian-translation/">&lt;p&gt;Tutto ebbe inizio con un misterioso tweet di &lt;a href=&quot;https://twitter.com/sensiolabs&quot;&gt;@sensiolabs&lt;/a&gt;, la casa madre del framework &lt;a href=&quot;http://www.symfony.com&quot;&gt;Symfony&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/tweet-sensio.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;!--More--&gt;
+&lt;p&gt;#}&lt;/p&gt;
+
+&lt;p&gt;L’attesa fu breve, il mistero fu presto svelato.
+&lt;img src=&quot;/images/tweet-symfony.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Symfony ha finalmente deciso di &lt;a href=&quot;http://symfony.com/blog/introducing-the-official-symfony-best-practices&quot;&gt;rilasciare&lt;/a&gt; le linee guida ufficiali per lo sviluppo di applicazioni con il proprio framework.&lt;/p&gt;
+
+&lt;p&gt;La notizia del rilascio ha subito riscosso grandi entusiasmi da parte della comunità, che aspettava da tempo le best practices ufficiali da adottare per sfruttare appieno le funzionalità di Symfony, pur mantenendo alta la qualità di codice prodotto.&lt;/p&gt;
+
+&lt;p&gt;Nonostante la caratura ufficiale delle best-practices, ad onor del vero, da anni la comunità Symfony, fra le migliori al mondo in campo PHP e OOP, contribuisce con articoli, post, presentazioni e libri alla diffusione di tecniche, strategie e casi d’uso per riuscire a sfruttare al meglio le funzionalità del framework.&lt;/p&gt;
+
+&lt;p&gt;Consigliando come migliorare l’esperienza dello sviluppatore nell’utilizzare Symfony, di fatto, la comunità ha giocato un ruolo fondamentale per la diffusione del framework stesso contribuendo sia a migliorarlo che a renderlo più flessibile e sicuro.&lt;/p&gt;
+
+&lt;p&gt;Molte di queste risorse, disponibili sul Web, possono essere considerate dei veri e propri tesori da custodire e proteggere gelosamente. Confesso che alcune di queste intuizioni avrei voluto scoprirle tanti anni fa quando ho iniziato a cimentarmi con la filosofia OOP.
+&lt;em&gt;(Per i più curiosi consiglio di seguire &lt;a href=&quot;http://www.planet-php.net/&quot;&gt;planet-php.net&lt;/a&gt; )&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;E’ possibile scaricare le best practices ufficiali di Symfony direttamente dal &lt;a href=&quot;http://symfony.com/doc/current/best_practices/index.html&quot;&gt;sito Symfony&lt;/a&gt;.
+Anche se si tratta di una prima versione non definitiva, ho pensato di tradurla in italiano.
+Sotto trovate l’indice oppure andate sul mio repo &lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;La traduzione è in fase di revisione. Consigli e contributi (leggasi PR) per migliorare la comprensione e leggibilità sono i benvenuti.&lt;/p&gt;
+
+&lt;h2 id=&quot;symfony-best-practices&quot;&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it&quot;&gt;Symfony Best Practices&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-01.md&quot;&gt;&lt;strong&gt;Best Practices del Framework Symfony&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-02.md&quot;&gt;&lt;strong&gt;La creazione del progetto&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-03.md&quot;&gt;&lt;strong&gt;La configurazione&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-04.md&quot;&gt;&lt;strong&gt;Organizzare la logica di business&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-05.md&quot;&gt;&lt;strong&gt;I Controller&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-06.md&quot;&gt;&lt;strong&gt;I Template&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-07.md&quot;&gt;&lt;strong&gt;I Form&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-08.md&quot;&gt;&lt;strong&gt;L’Internazionalizzazione&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-09.md&quot;&gt;&lt;strong&gt;La Sicurezza&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-10.md&quot;&gt;&lt;strong&gt;I Web Assets&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-11.md&quot;&gt;&lt;strong&gt;I Test&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Tutto ebbe inizio con un misterioso tweet di @sensiolabs, la casa madre del framework Symfony.</summary></entry><entry><title type="html">Semantic Web Ingredients: RDFa, RDF in attributes</title><link href="http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa/" rel="alternate" type="text/html" title="Semantic Web Ingredients: RDFa, RDF in attributes" /><published>2014-07-30T16:52:00+00:00</published><updated>2014-07-30T16:52:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa/">&lt;p&gt;In previous posts I introduced the &lt;strong&gt;RDF model&lt;/strong&gt; as the key ingredient of the Semantic Web and other
+standard languages, such as &lt;strong&gt;RDF Schema&lt;/strong&gt; and &lt;strong&gt;OWL&lt;/strong&gt;, to describe concepts and relationships more
+expressively. These semantic technologies allow to extend the actual Web providing a &lt;em&gt;globally coherent
+notion of meaning&lt;/em&gt;, transforming the text in concepts and relations to increase the data integration
+with external applications.
+&lt;!--More--&gt;#}&lt;/p&gt;
+
+&lt;p&gt;We know the HTML Web languages do not explicitly encode information, then,
+to create the new Web (also called by someone Web 3.0) we must proceed as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;for each new Web page we have to describe the information therein contained in a new parallel
+document where we have to apply one or more specific ontologies defining the Web page data into
+resources. The result will be a machine-understandable document;&lt;/li&gt;
+  &lt;li&gt;for pages currently on the Web (the majority) a solution could be that of adding a triplifier
+tool or scraping Web pages to automatically generate the relative
+semantified version of Web documents, allowing machines to process data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In both cases some problems immediately arise. Web pages may frequently change without warning and
+for each update a human intervention is necessary to align data. Publishing a relative RDF document
+for each Web page significantly increases data redundancy; this violates the &lt;em&gt;“Don’t Repeat Yourself”&lt;/em&gt;
+principle (&lt;a href=&quot;http://en.wikipedia.org/wiki/Don%27t_repeat_yourself&quot;&gt;DRY&lt;/a&gt;) and this should be avoided.&lt;/p&gt;
+
+&lt;p&gt;To circumvent these limits, the &lt;em&gt;Resource Description Framework in attributes&lt;/em&gt; 
+W3C Recommendation (&lt;a href=&quot;http://www.w3.org/TR/rdfa-syntax/&quot;&gt;RDFa&lt;/a&gt;) provided a solution to embed machine readable data on the same Web page. The concept is very
+simple; the RDFa technology allows to bring the RDF model into Web pages coding RDF statements inside XHTML tags
+as attributes. The RDFa defines a syntax for embedding an RDF graph in XHTML document using attributes for
+expressing RDF properties about concepts inside the page. So doing, the DRY principle is not violated, and
+data result to be written and published only once, either for humans or machines. Data inside pages would be
+easier to maintain since each update will require to modify only one source. In addition, structured information would
+allow a better indexing by search engines that will experience benefits in terms of efficiency.&lt;/p&gt;
+
+&lt;p&gt;Now I will show an example:&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HTML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;An&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RDFa&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;The&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;author&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UML&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Distilled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Martin&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Fowler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We need to unlock the metadata already in Web-pages, and RDFa provides a generic way to do this by
+building on features already in HTML. In the following code we can see how to enrich the previous
+HTML code using RDFa technology&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML+RDFa 1.0//EN&quot;
+  &quot;http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd&quot;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.w3.org/1999/xhtml&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;xmlns:ex=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://example.org/&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;version=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;XHTML+RDFa 1.0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xml:lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;&lt;/span&gt;An RDFa sample&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;typeof=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ex:Book&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;about=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://example.org/umld&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      The author of &lt;span class=&quot;nt&quot;&gt;&amp;lt;b&amp;gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ex:title&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;UML Distilled&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&amp;lt;/b&amp;gt;&lt;/span&gt;
+      is &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;typeof=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ex:Person&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;about=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://example.org/mfowler&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;i&amp;gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ex:name&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Martin&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ex:surname&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Fowler&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/i&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;about&lt;/strong&gt; attribute determines what we are talking about;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;property&lt;/strong&gt; attribute defines the type of relation between resources;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;typeof&lt;/strong&gt; attribute defines the class to instantiate.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When a Web page is a valid RDFa document generally it is present the following icon…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/semantic-web/rdfa.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;…and &lt;a href=&quot;http://www.w3.org/2012/pyRdfa/Validator.html&quot;&gt;here&lt;/a&gt; you can find the W3C Validator tool.&lt;/p&gt;
+
+&lt;p&gt;Obviously, this is just an overview. For detail I invite you to refer to
+the &lt;a href=&quot;http://www.w3.org/TR/rdfa-syntax/&quot;&gt;official documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;That’s all folks. Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">In previous posts I introduced the RDF model as the key ingredient of the Semantic Web and other standard languages, such as RDF Schema and OWL, to describe concepts and relationships more expressively. These semantic technologies allow to extend the actual Web providing a globally coherent notion of meaning, transforming the text in concepts and relations to increase the data integration with external applications.</summary></entry><entry><title type="html">Semantic Web Ingredients: the Web Ontology Language</title><link href="http://giovanni.pirrotta.it/blog/2014/07/22/semantic-web-ingredients-the-web-ontology-language/" rel="alternate" type="text/html" title="Semantic Web Ingredients: the Web Ontology Language" /><published>2014-07-22T16:00:00+00:00</published><updated>2014-07-22T16:00:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2014/07/22/semantic-web-ingredients-the-web-ontology-language</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2014/07/22/semantic-web-ingredients-the-web-ontology-language/">&lt;p&gt;In this post, after nearly six months, I continue my Semantic Web series speaking
+about the &lt;strong&gt;OWL&lt;/strong&gt; language, acronym of &lt;a href=&quot;http://www.w3.org&quot;&gt;Web Ontology Language&lt;/a&gt;,
+that provides a rich set of concepts for defining classes and properties.&lt;/p&gt;
+
+&lt;!--More--&gt;
+&lt;p&gt;#}&lt;/p&gt;
+
+&lt;p&gt;Although &lt;strong&gt;RDFS&lt;/strong&gt; represents a very useful language to model domains, it suffers the following limitations:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the &lt;code class=&quot;highlighter-rouge&quot;&gt;rdfs:range&lt;/code&gt; property defines the range of a certain property for all classes,
+but in RDF Schema we cannot declare a constraint only for a single class;&lt;/li&gt;
+  &lt;li&gt;we cannot say that two classes are disjoint, for example you cannot declare that the &lt;code class=&quot;highlighter-rouge&quot;&gt;Male&lt;/code&gt;
+class is disjoint from the &lt;code class=&quot;highlighter-rouge&quot;&gt;Female&lt;/code&gt; class;&lt;/li&gt;
+  &lt;li&gt;we cannot define new classes using boolean operators. In fact, to create a new class, we could use
+the union, the intersection and the complement operators, but the &lt;strong&gt;RDFS&lt;/strong&gt; does not provide tools
+powerful enough to express it;&lt;/li&gt;
+  &lt;li&gt;we cannot define cardinality constraints on properties. For example, we cannot declare that a
+&lt;strong&gt;Person&lt;/strong&gt; instance can have only one &lt;code class=&quot;highlighter-rouge&quot;&gt;hasMother&lt;/code&gt; property;&lt;/li&gt;
+  &lt;li&gt;we cannot specify particular features on properties such as transitivity, symmetry or inverse
+properties.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Because of these limitations, the &lt;a href=&quot;http://www.w3.org&quot;&gt;W3C Consortium&lt;/a&gt; defined a new knowledge representation
+language called OWL that provides a well defined syntax and semantics with a sufficiently expressive
+mechanism to ensure automate processing using a reasoner engine.
+Depending on the level of expressiveness, OWL specification includes the definition of three variants:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The &lt;strong&gt;OWL Full&lt;/strong&gt; language uses all primitives provided by the OWL Definition Language with the
+possibility of changing the meaning of OWL/RDF pre-defined primitives. It is either syntactically
+or semantically compatible with RDF, namely, each valid document in RDF is also valid in OWL Full,
+and each inference obtained in RDFS is a valid inference in OWL Full. Unfortunately, the OWL Full
+language is undecidable, so it cannot work on a reasoner engine.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The &lt;strong&gt;OWL DL&lt;/strong&gt; is a sublanguage of OWL Full and, limiting the way to use OWL and RDF constructors,
+it allows to map the OWL language on a description logic, in order to gain computational efficiency.
+In fact, it allows the reasoning support not permitted by OWL Full, but we lose the full
+compatibility with RDF; an RDF document cannot be considered an OWL DL document. Vice versa, each
+valid OWL DL document is also a valid RDF document.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The &lt;strong&gt;OWL Lite&lt;/strong&gt; is an OWL DL sublanguage and provides a limited set of constructors. For example,
+it excludes enumerated classes, the disjunction operator and some cardinality features. The OWL Lite
+is very simple to use but allows less expressiveness.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the following Figure we can see the relationships between OWL dialects.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/semantic-web/owl-variants.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the OWL language we can model our domain with the concept of &lt;strong&gt;class&lt;/strong&gt;, that
+represents one of the most important aspect of the language. To do this we use the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Class&lt;/code&gt;;
+Also exist two pre-defined classes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Thing&lt;/code&gt; is the superclass of all classes and a default class of all individuals. Thus,
+every individual in OWL world is member of &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Thing&lt;/code&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Nothing&lt;/code&gt; is a class that has no instances and is a subclass of all classes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thanks to the expressiveness of the OWL language, we can define more characteristics of classes we need
+to design. The language provides the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:EquivalentClass&lt;/code&gt; construct to declare the equivalence
+between two classes or the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:disjointWith&lt;/code&gt; construct to define the classes that do not
+share any individuals.&lt;/p&gt;
+
+&lt;p&gt;An &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Property&lt;/code&gt; is instead a binary relation defining relationships between individuals, or between
+individuals and data value. There are two pre-defined property classes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:ObjectTypeProperty&lt;/code&gt; resource defines the relation between instances of two classes;&lt;/li&gt;
+  &lt;li&gt;the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:DataTypeProperty&lt;/code&gt; resource defines the relation between instances of classes and literal values,
+such as string, date, float, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also, the OWL language provides some &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:ObjectTypeProperty&lt;/code&gt; subclasses specifying some interesting
+class characteristics.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:TransitiveProperty&lt;/code&gt; construct defines a transitive property: if a relation between the
+class &lt;strong&gt;A&lt;/strong&gt; and the class &lt;strong&gt;B&lt;/strong&gt; exists, and a relation between the class &lt;strong&gt;B&lt;/strong&gt; and the class &lt;strong&gt;C&lt;/strong&gt;
+exists, the also a relation between the class &lt;strong&gt;A&lt;/strong&gt; and the class &lt;strong&gt;C&lt;/strong&gt; does exist.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:SymmetricProperty&lt;/code&gt; construct defines a symmetric property: if a relation between
+the class &lt;strong&gt;A&lt;/strong&gt; and the class &lt;strong&gt;B&lt;/strong&gt; exists, then also a relation between the class &lt;strong&gt;B&lt;/strong&gt; and the
+class &lt;strong&gt;A&lt;/strong&gt; does exist.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:FunctionalProperty&lt;/code&gt; construct defines a property with at most one value for each instance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Also, we can set the cardinality of properties using the following OWL resources: &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Restriction&lt;/code&gt;,
+   &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:onProperty&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:minCardinality&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:maxCardinality&lt;/code&gt;, so we can create new classes using
+boolean operators through the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:unionOf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:complementOf&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:intersectionClass&lt;/code&gt; constructs.
+Obviously, there are many other constructs and language features provided by OWL language.
+For more details you can refer to the &lt;a href=&quot;http://www.w3.org/TR/owl-features/&quot;&gt;official documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let us come back to our old statement (in the previous &lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/&quot;&gt;post&lt;/a&gt;),
+and let us try to draw the relative ontology using the OWL language.&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//www.w3.org/1999/02/22-rdf-syntax-ns#&amp;gt;.
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//www.w3.org/2000/01/rdf-schema#&amp;gt;.
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//www.w3.org/2002/07/owl#&amp;gt;.
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//example.org/&amp;gt;.
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DatatypeProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;surname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DatatypeProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DatatypeProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DatatypeProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hasAuthor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ObjectProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+             &lt;span class=&quot;n&quot;&gt;rdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;domain&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+             &lt;span class=&quot;n&quot;&gt;rdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;range&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hasUniqueAuthor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ObjectProperty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                   &lt;span class=&quot;n&quot;&gt;rdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subPropertyOf&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hasAuthor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+
+
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;rdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subClassOf&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Restriction&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+           &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onProperty&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hasUniqueAuthor&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+           &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maxCardinality&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^^&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//www.w3.org/2001/XMLSchema#int&amp;gt;
+&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;umld&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+               &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hasUniqueAuthor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mfowler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+               &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;UML Distilled&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+               &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;0201325632&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mfowler&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Martin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;surname&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Fowler&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As can be seen in the code, the &lt;code class=&quot;highlighter-rouge&quot;&gt;rdfs:Class&lt;/code&gt;
+resources were replaced by the relative &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Class&lt;/code&gt; constructs.&lt;/p&gt;
+
+&lt;p&gt;Depending on the type of object, we can identify &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:DatatypeProperty&lt;/code&gt;
+and &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:ObjectProperty&lt;/code&gt; property instances.
+In our example only &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:hasAuthor&lt;/code&gt; is an &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:ObjectProperty&lt;/code&gt; instance,
+whereas the remaining ones are &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:DatatypeProperty&lt;/code&gt; property instances.&lt;/p&gt;
+
+&lt;p&gt;Now let us imagine we want to specialize the &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:hasAuthor&lt;/code&gt; property.
+We want to define a particular property modeling books with a single
+author. To do this, we define the &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:hasUniqueAuthor&lt;/code&gt; property as subproperty
+(&lt;code class=&quot;highlighter-rouge&quot;&gt;rdfs:subPropertyOf&lt;/code&gt; ) of &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:hasAuthor&lt;/code&gt; property. To define this
+constraint we must create an anonymous &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Restriction&lt;/code&gt; class, specifying
+as properties the attributes that have to be constrained.
+In this case we indicate the resource &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:hasUniqueAuthor&lt;/code&gt; through the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:onProperty&lt;/code&gt;
+property and we indicate the maximum number of relations the &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:hasUniqueAuthor&lt;/code&gt;
+property can join between classes, in this case only
+one, through the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:maxCardinality&lt;/code&gt; property.&lt;/p&gt;
+
+&lt;p&gt;That’s all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">In this post, after nearly six months, I continue my Semantic Web series speaking about the OWL language, acronym of Web Ontology Language, that provides a rich set of concepts for defining classes and properties.</summary></entry></feed>

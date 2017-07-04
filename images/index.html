@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html class="js video maskImage placeholder" lang="en"><!--<![endif]-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Opendatagiustizia Contest</title>
+  <meta name="author" content="Giovanni Pirrotta">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+
+    <link rel="canonical" href="http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click">
+
+  <link href="./asset/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://giovanni.pirrotta.it/atom.xml" rel="alternate" title="Giovanni Pirrotta" type="application/atom+xml">
+  <script id="facebook-jssdk" async="" src="./asset/all.js"></script><script type="text/javascript" async="" src="./asset/ga.js"></script><script src="./asset/modernizr-2.0.js"></script>
+  <script src="./asset/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="./asset/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="./asset/style.css" rel="stylesheet" type="text/css">
+<link href="./asset/style2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <header role="banner"><hgroup>
+  <h1><a href="http://giovanni.pirrotta.it/">Giovanni Pirrotta</a></h1>
+      <h2>Just a curious person</h2>
+  </hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+</ul>
+
+<fieldset class="mobile-nav"><select><option value="">Navigate…</option><option value="http://giovanni.pirrotta.it/">» Blog</option><option value="http://giovanni.pirrotta.it/blog/archives">» Archives</option><option value="http://giovanni.pirrotta.it/atom.xml">» RSS</option><option value="http://github.com/gpirrotta">» Github</option><option value="http://twitter.com/gpirrotta">» Twitter</option><option value="https://www.linkedin.com/in/giovannipirrotta">» Linkedin</option><option value="http://giovanni.pirrotta.it/about">» About</option></select></fieldset><ul class="main-navigation">
+  <li><a href="http://giovanni.pirrotta.it/">Blog</a></li>
+  <li><a href="http://giovanni.pirrotta.it/blog/archives">Archives</a></li>
+  <li><a href="http://giovanni.pirrotta.it/atom.xml">RSS</a></li>
+  <li><a href="http://github.com/gpirrotta">Github</a></li>
+  <li><a href="http://twitter.com/gpirrotta">Twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/giovannipirrotta">Linkedin</a></li>
+  <li><a href="http://giovanni.pirrotta.it/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">OpendataGiustizia API Platform</h1>
+  </header>
+
+
+<div class="entry-content">
+
+    <h3>Disclaimer</h3>
+    <em>Il progetto partecipa al contest <a href="http://www.opendatagiustizia.it">OpendataGiustizia.it</a>.<br>
+        Il progetto è da intendersi un <strong>prototipo</strong> a scopo dimostrativo.</em>
+
+
+    <div align="center">
+        <img align="center" src="logo-piccolo-odg.png">
+    </div>
+
+
+    <h2>Introduzione</h2>
+
+    <p>Il progetto <strong>OpenDataGiustizia API Platform</strong> intende dimostrare un concetto molto semplice, che ogni pubblica amministrazione
+        dovrebbe fare proprio e che può essere sintetizzato col seguente motto: <em>i dati al centro di tutto</em>.
+    </p>
+    <p>
+        L'obiettivo è <em>ri-definire</em> il concetto di dato interno al sistema informativo di ciascuna PA e renderlo fruibile all'esterno
+        in modo <strong>aperto</strong> secondo i principi opendata. <br>
+        La modalità di fruizione verso l'esterno dovrebbe essere la più alta possibile e, con questo progetto,
+        intendo dimostrare come, con un approccio <em>data-centric</em>, il dato diventa di fatto <strong>volano</strong> per la creazione di <strong>valore</strong>.
+    </p>
+        <p>
+        I dati aperti e liberamente disponibili possono essere usati, in modi innovativi, per creare strumenti e prodotti utili che contribuiscano alla creazione di
+        nuovi mercati, imprese e lavoro.
+        L’utilizzo dei dati in formato aperto può dar luogo a nuove applicazioni, effettuando il <strong>mashup</strong> di dati provenienti da contesti diversi,
+        creando in questo modo valore per gli utenti finali e  potenziali fonti di reddito per gli sviluppatori.
+        </p>
+
+        <h2>Il progetto</h2>
+        Il progetto <strong>OpendataGiustizia API Platform</strong> ha come obiettivo quello di aprire i dati del sito del <a href="httpw://www.giustizia.it">Ministero della Giustizia</a> e
+        renderli disponibili e fruibili attraverso servizi API.
+        L'intento è quello di dimostrare i benefici che sia i cittadini sia la PA stessa avrebbero se tutto partisse dal rilascio in modo aperto di dati fruibili mediante servizi API (Application
+        Programming Interface).
+
+        Il progetto si articola nella realizzazione di tre macroservizi API. Per ciascuna tipologia di servizio verrà dimostrato il valore che è possibile creare attraverso apposite demo.
+
+        <h2>API Documenti</h2>
+
+        <p>
+        Si decide di aprire l'archivio documentale delle sezioni più importanti del  <a target="_blank" href="https://www.giustizia.it">sito</a> del Ministero di Giustizia:
+
+            <ul>
+                <li><a href="https://www.giustizia.it/giustizia/it/mg_1_2.page" target="_blank">Attività Normativa</a></li>
+                <li><a href="https://www.giustizia.it/giustizia/it/mg_1_4.page" target="_blank">Bandi di Gara e Contratti</a></li>
+                <li><a href="https://www.giustizia.it/giustizia/it/mg_1_6.page" target="_blank">Concorsi, Esami e Assunzioni</a></li>
+                <li><a href="https://www.giustizia.it/giustizia/it/mg_1_7.page" target="_blank">Convenzioni, Accordi e Protocolli</a></li>
+                <li><a href="https://www.giustizia.it/giustizia/it/mg_1_8.page" target="_blank">Decreti, Circolari, Provvedimenti e Note</a></li>
+                <li><a href="https://www.giustizia.it/giustizia/it/mg_1_14.page" target="_blank">Statistiche</a></li>
+                <li><a href="https://www.giustizia.it/giustizia/it/mg_1_11.page" target="_blank">Progetti</a></li>
+                <li><a href="https://www.giustizia.it/giustizia/it/mg_1_12.page" target="_blank">Pubblicazioni, Studi e Ricerche</a></li>
+                <li><a href="https://www.giustizia.it/giustizia/it/mg_1_33.page" target="_blank">Pubblicità Legale e Contratti</a></li>
+                <li><a href="https://www.giustizia.it/giustizia/it/mg_1_20.page" target="_blank">Sentenze Corte Europea dei Diritti dell'Uomo</a></li>
+            </ul>
+    </p>
+
+    <p>
+        L'infrastruttura realizzata consente di interrogare in modo flessibile e tramite servizi API tutti i documenti all'interno delle sezioni sopra menzionate.
+        I servizi <strong> API documenti</strong> implementati sono i seguenti:
+    </p>
+
+    <p>
+        <ul>
+            <li> <code>/api/documenti/attivita-normativa/cerca?parametri</code></li>
+            <li> <code>/api/documenti/bandi-di-gara-e-contratti/cerca?parametri</code></li>
+            <li> <code>/api/documenti/concorsi-esami-e-assunzioni/cerca?parametri</code></li>
+            <li> <code>/api/documenti/convenzioni-accordi-e-protocolli/cerca?parametri</code></li>
+            <li> <code>/api/documenti/concorsi-esami-e-assunzioni/cerca?parametri</code></li>
+            <li> <code>/api/documenti/decreti-circolari-provvedimenti-e-note/cerca?parametri</code></li>
+            <li> <code>/api/documenti/statistiche/cerca?parametri</code></li>
+            <li> <code>/api/documenti/progetti/cerca?parametri</code></li>
+            <li> <code>/api/documenti/pubblicazioni-studi-ricerche/cerca?parametri</code></li>
+            <li> <code>/api/documenti/pubblicita-legale-e-contratti/cerca?parametri</code></li>
+            <li> <code>/api/documenti/sentenza-corte-europea-dei-diritti-uomo/cerca?parametri</code></li>
+        </ul>
+    </p>
+
+
+<p>Ogni servizio consente di selezionare i documenti di una sezione apposita del sito del Ministero e ciascuna sezione è caratterizzata da parametri specifici relativi
+a quel dominio. Per questo motivo, per ogni servizio, avremo parametri di interrogazione diversi.</p>
+    <p>
+        Se ad esempio volessimo recuperare tutte le <strong>direttive</strong> pubblicate nella sezione <strong>attività normativa </strong> del sito del Ministero di Giustizia, dovremmo invocare
+        il servizio API Documenti nel seguente modo:<br>
+        <a href="http://www.gpirrotta.tk/opendatagiustizia/api/documenti/attivita-normativa/cerca?tipo-di-documento=direttiva" target="_blank"><code>api/documenti/attivita-normativa/cerca?tipo-di-documento=direttiva</code></a>
+        <br>
+        ed otterremo i seguenti documenti in formato JSON
+    </p>
+
+    <div align="center">
+        <img align="center" src="documenti-json.png">
+    </div>
+    <p>
+        Vengono quindi visualizzate le informazioni richieste. A parte alcune informazioni di corredo della ricerca, per ogni documento viene definita una URL specifica, l'URL originale del sito e una URL
+        per generare il documento in PDF, dato che il sito originale non fornisce l'esportazione in nessun formato. Come si può vedere in intestazione i dati sono pubblicati con licenza opendata <a href="http://www.dati.gov.it/iodl/2.0/" target="_blank">IODLv2</a>.
+    </p>
+
+    <p>
+        Se siamo interessati al contenuto di uno dei documenti basta seguire l'URL indicato nella risposta JSON (<code>url</code>) e otterremo il testo del documento sia in formato testuale (<code>testo</code>)
+        che in formato HTML (<code>html</code>)
+    </p>
+
+
+    <div align="center">
+        <img align="center" src="documento-json.png">
+    </div>
+<p>
+    Ovviamente nella stessa chiamata possiamo aggiungere anche più parametri di ricerca in modo da filtrare meglio la risposta. La documentazione di tutti i possibili parametri da usare in <code>API
+    documenti</code> si trova al seguente <a target="_blank" href="https://docs.google.com/document/d/1o0DTnp_0ViXtflDQlVVso0mWoZq8308DuZs3z-Ubl3w/edit">documento</a>. Se la ricerca produce una grosse
+    mole di dati i documenti vengono suddivisi in pagine e nella risposta JSON sarà presente il numero di pagine totale e il link alla pagina successiva.
+</p>
+
+<p>
+    Per limiti dovuti al modo in cui il sito del Ministero visualizza i documenti, su cui si basa la logica di scraping implementata, la risposta JSON, a seconda della richiesta, potrebbe comprendere più categorie di documenti relative al filtro inserito nei parametri.
+    Questo tipo di ricerche è caratterizzato dal fatto di avere nella risposta JSON il parametro <strong>numero_categorie</strong> maggiore di uno. In questo caso, nella stessa risposta, è presente
+    l'ulteriore URL da invocare per esplorare la categoria desiderata e mostrare i relativi documenti.  Per ovviare questo ulteriore, ma pur semplice, passaggio si consiglia di aggiungere qualche filtro
+    in più nei parametri di ricerca.
+</p>
+
+    <p>
+        Questo servizio non utilizza alcun repository locale (database) e tutte le risposte JSON sono generate al volo ad ogni richiesta. Al fine di ridurre al minimo le richieste sul sito del
+        Ministero di Giustizia, alle fondamenta del servizio <strong>API Documenti</strong> c'è un sistema di caching che intercetta le chiamate esterne assicurandosi di non avere già localmente
+        precedenti identiche chiamate. In questo modo il servizio risulta enormemente ottimizzato in termini di performance.<br>
+        Anche i filtri di ricerca disponibili per tutti i servizi <code>API Documenti</code> sono generati <strong>al volo</strong> direttamente dal sito originale e mantenuti in cache per l'ottimizzazione delle richieste, per un periodo
+        di tempo configurabile. Questo rende  API Documenti  <strong>auto-aggiornante</strong>, cioè ogni nuovo filtro di ricerca caricato sul sito originale
+        del ministero di Giustizia, sarà automaticamente disponibile anche su <code>OpendataGiustizia Platform API</code> senza modificare nessuna riga di codice sorgente.
+    </p>
+
+    <p>
+        A questo punto il servizio <code>API Documenti</code> è pronto e funzionante per essere riutilizzato da tutti. I dati sono rilasciati in opendata quindi è possibile riutilizzarli in contesti diversi
+        anche a fini commerciali.
+    </p>
+
+    <h2> API Documenti Demo</h2>
+
+    <p>
+        Vediamo adesso cosa è possibile implementare con questo servizio. Se fossi il responsabile IT del Ministero di Giustizia, dopo aver progettato le API che mi consentono di gestire il tutto
+        in modo centralizzato, la cosa più semplice che mi verrebbe in mente sarebbe la pubblicazione dei documenti
+        su un semplice sito che possa <strong>consumare</strong> i dati disponibili tramite API. <br>
+        Decido quindi di realizzare un semplice sito che, a differenza dell'originale del Ministero, funziona a benzina <strong>opendata</strong> ;-)
+    </p>
+
+    <h3>Homepage</h3>
+    <p>
+        L'homepage presenta tutte le sezioni dei documenti a nostra disposizione. Ogni sezione è direttamente collegata alle <code>API Documenti</code>
+    </p>
+    <div align="center">
+        <img align="center" src="homepage-website.png">
+    </div>
+    <br><br>
+
+    <h3>Visualizza documenti di una sezione</h3>
+    Per ogni singola ricerca possiamo visualizzare l'elenco dei documenti disponibili. Possiamo esportare il documento in formato <code>JSON</code> o generare il file <code>PDF</code> per il download.
+    Nel pannello di sinistra troviamo tutti i filtri disponibili per quella particolare sezione di documenti.
+    <div align="center">
+
+        <img align="center" src="ricerca-documenti.png">
+    </div>
+    <br><br>
+
+    <h3>Visualizza singolo documento</h3>
+    Se clicchiamo sul singolo documento possiamo visualizzare il contenuto dello stesso direttamente sul sito.<br><br>
+    <div align="center">
+        <img align="center" src="documento-singolo.png">
+    </div>
+
+    <p align="center">
+        <a  style="text-decoration: none" href="http://www.gpirrotta.tk/opendatagiustizia/website" target="_blank">
+            Avvia Demo Api Documenti
+            <img src="settings.png">
+        </a>
+    </p>
+
+<br>
+<h2>API E-Commerce</h2>
+<p>
+    Passiamo adesso al secondo macro-servizio dell'OpendataGiustizia Platforma API e cioè le <code>API E-Commerce</code>. <br>
+Sul sito del ministero della Giustizia è disponibile una sezione apposita per la vendita di articoli artigianali, creazioni e prodotti agricoli curati dai detenuti
+    e che si possono acquistare individuando in ogni regione i negozi che li commercializzano.
+    I prodotti si possono selezionare anche a partire dall'istituto penitenziario che ha avviato l'impresa.
+</p>
+    <p>
+        L'apertura di tali dati e la loro disponibilità in modo strutturato consentirebbe l'esportazione degli stessi in quei canali di settore specializzati in e-commerce.
+        I prodotti sarebbero più presenti nei motori di ricerca, l'indicizzazione sarebbe enormemente migliorata e le vendite aumenterebbero.
+    </p>
+
+    <p>Il servizio realizzato consente di effettuare le ricerche di prodotti attraverso la seguente API: <br><br>
+    <code>/api/vetrina/cerca?parametri</code>
+    </p>
+
+    <h3>Parametri</h3>
+    I parametri possibili sono i seguenti:
+    <ul>
+        <li><strong>Prodotti </strong>(abbigliamento, accessori tavola, addobbi Natale, alimenti, arredamento, etc..)</li>
+        <li><strong>Punti Vendita </strong>(Abruzzo, Basilicata, etc.)</li>
+        <li><strong>Strutture Penitenziarie </strong>(Case di lavoro e colonie agricole, istituti penitenziari, etc)</li>
+        <li><strong>Strutture Minorili e di Comunità</strong></li>
+    </ul>
+
+    <p>
+    E' possibile visionare la documentazione dei parametri disponibili per il servizio <code>E-Commerce API</code> al seguente
+    <a href="https://docs.google.com/document/d/1HZH_6BhDdlZ1kbhnFuC-nEHGFP2opnT2mxx2AE_oP3Y/edit" target="_blank">link</a>.
+    </p>
+    <p>
+        Proviamo ad invocare il servizio, ad esempio, per sapere i prodotti del settore abbigliamento fatti in Sicilia: <br><br>
+
+        <a target="_blank" href="http://www.gpirrotta.tk/opendatagiustizia/api/vetrina/cerca?prodotto=abbigliamento&punti-vendita=sicilia"><code>api/vetrina/cerca?prodotto=abbigliamento&punti-vendita=sicilia </code></a>
+    </p>
+
+
+    <div align="center">
+        <img align="center" src="vetrina-json.png">
+    </div>
+    <p>
+        Se poi vogliamo passare alle informazioni sul singolo prodotto basta seguire l'url e visualizzeremo i seguenti dati
+    </p>
+    <div align="center">
+        <img align="center" src="prodotto1-json.png">
+    </div>
+    <p>
+        Anche in questo caso le informazioni sul contenuto sono disponibili sia in formato testuale che in formato html.
+    </p>
+    <p>
+        Così come per il servizio <code>API Documenti</code> anche il servizio <code>API E-Commerce</code> è <strong>auto-aggiornante</strong>,
+        per cui ogni nuova opzione di ricerca presente sul sito originale del Ministero sarà automaticamente disponibile su questa piattaforma,
+        senza scrivere alcuna riga di codice di programmazione.
+    </p>
+
+    <h2>API E-Commerce Demo</h2>
+    <p>
+        Vediamo adesso come realizzare una vetrina  <strong>E-Commerce</strong> in grado di <strong>consumare</strong> i dati prelevati dal servizio API appena descritto.
+        Per la Demo ho realizzato la seguente homepage
+    </p>
+
+    <div align="center">
+        <img align="center" src="ecommerce.png">
+    </div>
+    <p>Con possibilità di zoomare ogni singolo prodotto</p>
+
+    <div align="center">
+        <img align="center" src="zoomprodotto.png">
+    </div>
+
+    <p>e di visualizzare le informazioni specifiche del prodotto</p>
+
+    <div align="center">
+        <img align="center" src="prodotto-view.png">
+    </div>
+
+    <p align="center">
+        <a  style="text-decoration: none" href="http://www.gpirrotta.tk/opendatagiustizia/website/vetrina" target="_blank">
+            Avvia Demo Api E-Commerce
+            <img src="settings.png">
+        </a>
+    </p>
+
+
+
+    <h2>API Uffici</h2>
+    <p>Vediamo adesso l'ultimo macro-servizio del progetto <code>OpendataGiustizia API Platform</code> e cioè il servizio <code>API Uffici</code>.<br>
+    Sul sito del Ministero di Giustizia troviamo il motore di ricerca <a href="https://www.giustizia.it/giustizia/it/mg_4.page" target="_blank">Giustizia Map</a>
+        che ci consente di trovare gli uffici dell'amministrazione della giustizia in base ai seguenti filtri:
+        <ul>
+            <li><strong>Tipo ufficio</strong> -  si ottiene la lista di tutti gli uffici appartenenti alla tipologia scelta, a prescindere da dove si trovano;</li>
+            <li><strong>Regione</strong> - si ottiene la lista di tutti gli uffici presenti sul territorio di una regione;</li>
+            <li><strong>Provincia</strong> - si ottiene la lista di tutti gli uffici presenti sul territorio di una provincia;</li>
+            <li><strong>Comune</strong> - si ottiene la lista degli uffici giudiziari competenti per il territorio di quel comune e degli altri uffici presenti in quel comune.</li>
+        </ul>
+    E' possibile effettuare una qualsiasi ricerca fra quelle sopra elencate in modo <strong>esclusivo</strong>, cioè non è possibile filtrare i risultati per più di un parametro. Per cui è possibile sapere
+    l'elenco di tutti i tribunali (filtro per tipo ufficio) oppure l'elenco di tutti gli uffici dell'amministrazione giudiziaria della provincia di Bologna (filtro provincia), senza poter combinare più  filtri
+    tra  loro (ad es. solo i tribunali della provincia di Bologna). E' possibile visualizzare la ricerca come pagina web o come codice XML. La cosa strana è che il codice XML è <code>embeddato</code>
+    all'interno di una pagina HTML, per cui è di fatto una pagina web, non una response XML. Questa metodologia, a mio modo di vedere un pò grossolana,
+    di scambio dei dati tra il Ministero di Giustizia e non so chi, non dovrebbe essere esposta al cittadino visitatore del sito perchè potrebbe generare confusione durante la navigazione.
+    <br>
+    Vediamo come superare queste limitazioni.
+        </p>
+    <p>
+        A differenza dei due macro-servizi precedenti, questo servizio utilizza un repository locale per immagazzinare i dati. Dopo aver estratto, normalizzato e pulito tutti i dati, avendo a
+        disposizione molte informazioni territoriali di molti uffici (non di tutti però), ho proceduto al <code>geocoding</code> di ciascun ufficio, ottenendo
+        così, per ciascuno di essi, le coordinate geografiche espresse in latitudine e longitudine. Per trovare i riferimenti geografici degli uffici ho usato il servizio
+        <strong>Nominatim</strong> di OpenStreetMap.
+        Gli uffici georeferenziati sono stati quindi memorizzati all'interno di un database relazionale ed è stato implementato il seguente servizio: <br><br>
+
+        <code>/api/uffici/cerca?parametri</code> <br> con parametri <strong>tipo-ufficio, regione, provincia, citta</strong>.
+    </p>
+    <p>
+        A differenza del motore di ricerca del sito originale, il servizio <code>API Uffici</code> è in grado di effettuare la ricerca anche con più filtri per cui, ad esempio,
+        per trovare il tribunale della città di Bologna è necessario invocare il servizio nel seguente modo: <br>
+        <a href="http://www.gpirrotta.tk/opendatagiustizia/api/uffici/cerca?tipo-ufficio=tribunale&citta=bologna" target="_blank"><code>/api/uffici/cerca?tipo-ufficio=tribunale&citta=bologna</code></a>
+    </p>
+
+    <div align="center">
+        <img align="center" src="uffici-json.png">
+    </div>
+
+    <p>
+        Un dato molto interessante, ritornato dall'output in JSON, è la presenza delle voci <strong>latitudine</strong> e <strong>longitudine</strong> con il quale è possibile realizzare applicazioni,
+        a partire dai dati georeferenziati degli  uffici dell'amministrazione giudiziaria, che fanno uso di mappe geografiche.
+    </p>
+
+    <h2>API Uffici Demo 1</h2>
+    <p>
+        La presenza di dati geolocalizzati consente la creazione di applicazioni Web e mobile basati principalmente su mappe, come è possibile vedere dalla seguente demo.
+    </p>
+
+    <div align="center">
+        <img align="center" src="opendatagiustiziamap.png">
+    </div>
+
+    <p>Cliccando su ogni singolo <strong>marker</strong> verranno visualizzate le informazioni relative.</p>
+    <div align="center">
+        <img align="center" src="tribunale-barcellona.png">
+    </div>
+
+    </p>
+
+    <p align="center">
+        <a  style="text-decoration: none" href="http://www.gpirrotta.tk/opendatagiustizia/map/uffici" target="_blank">
+            Avvia Demo Api Uffici 1
+            <img src="settings.png">
+        </a>
+    </p>
+
+
+    <p>Un altro servizio disponibile in <strong>API Uffici</strong> è il seguente</p>
+    <p><code>/api/uffici/cerca-intorno?parametri</code> <br>con parametri di ricerca:
+    </p>
+        <ul>
+            <li><strong>latitudine</strong></li>
+    <li><strong>longitudine</strong></li>
+    <li><strong>distanza</strong> - opzionale</li>
+    </ul>
+     <p>
+        A partire da una posizione nota espressa in termini di latitudine e longitudine, il servizio restituisce l'insieme degli uffici dell'amministrazione giudiziaria, a un raggio di distanza pari
+        al numero di chilometri specificati nel parametro <strong>distanza</strong>. <br>Facciamo un esempio.
+    </p>
+    <p>Inserendo la mia posizione geografica e un raggio di <strong>5 chilometri</strong> in questo modo:</p>
+    <p>
+        <a target="_blank" href="http://www.gpirrotta.tk/opendatagiustizia/api/uffici/cerca-intorno?latitudine=38.147262&longitudine=15.212848&distanza=5"><code>/api/uffici/cerca-intorno?latitudine=38.147262&longitudine=15.212848&distanza=5</code></a>
+    </p>
+    <p>verranno restituiti tutti gli uffici dell'amministrazione giudiziaria distanti a un raggio massimo di 5 chilometri. Per ogni ufficio viene anche segnata la distanza in km</p>
+
+    <div align="center">
+        <img align="center" src="intorno.png">
+    </div>
+
+    <p>E' possibile visionare nel dettaglio i parametri del servizio API Uffici al seguente <a target="_blank" href="https://docs.google.com/document/d/16OUnnRyMGT0jyzGwB0UTYl_ChUBXYd3Zjp9Mo1hFO5s/edit#">link</a>.
+    </p>
+
+    <h2>API Uffici Demo 2</h2>
+    <p>
+    Per poter sperimentare a pieno le funzionalità del servizio appena descritto decidiamo di costruire un BOT Telegram in grado di trovare gli uffici dell'amministrazione giudiziaria
+    distanti massimo 10 km dalla nostra posizione. <br>
+
+    Scarichiamo e installiamo <a href="https://telegram.org/" target="_blank">Telegram</a>  per <a href="https://telegram.org/dl/android" target="_blank"> Android </a> o <a href="https://telegram.org/dl/ios" target="_blank">iPhone.</a>
+    </p>
+
+    <div align="center">
+        <img width="200px" align="center" src="telegram.png">
+    </div>
+    <p>
+        e cerchiamo il seguente utente <a href="https://telegram.me/OpenDataGiustiziaBot" target="_blank">@OpenDataGiustizia</a>
+    </p>
+
+    <p>Entrati nel BOT riceveremo un messaggio di saluto e ci verrà chiesto di scegliere un'opzione del menu. Clicchiamo sul tasto <strong>Cerca l'ufficio più vicino</strong>.
+    <div align="center">
+        <img align="center" src="bot1.png">
+    </div>
+
+    <p>A questo punto veniamo invitati a cliccare sulla graffetta per inviare la nostra posizione geografica. Sul nostro cellulare deve essere attiva la localizzazione GPS</p>
+    <div align="center">
+        <img align="center" src="bot2.png">
+    </div>
+    <div align="center">
+        <img align="center" src="bot3.png">
+    </div>
+    <p>Il BOT riceve quindi la nostra posizione:</p>
+
+    <div align="center">
+        <img align="center" src="bot4.png">
+    </div>
+
+    <p>e la nostra demo, <strong>consumando</strong> le API Uffici, utilizzerà il servizio per calcolare gli uffici giudiziari più vicini (default 10 km) dalla nostra posizione.
+        Per ciascuno di essi viene visualizzato il nome, l'indirizzo, la città, altre informazioni e la distanza in km.
+    </p>
+
+    <div align="center">
+        <img align="center" src="bot5.png">
+    </div>
+
+    <p>Cliccando sul link <strong>Traccia percorso</strong>
+        la pagina di Google Maps ci indicherà il percorso più breve da seguire e la strada da percorrere se a piedi, in macchina o altro mezzo di trasporto.</p>
+
+    <div align="center">
+        <img align="center" src="bot6.png">
+    </div>
+    <p>
+        E tutto questo grazie al rilascio dei dati in modo aperto, centralizzato e fruibile programmaticamente.
+    </p>
+
+    <p align="center">
+        <a  style="text-decoration: none" href="https://telegram.me/OpenDataGiustiziaBot" target="_blank">
+            Avvia Demo Api Uffici 2
+            <img src="settings.png">
+        </a>
+    </p>
+
+    <h3>Stack tecnologico</h3>
+    <p>
+        <strong>Si ribadisce la natura prototipale dell'intera piattaforma nonchè delle demo realizzate</strong>.<br>
+        Per il progetto è stato usato il framework PHP <a href="https://symfony.com/" target="_blank"> Symfony </a> (opensource),
+        il database <a href="https://www.oracle.com/it/products/mysql/overview/index.html" target="_blank">Mysql</a> (opensource),
+        la libreria Javascript per le mappe <a href="http://leafletjs.com/">Leaflet </a> (opensource).<br>
+    </p>
+
+
+    <h2>Conclusioni</h2>
+    <p>
+        Il progetto <code>OpendataGiustizia API Platform</code> implementa il concetto di <strong>data-first</strong> all'interno di una PA e realizza
+        un'infrastruttura in grado di fornire un alto livello di flessibilità, di interrogazione e di interoperabilità tra applicazioni diverse,
+        dimostrando come, mettendo i dati al centro di tutto, sia possibile aumentarne il valore in contesti diversi da quello originale. <br>
+        La possibilità di riuso dei dati, garantita dalla licenza opendata, consente la creazione
+        di mercati nuovi e scenari d'uso ancora inesplorati.
+        <br>
+        Solo partendo dai dati ogni pubblica amministrazione può innescare meccanismi virtuosi di crescita nell'economia del terzo millennio, può diventare
+        il detonatore per la nascita di nuovi mercati, di realtà economiche che possono sfruttare i dati come carburante per le proprie imprese e investire in campi
+        nuovi e innovativi.
+    </p>
+
+    <div align="center">
+        <img align="center" src="logo-piccolo-odg.png">
+    </div>
+    <div align="center">
+    <h4 class="lead">Grazie per l'attenzione</h4>
+    </div>
+    </div>
+</body>
+</html>

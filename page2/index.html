@@ -1,0 +1,599 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Giovanni Pirrotta</title>
+  <meta name="author" content="Giovanni Pirrotta">
+
+  
+  <meta name="description" content="
+    
+    
+    
+    
+        
+  
+    
+      Semantic Web Ingredients: the RDF Schema Model
+    
+    
+      
+
+        
+
+
+ January 06, 2014
+        
+...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://giovanni.pirrotta.it/page2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Giovanni Pirrotta" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-68654531-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body  
+      >
+<header role="banner"><hgroup>
+  <h1><a href="/">Giovanni Pirrotta</a></h1>
+  
+    <h2>Just a curious person</h2>
+  
+</hgroup>
+
+</header>
+<nav role="navigation"><ul class="subscription" data-subscription="rss">
+  
+  
+</ul>
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/atom.xml">RSS</a></li>
+  <li><a href="http://github.com/gpirrotta">Github</a></li>
+  <li><a href="http://twitter.com/gpirrotta">Twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/giovannipirrotta">Linkedin</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<div id="main">
+    <div id="content">
+        <div class="blog-index">
+    
+    
+    
+    <article>
+        
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/">Semantic Web Ingredients: the RDF Schema Model</a></h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ January 06, 2014
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In the <a href="http://giovanni.pirrotta.it/blog/2013/12/23/the-rdf-model/">last post</a> 
+I introduced the RDF Model to define assertions as triple statements. 
+But how does a stupid machine understand what a certain
+property describing a certain resource means?</p>
+
+ </div>
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/">Continue &rarr;</a>
+    </footer>
+
+
+    </article>
+    
+    
+    <article>
+        
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/12/23/the-rdf-model/">Semantic Web Ingredients: The RDF Model</a></h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ December 23, 2013
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>While in the <a href="http://localhost:4000/blog/2013/12/20/the-rdf-model/">previous post</a> 
+I explained why XML alone is not sufficiently powerful in the Semantic Web context in
+this post I will explain how to overcome the XML semantic markup limitations.</p>
+
+ </div>
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/12/23/the-rdf-model/">Continue &rarr;</a>
+    </footer>
+
+
+    </article>
+    
+    
+    <article>
+        
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/11/20/xml-limits/">Semantic Web Ingredients: why the XML alone is not sufficiently powerful</a></h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ November 20, 2013
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In this post we continue the Semantic Web post series (the last published in July) and in particular I will explain 
+why <code class="highlighter-rouge">XML</code> alone is not sufficiently powerful in the Semantic Web context.</p>
+
+<!--More -->
+
+<p><a href="http://www.w3.org/TR/xml">XML</a> is the acronym of <strong>Extensible Markup Language</strong> and represents a meta-language for the syntactic definition
+of markup languages allowing to add <code class="highlighter-rouge">metadata</code> to <code class="highlighter-rouge">local</code> data and separate contents from presentations with a 
+neutral textual format.</p>
+
+<p>Imagine we have the following XML code:</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code>
+<span class="cp">&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;</span>
+<span class="nt">&lt;mailbox&gt;</span>
+	<span class="nt">&lt;mail</span> <span class="na">id=</span><span class="s">"01"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;to&gt;</span>Giovanni<span class="nt">&lt;/to&gt;</span>
+		<span class="nt">&lt;from&gt;</span>Francesco<span class="nt">&lt;/from&gt;</span>
+		<span class="nt">&lt;title&gt;</span>Enjoy Christmas<span class="nt">&lt;/title&gt;</span>
+		<span class="nt">&lt;body&gt;</span>Merry Christmas and a Happy New Year<span class="nt">&lt;/body&gt;</span>
+	<span class="nt">&lt;/mail&gt;</span>
+<span class="nt">&lt;/mailbox&gt;</span>
+
+</code></pre>
+</div>
+
+<p>In the above example the tags <code class="highlighter-rouge">&lt;mailbox&gt;</code>, <code class="highlighter-rouge">&lt;mail&gt;</code>,<code class="highlighter-rouge">&lt;to&gt;</code>,<code class="highlighter-rouge">&lt;from&gt;</code>,<code class="highlighter-rouge">&lt;title&gt;</code> and <code class="highlighter-rouge">&lt;body&gt;</code> have been created specifically for our document and the name of each tag has been implemented to describe in the best possible way the content data.
+The big problem is that <code class="highlighter-rouge">XML</code> is unsuitable to the <code class="highlighter-rouge">global</code> semantic interpretation because there is no
+way to explain to the machine that for example, the string <code class="highlighter-rouge">Giovanni</code>, enclosed withing the tag <code class="highlighter-rouge">&lt;to&gt;</code>,
+represents the <strong>name</strong> of a <strong>person</strong>.</p>
+
+<p>With XML it is possible to adequately describe the content of a document, bux XML syntax does not define any explicit mechanism to semantically describe relationships between resources inside and outside the document. In fact, XML <strong>alone</strong> is not sufficiently powerful to explain the semantics in an independent and autonomous way from the context.</p>
+
+<p>Also it is not able to generate new knowledge starting from the original data infering new statements. 
+For example, if we have the fact <code class="highlighter-rouge">The dog is a mammal</code>, the XML does not allow to define 
+the sentence in terms of relationship. Also if we consider the fact <code class="highlighter-rouge">Fido is a dog</code>, it should be
+possible to infer the new fact <code class="highlighter-rouge">Fido is a mammal</code>. But XML does not allow to explicit this rule between
+resources because of it is unsuitable to represent semantically the resource on the Web.</p>
+
+<p>To overcome the XML semantic markup limitations, the W3C Consortium has
+formalized some models which aim to provide an abstract formalism to describe resources and their relationships (RDF, RDFs, OWL).</p>
+
+<p>The RDF model will be described in the next post, so, stay tuned!</p>
+ </div>
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/11/20/xml-limits/">Continue &rarr;</a>
+    </footer>
+
+
+    </article>
+    
+    
+    <article>
+        
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/10/04/cosaceintv-la-guida-tv-a-portata-di-tweet/">CosaCeInTV.it: guida TV a portata di tweet</a></h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ October 04, 2013
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Fra tutti i social network presenti online uno dei miei preferiti è <a href="https://www.twitter.com">Twitter</a>. 
+La semplicità e immediatezza del servizio di invio, in soli 140 caratteri, di informazioni in tempo reale è diventato
+negli anni un modello vincente di business.
+Non sto qui ad elencare il numero di utenti in costante crescita, le centinaia di applicazioni sviluppate da terzi, la possibilità di interagire con i tweets tramite API, la quasi imminente entrata in borsa dell’azienda, etc.</p>
+
+<p>Proprio per la sua diffusione capillare e globale, secondo me però, twitter potrebbe essere utilizzato per fare anche altro.
+Mi piacerebbe infatti utilizzare il mio client twitter come un telecomando da pigiare per ottenere specifici servizi: informazioni sui programmi televisi attualmente in onda, previsioni meteo, eventi serali della mia città, orari di apertura degli uffici pubblici, etc.<br />
+Mi piacerebbe avere la possibilità di interagire in modo semplice e immediato, tramite un banale tweet, ed ottenere queste informazioni, in modo centralizzato, direttamente sul mio smartphone.</p>
+
+<p>Sono state queste motivazioni che mi hanno portato a ideare e sviluppare <code class="highlighter-rouge">cosaceintv</code>, un servizio quindi <code class="highlighter-rouge">tweet-driven</code>.</p>
+
+ </div>
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/10/04/cosaceintv-la-guida-tv-a-portata-di-tweet/">Continue &rarr;</a>
+    </footer>
+
+
+    </article>
+    
+    
+    <article>
+        
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/28/opengazzettaufficiale-la-legge-e-open-per-tutti/">OpenGazzettaUfficiale: la legge e' Open per tutti</a></h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ August 28, 2013
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Circa un anno fa avevo intenzione di sviluppare un servizio che automaticamente mi inviasse via mail il bando dei concorsi
+pubblici non scaduti, relativamente a dei settori di interesse da me specificati. In rete esistono già svariati siti Web
+sui concorsi ma io volevo ottenere una maggiore flessibilità di interrogazione. Così, di primo acchito, sono andato sulla
+fonte ufficiale e più importante dei concorsi pubblici in Italia, vale a dire la <strong>gazzetta ufficiale</strong>, dove, con mia grande
+sorpresa, ho letto il seguente disclaimer:</p>
+
+ </div>
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/08/28/opengazzettaufficiale-la-legge-e-open-per-tutti/">Continue &rarr;</a>
+    </footer>
+
+
+    </article>
+    
+    
+    <article>
+        
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/22/openalbopretorio-apriti-sesamo/">OpenAlboPretorio: apriti sesamo - aggiornato</a></h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ July 22, 2013
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Sono iscritto ormai da più di due anni alla mailing list <a href="https://groups.google.com/forum/#!forum/spaghettiopendata"><strong>Spaghetti Open Data</strong></a> (<strong>SOA</strong>), 
+punto di incontro di un gruppo di persone, di professione tra loro eterogenea (programmatori, ricercatori, avvocati, esperti del settore, semplici curiosi, etc.), interessati al rilascio dei dati pubblici in formato aperto, leggi <a href="http://it.wikipedia.org/wiki/Dati_aperti">Open Data</a>. Anche se non partecipo attivamente alle attività della community, ogni volta che torno a leggere i post della lista trovo sempre qualcosa che mi arricchisce e ispira.</p>
+
+<p>Così è stato anche quando nel novembre del 2012 ho letto che l’utente <code class="highlighter-rouge">eccoilmoro</code> aveva realizzato, come esperimento di civic-hacking, lo scraping dell’albo pretorio online dei comuni della Bassa Romagna, reindirizzando il tutto su una pagina 
+<a href="https://www.facebook.com/AlboPretorioBassaRomagna">FB</a> prima e su un profilo <a href="https://twitter.com/BassaRomagna">Twitter</a> dopo.
+Il tutto è stato poi riportato in questo <a href="http://opendatabassaromagna.blogspot.it/2013/06/lalbo-pretorio.html">blog</a>.</p>
+
+ </div>
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/22/openalbopretorio-apriti-sesamo/">Continue &rarr;</a>
+    </footer>
+
+
+    </article>
+    
+    
+    <article>
+        
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/04/can-machines-think/">Can machines think?</a></h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ July 04, 2013
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Suppose we want to become a policeman and to participate in the selection we need to complete the online request application available in the police Website. To do this, we decide to rely this task to our software agent to achieve an independent interaction between the software agent and the police homepage. Simplifying a lot, our software agent could start from the police homepage and, through string-matching analysis and exploration of the links, it might be able to recognize a page containing the words <strong>selection</strong> and <strong>2013</strong> and it could “think” to have found the right page to start its interaction.</p>
+
+ </div>
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/04/can-machines-think/">Continue &rarr;</a>
+    </footer>
+
+
+    </article>
+    
+    
+    <article>
+        
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/06/12/terme-vigliatore-e-la-sua-storia-amministrativa/">Terme Vigliatore Statistics</a></h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ June 12, 2013
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Il popolo sovrano ha deciso.<br />
+<a href="http://it.wikipedia.org/wiki/Terme_Vigliatore">Terme Vigliatore</a> ha eletto il suo primo cittadino riconfermando il sindaco uscente.<br />
+Personalmente non ne potevo più del fermento elettorale che si era innescato da mesi e
+che vedeva i protagonisti delle varie liste, dei movimenti e degli schieramenti darsele (metaforicamente parlando) di santa ragione per accrescere il proprio bacino elettorale.<br />
+Tutto questo è ormai (e per fortuna) acqua passata!</p>
+
+<p>Da qualche tempo però, appassionato di <a href="http://it.wikipedia.org/wiki/Data_mining">data mining</a>,
+è nato in me il desiderio di effettuare ricerche statistiche sulla storia delle amministrazioni passate, per ricavarne qualcosa di interessante e curioso.</p>
+
+ </div>
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/06/12/terme-vigliatore-e-la-sua-storia-amministrativa/">Continue &rarr;</a>
+    </footer>
+
+
+    </article>
+    
+    
+    <article>
+        
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/06/03/limits-of-the-web-today/">Limits of the Web today</a></h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ June 03, 2013
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The Web was born in 1999 at the <a href="http://www.cern.ch">CERN</a> laboratory, when scientist need to share information and scientific researches in realtime. To accomplish this task, Tim Berners-Lee conceived a <a href="http://www.w3.org/History/1989/proposal.html">hypertextual system of communication</a> between documents that became, in few years, the keystone of the World Wide Web (WWW). He introduces a markup convention, called <em>HyperText Markup Language</em> (HTML), to visualize and format documents allowing the linking through <em>anchor</em> words. When HTML pages are loaded in Web server programs installed on computers and located in different places of the world, users can reach the Web documents using particular programs called browsers allowing them to navigate the Web of linked documents.</p>
+
+ </div>
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/06/03/limits-of-the-web-today/">Continue &rarr;</a>
+    </footer>
+
+
+    </article>
+    
+    
+    <article>
+        
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/05/24/semantic-web-what/">Semantic Web what?</a></h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ May 24, 2013
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <strong>Semantic Web</strong> term was coined by the same founding father of the Web, <a href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a>, with the aim of extending the current Web in a structured environment in which each resource can be semantically processed.</p>
+
+<p>A very famous <a href="http://tinyurl.com/tbl-semweb">example</a> used by founder explains his original idea. In a utopian world Lucy is at the doctor’s, and she calls her brother Pete to tell him that the doctor has prescribed some physiotherapy sessions to their mother. Lucy immediately instructs her agent semantics software, through her PDA, to retrieve information about her mother’s treatment such as the list of doctors covered by her mother’s insurance with a high level confidence provided by the confidence ranking service and no more than 20 miles distance from her mother’s house.</p>
+
+ </div>
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/05/24/semantic-web-what/">Continue &rarr;</a>
+    </footer>
+
+
+    </article>
+    
+    <div class="pagination">
+        
+        <a href="/archives">Blog Archives</a>
+        
+        <a class="next" href="/">Newer &rarr;</a>
+        
+    </div>
+</div>
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">Citybot: la tua città, smart, in pochi click</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/28/protezione-civile-palermo-telegram-bot/">Quando un BOT può salvarti la vita!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/18/developing-an-ontology/">Developing an Ontology</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/">Parking In Messina. quando la ZTL incontra gli Open Data</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+
+
+
+</aside>
+
+
+
+    </div>
+</div>
+<footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Giovanni Pirrotta -
+
+  <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+</p>
+
+</footer>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gpirrotta';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<script>
+  $(document).ready(function() {  
+  var stickyNavTop = $('nav').offset().top;  
+    
+  var stickyNav = function(){  
+  var scrollTop = $(window).scrollTop();  
+         
+  if (scrollTop > stickyNavTop) {   
+      $('nav').addClass('sticky');  
+  } else {  
+      $('nav').removeClass('sticky');   
+  }  
+  };  
+    
+  stickyNav();  
+    
+  $(window).scroll(function() {  
+      stickyNav();  
+  });  
+  });  
+</script>
+
+
+</body>
+</html>

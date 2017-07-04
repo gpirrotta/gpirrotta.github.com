@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato) - Giovanni Pirrotta</title>
+  <meta name="author" content="Giovanni Pirrotta">
+
+  
+  <meta name="description" content="
+    
+        
+  
+    
+      Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)
+    
+    
+      
+
+        
+
+
+ October 09, 2015
+       ...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://giovanni.pirrotta.it/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Giovanni Pirrotta" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-68654531-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body  
+      >
+<header role="banner"><hgroup>
+  <h1><a href="/">Giovanni Pirrotta</a></h1>
+  
+    <h2>Just a curious person</h2>
+  
+</hgroup>
+
+</header>
+<nav role="navigation"><ul class="subscription" data-subscription="rss">
+  
+  
+</ul>
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/atom.xml">RSS</a></li>
+  <li><a href="http://github.com/gpirrotta">Github</a></li>
+  <li><a href="http://twitter.com/gpirrotta">Twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/giovannipirrotta">Linkedin</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<div id="main">
+    <div id="content">
+        <div>
+    <article class="hentry" role="article">
+        
+  <header>
+    
+      <h1 class="entry-title">Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)</h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ October 09, 2015
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>In questi ultimi tempi in rete si fa un gran parlare di <strong>BOT</strong> (abbreviazione di robot), ovvero quei programmi che fanno credere
+all’utente di parlare con una persona reale ma che di fatto sono risponditori automatici utili per fornire servizi vari
+come ad esempio il meteo, news, quiz, sondaggi, giochi, etc.</p>
+
+<p>Il motivo di tutto questo proliferare di BOT è dovuto principalmente all’apertura di <a href="https://telegram.org/">Telegram</a>,
+nella sua versione 3, al mondo degli sviluppatori. Attraverso l’utilizzo di API ufficiali, infatti, è ora possibile creare,
+gestire e interagire con programmi BOT, personalizzandoli secondo le proprie esigenze.</p>
+
+<!--More-->
+
+<p>Ho sempre visto un alto potenziale nell’uso di questo tipo di applicazioni e la scelta di Telegram potrebbe rivelarsi
+particolarmente azzeccata in questo senso.</p>
+
+<p>Esattamente due anni fa anch’io ho iniziato a interessarmi di BOT, ad immaginarmi il mio smartphone come un telecomando da
+pigiare per ottenere specifici servizi: informazioni sui programmi televisivi, previsioni meteo, eventi serali della mia città,
+orari di apertura degli uffici pubblici, etc.
+Ho sviluppato quindi un BOT su <a href="http://www.twitter.com">Twitter</a> grazie al quale, con un semplice
+tweet e una microgrammatica, riuscivo ad inviare richieste ad un’applicazione per ottenere informazioni sui programmi televisivi della serata.
+Descrivo nel dettaglio l’implementazione del progetto, che si chiama per l’appunto <strong>cosaceintv</strong>,
+in questo <a href="http://giovanni.pirrotta.it/blog/2013/10/04/cosaceintv-la-guida-tv-a-portata-di-tweet/">post</a>;
+il sito del progetto è <a href="http://www.cosaceintv.it">cosaceintv.it</a>.</p>
+
+<p>Tuttavia Twitter non consente di creare  BOT in modo nativo per cui, per raggiungere
+ lo scopo, sono dovuto scendere a compromessi, chiamateli <em>workaround</em>.</p>
+
+<p><em>Ma con Telegram la situazione cambia</em></p>
+
+<p>Vero è che l’app non è diffusa come <a href="https://www.whatsapp.com/">WhatsApp</a>, l’attuale <em>killer application</em> nel settore
+dell’instant messaging, (molti si aspettavano dei segnali di apertura API da WhatsApp in occasione
+dell’ultima conferenza <a href="https://fbf8.com/">F8</a> di Facebook, ma invece <strong>nisba</strong>) ma è anche vero che Telegram sta guadagnando sempre più terreno grazie soprattutto a
+scelte aziendali che si stanno rivelando strategicamente vincenti, come ad esempio</p>
+
+<ul>
+  <li>il rilascio del sorgente in opensource,</li>
+  <li>l’alta attenzione nei confronti della sicurezza e della privacy degli utenti,</li>
+  <li>la possibilità di creare chat segrete e autodistruggenti dopo un tempo prestabilito,</li>
+  <li>un design pulito e gradevole,</li>
+  <li>la totale gratuita,</li>
+  <li>l’assenza di pubblicità</li>
+  <li>ed infine, non meno importante, l’ultima feature aggiunta cioè la possibilità di creare BOT per la gestione di servizi personalizzati e l’interazione in modo programmatico attraverso API.</li>
+</ul>
+
+<p>Più che una semplice app di messaggistica Telegram è di fatto una vera e propria piattaforma e in
+ rete si trovano già applicazioni BOT di qualsiasi tipo; le più popolari si possono trovare
+ al seguente <a href="http://storebot.me/top/">link</a>.</p>
+
+<p><em>Ma anche in Italia cominciano a vedersi progetti interessanti.</em></p>
+
+<p>A Prato <a href="https://twitter.com/il_tempe">Matteo Tempestini</a> ha sviluppato il <a href="https://telegram.me/emergenzeprato_bot">BOT Emergenze Prato</a>
+per essere aggiornati in tempo reale su condizioni meteo, possibili allerte e segnalazioni.
+A Lecce, utilizzando gli opendata del comune e non solo, <a href="https://twitter.com/piersoft">Pier Paolo Paolicelli (piersoft)</a> ha sviluppato
+[OpenDataLecceBot]((https://telegram.me/opendataleccebot) con il quale è possibile ottenere informazioni su meteo,
+temperatura, qualità dell’aria, orari delle scuole, tariffe aree ZTL, eventi culturali, etc.
+Il servizio trasporti bus <a href="http://www.tper.it/">TPER</a> fornisce informazioni aggiornate sui bus di
+Bologna usando i servizi informativi e gli opendata. (<a href="https://telegram.me/tperbot">tperbot</a>.)</p>
+
+<p>Incuriosito quindi da tutto questo fermento mi è venuta voglia di rimettermi in gioco anch’io con i BOT e smanettare
+un pò con questa piattaforma.
+Ho accolto, quindi, il suggerimento di <strong>piersoft</strong> che consigliava di replicare il servizio offerto dalla TPER di Bologna sui trasporti anche per la città di Palermo,
+dato che i dati sui trasporti palermitani sono <a href="http://www.amat.pa.it/index.php?option=com_content&amp;view=article&amp;id=1090&amp;Itemid=287">rilasciati</a>
+dall’ azienda AMAT in formato GTFS con licenza OpenData.</p>
+
+<p>La specifica <a href="https://developers.google.com/transit/gtfs/reference">GTFS</a> (General Transit Feed Specification) è stata sviluppata
+da Google e definisce un formato comune per rappresentare informazioni orarie di un sistema di trasporti
+(bus, metro, treno, etc) associandole ad informazioni geografiche.</p>
+
+<p>La specifica struttura i dati organizzandoli in un insieme di file CSV.</p>
+
+<p>I più importanti sono i seguenti:</p>
+
+<ul>
+  <li><strong>agency</strong> - informazioni inerenti l’azienda che gestisce i trasporti;</li>
+  <li><strong>routes</strong> - informazioni sulle linee dei trasporti;</li>
+  <li><strong>trips</strong> - informazioni inerenti le corse per ciascuna linea;</li>
+  <li><strong>stops</strong> - le fermate geolocalizzate;</li>
+  <li><strong>stop_times</strong> - l’orario di arrivo e partenza e la sequenza per ogni corsa in ciascuna fermata;</li>
+  <li><strong>calendar</strong> - periodo del servizio trasporti su base settimanale;</li>
+  <li><strong>calendar_dates</strong> - date in cui vi sono delle eccezioni rispetto a quanto descritto
+in <em>calendar</em> (ad. es. feste)</li>
+</ul>
+
+<p>Per la specifica completa si rimanda alla <a href="https://developers.google.com/transit/gtfs/reference">pagina ufficiale GTFS</a></p>
+
+<p>Quindi mettiamoci al lavoro e scarichiamo i dati dal sito AMAT di Palermo.</p>
+
+<p>###Ma cosa vedono i miei occhi???</p>
+
+<p><img src="/images/crying-meme.png" alt="Image" class="center-image" /></p>
+
+<p>~~ Dalla pagina AMAT Palermo, sezione OpenData, i dati GTFS risultano <strong>aggiornati al 2014</strong>
+purtroppo!~~</p>
+
+<p>~~ In un settore come quello dei trasporti, il rilascio continuo di dati aggiornati aperti
+e riutilizzabili rappresenta una condizione necessaria per lo sviluppo di qualsiasi
+applicazione che voglia essere realmente utile ed efficace per cittadini.~~</p>
+
+<p>** Ho preso una cantonata, dopo aver pubblicato il post il buon <a href="http://twitter.com/aborruso">Andrea Borruso</a> mi ha fatto notare
+che in rete ci sono i dati GTFS dell’azienda AMAT relativi all’anno 2015 e la pagina di riferimento è quella del Comune
+di Palermo, non quella dell’Azienda AMAT. Grazie Andrea! **</p>
+
+<p>Ad agosto ho sviluppato una demo per spiegare come riutilizzare i dati relativi alle tariffe orarie delle ZTL
+a Messina, aumentandone di fatto il valore, se questi fossero stati rilasciati in modalità OpenData dall’azienda ATM.
+Ne parlo in questo <a href="http://giovanni.pirrotta.it/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/">post</a>.</p>
+
+<p>Allo stesso modo spiegherò in questo post come realizzare un BOT su Telegram in grado di fornire informazioni sui
+trasporti AMAT di Palermo, un modo intelligente di riuso dei dati aperti ~~ che possa servire per <em>punzolare</em>
+l’azienda AMAT al rilascio dei dati aggiornati.~~</p>
+
+<p><em>Mettiamoci al lavoro!</em></p>
+
+<p>~~ Per prima cosa scarico il file zippato GTFS dalla <a href="http://www.amat.pa.it/index.php?option=com_content&amp;view=article&amp;id=1090&amp;Itemid=287">pagina</a> OpenData AMAT Palermo.~~</p>
+
+<p>Per prima cosa scarico il file zippato GTFS dalla <a href="http://www.comune.palermo.it/opendata_dld.php?id=349">pagina</a> OpenData del Comune di  Palermo.</p>
+
+<p>Decido di caricare tutti i file CSV all’interno di un dabatase Mysql, per cui inizio a cercare in rete degli
+<a href="https://en.wikipedia.org/wiki/Data_definition_language">statement DDL</a> in modo da risparmiarmi il creare tutto a manina.
+Uno potrebbe pensare che, essendo GTFS un formato ben definito, uno schema DDL vale l’altro.</p>
+
+<p>###Errore!!!</p>
+
+<p><em>Quelli che seguono sono alcuni consigli che vi potrebbero farvi risparmiare tempo e mal di testa quando decidete di creare
+uno schema GTFS trovato in rete.</em></p>
+
+<p>####REGOLE D’ORO</p>
+
+<ol>
+  <li>Analizzare <strong>sempre</strong> e <strong>bene</strong> la qualità dei dati da importare <strong>prima</strong> di importarli</li>
+  <li>GOTO 1 ;-)</li>
+</ol>
+
+<p>La maggior parte dei campi <strong>id</strong> degli schemi che ho trovano in rete è in formato intero
+mentre nella maggior parte dei record dei dati GTFS AMAT il campo <strong>id</strong> contiene anche valori
+alfanumerici, ergo trasformate tutti gli id da <strong>int</strong> a <strong>varchar</strong>.</p>
+
+<p>Per importare i dati automaticamente ho usato uno script in python scaricato da github.
+Trovate un fork sul mio repository github in quanto lo script conteneva un bug relativo al
+caricamento di codici
+alfanumerici contenenti il carattere <strong>E</strong>. Lo script erroneamente parsava i codici contenenti
+il carattere <strong>E</strong> come formato esadecimale considerandoli interi invece di stringa.
+Trovate la versione fixata nel mio <a href="https://github.com/gpirrotta/py-gtfs-mysql">repo</a>.</p>
+
+<p>A questo punto iniziamo a scrivere un pò di codice. La documentazione di riferimento per
+creare BOT con Telegram è fatta benissimo e la trovate al seguente
+<a href="https://core.telegram.org/bots/api">link</a>.
+Per lo sviluppo del codice ho usato questa <a href="https://github.com/irazasyed/telegram-bot-sdk">libreria PHP</a>
+ a sua volta descritta in modo molto chiaro <a href="https://irazasyed.github.io/telegram-bot-sdk/">qui</a>. La libreria è stata sviluppata per il framework PHP
+<a href="http://laravel.com/">Laravel</a>
+ma può essere utilizzata anche in modalità standalone.</p>
+
+<p>La prima cosa da fare è creare il bot. Per fare questo bisogna aggiungere sul proprio
+client Telegram l’utente <strong>@BotFather</strong> e inviargli il seguente comando <strong>/newbot</strong>.
+Dopo aver risposto ad alcune domande, ad esempio nome ed username del BOT, viene generato
+un <strong>TOKEN</strong> che rappresenta il ponte di collegamento tra il nostro software e Telegram.
+Per maggiori dettagli sulla creazione dei bot fate riferimento alla documentazione ufficiale.</p>
+
+<p>Per poter interagire con Telegram scriviamo quindi:</p>
+
+<div class="language-php highlighter-rouge"><pre class="highlight"><code>    $telegram = new Api('BOT TOKEN');
+    $response = $telegram-&gt;getMe();
+</code></pre>
+</div>
+
+<p>Nella <em>response</em> troveremo informazioni sul bot creato.</p>
+
+<p>Per poter inviare messaggi all’utente bisognerà indicare, oltre al messaggio, anche l’<strong>ID</strong> della chat in modo che
+solo l’utente che ha fatto la richiesta possa ricevere il messaggio di ritorno.</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">  Telegram</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line">$response = $telegram-&gt;sendMessage('CHAT_ID', 'Hello World');</div></div></pre></div></figure>
+
+<p>Oltre a messaggi di testo il nostro BOT può rispondere anche con immagini, audio, video, allegati, etc.:</p>
+
+<div class="language-php highlighter-rouge"><pre class="highlight"><code>$response = $telegram-&gt;sendPhoto('CHAT_ID', 'path/to/photo.jpg', 'Some caption');
+</code></pre>
+</div>
+
+<p>Ma come fa l’utente a chiedere le informazioni al BOT? Inviando dei <strong>comandi</strong>.</p>
+
+<p>Per creare un comando, usando la libreria PHP, è necessario estendere la classe <strong>Command</strong> e implementare il metodo
+ <strong>handle</strong>.
+Creare un comando è un’operazione veramente banale, è infatti necessario inizializzare semplicemente la variabile <em>name</em>
+con il nome del comando che si vuole creare. Nell’esempio si sta creando il comando <em>/start</em>.</p>
+
+<p>Nell’esempio che segue, digitando da Telegram il comando <em>/start</em> il BOT risponderà con <strong>Hello World!</strong>;</p>
+
+<div class="language-php highlighter-rouge"><pre class="highlight"><code>    <span class="cp">&lt;?php</span>
+
+    <span class="k">use</span> <span class="nx">Telegram\Bot\Commands\Command</span><span class="p">;</span>
+
+    <span class="k">class</span> <span class="nc">StartCommand</span> <span class="k">extends</span> <span class="nx">Command</span>
+    <span class="p">{</span>
+
+        <span class="k">protected</span> <span class="nv">$name</span> <span class="o">=</span> <span class="s2">"start"</span><span class="p">;</span>
+        <span class="k">protected</span> <span class="nv">$description</span> <span class="o">=</span> <span class="s2">"Start Command to get you started"</span><span class="p">;</span>
+
+        <span class="k">public</span> <span class="k">function</span> <span class="nf">handle</span><span class="p">(</span><span class="nv">$arguments</span><span class="p">)</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">replyWithMessage</span><span class="p">(</span><span class="s1">'Hello World!'</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Non mi soffermerò oltre su questa libreria perchè, come già detto, è presente una documentazione completa ed esaustiva.</p>
+
+<p>Vediamo adesso le feature più importanti che dovrà avere il nostro BOT.
+Verranno descritte le più importanti scelte adottate per la logica applicativa.
+Si tratta essenzialmente di recuperare informazioni dal database e di formattare l’output, ci soffermeremo quindi
+solo sulle query <em>SQL</em> più importanti.</p>
+
+<p>La prima versione di <strong>amatPABot</strong>, questo il nome del BOT, implementa due funzionalità:</p>
+
+<ul>
+  <li><strong>Orario Linee</strong></li>
+  <li><strong>Fermata più vicina</strong></li>
+</ul>
+
+<p><img src="/images/amat-bot-2.jpg" alt="Image" class="center-image" /></p>
+
+<p>###Orario Linee</p>
+
+<p>Le informazioni sono tutte presenti nel db per cui all’interno del metodo <em>handle</em> viene
+gestita la logica per estrarre le informazioni relative alle linee AMAT di Palermo.</p>
+
+<p>La query SQL utilizzata per mostrare le linee:</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">  SQL</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">SELECT</span> <span class="n">route_id</span><span class="p">,</span> <span class="n">route_long_name</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">FROM</span> <span class="n">routes</span>
+</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">route_id</span> <span class="k">asc</span></div></div></pre></div></figure>
+
+<p><img src="/images/amat-bot-3.jpg" alt="Image" class="center-image" /></p>
+
+<p>A questo punto viene mostrato l’elenco delle linee AMAT. L’utente può scegliere la linea
+di cui vuole sapere gli orari. Una volta scelta la linea un nuovo comando recupererà
+il nome delle fermate della linea (Andata e ritorno) e gli orari relativi.</p>
+
+<p>Per recuperare gli orari delle corse uso la seguente query SQL, passandogli l’id della linea e l’id del servizio, cioè
+del periodo di riferimento nel calendario.</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">  SQL</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">SELECT</span> <span class="o">*</span> <span class="k">from</span> <span class="n">stop_times</span><span class="p">,</span> <span class="n">trips</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">WHERE</span> <span class="n">stop_times</span><span class="p">.</span><span class="n">trip_id</span> <span class="o">=</span> <span class="n">trips</span><span class="p">.</span><span class="n">trip_id</span> <span class="k">and</span>
+</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">       <span class="n">trips</span><span class="p">.</span><span class="n">route_id</span> <span class="o">=</span> <span class="p">:</span><span class="n">route_id</span> <span class="k">and</span> <span class="n">service_id</span> <span class="o">=</span> <span class="p">:</span><span class="n">service_id</span>
+</div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">GROUP</span> <span class="k">BY</span> <span class="n">stop_times</span><span class="p">.</span><span class="n">trip_id</span></div></div></pre></div></figure>
+
+<p>A questo punto l’output ottenuto è il seguente:</p>
+
+<p><img src="/images/amat-bot-4.jpg" alt="Image" class="center-image" /></p>
+
+<p>Passiamo adesso all’altra funzionalità.</p>
+
+<p>###Fermata più vicina</p>
+
+<p>Per ottenere informazioni sulla fermata più vicina  dobbiamo per prima cosa cliccare sulla graffetta e inviare la
+nostra posizione geografica.</p>
+
+<p><img src="/images/graffetta-amat.jpg" alt="Image" class="center-image" /></p>
+
+<p><img src="/images/posizione-amat.jpg" alt="Image" class="center-image" /></p>
+
+<p>Fatto ciò un comando calcolerà le 5 fermate più vicine recuperandole dalla tabella <em>stops</em> eseguendo la seguente query:</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">  SQL</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">SELECT</span> <span class="n">stop_id</span><span class="p">,</span> <span class="n">stop_name</span><span class="p">,</span> <span class="n">stop_lat</span><span class="p">,</span> <span class="n">stop_lon</span><span class="p">,</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="p">(</span><span class="mi">6371</span> <span class="o">*</span> <span class="n">acos</span><span class="p">(</span> <span class="n">cos</span><span class="p">(</span> <span class="n">radians</span><span class="p">(:</span><span class="n">latitude</span><span class="p">))</span> <span class="o">*</span>
+</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">              <span class="n">cos</span><span class="p">(</span> <span class="n">radians</span><span class="p">(</span> <span class="n">stop_lat</span> <span class="p">))</span> <span class="o">*</span>
+</div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line">              <span class="n">cos</span><span class="p">(</span> <span class="n">radians</span><span class="p">(</span> <span class="p">:</span><span class="n">longitude</span> <span class="p">)</span> <span class="o">-</span>
+</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line">              <span class="n">radians</span><span class="p">(</span><span class="n">stop_lon</span><span class="p">))</span> <span class="o">+</span>
+</div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line">              <span class="n">sin</span><span class="p">(</span> <span class="n">radians</span><span class="p">(:</span><span class="n">latitude</span><span class="p">))</span>
+</div></div><div data-line="7" class="code-highlight-row numbered"><div class="code-highlight-line">              <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">radians</span><span class="p">(</span><span class="n">stop_lat</span><span class="p">))))</span> <span class="k">AS</span> <span class="n">distance</span>
+</div></div><div data-line="8" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">FROM</span> <span class="n">stops</span>
+</div></div><div data-line="9" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">HAVING</span> <span class="n">distance</span> <span class="o">&lt;</span> <span class="mi">250000</span>
+</div></div><div data-line="10" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">distance</span> <span class="k">limit</span> <span class="mi">5</span><span class="nv">"</span></div></div></pre></div></figure>
+
+<p>Il valore <em>6371</em> è la lunghezza del raggio della terra. La formula utilizzata calcola la distanza in <strong>KM</strong>
+tra due punti espressi in latitudine e longitudine. Si tratta di una variante dell’<em>Haversine Formula</em>,
+per maggiori informazioni fate riferimento <a href="https://en.wikipedia.org/wiki/Haversine_formula">qui</a> e
+<a href="http://www.codecodex.com/wiki/Calculate_distance_between_two_points_on_a_globe#Haversine_Formula">qui</a>.</p>
+
+<p>Per ogni fermata recupero anche il nome delle linee passanti.</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title">  SQL</span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line"><span class="k">SELECT</span> <span class="n">route_id</span>
+</div></div><div data-line="2" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="k">FROM</span> <span class="n">stops</span><span class="p">,</span> <span class="n">stop_times</span><span class="p">,</span> <span class="n">trips</span>
+</div></div><div data-line="3" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="k">WHERE</span> <span class="n">stops</span><span class="p">.</span><span class="n">stop_id</span><span class="o">=</span><span class="n">stop_times</span><span class="p">.</span><span class="n">stop_id</span>
+</div></div><div data-line="4" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="k">AND</span> <span class="n">stop_times</span><span class="p">.</span><span class="n">trip_id</span> <span class="o">=</span> <span class="n">trips</span><span class="p">.</span><span class="n">trip_id</span>
+</div></div><div data-line="5" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="k">AND</span> <span class="n">stops</span><span class="p">.</span><span class="n">stop_id</span> <span class="o">=</span> <span class="p">:</span><span class="n">stop_id</span>
+</div></div><div data-line="6" class="code-highlight-row numbered"><div class="code-highlight-line">    <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">route_id</span></div></div></pre></div></figure>
+
+<p>Vengono mostrate a video le 5 fermate più vicine con le relative linee passanti.
+La prima fermata viene visualizzata su una mappa (si lo so, è Google Maps e non OpenStreetMap; nativamente Telegram usa le
+mappe di Google per inviare al client le posizioni geografiche; per usare OSM si potrebbero, ad esempio, creare al volo
+immagini statiche e inviarle all’utente per la posizione delle fermate)</p>
+
+<p><img src="/images/risposta-fermate.jpg" alt="Image" class="center-image" /></p>
+
+<p>Per il <em>deploy</em> del BOT ho usato <a href="w.cloudflare.com/ssl">Cloudflare</a> per avere una
+connessione SSL, condizione necessaria per poter utilizzare il <a href="https://core.telegram.org/bots/api#setwebhook">WebHook</a>
+in Telegram, invece del metodo manuale <a href="https://core.telegram.org/bots/api#getting-updates">getUpdates</a>.</p>
+
+<p>###Ricapitolando</p>
+
+<ul>
+  <li><del>I dati mostrati dal BOT non sono aggiornati al 2015 ma all’ultimo trimestre 2014;</del></li>
+  <li>Il BOT è funzionante con i dati aggiornati al 2015;</li>
+  <li>Sulla correttezza e consistenza dei dati non garantisco. Non prendetevela con me
+per eventuali inesattezze e/o sbagli :-)</li>
+  <li><del>E’ possibile aggiungere tante altre funzionalità ma la vera <strong>mission</strong> di questa prima versione è costringere
+l’AMAT di Palermo al rilascio dei dati aggiornati al 2015.</del></li>
+  <li>Il BOT sviluppato è <em>ancora</em> una demo. E’ possibile aggiungere altre funzionalità, il limite è la fantasia.</li>
+</ul>
+
+<p>Per interagire con il bot dovete aggiungere al vostro client Telegram il contatto: <a href="https://telegram.me/amatpabot">@amatPABot</a>.</p>
+
+<p><a href="https://telegram.me/amatpabot"><img src="/images/AMATBOTlogo.jpg" alt="Image" class="center-image" /></a></p>
+
+<p>Il codice sorgente lo trovate <a href="https://github.com/gpirrotta/amat-pa-bot">qui</a>.</p>
+
+<p><strong>Attenzione, è’ una versione ancora poco stabile, non pronta per andare in produzione.</strong></p>
+
+<p>~~ I dati non sono aggiornati quindi, <em>in questo momento</em>, il BOT non è molto utile; però,~~ Se questo lavoro vi è
+piaciuto un pò, potreste contribuire <del>alla causa aiutandomi a fare un pò di tam-tam mediatico sui social network.</del>
+a farlo conoscere in giro sui social, grazie.</p>
+
+<p><em>Twittami</em></p>
+
+<p><a href="http://twitter.com/share?url=https://telegram.me/amatpabot&amp;text=@gpirrotta+AmatPABot+-+AMAT+Palermo+BOT+Informazioni+trasporti+pubblici"><img src="/images/twitter.png" alt="Image" class="center-image" /></a></p>
+
+<p>Idee, critiche e suggerimenti sono benvenuti.</p>
+
+<p>That’s all folks! Stay tuned!</p>
+</div>
+
+
+        <footer>
+            <p class="meta">
+                
+<span class="byline author vcard">Posted by <span class="fn">Giovanni Pirrotta</span></span>
+
+                <time pubdate>
+                October 09, 2015
+                </time>
+
+                <span class="categories">
+                
+
+                
+                <a class="category" href="/categories/amat">amat</a>,
+                
+                <a class="category" href="/categories/telegram">telegram</a>,
+                
+                <a class="category" href="/categories/bot">bot</a>,
+                
+                <a class="category" href="/categories/opendata">opendata</a>,
+                
+                <a class="category" href="/categories/opendatasicilia">opendatasicilia</a>,
+                
+                <a class="category" href="/categories/palermo">palermo</a>
+                
+                </span>
+            </p>
+            
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://giovanni.pirrotta.it/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/" data-via="gpirrotta" data-counturl="http://giovanni.pirrotta.it/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+            
+            <p class="meta">
+                
+                <a class="basic-alignment left" href="/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/" title="Previous Post: Parking In Messina. quando la ZTL incontra gli Open Data">&laquo; Parking In Messina. quando la ZTL incontra gli Open Data</a>
+                
+                
+                <a class="basic-alignment right" href="/blog/2015/10/18/developing-an-ontology/" title="Next Post: Developing an Ontology">Developing an Ontology &raquo;</a>
+                
+            </p>
+        </footer>
+    </article>
+    
+    <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">Citybot: la tua città, smart, in pochi click</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/28/protezione-civile-palermo-telegram-bot/">Quando un BOT può salvarti la vita!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/18/developing-an-ontology/">Developing an Ontology</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/">Parking In Messina. quando la ZTL incontra gli Open Data</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+
+
+
+</aside>
+
+
+
+    </div>
+</div>
+<footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Giovanni Pirrotta -
+
+  <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+</p>
+
+</footer>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gpirrotta';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://giovanni.pirrotta.it/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/';
+        var disqus_url = 'http://giovanni.pirrotta.it/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<script>
+  $(document).ready(function() {  
+  var stickyNavTop = $('nav').offset().top;  
+    
+  var stickyNav = function(){  
+  var scrollTop = $(window).scrollTop();  
+         
+  if (scrollTop > stickyNavTop) {   
+      $('nav').addClass('sticky');  
+  } else {  
+      $('nav').removeClass('sticky');   
+  }  
+  };  
+    
+  stickyNav();  
+    
+  $(window).scroll(function() {  
+      stickyNav();  
+  });  
+  });  
+</script>
+
+
+</body>
+</html>
