@@ -1,4 +1,345 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://giovanni.pirrotta.it/feed.xml" rel="self" type="application/atom+xml" /><link href="http://giovanni.pirrotta.it/" rel="alternate" type="text/html" /><updated>2017-07-04T03:20:35+00:00</updated><id>http://giovanni.pirrotta.it/</id><title type="html">Giovanni Pirrotta</title><author><name>Giovanni Pirrotta</name></author><entry><title type="html">Citybot: la tua città, smart, in pochi click</title><link href="http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/" rel="alternate" type="text/html" title="Citybot: la tua città, smart, in pochi click" /><published>2016-04-09T11:11:00+00:00</published><updated>2016-04-09T11:11:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">&lt;p&gt;A settembre 2015 ho partecipato al raduno Open Data Sicilia, svoltosi a Palermo.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://giovanni.pirrotta.it/feed.xml" rel="self" type="application/atom+xml" /><link href="http://giovanni.pirrotta.it/" rel="alternate" type="text/html" /><updated>2017-07-04T14:22:08+00:00</updated><id>http://giovanni.pirrotta.it/</id><title type="html">Giovanni Pirrotta</title><author><name>Giovanni Pirrotta</name></author><entry><title type="html">FoiaPop: accesso civico data-driven</title><link href="http://giovanni.pirrotta.it/blog/2017/07/04/foiapop-accesso-civico-data-driven/" rel="alternate" type="text/html" title="FoiaPop: accesso civico data-driven" /><published>2017-07-04T01:40:08+00:00</published><updated>2017-07-04T01:40:08+00:00</updated><id>http://giovanni.pirrotta.it/blog/2017/07/04/foiapop-accesso-civico-data-driven</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2017/07/04/foiapop-accesso-civico-data-driven/">&lt;p&gt;Ritorno a scrivere in questo blog, dopo molto tempo, su un tema a me molto caro e cioè l’utilizzo degli opendata come &lt;strong&gt;strumento&lt;/strong&gt; per facilitare 
+processi inerenti la trasparenza e la diffusione di informazioni da parte delle pubbliche amministrazioni.&lt;/p&gt;
+
+&lt;p&gt;Subito dopo il raduno di &lt;a target=&quot;_blank&quot; href=&quot;http://ods16.opendatasicilia.it&quot;&gt;Opendata Sicilia 2016&lt;/a&gt;, svoltosi a settembre a Messina, avevo voglia di smanettare 
+ con gli opendata dei contratti pubblici - i cui URL dei file XML
+ sono disponibili sul sito ANAC - e con gli opendata relativi agli incassi e ai pagamenti di tutte le pubbliche amministrazioni, disponibili sul sito SIOPE.
+Questi dati contengono informazioni molto utili sullo stato di salute delle pubbliche amministrazioni italiane e il loro riuso, in termini di analisi, esplorazione e mashup,
+ è &lt;strong&gt;carburante&lt;/strong&gt; prezioso per modelli di economie &lt;em&gt;data-based.&lt;/em&gt;&lt;/p&gt;
+
+&lt;!--More--&gt;
+
+&lt;p&gt;Lo sanno bene alcune startup come &lt;a target=&quot;_blank&quot; href=&quot;https://synapta.it/&quot;&gt;Synapta&lt;/a&gt; che, applicando le potenzialità del linguaggio semantico ai contratti pubblici, 
+rendono più sostenibili la gestione dei dati aziendali, risolvendo problemi quotidiani di aziende, pubbliche amministrazioni e cittadini.&lt;/p&gt;
+
+&lt;p&gt;Nel settore pubblico, invece, è da menzionare il progetto &lt;a target=&quot;_blank&quot; href=&quot;http://soldipubblici.gov.it/it/home&quot;&gt;soldipubblici&lt;/a&gt; che, a partire dagli opendata relativi alle spese delle pubbliche amministrazioni,
+disponibili su &lt;a target=&quot;_blank&quot; href=&quot;http://www.siope.it&quot;&gt;SIOPE&lt;/a&gt;, promuovono e migliorano l’accesso e la comprensione dei cittadini sui dati della spesa della Pubblica Amministrazione, in un’ottica di maggiore trasparenza 
+e partecipazione. &lt;em&gt;A causa del cambio di codifica SIOPE, purtroppo, il servizio è momentaneamente non disponibile&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Come dicevo prima, avevo intenzione di sperimentare qualcosa con gli opendata SIOPE e ANAC ma, anche se avevo qualche piccola idea da cui partire, non ero molto convinto su dove sarei andato a &lt;em&gt;parare&lt;/em&gt; :-) .&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/mumble-meme.jpg&quot; width=&quot;30%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sentivo forte l’esigenza di confrontarmi con chi, prima di me, si era cimentato nell’analisi di questi dati, ci aveva sbattuto la testa e sicuramente 
+possedeva una visione più completa del dominio di riferimento.&lt;/p&gt;
+
+&lt;p&gt;Avevo bisogno di parlare con &lt;a target=&quot;_blank&quot; href=&quot;https://www.twitter.com/giuragu&quot;&gt;Giuseppe Ragusa&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Quasi due anni fa, Giuseppe, confrontando i dati IPA, cioè le anagrafiche delle pubbliche amministrazioni, con i dati dei contratti pubblici ANAC, aveva
+scoperto delle anomalie e aveva raccontato la sua ricerca e i suoi risultati in questo &lt;a target=&quot;_blank&quot; href=&quot;http://opendatasicilia.it/2015/07/27/anac-e-indice-pa-i-dati-sugli-enti-non-tornano/&quot;&gt;post&lt;/a&gt;, che vi invito a leggere.&lt;/p&gt;
+
+&lt;p&gt;Era l’uomo che cercavo!&lt;/p&gt;
+
+&lt;p&gt;Ci siamo dati appuntamento un giorno di gennaio e via &lt;em&gt;hangout&lt;/em&gt; abbiamo trascorso quasi l’intero pomeriggio cercando di immaginare, intuire, intercettare
+un qualche bisogno di cui il cittadino poteva avvertire l’esigenza, cercando di captare e percepire una qualche sua necessità, 
+per farlo diventare, dal punto di vista della partecipazione civica, più attivo, più consapevole, più moderno.
+Dopo aver partorito due/tre idee da cui partire (che non ricordo neanche più) e dopo un paio di ore di brainstorming, piano piano, in modo silente, nella discussione stava
+emergendo con sempre più insistenza la parolina magica che sarebbe diventata l’architrave dell’intero progetto finale: sto parlando della parola &lt;strong&gt;FOIA&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Disclaimer&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;Non sono un giurista per cui mi scuso in anticipo per ogni imprecisione giuridica riscontrata nel proseguio del post&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Il &lt;strong&gt;FOIA&lt;/strong&gt;, acronimo di &lt;em&gt;Freedom of Information Act è una legge sulla libertà di informazione, emanata negli Stati Uniti il 4 luglio 1966&lt;/em&gt;
+ (&lt;a href=&quot;https://it.wikipedia.org/wiki/Freedom_of_Information_Act&quot;&gt;Wikipedia&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;L’Italia ha recentemente introdotto uno strumento giuridico, chiamato &lt;em&gt;accesso civico generalizzato&lt;/em&gt;, che riprende a grandi linee il FOIA americano, 
+motivo per cui anche in Italia si parla ultimamente così tanto di FOIA.
+Con questo strumento il cittadino può richiedere alla pubblica amministrazione, tramite specifica istanza, dati, documenti, informazioni prodotti
+e posseduti dalle P.A., con alcune e delimitate esclusioni.&lt;/p&gt;
+
+&lt;p&gt;A dire il vero, mediante altre modalità di accesso, il cittadino poteva già ottenere informazioni dalle P.A., come ad esempio attraverso la richiesta di &lt;em&gt;accesso civico semplice&lt;/em&gt;.
+Il cittadino, con questo strumento giuridico, ha il diritto di accesso a documenti, dati e informazioni su cui sussiste l’obbligo di pubblicazione ai sensi del 
+&lt;a target=&quot;blank&quot; href=&quot;http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2013-03-14;33!vig=&quot;&gt;D.Lgs 33/2013&lt;/a&gt;.
+Ogni pubblica amministrazione deve pubblicare sul proprio sito istituzionale, nella sezione &lt;strong&gt;Amministrazione Trasparente&lt;/strong&gt;, 
+un insieme di &lt;a href=&quot;http://www.anticorruzione.it/portal/public/classic/AttivitaAutorita/AttiDellAutorita/_Atto?ca=6667&quot;&gt;informazioni&lt;/a&gt;.
+Qualora il cittadino non trovi pubblicata una (o più) di queste informazioni può esercitare il diritto di 
+&lt;em&gt;accesso civico semplice&lt;/em&gt;, chiedendo alla P.A. la pubblicazione dei documenti mancanti.&lt;/p&gt;
+
+&lt;p&gt;Da segnalare lo strumento online &lt;a href=&quot;http://bussola.magellanopa.it/il-progetto.html&quot;&gt;Bussola della Trasparenza&lt;/a&gt;, realizzato dal
+Ministero per la Semplificazione e la Pubblica Amministrazione, con il quale è possibile monitorare l’adempimento,
+da parte dei siti Web delle pubbliche amministrazioni, degli obblighi di trasparenza imposti dalla legge italiana. 
+Uno degli aspetti più interessanti di questo progetto è che i dati sul monitoraggio degli obblighi sono disponibili in &lt;a href=&quot;http://bussola.magellanopa.it/open-data.html&quot;&gt;opendata&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ritornando al brainstorming con Giuseppe, alla fine del confronto sono emerse le seguenti osservazioni/preoccupazioni:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;i cittadini &lt;strong&gt;non conoscono&lt;/strong&gt; il diritto di accesso civico, nè quello semplice nè quello generalizzato (FOIA);&lt;/li&gt;
+  &lt;li&gt;i cittadini più informati (pochi) spesso non sanno da dove partire, &lt;strong&gt;non hanno&lt;/strong&gt; quindi gli strumenti per poter definire e portare a termine
+una richiesta di accesso ai dati, documenti e informazioni;&lt;/li&gt;
+  &lt;li&gt;le manifestazioni più importanti all’interno di una PA sono quelle su cui &lt;strong&gt;ruotano i flussi monetari&lt;/strong&gt; e cioè i pagamenti, gli incassi, gli appalti, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;E’ emerso un vuoto da colmare e, sulla scia del nome del progetto &lt;a target=&quot;blank&quot; href=&quot;http://albopop.it/&quot;&gt;albopop&lt;/a&gt;, propongo di chiamare questo vuoto &lt;strong&gt;FOIAPOP&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;foiapop&quot;&gt;FOIAPOP&lt;/h2&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/homepage.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FoiaPop&lt;/strong&gt; ha come obiettivo quello di supportare l’utente nella compilazione online di richieste di accesso civico semplice e generalizzato. 
+Rispetto ad altre soluzioni simili, però, la compilazione della richiesta di accesso civico è guidata dai dati (data-driven).
+FoiaPop èin grado di ricostruire, in modo preciso e puntuale, i flussi monetari specifici di ogni pubblica
+amministrazione italiana, su cui il cittadino può facilmente maturare delle domande specifiche di accesso.&lt;/p&gt;
+
+&lt;p&gt;Grazie al riutilizzo degli opendata relativi alle basi informative IPA, SIOPE, e AVCP/ANAC, l’utente può formulare le &lt;em&gt;richieste di accesso civico generalizzato&lt;/em&gt;
+semplicemente cliccando sulle voci di spese, incassi o contratti pubblici.&lt;/p&gt;
+
+&lt;p&gt;Allo stesso modo, sfruttando gli opendata relativi ai dati IPA, Obblighi ANAC e Bussola della Trasparenza, l’utente può compilare online la richiesta
+di &lt;em&gt;accesso civico semplice&lt;/em&gt; per richiedere la pubblicazione di documenti obbligatori non presenti in Amministrazione Trasparente della Pubblica Amministrazione.&lt;/p&gt;
+
+&lt;p&gt;Vediamo adesso nel dettaglio il funzionamento della piattaforma descrivendo il workflow utilizzato da FoiaPop per il suo funzionamento.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/workflow.png?t=dfdf&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Con FoiaPop è possibile &lt;strong&gt;selezionare&lt;/strong&gt; una qualsiasi pubblica amministrazione italiana (più di 20.000), &lt;strong&gt;compilare&lt;/strong&gt;
+una richiesta di accesso civico in modo semplice e, in pochi click, &lt;strong&gt;generare&lt;/strong&gt; il modulo compilato in PDF da trasmettere 
+alla pubblica amministrazione.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FoiaPop&lt;/strong&gt; è &lt;em&gt;ente-centrico&lt;/em&gt;, tutte le funzionalità ruotano attorno a ciascuna pubblica amministrazione e la base informativa di riferimento, 
+elemento centrale su cui si basa la piattaforma, è l’indice della pubblica amministrazione &lt;a href=&quot;http://www.indicepa.gov.it/documentale/n-opendata.php&quot;&gt;IPA&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Inseriamo il nome della pubblica amministrazione di nostro interesse nell’apposito modulo di ricerca. 
+Cerchiamo il termine &lt;strong&gt;Caltanissetta&lt;/strong&gt; e scegliamo, tra i vari enti possibili, il &lt;strong&gt;comune di Caltanissetta&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/caltanissetta.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FOIAPop&lt;/strong&gt; ci consentirà, quindi, di creare le seguenti richieste di accesso civico:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/sceltarichiesta.png&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Descriviamo adesso le diverse tipologie di richieste disponibili in &lt;strong&gt;FoiaPop.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;nuovo-accesso-civico-generalizzato&quot;&gt;Nuovo Accesso Civico Generalizzato&lt;/h2&gt;
+
+&lt;p&gt;E’ il caso più semplice di richiesta di accesso civico generalizzato (FOIA). Cliccando su &lt;strong&gt;Nuovo Accesso Civico Generalizzato&lt;/strong&gt;
+ verremo rendirizzati nel modulo di inserimento dei dati anagrafici del richiedente e del testo della richiesta.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/form-foia.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Clicchiamo su &lt;strong&gt;AVANTI&lt;/strong&gt;.  &lt;strong&gt;FoiaPop&lt;/strong&gt; visualizzerà un’&lt;strong&gt;anteprima&lt;/strong&gt; della richiesta di &lt;em&gt;accesso civico generalizzato&lt;/em&gt;, utile
+per effettuare gli ultimi controlli. L’anteprima riflette il modello di domanda PDF che sarà generato e presenta
+quindi tutte le informazioni di contesto specifico della richiesta di accesso civico generalizzato:
+l’intestatario &lt;em&gt;Ufficio Relazioni con il Pubblico&lt;/em&gt;, l’indirizzo e l’email/PEC della pubblica amministrazione, 
+l’oggetto, i dati anagrafici del richiedente, la richiesta stessa e, in calce, lo spazio dedicato alla firma.
+Seguono quindi le istruzioni relative alla modalità di trasmissione della richiesta che si sta per generare,
+con possibilità di download.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/preview-foia.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dopo aver controllato la correttezza delle informazioni visualizzate in anteprima e
+dopo aver ricordato le modalità operative di trasmissione del modello, si può procedere alla generazione in PDF
+della richiesta di accesso civico generalizzato.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/foia.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A questo punto l’utente può trasmettere la richiesta secondo le modalità di trasmissione che preferisce.&lt;/p&gt;
+
+&lt;h2 id=&quot;nuovo-accesso-civico-generalizzato-dai-dati-siope&quot;&gt;Nuovo Accesso Civico Generalizzato dai dati SIOPE&lt;/h2&gt;
+
+&lt;p&gt;Nonostante il diritto di accesso generalizzato sia uno strumento a disposizione di tutti, spesso i cittadini non sanno cosa chiedere,
+non conoscono i dati sui quali possono chiedere informazioni, spiegazioni, chiarimenti.
+Per supportare il cittadino &lt;strong&gt;FoiaPop&lt;/strong&gt; consente la compilazione di richieste di accesso civico generalizzato 
+a partire dai dati SIOPE, cioè a partire da dati relativi gli incassi e i pagamenti delle pubbliche amministrazioni.
+Queste informazioni sono disponibili in opendata sul sito SIOPE da cui è possibile effettuare anche il &lt;a target=&quot;blank&quot; href=&quot;https://www.siope.it/Siope2Web/jsp/dispatchHome.do&quot;&gt;download&lt;/a&gt; massivo 
+per anno. Il livello di dettaglio è per singolo mese, la frequenza di aggiornamento è circa settimanale e 
+tutti gli importi sono organizzati per codici gestionali SIOPE.&lt;/p&gt;
+
+&lt;p&gt;Per iniziare una nuova richiesta a partire dai dati SIOPE, dopo aver selezionato la pubblica amministrazione di nostro interesse,
+clicchiamo su &lt;strong&gt;Parti dai dati SIOPE - Incassi e Pagamenti Enti Pubblici&lt;/strong&gt;  e FoiaPop ci mostretà il seguente elenco&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/siope-list.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Per ogni voce SIOPE viene mostrata la tipologia (Entrate o Uscite), l’anno e il mese di riferimento, il
+ codice gestionale SIOPE, la descrizione e l’importo relativo. Il più delle volte l’elenco è composto
+ da diverse centinaia di righe ed è possibile filtrare i dati per &lt;strong&gt;parola chiave&lt;/strong&gt; attraverso il modulo, posto ad inizio pagina.&lt;/p&gt;
+
+&lt;p&gt;Scorrendo verso il basso immaginiamo di volere chiedere maggiori informazioni sulla seguente spesa:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/dispositivi-medici.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Non ci resta che cliccare su &lt;strong&gt;CREA FOIA&lt;/strong&gt; ed iniziare la nostra richiesta. FoiaPop ci ripresenterà lo stesso form
+ di compilazione dei dati anagrafici che abbiamo visto in precedenza con un’interessante differenza:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/siope-form.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Subito prima del campo richiesta è presente un riquadro con il dettaglio della voce SIOPE che abbiamo selezionato
+in precedenza e su cui intendiamo esercitare il diritto di accesso civico generalizzato.&lt;/p&gt;
+
+&lt;p&gt;Clicchiamo su &lt;em&gt;AVANTI&lt;/em&gt;. Anche in questo caso FoiaPop visualizzerà l’anteprima del modulo di richiesta ed inserirà
+automaticamente il riferimento ai dati SIOPE di nostro interesse, come si può vedere dalla seguente figura.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/siope-preview.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dopo aver controllato l’esattezza di tutti i dati dell’anteprima non ci resta che cliccare sul
+tasto &lt;em&gt;CREA RICHIESTA FOIA&lt;/em&gt; per generare il modulo in PDF da trasmettere alla P.A.&lt;/p&gt;
+
+&lt;h2 id=&quot;nuovo-accesso-civico-generalizzato-dai-dati-anac&quot;&gt;Nuovo Accesso Civico Generalizzato dai dati ANAC&lt;/h2&gt;
+&lt;p&gt;Oltre ai dati SIOPE, &lt;strong&gt;FoiaPop&lt;/strong&gt; consente anche di creare richieste di accesso civico generalizzato a partire dai contratti pubblici delle P.A.
+La base informativa di riferimento è il sito &lt;a href=&quot;http://dati.anticorruzione.it/#/l190&quot;&gt;ANAC&lt;/a&gt; dove è possibile effettuare il download
+di tutti gli URL dei file XML contenenti le informazioni sui contratti pubblici delle P.A., secondo lo standard AVCP.&lt;/p&gt;
+
+&lt;p&gt;Per iniziare una nuova richiesta dai dati ANAC, dopo aver selezionato la pubblica amministrazione di nostro interesse,
+clicchiamo su &lt;strong&gt;Parti dai dati ANAC - Contratti Pubblici -&lt;/strong&gt;. FoiaPop ci mostrerà il seguente elenco&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/anac-list.png&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Per ogni contratto viene visualizzato la descrizione dell’appalto, i partecipanti alla gara, l’aggiudicatario, i tempi
+di completamento, l’importo di aggiudicazione e l’importo delle somme liquidate.
+Come già visto in precedenza, anche qui è disponibile un filtro di ricerca per parola chiave.&lt;/p&gt;
+
+&lt;p&gt;Prendiamo per esempio il seguente appalto:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/anac-list3.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Come per i casi precedenti dobbiamo inserire tutte le informazioni anagrafiche del richiedente e, in questo caso,
+nel campo relativo alla richiesta troviamo i dati sull’appalto ANAC su cui intendiamo esercitare il diritto di accesso.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/anac-form2.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Clicchiamo su &lt;strong&gt;AVANTI&lt;/strong&gt; e l’anteprima ci mostrerà il riferimento ai dati ANAC incorporati nel testo della richiesta,
+con in più il riferimento dell’URL, fonte dei dati ANAC e il CIG di riferimento dell’appalto.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/anac-preview2.png&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dopo aver controllato l’esattezza di tutte le informazioni inserite procediamo alla generazione del modulo di richiesta in PDF
+cliccando su &lt;strong&gt;CREA RICHIESTA FOIA&lt;/strong&gt;. Il modulo generato potrà quindi essere trasmesso alla pubblica amministrazione.&lt;/p&gt;
+
+&lt;h2 id=&quot;accesso-civico-generalizzato-api&quot;&gt;Accesso Civico Generalizzato API&lt;/h2&gt;
+
+&lt;p&gt;Attraverso apposite &lt;strong&gt;API&lt;/strong&gt; FoiaPop consente l’integrazione delle sue funzionalità con siti esterni, come, ad esempio,
+i siti istituzionali degli enti pubblici.&lt;/p&gt;
+
+&lt;p&gt;L’URL da invocare è il seguente:&lt;/p&gt;
+
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt; &lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;http://www.foiapop.it/api/accesso-civico-generalizzato?cf=CODICE-FISCALE-DELLA-PA&amp;amp;dati=DATI-DA-INSERIRE-NELLA-RICHIESTA&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;dove il parametro &lt;strong&gt;cf&lt;/strong&gt; (obbligatorio) rappresenta il codice fiscale della pubblica amministrazione e il parametro &lt;strong&gt;dati&lt;/strong&gt; (opzionale) 
+rappresenta il &lt;em&gt;dato&lt;/em&gt; da inserire nella richiesta di accesso civico generalizzato.&lt;/p&gt;
+
+&lt;p&gt;Un tipico scenario d’uso è, ad esempio, l’inserimento di un link (o di un bottone) nel sito istituzionale del comune 
+utilizzando il parametro &lt;em&gt;dati&lt;/em&gt; per veicolare gli &lt;em&gt;oggetti&lt;/em&gt;  degli atti amministrativi degli albi pretori come dati di partenza.
+L’utente che visita l’albo pretorio del comune vedrà, per ogni atto amministrativo pubblicato, un bottone &lt;em&gt;Accesso Civico&lt;/em&gt;
+che lo rendirizzerà su &lt;em&gt;FoiaPop&lt;/em&gt; per la compilazione automatica della richiesta di &lt;em&gt;accesso civico generalizzato&lt;/em&gt;, a partire dai dati
+relativi all’oggetto specifico di quell’atto amministrativo.&lt;/p&gt;
+
+&lt;p&gt;Se non si vuole scendere a questo livello di dettaglio e per facilitare i webmaster dei siti delle pubbliche amministrazioni (ma anche di siti esterni)
+&lt;strong&gt;FoiaPop&lt;/strong&gt; mette a disposizione dei widget pronti all’uso, da posizionare nelle pagine dei siti Web istituzionali, il cui codice HTML può essere copiato e incollato all’interno dei propri portali.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/foia-api.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;demo&quot;&gt;Demo&lt;/h3&gt;
+&lt;iframe style=&quot;width:123px;height:35px&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; align=&quot;top&quot; scrolling=&quot;No&quot; frameborder=&quot;0&quot; hspace=&quot;0&quot; vspace=&quot;0&quot; src=&quot;http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-generalizzato/widget&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;width:123px;height:35px&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; align=&quot;top&quot; scrolling=&quot;No&quot; frameborder=&quot;0&quot; hspace=&quot;0&quot; vspace=&quot;0&quot; src=&quot;http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-generalizzato/widget?style=btn-success&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;width:123px;height:35px&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; align=&quot;top&quot; scrolling=&quot;No&quot; frameborder=&quot;0&quot; hspace=&quot;0&quot; vspace=&quot;0&quot; src=&quot;http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-generalizzato/widget?style=btn-info&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;width:123px;height:35px&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; align=&quot;top&quot; scrolling=&quot;No&quot; frameborder=&quot;0&quot; hspace=&quot;0&quot; vspace=&quot;0&quot; src=&quot;http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-generalizzato/widget?style=btn-warning&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;width:123px;height:35px&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; align=&quot;top&quot; scrolling=&quot;No&quot; frameborder=&quot;0&quot; hspace=&quot;0&quot; vspace=&quot;0&quot; src=&quot;http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-generalizzato/widget?style=btn-danger&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Cliccando su uno dei bottoni si verrà reindirizzati su &lt;strong&gt;FoiaPop&lt;/strong&gt; e si potrà iniziare il processo di compilazione della richiesta online, esattamente come già visto in precedenza. L’ente di partenza
+è sempre il &lt;em&gt;Comune di Caltanissetta&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;nuovo-accesso-civico-semplice&quot;&gt;Nuovo Accesso Civico Semplice&lt;/h2&gt;
+
+&lt;p&gt;Come già detto all’inizio di questo post, esistono diverse tipologie di accesso civico a disposizione del cittadino per richiedere informazioni e, tra queste, una delle più importanti è
+la &lt;em&gt;richiesta di accesso civico semplice&lt;/em&gt;. Con questa richiesta si ha il diritto di accesso ai documenti, dati e informazioni su cui sussite l’obbligo di pubblicazione
+ai sensi del D.Lgs.33/2013. Tali obblighi sono resi di più agevole comprensione da ANAC (Autorità nazionale anticorruzione) che ne ha elaborato un
+ &lt;a href=&quot;http://www.anticorruzione.it/portal/rest/jcr/repository/collaboration/Digital%20Assets/anacdocs/Attivita/Atti/determinazioni/2016/1310/Del.1310.2016.All_new.xls&quot;&gt;elenco&lt;/a&gt; 
+specifico.
+Tali informazioni devono essere pubblicate all’interno di ogni sito istituzionale delle P.A. nella sezione Amministrazione Trasparente.
+Se il cittadino non trova pubblicate una o più di queste informazioni può esercitare il diritto di &lt;em&gt;accesso civico semplice&lt;/em&gt;, chiedendo alla P.A.
+la pubblicazione dei documenti mancanti.&lt;/p&gt;
+
+&lt;p&gt;Anche per questa tipologia di richiesta FoiaPop consente di creare passo passo il modulo da trasmettere alla P.A. Vediamo come.&lt;/p&gt;
+
+&lt;p&gt;Il punto di partenza è sempre la pubblica amministrazione di nostro interesse. Anche in questo caso scegliamo il &lt;em&gt;comune di Caltanissetta&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Clicchiamo quindi su &lt;strong&gt;Nuovo Accesso Civico Semplice - Pubblicazioni Online Obbligatorie&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/bottone-acs.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FoiaPop ci mostrerà l’elenco dei documenti che tutte le P.A. devono pubblicare all’interno della sezione &lt;strong&gt;Amministrazione Trasparente&lt;/strong&gt; dei loro siti istituzionali.
+Tali obblighi, così come previsti dall’ANAC, sono strutturati in sezioni (macrofamiglie) e in sottosezioni (tipologie di dati).&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/at-list.png&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Per ciascun obbligo, passando il mouse sopra l’icona &lt;strong&gt;punto interrogativo&lt;/strong&gt;, FoiaPop visualizzerà il contenuto con un dettaglio maggiore.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/at-tooltip.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FoiaPop&lt;/strong&gt;, inoltre, verificherà l’esito del monitoraggio effettuato dalla &lt;a href=&quot;http://bussola.magellanopa.it/home.html&quot;&gt;Bussola della Trasparenza&lt;/a&gt; per ciascun obbligo e, in caso di esito positivo,
+mostrerà l’icona di una bussola con il collegamento alla pagina del sito istituzionale al cui interno si trova (&lt;em&gt;o si dovrebbe trovare&lt;/em&gt;) il documento relativo
+all’obbligo monitorato.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/at-bussola.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;L’utente procederà quindi a inserire uno o più obblighi nella &lt;em&gt;richiesta di accesso civico semplice&lt;/em&gt;, a mò di carrello della spesa, e per ciascuna selezione potrà indicare la
+motivazione della richiesta, così come di seguito riportato.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/at-carrello.png&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dopo aver selezionato il/i documento/i su cui richiedere l’accesso, premendo il tasto &lt;strong&gt;AVANTI&lt;/strong&gt; l’utente potrà inserire le informazioni anagrafiche 
+così come visto in precedenza.&lt;/p&gt;
+
+&lt;p&gt;Alla fine del modulo viene visualizzato il dettaglio degli obblighi non rispettati che si vogliono aggiungere alla richiesta.
+FoiaPop consente anche di inserire, in un campo libero, eventuali precisazioni a corredo della richiesta stessa.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/at-form.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cliccando su &lt;em&gt;AVANTI&lt;/em&gt;  FoiaPop visualizzerà l’anteprima della &lt;em&gt;richiesta di accesso civico semplice&lt;/em&gt;, completa di tutte le informazioni inserite.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/at-preview.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nella stessa pagina, in basso, si troveranno sempre le indicazioni operative per la trasmissione della richiesta alla P.A. (con possibilità di download).
+Dopo aver controllato l’esattezza di tutte le informazioni inserite nella richiesta possiamo cliccare su &lt;strong&gt;CREA RICHIESTA ACCESSO CIVICO SEMPLICE&lt;/strong&gt;
+e FoiaPop genererà per noi il documento in PDF da trasmettere alla pubblica amministrazione.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/foiapop/accesso-civico-semplice.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;accesso-civico-semplice-api&quot;&gt;Accesso Civico Semplice API&lt;/h2&gt;
+&lt;p&gt;Attraverso l’accesso tramite &lt;strong&gt;API&lt;/strong&gt; è possibile generare richieste di &lt;em&gt;accesso civico semplice&lt;/em&gt; a partire da siti esterni.
+L’&lt;strong&gt;URL&lt;/strong&gt; da invocare è il seguente:&lt;/p&gt;
+&lt;figure class=&quot;code-highlight-figure&quot;&gt;&lt;figcaption class=&quot;code-highlight-caption&quot;&gt;&lt;span class=&quot;code-highlight-caption-title&quot;&gt; &lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;code-highlight&quot;&gt;&lt;pre class=&quot;code-highlight-pre&quot;&gt;&lt;div data-line=&quot;1&quot; class=&quot;code-highlight-row numbered&quot;&gt;&lt;div class=&quot;code-highlight-line&quot;&gt;http://www.foiapop.it/api/accesso-civico-semplice?cf=CODICE-FISCALE-DELLA-PA&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/figure&gt;
+
+&lt;p&gt;doce il parametro &lt;strong&gt;cf&lt;/strong&gt; (obbligatorio) rappresenta il codice fiscale della pubblica amministrazione.&lt;/p&gt;
+
+&lt;p&gt;Un tipico scenario d’uso è, ad esempio, l’inserimento di un link (o di un bottone) all’interno del sito istituzionale di un comune,
+nella sezione &lt;strong&gt;Amministrazione Trasparente&lt;/strong&gt;. L’utente che non riesce a trovare il documento desiderato, cliccando sul link/bottone,
+viene quindi reindirizzato su &lt;strong&gt;FoiaPop&lt;/strong&gt; per la compilazione passo passo della richiesta di &lt;em&gt;accesso civico semplice&lt;/em&gt; del documento non trovato.&lt;/p&gt;
+
+&lt;p&gt;Per facilitare il lavoro ai webmaster, &lt;strong&gt;FoiaPop&lt;/strong&gt; mette a disposizione dei widget pronti all’uso,
+ da posizionare direttamente nelle pagine del sito Web istituzionale, copiando e incollando il codice HTML generato dalla piattaforma.
+ L’ente è sempre il &lt;em&gt;Comune di Caltanissetta&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;demo-1&quot;&gt;Demo&lt;/h3&gt;
+&lt;iframe style=&quot;width:123px;height:35px&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; align=&quot;top&quot; scrolling=&quot;No&quot; frameborder=&quot;0&quot; hspace=&quot;0&quot; vspace=&quot;0&quot; src=&quot;http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-semplice/widget&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;width:123px;height:35px&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; align=&quot;top&quot; scrolling=&quot;No&quot; frameborder=&quot;0&quot; hspace=&quot;0&quot; vspace=&quot;0&quot; src=&quot;http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-semplice/widget?style=btn-success&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;width:123px;height:35px&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; align=&quot;top&quot; scrolling=&quot;No&quot; frameborder=&quot;0&quot; hspace=&quot;0&quot; vspace=&quot;0&quot; src=&quot;http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-semplice/widget?style=btn-info&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;width:123px;height:35px&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; align=&quot;top&quot; scrolling=&quot;No&quot; frameborder=&quot;0&quot; hspace=&quot;0&quot; vspace=&quot;0&quot; src=&quot;http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-semplice/widget?style=btn-warning&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;width:123px;height:35px&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; align=&quot;top&quot; scrolling=&quot;No&quot; frameborder=&quot;0&quot; hspace=&quot;0&quot; vspace=&quot;0&quot; src=&quot;http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-semplice/widget?style=btn-danger&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Cliccando su uno di questi bottoni si verrà reindirizzati su FoiaPop e si potrà iniziare il processo di compilazione della richiesta online, esattamente come già visto in precedenza.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusioni&quot;&gt;Conclusioni&lt;/h2&gt;
+&lt;p&gt;FoiaPop è una piattaforma online per la compilazione di richieste di &lt;em&gt;accesso civico semplice e generalizzato&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;E’ online la versione &lt;a href=&quot;http://www.foiapop.it&quot;&gt;beta&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;FoiaPop è uno strumento rivolto ai cittadini per facilitare loro la compilazione delle richieste di accesso civico.
+&lt;strong&gt;Ma non è solo questo.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;FoiaPop vuole essere uno strumento in grado aumentare la consapevolezza civica
+del cittadino comune affinchè possa diventare sempre più partecipe e determinante nella vita amministrativa della propria città, possa comprendere sempre
+meglio i processi interni della burocrazia del palazzo, possa farsi domande che suscitino in lui dubbi, critiche e osservazioni, 
+che stimolino anche proposte, consigli e suggerimenti, possa svolgere attività di controllo dei processi decisionali all’interno delle istituzioni.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Se questo progetto ti è piaciuto, mi aiuti a farlo conoscere con un tweet? Grazie!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/share?url=http://www.foiapop.it&amp;amp;text=FoiaPop+-+Accesso+civico+data-driven!+@foiapop+@gpirrotta&quot;&gt;Twittami&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/share?url=http://www.foiapop.it&amp;amp;text=FoiaPop+-+Accesso+civico+data-driven!+@foiapop+@gpirrotta&quot;&gt;&lt;img src=&quot;/images/twitter.png&quot; alt=&quot;Image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Per feedback, suggerimenti e critiche non esitate a lasciarmi un commento.&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Ritorno a scrivere in questo blog, dopo molto tempo, su un tema a me molto caro e cioè l’utilizzo degli opendata come strumento per facilitare processi inerenti la trasparenza e la diffusione di informazioni da parte delle pubbliche amministrazioni. Subito dopo il raduno di Opendata Sicilia 2016, svoltosi a settembre a Messina, avevo voglia di smanettare con gli opendata dei contratti pubblici - i cui URL dei file XML sono disponibili sul sito ANAC - e con gli opendata relativi agli incassi e ai pagamenti di tutte le pubbliche amministrazioni, disponibili sul sito SIOPE. Questi dati contengono informazioni molto utili sullo stato di salute delle pubbliche amministrazioni italiane e il loro riuso, in termini di analisi, esplorazione e mashup, è carburante prezioso per modelli di economie data-based.</summary></entry><entry><title type="html">Citybot: la tua città, smart, in pochi click</title><link href="http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/" rel="alternate" type="text/html" title="Citybot: la tua città, smart, in pochi click" /><published>2016-04-09T11:11:00+00:00</published><updated>2016-04-09T11:11:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">&lt;p&gt;A settembre 2015 ho partecipato al raduno Open Data Sicilia, svoltosi a Palermo.
 In quell’occasione sono venuto a conoscenza del progetto &lt;a href=&quot;http://www.comunweb.it/&quot;&gt;ComunWeb&lt;/a&gt;, cioè una soluzione informatica omogenea per tutti i comuni e le comunità di Valle interessate a un portale di comunicazione su piattaforma condivisa.
 &lt;!--More--&gt;
 La parte di ComunWeb che ha destato in me maggior attenzione è stata quella relativa all’utilizzo di un &lt;a href=&quot;http://www.comunweb.it/openpa/classes&quot;&gt;modello di dati condiviso&lt;/a&gt; fra tutti gli enti locali aderenti (attualmente 178), grazie al quale i
@@ -1701,160 +2042,4 @@ HTML code using RDFa technology&lt;/p&gt;
 &lt;p&gt;Obviously, this is just an overview. For detail I invite you to refer to
 the &lt;a href=&quot;http://www.w3.org/TR/rdfa-syntax/&quot;&gt;official documentation&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;That’s all folks. Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">In previous posts I introduced the RDF model as the key ingredient of the Semantic Web and other standard languages, such as RDF Schema and OWL, to describe concepts and relationships more expressively. These semantic technologies allow to extend the actual Web providing a globally coherent notion of meaning, transforming the text in concepts and relations to increase the data integration with external applications.</summary></entry><entry><title type="html">Semantic Web Ingredients: the Web Ontology Language</title><link href="http://giovanni.pirrotta.it/blog/2014/07/22/semantic-web-ingredients-the-web-ontology-language/" rel="alternate" type="text/html" title="Semantic Web Ingredients: the Web Ontology Language" /><published>2014-07-22T16:00:00+00:00</published><updated>2014-07-22T16:00:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2014/07/22/semantic-web-ingredients-the-web-ontology-language</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2014/07/22/semantic-web-ingredients-the-web-ontology-language/">&lt;p&gt;In this post, after nearly six months, I continue my Semantic Web series speaking
-about the &lt;strong&gt;OWL&lt;/strong&gt; language, acronym of &lt;a href=&quot;http://www.w3.org&quot;&gt;Web Ontology Language&lt;/a&gt;,
-that provides a rich set of concepts for defining classes and properties.&lt;/p&gt;
-
-&lt;!--More--&gt;
-&lt;p&gt;#}&lt;/p&gt;
-
-&lt;p&gt;Although &lt;strong&gt;RDFS&lt;/strong&gt; represents a very useful language to model domains, it suffers the following limitations:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the &lt;code class=&quot;highlighter-rouge&quot;&gt;rdfs:range&lt;/code&gt; property defines the range of a certain property for all classes,
-but in RDF Schema we cannot declare a constraint only for a single class;&lt;/li&gt;
-  &lt;li&gt;we cannot say that two classes are disjoint, for example you cannot declare that the &lt;code class=&quot;highlighter-rouge&quot;&gt;Male&lt;/code&gt;
-class is disjoint from the &lt;code class=&quot;highlighter-rouge&quot;&gt;Female&lt;/code&gt; class;&lt;/li&gt;
-  &lt;li&gt;we cannot define new classes using boolean operators. In fact, to create a new class, we could use
-the union, the intersection and the complement operators, but the &lt;strong&gt;RDFS&lt;/strong&gt; does not provide tools
-powerful enough to express it;&lt;/li&gt;
-  &lt;li&gt;we cannot define cardinality constraints on properties. For example, we cannot declare that a
-&lt;strong&gt;Person&lt;/strong&gt; instance can have only one &lt;code class=&quot;highlighter-rouge&quot;&gt;hasMother&lt;/code&gt; property;&lt;/li&gt;
-  &lt;li&gt;we cannot specify particular features on properties such as transitivity, symmetry or inverse
-properties.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Because of these limitations, the &lt;a href=&quot;http://www.w3.org&quot;&gt;W3C Consortium&lt;/a&gt; defined a new knowledge representation
-language called OWL that provides a well defined syntax and semantics with a sufficiently expressive
-mechanism to ensure automate processing using a reasoner engine.
-Depending on the level of expressiveness, OWL specification includes the definition of three variants:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;The &lt;strong&gt;OWL Full&lt;/strong&gt; language uses all primitives provided by the OWL Definition Language with the
-possibility of changing the meaning of OWL/RDF pre-defined primitives. It is either syntactically
-or semantically compatible with RDF, namely, each valid document in RDF is also valid in OWL Full,
-and each inference obtained in RDFS is a valid inference in OWL Full. Unfortunately, the OWL Full
-language is undecidable, so it cannot work on a reasoner engine.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The &lt;strong&gt;OWL DL&lt;/strong&gt; is a sublanguage of OWL Full and, limiting the way to use OWL and RDF constructors,
-it allows to map the OWL language on a description logic, in order to gain computational efficiency.
-In fact, it allows the reasoning support not permitted by OWL Full, but we lose the full
-compatibility with RDF; an RDF document cannot be considered an OWL DL document. Vice versa, each
-valid OWL DL document is also a valid RDF document.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The &lt;strong&gt;OWL Lite&lt;/strong&gt; is an OWL DL sublanguage and provides a limited set of constructors. For example,
-it excludes enumerated classes, the disjunction operator and some cardinality features. The OWL Lite
-is very simple to use but allows less expressiveness.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In the following Figure we can see the relationships between OWL dialects.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/semantic-web/owl-variants.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In the OWL language we can model our domain with the concept of &lt;strong&gt;class&lt;/strong&gt;, that
-represents one of the most important aspect of the language. To do this we use the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Class&lt;/code&gt;;
-Also exist two pre-defined classes:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Thing&lt;/code&gt; is the superclass of all classes and a default class of all individuals. Thus,
-every individual in OWL world is member of &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Thing&lt;/code&gt;;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Nothing&lt;/code&gt; is a class that has no instances and is a subclass of all classes.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thanks to the expressiveness of the OWL language, we can define more characteristics of classes we need
-to design. The language provides the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:EquivalentClass&lt;/code&gt; construct to declare the equivalence
-between two classes or the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:disjointWith&lt;/code&gt; construct to define the classes that do not
-share any individuals.&lt;/p&gt;
-
-&lt;p&gt;An &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Property&lt;/code&gt; is instead a binary relation defining relationships between individuals, or between
-individuals and data value. There are two pre-defined property classes:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:ObjectTypeProperty&lt;/code&gt; resource defines the relation between instances of two classes;&lt;/li&gt;
-  &lt;li&gt;the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:DataTypeProperty&lt;/code&gt; resource defines the relation between instances of classes and literal values,
-such as string, date, float, etc.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Also, the OWL language provides some &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:ObjectTypeProperty&lt;/code&gt; subclasses specifying some interesting
-class characteristics.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:TransitiveProperty&lt;/code&gt; construct defines a transitive property: if a relation between the
-class &lt;strong&gt;A&lt;/strong&gt; and the class &lt;strong&gt;B&lt;/strong&gt; exists, and a relation between the class &lt;strong&gt;B&lt;/strong&gt; and the class &lt;strong&gt;C&lt;/strong&gt;
-exists, the also a relation between the class &lt;strong&gt;A&lt;/strong&gt; and the class &lt;strong&gt;C&lt;/strong&gt; does exist.&lt;/li&gt;
-  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:SymmetricProperty&lt;/code&gt; construct defines a symmetric property: if a relation between
-the class &lt;strong&gt;A&lt;/strong&gt; and the class &lt;strong&gt;B&lt;/strong&gt; exists, then also a relation between the class &lt;strong&gt;B&lt;/strong&gt; and the
-class &lt;strong&gt;A&lt;/strong&gt; does exist.&lt;/li&gt;
-  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:FunctionalProperty&lt;/code&gt; construct defines a property with at most one value for each instance.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Also, we can set the cardinality of properties using the following OWL resources: &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Restriction&lt;/code&gt;,
-   &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:onProperty&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:minCardinality&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:maxCardinality&lt;/code&gt;, so we can create new classes using
-boolean operators through the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:unionOf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:complementOf&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:intersectionClass&lt;/code&gt; constructs.
-Obviously, there are many other constructs and language features provided by OWL language.
-For more details you can refer to the &lt;a href=&quot;http://www.w3.org/TR/owl-features/&quot;&gt;official documentation&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Let us come back to our old statement (in the previous &lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/&quot;&gt;post&lt;/a&gt;),
-and let us try to draw the relative ontology using the OWL language.&lt;/p&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//www.w3.org/1999/02/22-rdf-syntax-ns#&amp;gt;.
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//www.w3.org/2000/01/rdf-schema#&amp;gt;.
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//www.w3.org/2002/07/owl#&amp;gt;.
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//example.org/&amp;gt;.
-&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DatatypeProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;surname&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DatatypeProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DatatypeProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DatatypeProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hasAuthor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ObjectProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-             &lt;span class=&quot;n&quot;&gt;rdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;domain&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-             &lt;span class=&quot;n&quot;&gt;rdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;range&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hasUniqueAuthor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ObjectProperty&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                   &lt;span class=&quot;n&quot;&gt;rdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subPropertyOf&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hasAuthor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-
-
-&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;rdfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subClassOf&lt;/span&gt;
-         &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Restriction&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-           &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onProperty&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hasUniqueAuthor&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-           &lt;span class=&quot;n&quot;&gt;owl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maxCardinality&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^^&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//www.w3.org/2001/XMLSchema#int&amp;gt;
-&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;umld&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-               &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hasUniqueAuthor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mfowler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-               &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;UML Distilled&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-               &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;0201325632&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mfowler&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Martin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;surname&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Fowler&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;As can be seen in the code, the &lt;code class=&quot;highlighter-rouge&quot;&gt;rdfs:Class&lt;/code&gt;
-resources were replaced by the relative &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Class&lt;/code&gt; constructs.&lt;/p&gt;
-
-&lt;p&gt;Depending on the type of object, we can identify &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:DatatypeProperty&lt;/code&gt;
-and &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:ObjectProperty&lt;/code&gt; property instances.
-In our example only &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:hasAuthor&lt;/code&gt; is an &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:ObjectProperty&lt;/code&gt; instance,
-whereas the remaining ones are &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:DatatypeProperty&lt;/code&gt; property instances.&lt;/p&gt;
-
-&lt;p&gt;Now let us imagine we want to specialize the &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:hasAuthor&lt;/code&gt; property.
-We want to define a particular property modeling books with a single
-author. To do this, we define the &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:hasUniqueAuthor&lt;/code&gt; property as subproperty
-(&lt;code class=&quot;highlighter-rouge&quot;&gt;rdfs:subPropertyOf&lt;/code&gt; ) of &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:hasAuthor&lt;/code&gt; property. To define this
-constraint we must create an anonymous &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:Restriction&lt;/code&gt; class, specifying
-as properties the attributes that have to be constrained.
-In this case we indicate the resource &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:hasUniqueAuthor&lt;/code&gt; through the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:onProperty&lt;/code&gt;
-property and we indicate the maximum number of relations the &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:hasUniqueAuthor&lt;/code&gt;
-property can join between classes, in this case only
-one, through the &lt;code class=&quot;highlighter-rouge&quot;&gt;owl:maxCardinality&lt;/code&gt; property.&lt;/p&gt;
-
-&lt;p&gt;That’s all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">In this post, after nearly six months, I continue my Semantic Web series speaking about the OWL language, acronym of Web Ontology Language, that provides a rich set of concepts for defining classes and properties.</summary></entry></feed>
+&lt;p&gt;That’s all folks. Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">In previous posts I introduced the RDF model as the key ingredient of the Semantic Web and other standard languages, such as RDF Schema and OWL, to describe concepts and relationships more expressively. These semantic technologies allow to extend the actual Web providing a globally coherent notion of meaning, transforming the text in concepts and relations to increase the data integration with external applications.</summary></entry></feed>

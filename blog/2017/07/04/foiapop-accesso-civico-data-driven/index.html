@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>FoiaPop: accesso civico data-driven - Giovanni Pirrotta</title>
+  <meta name="author" content="Giovanni Pirrotta">
+
+  
+  <meta name="description" content="
+    
+        
+  
+    
+      FoiaPop: accesso civico data-driven
+    
+    
+      
+
+        
+
+
+ July 04, 2017
+        
+      
+    
+  
+
+
+Ritorno a sc...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://giovanni.pirrotta.it/blog/2017/07/04/foiapop-accesso-civico-data-driven/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Giovanni Pirrotta" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-68654531-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body  
+      >
+<header role="banner"><hgroup>
+  <h1><a href="/">Giovanni Pirrotta</a></h1>
+  
+    <h2>Just a curious person</h2>
+  
+</hgroup>
+
+</header>
+<nav role="navigation"><ul class="subscription" data-subscription="rss">
+  
+  
+</ul>
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/atom.xml">RSS</a></li>
+  <li><a href="http://github.com/gpirrotta">Github</a></li>
+  <li><a href="http://twitter.com/gpirrotta">Twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/giovannipirrotta">Linkedin</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<div id="main">
+    <div id="content">
+        <div>
+    <article class="hentry" role="article">
+        
+  <header>
+    
+      <h1 class="entry-title">FoiaPop: accesso civico data-driven</h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ July 04, 2017
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Ritorno a scrivere in questo blog, dopo molto tempo, su un tema a me molto caro e cioè l’utilizzo degli opendata come <strong>strumento</strong> per facilitare 
+processi inerenti la trasparenza e la diffusione di informazioni da parte delle pubbliche amministrazioni.</p>
+
+<p>Subito dopo il raduno di <a target="_blank" href="http://ods16.opendatasicilia.it">Opendata Sicilia 2016</a>, svoltosi a settembre a Messina, avevo voglia di smanettare 
+ con gli opendata dei contratti pubblici - i cui URL dei file XML
+ sono disponibili sul sito ANAC - e con gli opendata relativi agli incassi e ai pagamenti di tutte le pubbliche amministrazioni, disponibili sul sito SIOPE.
+Questi dati contengono informazioni molto utili sullo stato di salute delle pubbliche amministrazioni italiane e il loro riuso, in termini di analisi, esplorazione e mashup,
+ è <strong>carburante</strong> prezioso per modelli di economie <em>data-based.</em></p>
+
+<!--More-->
+
+<p>Lo sanno bene alcune startup come <a target="_blank" href="https://synapta.it/">Synapta</a> che, applicando le potenzialità del linguaggio semantico ai contratti pubblici, 
+rendono più sostenibili la gestione dei dati aziendali, risolvendo problemi quotidiani di aziende, pubbliche amministrazioni e cittadini.</p>
+
+<p>Nel settore pubblico, invece, è da menzionare il progetto <a target="_blank" href="http://soldipubblici.gov.it/it/home">soldipubblici</a> che, a partire dagli opendata relativi alle spese delle pubbliche amministrazioni,
+disponibili su <a target="_blank" href="http://www.siope.it">SIOPE</a>, promuovono e migliorano l’accesso e la comprensione dei cittadini sui dati della spesa della Pubblica Amministrazione, in un’ottica di maggiore trasparenza 
+e partecipazione. <em>A causa del cambio di codifica SIOPE, purtroppo, il servizio è momentaneamente non disponibile</em>.</p>
+
+<p>Come dicevo prima, avevo intenzione di sperimentare qualcosa con gli opendata SIOPE e ANAC ma, anche se avevo qualche piccola idea da cui partire, non ero molto convinto su dove sarei andato a <em>parare</em> :-) .</p>
+
+<p><img class="center-image" src="/images/foiapop/mumble-meme.jpg" width="30%" /></p>
+
+<p>Sentivo forte l’esigenza di confrontarmi con chi, prima di me, si era cimentato nell’analisi di questi dati, ci aveva sbattuto la testa e sicuramente 
+possedeva una visione più completa del dominio di riferimento.</p>
+
+<p>Avevo bisogno di parlare con <a target="_blank" href="https://www.twitter.com/giuragu">Giuseppe Ragusa</a></p>
+
+<p>Quasi due anni fa, Giuseppe, confrontando i dati IPA, cioè le anagrafiche delle pubbliche amministrazioni, con i dati dei contratti pubblici ANAC, aveva
+scoperto delle anomalie e aveva raccontato la sua ricerca e i suoi risultati in questo <a target="_blank" href="http://opendatasicilia.it/2015/07/27/anac-e-indice-pa-i-dati-sugli-enti-non-tornano/">post</a>, che vi invito a leggere.</p>
+
+<p>Era l’uomo che cercavo!</p>
+
+<p>Ci siamo dati appuntamento un giorno di gennaio e via <em>hangout</em> abbiamo trascorso quasi l’intero pomeriggio cercando di immaginare, intuire, intercettare
+un qualche bisogno di cui il cittadino poteva avvertire l’esigenza, cercando di captare e percepire una qualche sua necessità, 
+per farlo diventare, dal punto di vista della partecipazione civica, più attivo, più consapevole, più moderno.
+Dopo aver partorito due/tre idee da cui partire (che non ricordo neanche più) e dopo un paio di ore di brainstorming, piano piano, in modo silente, nella discussione stava
+emergendo con sempre più insistenza la parolina magica che sarebbe diventata l’architrave dell’intero progetto finale: sto parlando della parola <strong>FOIA</strong>.</p>
+
+<p><em>Disclaimer</em><br />
+<em>Non sono un giurista per cui mi scuso in anticipo per ogni imprecisione giuridica riscontrata nel proseguio del post</em></p>
+
+<p>Il <strong>FOIA</strong>, acronimo di <em>Freedom of Information Act è una legge sulla libertà di informazione, emanata negli Stati Uniti il 4 luglio 1966</em>
+ (<a href="https://it.wikipedia.org/wiki/Freedom_of_Information_Act">Wikipedia</a>).</p>
+
+<p>L’Italia ha recentemente introdotto uno strumento giuridico, chiamato <em>accesso civico generalizzato</em>, che riprende a grandi linee il FOIA americano, 
+motivo per cui anche in Italia si parla ultimamente così tanto di FOIA.
+Con questo strumento il cittadino può richiedere alla pubblica amministrazione, tramite specifica istanza, dati, documenti, informazioni prodotti
+e posseduti dalle P.A., con alcune e delimitate esclusioni.</p>
+
+<p>A dire il vero, mediante altre modalità di accesso, il cittadino poteva già ottenere informazioni dalle P.A., come ad esempio attraverso la richiesta di <em>accesso civico semplice</em>.
+Il cittadino, con questo strumento giuridico, ha il diritto di accesso a documenti, dati e informazioni su cui sussiste l’obbligo di pubblicazione ai sensi del 
+<a target="blank" href="http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2013-03-14;33!vig=">D.Lgs 33/2013</a>.
+Ogni pubblica amministrazione deve pubblicare sul proprio sito istituzionale, nella sezione <strong>Amministrazione Trasparente</strong>, 
+un insieme di <a href="http://www.anticorruzione.it/portal/public/classic/AttivitaAutorita/AttiDellAutorita/_Atto?ca=6667">informazioni</a>.
+Qualora il cittadino non trovi pubblicata una (o più) di queste informazioni può esercitare il diritto di 
+<em>accesso civico semplice</em>, chiedendo alla P.A. la pubblicazione dei documenti mancanti.</p>
+
+<p>Da segnalare lo strumento online <a href="http://bussola.magellanopa.it/il-progetto.html">Bussola della Trasparenza</a>, realizzato dal
+Ministero per la Semplificazione e la Pubblica Amministrazione, con il quale è possibile monitorare l’adempimento,
+da parte dei siti Web delle pubbliche amministrazioni, degli obblighi di trasparenza imposti dalla legge italiana. 
+Uno degli aspetti più interessanti di questo progetto è che i dati sul monitoraggio degli obblighi sono disponibili in <a href="http://bussola.magellanopa.it/open-data.html">opendata</a>.</p>
+
+<p>Ritornando al brainstorming con Giuseppe, alla fine del confronto sono emerse le seguenti osservazioni/preoccupazioni:</p>
+
+<ul>
+  <li>i cittadini <strong>non conoscono</strong> il diritto di accesso civico, nè quello semplice nè quello generalizzato (FOIA);</li>
+  <li>i cittadini più informati (pochi) spesso non sanno da dove partire, <strong>non hanno</strong> quindi gli strumenti per poter definire e portare a termine
+una richiesta di accesso ai dati, documenti e informazioni;</li>
+  <li>le manifestazioni più importanti all’interno di una PA sono quelle su cui <strong>ruotano i flussi monetari</strong> e cioè i pagamenti, gli incassi, gli appalti, etc.</li>
+</ul>
+
+<p>E’ emerso un vuoto da colmare e, sulla scia del nome del progetto <a target="blank" href="http://albopop.it/">albopop</a>, propongo di chiamare questo vuoto <strong>FOIAPOP</strong>.</p>
+
+<h2 id="foiapop">FOIAPOP</h2>
+
+<p><img class="center-image" src="/images/foiapop/homepage.png" width="60%" /></p>
+
+<p><strong>FoiaPop</strong> ha come obiettivo quello di supportare l’utente nella compilazione online di richieste di accesso civico semplice e generalizzato. 
+Rispetto ad altre soluzioni simili, però, la compilazione della richiesta di accesso civico è guidata dai dati (data-driven).
+FoiaPop èin grado di ricostruire, in modo preciso e puntuale, i flussi monetari specifici di ogni pubblica
+amministrazione italiana, su cui il cittadino può facilmente maturare delle domande specifiche di accesso.</p>
+
+<p>Grazie al riutilizzo degli opendata relativi alle basi informative IPA, SIOPE, e AVCP/ANAC, l’utente può formulare le <em>richieste di accesso civico generalizzato</em>
+semplicemente cliccando sulle voci di spese, incassi o contratti pubblici.</p>
+
+<p>Allo stesso modo, sfruttando gli opendata relativi ai dati IPA, Obblighi ANAC e Bussola della Trasparenza, l’utente può compilare online la richiesta
+di <em>accesso civico semplice</em> per richiedere la pubblicazione di documenti obbligatori non presenti in Amministrazione Trasparente della Pubblica Amministrazione.</p>
+
+<p>Vediamo adesso nel dettaglio il funzionamento della piattaforma descrivendo il workflow utilizzato da FoiaPop per il suo funzionamento.</p>
+
+<p><img class="center-image" src="/images/foiapop/workflow.png?t=dfdf" width="80%" /></p>
+
+<p>Con FoiaPop è possibile <strong>selezionare</strong> una qualsiasi pubblica amministrazione italiana (più di 20.000), <strong>compilare</strong>
+una richiesta di accesso civico in modo semplice e, in pochi click, <strong>generare</strong> il modulo compilato in PDF da trasmettere 
+alla pubblica amministrazione.</p>
+
+<p><strong>FoiaPop</strong> è <em>ente-centrico</em>, tutte le funzionalità ruotano attorno a ciascuna pubblica amministrazione e la base informativa di riferimento, 
+elemento centrale su cui si basa la piattaforma, è l’indice della pubblica amministrazione <a href="http://www.indicepa.gov.it/documentale/n-opendata.php">IPA</a>.</p>
+
+<p>Inseriamo il nome della pubblica amministrazione di nostro interesse nell’apposito modulo di ricerca. 
+Cerchiamo il termine <strong>Caltanissetta</strong> e scegliamo, tra i vari enti possibili, il <strong>comune di Caltanissetta</strong>.</p>
+
+<p><img class="center-image" src="/images/foiapop/caltanissetta.png" width="60%" /></p>
+
+<p><strong>FOIAPop</strong> ci consentirà, quindi, di creare le seguenti richieste di accesso civico:</p>
+
+<p><img class="center-image" src="/images/foiapop/sceltarichiesta.png" width="90%" /></p>
+
+<p>Descriviamo adesso le diverse tipologie di richieste disponibili in <strong>FoiaPop.</strong></p>
+
+<h2 id="nuovo-accesso-civico-generalizzato">Nuovo Accesso Civico Generalizzato</h2>
+
+<p>E’ il caso più semplice di richiesta di accesso civico generalizzato (FOIA). Cliccando su <strong>Nuovo Accesso Civico Generalizzato</strong>
+ verremo rendirizzati nel modulo di inserimento dei dati anagrafici del richiedente e del testo della richiesta.</p>
+
+<p><img class="center-image" src="/images/foiapop/form-foia.png" width="60%" /></p>
+
+<p>Clicchiamo su <strong>AVANTI</strong>.  <strong>FoiaPop</strong> visualizzerà un’<strong>anteprima</strong> della richiesta di <em>accesso civico generalizzato</em>, utile
+per effettuare gli ultimi controlli. L’anteprima riflette il modello di domanda PDF che sarà generato e presenta
+quindi tutte le informazioni di contesto specifico della richiesta di accesso civico generalizzato:
+l’intestatario <em>Ufficio Relazioni con il Pubblico</em>, l’indirizzo e l’email/PEC della pubblica amministrazione, 
+l’oggetto, i dati anagrafici del richiedente, la richiesta stessa e, in calce, lo spazio dedicato alla firma.
+Seguono quindi le istruzioni relative alla modalità di trasmissione della richiesta che si sta per generare,
+con possibilità di download.</p>
+
+<p><img class="center-image" src="/images/foiapop/preview-foia.png" width="60%" /></p>
+
+<p>Dopo aver controllato la correttezza delle informazioni visualizzate in anteprima e
+dopo aver ricordato le modalità operative di trasmissione del modello, si può procedere alla generazione in PDF
+della richiesta di accesso civico generalizzato.</p>
+
+<p><img class="center-image" src="/images/foiapop/foia.png" width="60%" /></p>
+
+<p>A questo punto l’utente può trasmettere la richiesta secondo le modalità di trasmissione che preferisce.</p>
+
+<h2 id="nuovo-accesso-civico-generalizzato-dai-dati-siope">Nuovo Accesso Civico Generalizzato dai dati SIOPE</h2>
+
+<p>Nonostante il diritto di accesso generalizzato sia uno strumento a disposizione di tutti, spesso i cittadini non sanno cosa chiedere,
+non conoscono i dati sui quali possono chiedere informazioni, spiegazioni, chiarimenti.
+Per supportare il cittadino <strong>FoiaPop</strong> consente la compilazione di richieste di accesso civico generalizzato 
+a partire dai dati SIOPE, cioè a partire da dati relativi gli incassi e i pagamenti delle pubbliche amministrazioni.
+Queste informazioni sono disponibili in opendata sul sito SIOPE da cui è possibile effettuare anche il <a target="blank" href="https://www.siope.it/Siope2Web/jsp/dispatchHome.do">download</a> massivo 
+per anno. Il livello di dettaglio è per singolo mese, la frequenza di aggiornamento è circa settimanale e 
+tutti gli importi sono organizzati per codici gestionali SIOPE.</p>
+
+<p>Per iniziare una nuova richiesta a partire dai dati SIOPE, dopo aver selezionato la pubblica amministrazione di nostro interesse,
+clicchiamo su <strong>Parti dai dati SIOPE - Incassi e Pagamenti Enti Pubblici</strong>  e FoiaPop ci mostretà il seguente elenco</p>
+
+<p><img class="center-image" src="/images/foiapop/siope-list.png" width="80%" /></p>
+
+<p>Per ogni voce SIOPE viene mostrata la tipologia (Entrate o Uscite), l’anno e il mese di riferimento, il
+ codice gestionale SIOPE, la descrizione e l’importo relativo. Il più delle volte l’elenco è composto
+ da diverse centinaia di righe ed è possibile filtrare i dati per <strong>parola chiave</strong> attraverso il modulo, posto ad inizio pagina.</p>
+
+<p>Scorrendo verso il basso immaginiamo di volere chiedere maggiori informazioni sulla seguente spesa:</p>
+
+<p><img class="center-image" src="/images/foiapop/dispositivi-medici.png" width="80%" /></p>
+
+<p>Non ci resta che cliccare su <strong>CREA FOIA</strong> ed iniziare la nostra richiesta. FoiaPop ci ripresenterà lo stesso form
+ di compilazione dei dati anagrafici che abbiamo visto in precedenza con un’interessante differenza:</p>
+
+<p><img class="center-image" src="/images/foiapop/siope-form.png" width="80%" /></p>
+
+<p>Subito prima del campo richiesta è presente un riquadro con il dettaglio della voce SIOPE che abbiamo selezionato
+in precedenza e su cui intendiamo esercitare il diritto di accesso civico generalizzato.</p>
+
+<p>Clicchiamo su <em>AVANTI</em>. Anche in questo caso FoiaPop visualizzerà l’anteprima del modulo di richiesta ed inserirà
+automaticamente il riferimento ai dati SIOPE di nostro interesse, come si può vedere dalla seguente figura.</p>
+
+<p><img class="center-image" src="/images/foiapop/siope-preview.png" width="80%" /></p>
+
+<p>Dopo aver controllato l’esattezza di tutti i dati dell’anteprima non ci resta che cliccare sul
+tasto <em>CREA RICHIESTA FOIA</em> per generare il modulo in PDF da trasmettere alla P.A.</p>
+
+<h2 id="nuovo-accesso-civico-generalizzato-dai-dati-anac">Nuovo Accesso Civico Generalizzato dai dati ANAC</h2>
+<p>Oltre ai dati SIOPE, <strong>FoiaPop</strong> consente anche di creare richieste di accesso civico generalizzato a partire dai contratti pubblici delle P.A.
+La base informativa di riferimento è il sito <a href="http://dati.anticorruzione.it/#/l190">ANAC</a> dove è possibile effettuare il download
+di tutti gli URL dei file XML contenenti le informazioni sui contratti pubblici delle P.A., secondo lo standard AVCP.</p>
+
+<p>Per iniziare una nuova richiesta dai dati ANAC, dopo aver selezionato la pubblica amministrazione di nostro interesse,
+clicchiamo su <strong>Parti dai dati ANAC - Contratti Pubblici -</strong>. FoiaPop ci mostrerà il seguente elenco</p>
+
+<p><img class="center-image" src="/images/foiapop/anac-list.png" width="90%" /></p>
+
+<p>Per ogni contratto viene visualizzato la descrizione dell’appalto, i partecipanti alla gara, l’aggiudicatario, i tempi
+di completamento, l’importo di aggiudicazione e l’importo delle somme liquidate.
+Come già visto in precedenza, anche qui è disponibile un filtro di ricerca per parola chiave.</p>
+
+<p>Prendiamo per esempio il seguente appalto:</p>
+
+<p><img class="center-image" src="/images/foiapop/anac-list3.png" width="80%" /></p>
+
+<p>Come per i casi precedenti dobbiamo inserire tutte le informazioni anagrafiche del richiedente e, in questo caso,
+nel campo relativo alla richiesta troviamo i dati sull’appalto ANAC su cui intendiamo esercitare il diritto di accesso.</p>
+
+<p><img class="center-image" src="/images/foiapop/anac-form2.png" width="80%" /></p>
+
+<p>Clicchiamo su <strong>AVANTI</strong> e l’anteprima ci mostrerà il riferimento ai dati ANAC incorporati nel testo della richiesta,
+con in più il riferimento dell’URL, fonte dei dati ANAC e il CIG di riferimento dell’appalto.</p>
+
+<p><img class="center-image" src="/images/foiapop/anac-preview2.png" width="90%" /></p>
+
+<p>Dopo aver controllato l’esattezza di tutte le informazioni inserite procediamo alla generazione del modulo di richiesta in PDF
+cliccando su <strong>CREA RICHIESTA FOIA</strong>. Il modulo generato potrà quindi essere trasmesso alla pubblica amministrazione.</p>
+
+<h2 id="accesso-civico-generalizzato-api">Accesso Civico Generalizzato API</h2>
+
+<p>Attraverso apposite <strong>API</strong> FoiaPop consente l’integrazione delle sue funzionalità con siti esterni, come, ad esempio,
+i siti istituzionali degli enti pubblici.</p>
+
+<p>L’URL da invocare è il seguente:</p>
+
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title"> </span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line">http://www.foiapop.it/api/accesso-civico-generalizzato?cf=CODICE-FISCALE-DELLA-PA&amp;dati=DATI-DA-INSERIRE-NELLA-RICHIESTA</div></div></pre></div></figure>
+
+<p>dove il parametro <strong>cf</strong> (obbligatorio) rappresenta il codice fiscale della pubblica amministrazione e il parametro <strong>dati</strong> (opzionale) 
+rappresenta il <em>dato</em> da inserire nella richiesta di accesso civico generalizzato.</p>
+
+<p>Un tipico scenario d’uso è, ad esempio, l’inserimento di un link (o di un bottone) nel sito istituzionale del comune 
+utilizzando il parametro <em>dati</em> per veicolare gli <em>oggetti</em>  degli atti amministrativi degli albi pretori come dati di partenza.
+L’utente che visita l’albo pretorio del comune vedrà, per ogni atto amministrativo pubblicato, un bottone <em>Accesso Civico</em>
+che lo rendirizzerà su <em>FoiaPop</em> per la compilazione automatica della richiesta di <em>accesso civico generalizzato</em>, a partire dai dati
+relativi all’oggetto specifico di quell’atto amministrativo.</p>
+
+<p>Se non si vuole scendere a questo livello di dettaglio e per facilitare i webmaster dei siti delle pubbliche amministrazioni (ma anche di siti esterni)
+<strong>FoiaPop</strong> mette a disposizione dei widget pronti all’uso, da posizionare nelle pagine dei siti Web istituzionali, il cui codice HTML può essere copiato e incollato all’interno dei propri portali.</p>
+
+<p><img class="center-image" src="/images/foiapop/foia-api.png" width="80%" /></p>
+
+<h3 id="demo">Demo</h3>
+<iframe style="width:123px;height:35px" marginwidth="0" marginheight="0" align="top" scrolling="No" frameborder="0" hspace="0" vspace="0" src="http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-generalizzato/widget"></iframe>
+<iframe style="width:123px;height:35px" marginwidth="0" marginheight="0" align="top" scrolling="No" frameborder="0" hspace="0" vspace="0" src="http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-generalizzato/widget?style=btn-success"></iframe>
+<iframe style="width:123px;height:35px" marginwidth="0" marginheight="0" align="top" scrolling="No" frameborder="0" hspace="0" vspace="0" src="http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-generalizzato/widget?style=btn-info"></iframe>
+<iframe style="width:123px;height:35px" marginwidth="0" marginheight="0" align="top" scrolling="No" frameborder="0" hspace="0" vspace="0" src="http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-generalizzato/widget?style=btn-warning"></iframe>
+<iframe style="width:123px;height:35px" marginwidth="0" marginheight="0" align="top" scrolling="No" frameborder="0" hspace="0" vspace="0" src="http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-generalizzato/widget?style=btn-danger"></iframe>
+
+<p>Cliccando su uno dei bottoni si verrà reindirizzati su <strong>FoiaPop</strong> e si potrà iniziare il processo di compilazione della richiesta online, esattamente come già visto in precedenza. L’ente di partenza
+è sempre il <em>Comune di Caltanissetta</em>.</p>
+
+<h2 id="nuovo-accesso-civico-semplice">Nuovo Accesso Civico Semplice</h2>
+
+<p>Come già detto all’inizio di questo post, esistono diverse tipologie di accesso civico a disposizione del cittadino per richiedere informazioni e, tra queste, una delle più importanti è
+la <em>richiesta di accesso civico semplice</em>. Con questa richiesta si ha il diritto di accesso ai documenti, dati e informazioni su cui sussite l’obbligo di pubblicazione
+ai sensi del D.Lgs.33/2013. Tali obblighi sono resi di più agevole comprensione da ANAC (Autorità nazionale anticorruzione) che ne ha elaborato un
+ <a href="http://www.anticorruzione.it/portal/rest/jcr/repository/collaboration/Digital%20Assets/anacdocs/Attivita/Atti/determinazioni/2016/1310/Del.1310.2016.All_new.xls">elenco</a> 
+specifico.
+Tali informazioni devono essere pubblicate all’interno di ogni sito istituzionale delle P.A. nella sezione Amministrazione Trasparente.
+Se il cittadino non trova pubblicate una o più di queste informazioni può esercitare il diritto di <em>accesso civico semplice</em>, chiedendo alla P.A.
+la pubblicazione dei documenti mancanti.</p>
+
+<p>Anche per questa tipologia di richiesta FoiaPop consente di creare passo passo il modulo da trasmettere alla P.A. Vediamo come.</p>
+
+<p>Il punto di partenza è sempre la pubblica amministrazione di nostro interesse. Anche in questo caso scegliamo il <em>comune di Caltanissetta</em>.</p>
+
+<p>Clicchiamo quindi su <strong>Nuovo Accesso Civico Semplice - Pubblicazioni Online Obbligatorie</strong>.</p>
+
+<p><img class="center-image" src="/images/foiapop/bottone-acs.png" width="80%" /></p>
+
+<p>FoiaPop ci mostrerà l’elenco dei documenti che tutte le P.A. devono pubblicare all’interno della sezione <strong>Amministrazione Trasparente</strong> dei loro siti istituzionali.
+Tali obblighi, così come previsti dall’ANAC, sono strutturati in sezioni (macrofamiglie) e in sottosezioni (tipologie di dati).</p>
+
+<p><img class="center-image" src="/images/foiapop/at-list.png" width="90%" /></p>
+
+<p>Per ciascun obbligo, passando il mouse sopra l’icona <strong>punto interrogativo</strong>, FoiaPop visualizzerà il contenuto con un dettaglio maggiore.</p>
+
+<p><img class="center-image" src="/images/foiapop/at-tooltip.png" width="80%" /></p>
+
+<p><strong>FoiaPop</strong>, inoltre, verificherà l’esito del monitoraggio effettuato dalla <a href="http://bussola.magellanopa.it/home.html">Bussola della Trasparenza</a> per ciascun obbligo e, in caso di esito positivo,
+mostrerà l’icona di una bussola con il collegamento alla pagina del sito istituzionale al cui interno si trova (<em>o si dovrebbe trovare</em>) il documento relativo
+all’obbligo monitorato.</p>
+
+<p><img class="center-image" src="/images/foiapop/at-bussola.png" width="80%" /></p>
+
+<p>L’utente procederà quindi a inserire uno o più obblighi nella <em>richiesta di accesso civico semplice</em>, a mò di carrello della spesa, e per ciascuna selezione potrà indicare la
+motivazione della richiesta, così come di seguito riportato.</p>
+
+<p><img class="center-image" src="/images/foiapop/at-carrello.png" width="50%" /></p>
+
+<p>Dopo aver selezionato il/i documento/i su cui richiedere l’accesso, premendo il tasto <strong>AVANTI</strong> l’utente potrà inserire le informazioni anagrafiche 
+così come visto in precedenza.</p>
+
+<p>Alla fine del modulo viene visualizzato il dettaglio degli obblighi non rispettati che si vogliono aggiungere alla richiesta.
+FoiaPop consente anche di inserire, in un campo libero, eventuali precisazioni a corredo della richiesta stessa.</p>
+
+<p><img class="center-image" src="/images/foiapop/at-form.png" width="80%" /></p>
+
+<p>Cliccando su <em>AVANTI</em>  FoiaPop visualizzerà l’anteprima della <em>richiesta di accesso civico semplice</em>, completa di tutte le informazioni inserite.</p>
+
+<p><img class="center-image" src="/images/foiapop/at-preview.png" width="80%" /></p>
+
+<p>Nella stessa pagina, in basso, si troveranno sempre le indicazioni operative per la trasmissione della richiesta alla P.A. (con possibilità di download).
+Dopo aver controllato l’esattezza di tutte le informazioni inserite nella richiesta possiamo cliccare su <strong>CREA RICHIESTA ACCESSO CIVICO SEMPLICE</strong>
+e FoiaPop genererà per noi il documento in PDF da trasmettere alla pubblica amministrazione.</p>
+
+<p><img class="center-image" src="/images/foiapop/accesso-civico-semplice.png" width="100%" /></p>
+
+<h2 id="accesso-civico-semplice-api">Accesso Civico Semplice API</h2>
+<p>Attraverso l’accesso tramite <strong>API</strong> è possibile generare richieste di <em>accesso civico semplice</em> a partire da siti esterni.
+L’<strong>URL</strong> da invocare è il seguente:</p>
+<figure class="code-highlight-figure"><figcaption class="code-highlight-caption"><span class="code-highlight-caption-title"> </span></figcaption><div class="code-highlight"><pre class="code-highlight-pre"><div data-line="1" class="code-highlight-row numbered"><div class="code-highlight-line">http://www.foiapop.it/api/accesso-civico-semplice?cf=CODICE-FISCALE-DELLA-PA</div></div></pre></div></figure>
+
+<p>doce il parametro <strong>cf</strong> (obbligatorio) rappresenta il codice fiscale della pubblica amministrazione.</p>
+
+<p>Un tipico scenario d’uso è, ad esempio, l’inserimento di un link (o di un bottone) all’interno del sito istituzionale di un comune,
+nella sezione <strong>Amministrazione Trasparente</strong>. L’utente che non riesce a trovare il documento desiderato, cliccando sul link/bottone,
+viene quindi reindirizzato su <strong>FoiaPop</strong> per la compilazione passo passo della richiesta di <em>accesso civico semplice</em> del documento non trovato.</p>
+
+<p>Per facilitare il lavoro ai webmaster, <strong>FoiaPop</strong> mette a disposizione dei widget pronti all’uso,
+ da posizionare direttamente nelle pagine del sito Web istituzionale, copiando e incollando il codice HTML generato dalla piattaforma.
+ L’ente è sempre il <em>Comune di Caltanissetta</em>.</p>
+
+<h3 id="demo-1">Demo</h3>
+<iframe style="width:123px;height:35px" marginwidth="0" marginheight="0" align="top" scrolling="No" frameborder="0" hspace="0" vspace="0" src="http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-semplice/widget"></iframe>
+<iframe style="width:123px;height:35px" marginwidth="0" marginheight="0" align="top" scrolling="No" frameborder="0" hspace="0" vspace="0" src="http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-semplice/widget?style=btn-success"></iframe>
+<iframe style="width:123px;height:35px" marginwidth="0" marginheight="0" align="top" scrolling="No" frameborder="0" hspace="0" vspace="0" src="http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-semplice/widget?style=btn-info"></iframe>
+<iframe style="width:123px;height:35px" marginwidth="0" marginheight="0" align="top" scrolling="No" frameborder="0" hspace="0" vspace="0" src="http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-semplice/widget?style=btn-warning"></iframe>
+<iframe style="width:123px;height:35px" marginwidth="0" marginheight="0" align="top" scrolling="No" frameborder="0" hspace="0" vspace="0" src="http://www.foiapop.it/ente/dbece4af-e46b-47cf-9e0f-26db9b9c9365/accesso-civico-semplice/widget?style=btn-danger"></iframe>
+
+<p>Cliccando su uno di questi bottoni si verrà reindirizzati su FoiaPop e si potrà iniziare il processo di compilazione della richiesta online, esattamente come già visto in precedenza.</p>
+
+<h2 id="conclusioni">Conclusioni</h2>
+<p>FoiaPop è una piattaforma online per la compilazione di richieste di <em>accesso civico semplice e generalizzato</em>.</p>
+
+<p>E’ online la versione <a href="http://www.foiapop.it">beta</a>.</p>
+
+<p>FoiaPop è uno strumento rivolto ai cittadini per facilitare loro la compilazione delle richieste di accesso civico.
+<strong>Ma non è solo questo.</strong></p>
+
+<p>FoiaPop vuole essere uno strumento in grado aumentare la consapevolezza civica
+del cittadino comune affinchè possa diventare sempre più partecipe e determinante nella vita amministrativa della propria città, possa comprendere sempre
+meglio i processi interni della burocrazia del palazzo, possa farsi domande che suscitino in lui dubbi, critiche e osservazioni, 
+che stimolino anche proposte, consigli e suggerimenti, possa svolgere attività di controllo dei processi decisionali all’interno delle istituzioni.</p>
+
+<hr />
+
+<p><br />
+Se questo progetto ti è piaciuto, mi aiuti a farlo conoscere con un tweet? Grazie!</p>
+
+<p><a href="http://twitter.com/share?url=http://www.foiapop.it&amp;text=FoiaPop+-+Accesso+civico+data-driven!+@foiapop+@gpirrotta">Twittami</a></p>
+
+<p><a href="http://twitter.com/share?url=http://www.foiapop.it&amp;text=FoiaPop+-+Accesso+civico+data-driven!+@foiapop+@gpirrotta"><img src="/images/twitter.png" alt="Image" /></a></p>
+
+<p>Per feedback, suggerimenti e critiche non esitate a lasciarmi un commento.</p>
+
+</div>
+
+
+        <footer>
+            <p class="meta">
+                
+<span class="byline author vcard">Posted by <span class="fn">Giovanni Pirrotta</span></span>
+
+                <time pubdate>
+                July 04, 2017
+                </time>
+
+                <span class="categories">
+                
+
+                
+                <a class="category" href="/categories/trasparenza">trasparenza</a>,
+                
+                <a class="category" href="/categories/opendata">opendata</a>,
+                
+                <a class="category" href="/categories/accesso-civico">accesso-civico</a>,
+                
+                <a class="category" href="/categories/foia">foia</a>
+                
+                </span>
+            </p>
+            
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://giovanni.pirrotta.it/blog/2017/07/04/foiapop-accesso-civico-data-driven/" data-via="gpirrotta" data-counturl="http://giovanni.pirrotta.it/blog/2017/07/04/foiapop-accesso-civico-data-driven/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+            
+            <p class="meta">
+                
+                <a class="basic-alignment left" href="/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/" title="Previous Post: Citybot: la tua città, smart, in pochi click">&laquo; Citybot: la tua città, smart, in pochi click</a>
+                
+                
+            </p>
+        </footer>
+    </article>
+    
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2017/07/04/foiapop-accesso-civico-data-driven/">FoiaPop: accesso civico data-driven</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">Citybot: la tua città, smart, in pochi click</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/28/protezione-civile-palermo-telegram-bot/">Quando un BOT può salvarti la vita!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/18/developing-an-ontology/">Developing an Ontology</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/09/stazione-amat-di-palermo-ce-un-telegram-per-te/">Trasporti Amat di Palermo? C'è un Telegram per te! (aggiornato)</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+
+
+
+</aside>
+
+
+
+    </div>
+</div>
+<footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Giovanni Pirrotta -
+
+  <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+</p>
+
+</footer>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gpirrotta';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<script>
+  $(document).ready(function() {  
+  var stickyNavTop = $('nav').offset().top;  
+    
+  var stickyNav = function(){  
+  var scrollTop = $(window).scrollTop();  
+         
+  if (scrollTop > stickyNavTop) {   
+      $('nav').addClass('sticky');  
+  } else {  
+      $('nav').removeClass('sticky');   
+  }  
+  };  
+    
+  stickyNav();  
+    
+  $(window).scroll(function() {  
+      stickyNav();  
+  });  
+  });  
+</script>
+
+
+</body>
+</html>
