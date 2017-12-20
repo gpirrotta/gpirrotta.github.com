@@ -4,7 +4,7 @@
   <title><![CDATA[Giovanni Pirrotta]]></title>
   <link href="http://giovanni.pirrotta.it/atom.xml" rel="self"/>
   <link href="http://giovanni.pirrotta.it/"/>
-  <updated>2017-07-04T16:45:34+00:00</updated>
+  <updated>2017-12-20T16:46:32+00:00</updated>
   <id>http://giovanni.pirrotta.it/</id>
   <author>
     <name><![CDATA[Giovanni Pirrotta]]></name>
@@ -12,6 +12,256 @@
   </author>
   <generator uri="https://jekyllrb.com">Jekyll</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Del riutilizzo dei dati meteo ai tempi dei Borboni]]></title>
+    <link href="http://giovanni.pirrotta.it/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni/"/>
+    <updated>2017-12-20T01:40:08+00:00</updated>
+    <id>http://giovanni.pirrotta.it/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni</id>
+    <content type="html"><![CDATA[<p>Tutto ebbe inizio un giorno quando, di buon mattino, in un vecchio baule antico della mia soffitta, ritrovai un vecchio manoscritto
+di racconti intitolato “<em>Digital Fabulas</em>”, la cui prima pagina recitava:</p>
+
+<blockquote>
+  <p><em>Questa è la storia di <strong>Ioan Pairot</strong>, squattrinato maniscalco siciliano, che ebbe la cattiva sorte
+di vivere secoli or sono alla corte di un potente signorotto palermitano.</em></p>
+</blockquote>
+
+<p>Il primo dei racconti iniziava così:</p>
+
+<p><em>Galeotta fu la telefonata col conte Andreas de los Bash, nobile discendente della casata dei Borrusi,
+di origine borbonica, insediatasi a Palermo all’inizio del XIX secolo lamentante di non trovare
+sul situs Webus della Protezione Civilis dell’isola Trinacria notitia circa lo tempo previstus del giorno appresso
+in forma tal da essere riusata in posti altri da quel situs poco apertus.</em>
+  <em>Maniscalco scapestrato qual ero, nulla potei replicare all’illustre conte, ma il pensier
+turbò quella mia notte insonne e mi accompagnò fin al mattino.
+E infin cedetti per lo sfinimento, per appagar del conte il desiderio e ritornar a dormir la notte,
+quieto e libero da pensier molesti a oltranza.</em></p>
+
+<!--More-->
+
+<p><img class="center-image" src="/images/protezionecivile/sicilia-storica.jpg" width="60%" /></p>
+
+<p><strong>Per una migliore comprensione del racconto d’ora in avanti tradurrò la storia in lingua moderna.</strong></p>
+
+<hr />
+
+<h4 id="dal-diario-di-ioan-pairot">Dal diario di Ioan Pairot</h4>
+
+<p>[…] Il conte Andreas mi informò che la Protezione Civile siciliana pubblicava quotidinamente, sul proprio situs ipertestuales (<em>oggi lo chiameremmo sito o pagina Web</em>),
+il dispaccio delle allerte dei rischi idrogeologici (<em>oggi lo chiameremmo report o bollettino</em>) dell’intera regione in un formato file chiamato <strong>OCD</strong> (<em>oggi lo chiameremmo PDF</em>).
+Tale formato, purtroppo, impediva la possibilità di riusare le preziose informazioni del bollettino in contesti diversi da quello originale e il conte, desideroso di
+ manipolare quei dati, mi intimò di trovare una soluzione al problema.</p>
+
+<p>Conoscendo la sua ira funesta la notte non chiusi occhio ma, alle prime luci dell’alba, un lampo di luce mi guizzò in mente ed…<strong>Eureka</strong>…  trovai la soluzione.</p>
+
+<p>In questo diario descriverò il dettaglio tecnico.</p>
+
+<p>Ogni giorno la Protezione Civile siciliana pubblicava su questa <a target="_blank" href="http://www.regione.sicilia.it/presidenza/protezionecivile/pp/archivio_idro.asp">pagina Web</a>
+il bollettino giornaliero dei rischi idrogeologici della regione, relativi ad un periodo che andava dalle 16 del giorno di pubblicazione fino alle 24 del
+giorno successivo.</p>
+
+<p><img class="center-image" src="/images/protezionecivile/bollettino.png" width="90%" /></p>
+
+<p>Nel bollettino apparivano diverse mappe della Sicilia suddivise per zone e per ciascuna di esse era riportato il livello del rischio
+in base alla seguente scala di colori:</p>
+
+<p><img class="center-image" src="/images/protezionecivile/livelli-allerta.png" width="70%" /></p>
+
+<p>Il bollettino veniva pubblicato in <strong>PDF</strong> per cui le informazioni rimanevano confinate nel file precludendo la possibilità di
+riutilizzare gli stessi dati in contesti differenti da quello originale.</p>
+
+<p>Per poter individuare il tipo di approccio da attuare ho analizzato attentamente il report della Protezione Civile ponendo particolare attenzione ai colori delle prime due mappe,
+relative ai livelli di allerta regionali del giorno di pubblicazione e del successivo.
+Per poter <strong>aprire</strong> e <strong>riusare</strong> i dati <em>ingabbiati</em> nel PDF avevo bisogno di <em>grattare</em> i colori di ogni zona al di fuori del file. 
+Dovevo stabilire un insieme di passi (<em>oggi lo chiameremmo algoritmo</em>) in grado di riconoscere i colori delle mappe, in modo automatico e puntuale,
+al fine di risalire al colore di ogni singolo elemento grafico (<em>oggi lo chiameremmo pixel</em>) presente in ciascuna zona della mappa.</p>
+
+<p>Vediamo i singoli passi</p>
+
+<p>Sul sito della Protezione Civile era presente una pagina con l’elenco di tutti i bollettini meteo e disponibile al seguente URL</p>
+
+<p><a target="_blank" href="http://www.regione.sicilia.it/presidenza/protezionecivile/pp/archivio_idro.asp">http://www.regione.sicilia.it/presidenza/protezionecivile/pp/archivio_idro.asp</a></p>
+
+<p><img class="center-image" src="/images/protezionecivile/elenco-report.png" width="90%" /></p>
+
+<p>Il primo link dell’elenco rappresentava l’ultimo bollettino pubblicato dalla Protezione Civile.
+Per estrarre tale link ho utilizzato la libreria <a href="https://www.crummy.com/software/BeautifulSoup/"><em>BeautifulSoup</em></a>, ormai lo standard de-facto per lo scraping Web in <strong>Angus</strong> (<em>oggi lo chiameremmo Python</em>).
+Di seguito la prima parte del <strong>fons</strong> (<em>oggi lo chiameremo codice sorgente</em>):</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">url</span> <span class="o">=</span> <span class="s">'http://www.regione.sicilia.it/presidenza/protezionecivile/pp/archivio_idro.asp'</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="n">html</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s">'lxml'</span><span class="p">)</span>
+ 
+<span class="n">pattern</span> <span class="o">=</span> <span class="s">'Avviso rischio idrogeologico per il (.*)'</span>
+<span class="n">first_row</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">'td'</span><span class="p">,{</span><span class="s">'class'</span><span class="p">:</span><span class="s">'testo_tabelle_cent'</span><span class="p">})</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">first_row</span><span class="o">.</span><span class="n">text</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">m</span><span class="p">:</span>
+    <span class="n">primo_giorno_text</span> <span class="o">=</span> <span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">primo_giorno</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">primo_giorno_text</span><span class="p">,</span> <span class="s">'</span><span class="si">%</span><span class="s">d/</span><span class="si">%</span><span class="s">m/</span><span class="si">%</span><span class="s">Y'</span><span class="p">)</span>
+    <span class="n">secondo_giorno</span> <span class="o">=</span> <span class="n">primo_giorno</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">secondo_giorno_text</span> <span class="o">=</span> <span class="n">secondo_giorno</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">d/</span><span class="si">%</span><span class="s">m/</span><span class="si">%</span><span class="s">Y"</span><span class="p">)</span>
+    
+<span class="k">if</span> <span class="n">first_row</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
+    <span class="n">link</span> <span class="o">=</span> <span class="n">first_row</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'href'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">link</span><span class="p">:</span>
+        <span class="n">href</span> <span class="o">=</span> <span class="n">link</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+</code></pre>
+</div>
+
+<p>A questo punto <strong>href</strong> conterrà il link (<em>relativo</em>) del bollettino della Protezione Civile.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">WEB_ROOT_URL</span> <span class="o">=</span> <span class="s">'http://www.regione.sicilia.it/presidenza/protezionecivile/'</span>
+<span class="n">full_url</span> <span class="o">=</span>  <span class="n">WEB_ROOT_URL</span> <span class="o">+</span> <span class="n">href</span>
+<span class="n">file_pdf</span> <span class="o">=</span> <span class="s">'protezione-civile.pdf'</span>
+<span class="n">wget_cmd</span> <span class="o">=</span> <span class="s">'wget -O '</span> <span class="o">+</span> <span class="n">file_pdf</span> <span class="o">+</span> <span class="s">' "'</span> <span class="o">+</span><span class="n">full_url</span> <span class="o">+</span> <span class="s">'"'</span>
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">wget_cmd</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>L’algoritmo prosegue con lo <strong>scaricamento</strong> del file (oggi lo chiameremmo <em>download</em>), attraverso il comando shell  <strong>wget</strong>, invocato 
+da python, grazie al quale otteniamo il trasferimento del PDF in locale sul mio <strong>calculator</strong> (<em>oggi lo chiameremmo server</em>).</p>
+
+<p>Considerando che le mappe della Sicilia presenti nel report si trovavano sempre in prima pagina e sempre nella stessa posizione,
+ho iniziato a pensare a come esportare i dati  al di fuori del file.</p>
+
+<p><img class="center-image" src="/images/protezionecivile/mumble-meme.jpg" width="30%" /></p>
+
+<p>Volendo analizzare i colori delle mappe siciliane, ed essendo queste essenzialmente delle immagini incastonate nel PDF,
+la prima cosa che mi è venuta in mente è stata quella di <strong>convertire</strong> la prima pagina del PDF in un’immagine e 
+ utilizzare le librerie grafiche disponibili in Python per poter ottenere informazioni sui colori delle specifiche zone.</p>
+
+<p>Attraverso il tool <strong>convert</strong> di <a href="http://www.imagemagick.org/script/index.php"><strong>ImageMagick</strong></a> ho convertito quindi 
+la prima pagina del bollettino PDF in formato immagine <strong>PNG</strong>  nel seguente modo:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">file_png</span> <span class="o">=</span> <span class="s">'protezione-civile.png'</span>
+<span class="n">file_pdf</span> <span class="o">=</span> <span class="s">'protezione-civile.pdf'</span>
+<span class="n">cmd</span> <span class="o">=</span> <span class="s">'convert '</span><span class="o">+</span> <span class="n">file_pdf</span> <span class="o">+</span> <span class="s">'[0] '</span> <span class="o">+</span> <span class="n">file_png</span>
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>    
+</code></pre>
+</div>
+
+<p>Con l’immagine generata ho individuato, in ciascuna delle prime due mappe, la posizione dei pixel ricadenti
+in ogni zona, in modo da potermi dedicare all’individuazione dei colori delle zone stesse.</p>
+
+<p><img class="center-image" src="/images/protezionecivile/mappe-frecce.png" width="90%" /></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">pixel_sicilia_zone_primo_giorno</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">pixel_sicilia_zone_primo_giorno</span><span class="p">[</span><span class="s">'A'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">262</span><span class="p">,</span><span class="mi">174</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_primo_giorno</span><span class="p">[</span><span class="s">'B'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">182</span><span class="p">,</span> <span class="mi">188</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_primo_giorno</span><span class="p">[</span><span class="s">'C'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">105</span><span class="p">,</span> <span class="mi">186</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_primo_giorno</span><span class="p">[</span><span class="s">'D'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">106</span><span class="p">,</span> <span class="mi">208</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_primo_giorno</span><span class="p">[</span><span class="s">'E'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">170</span><span class="p">,</span> <span class="mi">230</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_primo_giorno</span><span class="p">[</span><span class="s">'F'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">219</span><span class="p">,</span> <span class="mi">269</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_primo_giorno</span><span class="p">[</span><span class="s">'G'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">248</span><span class="p">,</span> <span class="mi">266</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_primo_giorno</span><span class="p">[</span><span class="s">'H'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">222</span><span class="p">,</span> <span class="mi">216</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_primo_giorno</span><span class="p">[</span><span class="s">'I'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">246</span><span class="p">,</span> <span class="mi">202</span><span class="p">]</span>
+
+<span class="n">pixel_sicilia_zone_secondo_giorno</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">pixel_sicilia_zone_secondo_giorno</span><span class="p">[</span><span class="s">'A'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">520</span><span class="p">,</span><span class="mi">174</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_secondo_giorno</span><span class="p">[</span><span class="s">'B'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">438</span><span class="p">,</span> <span class="mi">188</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_secondo_giorno</span><span class="p">[</span><span class="s">'C'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">364</span><span class="p">,</span> <span class="mi">186</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_secondo_giorno</span><span class="p">[</span><span class="s">'D'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">364</span><span class="p">,</span> <span class="mi">209</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_secondo_giorno</span><span class="p">[</span><span class="s">'E'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">431</span><span class="p">,</span> <span class="mi">230</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_secondo_giorno</span><span class="p">[</span><span class="s">'F'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">477</span><span class="p">,</span> <span class="mi">268</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_secondo_giorno</span><span class="p">[</span><span class="s">'G'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">506</span><span class="p">,</span> <span class="mi">265</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_secondo_giorno</span><span class="p">[</span><span class="s">'H'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">480</span><span class="p">,</span> <span class="mi">216</span><span class="p">]</span>
+<span class="n">pixel_sicilia_zone_secondo_giorno</span><span class="p">[</span><span class="s">'I'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">504</span><span class="p">,</span> <span class="mi">202</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>Utilizzando le librerie <a target="_blank" href="https://python-pillow.org/">Pillow</a> è possibile ottenere informazioni sui singoli pixel delle immagini.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">image</span> <span class="o">=</span>  <span class="n">Image</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">file_png</span><span class="p">)</span>
+<span class="n">pixel</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">getpixel</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>La funzione <em>getPixel()</em>, passando in input la posizione di un pixel, restituisce un vettore contenente la triade delle componenti
+dei colori primari nella forma <a target="blank" href="https://it.wikipedia.org/wiki/RGB"><strong>RGB</strong></a> (red, green, blue), grazie alla quale è possibile risalire al colore del pixel desiderato.</p>
+
+<p><img class="center-image" src="/images/protezionecivile/rgb.png" width="30%" /></p>
+
+<p>In base ai valori delle componenti di ciascun colore è possibile adesso ottenere il livello di allerta della zona interessata.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_allerta</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">r</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">g</span> <span class="o">==</span> <span class="mi">255</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">'ALLERTA VERDE - GENERICA VIGILANZA'</span>
+    <span class="k">elif</span> <span class="n">r</span> <span class="o">==</span> <span class="mi">255</span> <span class="ow">and</span> <span class="n">g</span> <span class="o">==</span> <span class="mi">255</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">'ALLERTA GIALLA - ATTENZIONE'</span>
+    <span class="k">elif</span> <span class="n">r</span> <span class="o">==</span> <span class="mi">255</span> <span class="ow">and</span> <span class="n">g</span> <span class="o">==</span> <span class="mi">204</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">'ALLERTA ARANCIONE - PREALLARME'</span>
+    <span class="k">elif</span> <span class="n">r</span> <span class="o">==</span> <span class="mi">255</span> <span class="ow">and</span> <span class="n">g</span> <span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">'ALLERTA ROSSA - ALLARME'</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">''</span>
+</code></pre>
+</div>
+
+<p>Ad esempio, la triade (0,255,0), corrisponde al colore <strong>VERDE</strong>, la triade (255,0,0) corrisponde al colore <strong>ROSSO</strong>
+e così via.</p>
+
+<p>Infine è stata  definita una struttura adatta a contenere 
+le informazioni estratte dal bollettino PDF; successivamente è stata salvata in un file JSON e pubblicata su un server raggiungibile via Web.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">previsioni</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">previsioni</span><span class="p">[</span><span class="s">'fonte'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'Regione Siciliana - Dipartimento della Protezione Civile'</span>
+<span class="n">previsioni</span><span class="p">[</span><span class="s">'allerta_meteo'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">previsioni</span><span class="p">[</span><span class="s">'allerta_meteo'</span><span class="p">][</span><span class="s">'date'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">previsioni</span><span class="p">[</span><span class="s">'allerta_meteo'</span><span class="p">][</span><span class="s">'url'</span><span class="p">]</span> <span class="o">=</span> <span class="n">full_url</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">' '</span><span class="p">,</span> <span class="s">'</span><span class="si">%20</span><span class="s">'</span><span class="p">)</span>
+
+<span class="n">prev</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">prev</span><span class="p">[</span><span class="n">primo_giorno_text</span><span class="p">]</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">prev</span><span class="p">[</span><span class="n">secondo_giorno_text</span><span class="p">]</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">zona</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'A'</span><span class="p">,</span><span class="s">'B'</span><span class="p">,</span><span class="s">'C'</span><span class="p">,</span><span class="s">'D'</span><span class="p">,</span><span class="s">'E'</span><span class="p">,</span><span class="s">'F'</span><span class="p">,</span><span class="s">'G'</span><span class="p">,</span><span class="s">'H'</span><span class="p">,</span><span class="s">'I'</span><span class="p">]:</span>
+  <span class="n">rgb</span> <span class="o">=</span> <span class="n">get_pixel</span><span class="p">(</span><span class="n">picture</span><span class="p">,</span> <span class="n">pixel_sicilia_zone_primo_giorno</span><span class="p">[</span><span class="n">zona</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">pixel_sicilia_zone_primo_giorno</span><span class="p">[</span><span class="n">zona</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+  <span class="n">allerta</span> <span class="o">=</span> <span class="n">get_allerta</span><span class="p">(</span><span class="n">rgb</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rgb</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">rgb</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+  <span class="n">prev</span><span class="p">[</span><span class="n">primo_giorno_text</span><span class="p">][</span><span class="s">'ZONA '</span> <span class="o">+</span> <span class="n">zona</span><span class="p">]</span><span class="o">=</span> <span class="n">allerta</span>
+
+<span class="k">for</span> <span class="n">zona</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'A'</span><span class="p">,</span><span class="s">'B'</span><span class="p">,</span><span class="s">'C'</span><span class="p">,</span><span class="s">'D'</span><span class="p">,</span><span class="s">'E'</span><span class="p">,</span><span class="s">'F'</span><span class="p">,</span><span class="s">'G'</span><span class="p">,</span><span class="s">'H'</span><span class="p">,</span><span class="s">'I'</span><span class="p">]:</span>
+  <span class="n">rgb</span> <span class="o">=</span> <span class="n">get_pixel</span><span class="p">(</span><span class="n">picture</span><span class="p">,</span> <span class="n">pixel_sicilia_zone_secondo_giorno</span><span class="p">[</span><span class="n">zona</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">pixel_sicilia_zone_secondo_giorno</span><span class="p">[</span><span class="n">zona</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+  <span class="n">allerta</span> <span class="o">=</span> <span class="n">get_allerta</span><span class="p">(</span><span class="n">rgb</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rgb</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">rgb</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+  <span class="n">prev</span><span class="p">[</span><span class="n">secondo_giorno_text</span><span class="p">][</span><span class="s">'ZONA '</span> <span class="o">+</span> <span class="n">zona</span><span class="p">]</span><span class="o">=</span> <span class="n">allerta</span>
+
+<span class="n">previsioni</span><span class="p">[</span><span class="s">'allerta_meteo'</span><span class="p">][</span><span class="s">'date'</span><span class="p">]</span> <span class="o">=</span> <span class="n">prev</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'allerta.json'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+  <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">previsioni</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="n">move_cmd</span> <span class="o">=</span> <span class="s">'mv allerta.json ../../gpirrotta.tk/regione-siciliana/protezione-civile/allerta.json'</span>
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">move_cmd</span><span class="p">)</span>    
+</code></pre>
+</div>
+
+<p>Tale codice sorgente è stato quindi fatto eseguire una volta al giorno dai <strong>vigilantes</strong> del conte (che oggi chiameremmo <em>cron</em>)
+al fine di produrre il seguente output:</p>
+
+<p><img class="center-image" src="/images/protezionecivile/json.png" width="90%" /></p>
+
+<blockquote>
+  <p>[…] E fu così che ritornar potei, a notti placide e soavi sogni, pensate un pò al signorotto piacque, questa mia idea di agir così com’io ho testè scritto…</p>
+</blockquote>
+
+<blockquote>
+  <p>E c’è chi dice di aver sentito il conte, adesso lui in preda ad incubi notturni, accennar sibilante insolite parole… <strong>xml</strong>…<strong>RSS</strong>…<strong>POP</strong>.</p>
+</blockquote>
+
+<blockquote>
+  <p><em>Nessuno seppe però mai cosa intendesse dire, tra veglie, convulsioni e tormenti, con quegli strani e indecifrabili farfugliamenti…</em></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Ioan Pairot</strong></p>
+</blockquote>
+
+<p><strong>P.S.</strong> <em>Non so se in futuro il servizio rimarrà sempre attivo, ma se così sarà i posteri lo potranno trovare al seguente <a target="blank" href="http://www.gpirrotta.tk/regione-siciliana/protezione-civile/allerta.json">URL</a></em>.
+E il codice sorgente  <a target="_blank" href="https://gist.github.com/gpirrotta/43697a050dfc1e5807a43f72aa1ae32d">qui</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[FoiaPop: accesso civico data-driven]]></title>
@@ -3286,39 +3536,6 @@ l’ <strong>11%</strong> di donne sono salite sullo <em>scranno</em> comunale.<
 
 <p>In una sola parola: <a href="http://it.wikipedia.org/wiki/Open_government"><strong>open government</strong></a>!</p>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Limits of the Web today]]></title>
-    <link href="http://giovanni.pirrotta.it/blog/2013/06/03/limits-of-the-web-today/"/>
-    <updated>2013-06-03T10:39:00+00:00</updated>
-    <id>http://giovanni.pirrotta.it/blog/2013/06/03/limits-of-the-web-today</id>
-    <content type="html"><![CDATA[<p>The Web was born in 1999 at the <a href="http://www.cern.ch">CERN</a> laboratory, when scientist need to share information and scientific researches in realtime. To accomplish this task, Tim Berners-Lee conceived a <a href="http://www.w3.org/History/1989/proposal.html">hypertextual system of communication</a> between documents that became, in few years, the keystone of the World Wide Web (WWW). He introduces a markup convention, called <em>HyperText Markup Language</em> (HTML), to visualize and format documents allowing the linking through <em>anchor</em> words. When HTML pages are loaded in Web server programs installed on computers and located in different places of the world, users can reach the Web documents using particular programs called browsers allowing them to navigate the Web of linked documents.
-<!--More--></p>
-
-<p>The World Wide Web is mainly based on documents written in HTML language but, infortunately, the language defines only how to show data without specifying anything about the meaning of data showed.<br />
-All data, such as local sport events, weather information, plane times, major baseball statistics, television guides, and so on are presented by numerous sites, but all in HTML. So it is difficult to reuse these data in different contexts, it is difficult for machines to perform automatic tasks in order to carry out specific activities.</p>
-
-<p>We imagine for example the difficulty for a search engine to find the information desired by a user. When we perform a search, we expect the search engine is able to understand the <em>nuance</em> of meaning that we want to express without problems of interpretation. For example, if we search the Italian word <em>espresso</em>, how does the search engine understand if we are searching for information about:</p>
-
-<ul>
-  <li>espresso, the past participle of the Italian verb <strong>esprimere</strong>;</li>
-  <li>espresso, a kind of Italian <strong>train</strong>;</li>
-  <li>espresso, a kind of <strong>coffee</strong>;</li>
-  <li>espresso, the famous Italian <strong>newspaper</strong>.</li>
-</ul>
-
-<p>The word <em>espresso</em> has many meanings depending on the context in which it appears. Unlike, in a semantic-based system each word is related to a series of semantic networks, which are not simply lists of words, but dense data links allowing to process complex information. A software agent should <em>understand</em> if different propositions identify the same concept, individuate all relationships between a word and their properties, unlike current search engines that index all contents by words and not by semantic networks.</p>
-
-<p>The documents published on the Web can be considered as belonging to a huge global file system; since HTML pages are written by humans for humans, the semantics is implicit inside the pages and links, and it is made explicit in the human-interaction. The data contained in Web pages are not organized and structured to be processed, queried and interpreted unambiguously in a model that can explain the implicit semantics in a manner understandable to machines, because in this context everything revolves around documents and their links, and not around data, i.e., the resources contained into documents.</p>
-
-<p>For example, with HTML languages we can list items for sale but there is no capability within the HTML itself to assert unambisuously that, item number “<em>ABC</em>” is a <strong>DVD recorder</strong> with a price of <strong>euro 100,00</strong>. Rather HTML can only say that the portion of text “super” is something that should be placed near the text “DVD recorder” and so forth. There is no way to say <em>“This is an e-commerce site”</em> or event to establish that <em>DVD recorder</em> is a kind of product or that <em>euro 100,00</em> is a price.</p>
-
-<p>Summarizing, the problem of the actual Web is that the content is not structured and the links are untyped and meaningless. We can see each Web server as a disconnected data silos and in each silos the data cannot be reused in external contexts from the original one. We cannot ask expressive queries on data, we cannot process content within applications of mashup data with information coming from different data sources.<br />
-We have problems in terms of interpretation, integration and automatic processing.</p>
-
-<p>That’s all for now. In the next post I will talk about how machines can think. Stay tuned!</p>
 ]]></content>
   </entry>
   
