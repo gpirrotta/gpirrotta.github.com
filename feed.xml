@@ -1,4 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://giovanni.pirrotta.it/feed.xml" rel="self" type="application/atom+xml" /><link href="http://giovanni.pirrotta.it/" rel="alternate" type="text/html" /><updated>2017-12-20T16:46:32+00:00</updated><id>http://giovanni.pirrotta.it/</id><title type="html">Giovanni Pirrotta</title><author><name>Giovanni Pirrotta</name></author><entry><title type="html">Del riutilizzo dei dati meteo ai tempi dei Borboni</title><link href="http://giovanni.pirrotta.it/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni/" rel="alternate" type="text/html" title="Del riutilizzo dei dati meteo ai tempi dei Borboni" /><published>2017-12-20T01:40:08+00:00</published><updated>2017-12-20T01:40:08+00:00</updated><id>http://giovanni.pirrotta.it/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni/">&lt;p&gt;Tutto ebbe inizio un giorno quando, di buon mattino, in un vecchio baule antico della mia soffitta, ritrovai un vecchio manoscritto
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://giovanni.pirrotta.it/feed.xml" rel="self" type="application/atom+xml" /><link href="http://giovanni.pirrotta.it/" rel="alternate" type="text/html" /><updated>2018-02-09T17:41:39+00:00</updated><id>http://giovanni.pirrotta.it/</id><title type="html">Giovanni Pirrotta</title><author><name>Giovanni Pirrotta</name></author><entry><title type="html">VisualCAD: la mappa interattiva della storia del CAD</title><link href="http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/" rel="alternate" type="text/html" title="VisualCAD: la mappa interattiva della storia del CAD" /><published>2018-02-09T01:40:08+00:00</published><updated>2018-02-09T01:40:08+00:00</updated><id>http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/">&lt;p&gt;Il Codice dell’Amministrazione Digitale (&lt;strong&gt;CAD&lt;/strong&gt;) è il testo normativo di riferimento 
+della pubblica amministrazione che disciplina il processo di digitalizzazione
+dell’attività amministrativa.
+Da più di un decennio il CAD, cioè il &lt;a href=&quot;http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82&quot; target=&quot;blank&quot;&gt;decreto legislativo n.82 del 7/3/2005&lt;/a&gt;, viene sistematicamente
+&lt;em&gt;bistrattato&lt;/em&gt; a colpi di leggi, decreti legislativi e decreti legge, come un vestito continuamente rattoppato
+ a suon di taglia e cuci, a discapito delle povere pubbliche amministrazioni che hanno il compito di attuare 
+ le disposizioni normative.
+Dal testo originario del 2005, tra piccole e grandi modifiche,
+si sono succeduti ben 29 aggiornamenti.
+Ad ogni aggiornamento, per poter leggere il testo coordinato, è necessario apportare all’ultima versione del CAD
+tutte le modifiche previste dall’aggiornamento normativo.
+Paragonando quest’operazione al mondo informatico, potremmo dire che l’operazione effettuata è un
+ &lt;strong&gt;merge&lt;/strong&gt; di un &lt;em&gt;fix&lt;/em&gt; o di una nuova &lt;em&gt;feature&lt;/em&gt; nella &lt;strong&gt;codebase&lt;/strong&gt; di un software.&lt;/p&gt;
+
+&lt;!--More--&gt;
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/visualcad/cad.jpg&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ed è proprio da quest’idea di &lt;em&gt;merging&lt;/em&gt; documentale che sono partito per riflettere sulla possibilità di
+considerare i testi normativi alla stregua di codici sorgente e di poter utilizzare i tool a disposizione per il versionamento
+del software, ad esempio &lt;strong&gt;Git&lt;/strong&gt; ma anche &lt;strong&gt;Subversion&lt;/strong&gt; o &lt;strong&gt;Mercurial&lt;/strong&gt;, per tenere traccia di tutte le modifiche
+che avvengono fra le versioni delle leggi.&lt;/p&gt;
+
+&lt;p&gt;Quest’idea in realtà non è nuova. Da diversi anni esistono dei progetti che supportano l’utilizzo
+di strumenti che, anche se nati per il mondo software, consentono sia
+di versionare i documenti normativi sia di far interagire i cittadini con i proponenti la legge,
+mettendoli in condizione di fornire feedback, consigli, critiche e/o spunti di miglioramento. 
+E’ un esempio il progetto &lt;a href=&quot;https://github.com/bundestag/gesetze&quot; target=&quot;blank&quot;&gt;Bundes-Git&lt;/a&gt; che
+raccoglie in un repository &lt;strong&gt;git&lt;/strong&gt; le leggi e i regolamenti federali tedeschi in &lt;a href=&quot;https://it.wikipedia.org/wiki/Markdown&quot; target=&quot;blank&quot;&gt;markdown&lt;/a&gt;,
+cioè usando un formato in grado di migliorare la leggibilità e la fruibilità per gli utenti finali.&lt;/p&gt;
+
+&lt;p&gt;Anche in Italia, in occasione del referendum costituzionale del 2016, c’è stato chi
+ha pensato bene di &lt;a href=&quot;https://github.com/pmontrasio/costituzione&quot; target=&quot;blank&quot;&gt;versionare&lt;/a&gt; 
+la costituzione corrente con quella che sarebbe stata se fosse passato il referendum confermativo.&lt;/p&gt;
+
+&lt;p&gt;Ritornando al CAD, a fine gennaio avevo quindi intenzione di creare un repository &lt;strong&gt;git&lt;/strong&gt; e caricare
+tutte le versioni del CAD, naturalmente con &lt;strong&gt;commit&lt;/strong&gt; diversi, per consentire sia la lettura 
+del decreto legislativo  su piattaforme online di versionamento, come ad esempio
+&lt;a target=&quot;blank&quot; href=&quot;https://www.github.com&quot;&gt;github&lt;/a&gt;,
+sia per tenere traccia delle modifiche di capi, titoli, articoli e commi e poter fare confronti tra le varie 
+versioni. Successivamente avevo intenzione di creare una mappa dell’intero decreto, in grado di fornire
+all’utente il quadro generale non solo della versione corrente del CAD ma anche di tutte le precedenti.&lt;/p&gt;
+
+&lt;p&gt;Per reperire il testo delle varie versioni ho riciclato e fixato in alcune parti un vecchissimo scraper, 
+sviluppato più di 4 anni fa per un progettino didattico, in grado
+ di estrarre dati da &lt;strong&gt;normattiva.it&lt;/strong&gt; e di creare
+un file JSON con &lt;em&gt;capi&lt;/em&gt;, &lt;em&gt;sezioni&lt;/em&gt;, &lt;em&gt;articoli&lt;/em&gt;, &lt;em&gt;versioni&lt;/em&gt;, &lt;em&gt;testi&lt;/em&gt;, &lt;em&gt;aggiornamenti&lt;/em&gt;, &lt;em&gt;vigenze&lt;/em&gt;,
+&lt;em&gt;riferimenti normativi&lt;/em&gt; del CAD.&lt;/p&gt;
+
+&lt;p&gt;Il file estratto lo potete trovare &lt;a target=&quot;blank&quot; href=&quot;http://giovanni.pirrotta.it/images/visualcad/cad.json&quot;&gt;qui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Era fine gennaio dicevo (&lt;em&gt;cioè due settimane fa&lt;/em&gt;), avevo generato il file e accantonato il progetto per qualche settimana intendendo ritornarvi appena avessi avuto un pò più
+di tempo libero quando, ad un tratto…un fulmine a ciel sereno.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/visualcad/tweet.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Il &lt;a href=&quot;https://twitter.com/teamdigitaleIT&quot; target=&quot;blank&quot;&gt;team digitale&lt;/a&gt; di &lt;a href=&quot;https://twitter.com/diegopia&quot; target=&quot;blank&quot;&gt;Diego Piacentini&lt;/a&gt; 
+carica su &lt;a href=&quot;&quot; target=&quot;blank&quot;&gt;github&lt;/a&gt; tutte le versioni del CAD andando
+a realizzare &lt;strong&gt;esattamente&lt;/strong&gt; quello che avevo in mente io. Non solo. Rilasciano il CAD
+in formato &lt;a href=&quot;https://it.wikipedia.org/wiki/ReStructuredText&quot; target=&quot;blank&quot;&gt;reStrucredText&lt;/a&gt;, 
+collegano il repository al servizio di documentazione online 
+&lt;a href=&quot;https://readthedocs.org/&quot; target=&quot;blank&quot;&gt;readthedocs&lt;/a&gt;
+migliorando  di molto l’esperienza di leggibilità, con in più la possibilità
+ di confrontare le versioni, articolo per articolo, direttamente su 
+ &lt;a href=&quot;https://github.com/italia/cad-docs/compare/v2016-08-26...v2017-12-13&quot; target=&quot;blank&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Questa la mia reazione&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/visualcad/cereal.png&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;M’avete fregato sul tempo…A Piacentì, A Team Digitale…‘ve possino!!!&lt;/em&gt;  &lt;strong&gt;se scherza eh ;-)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Raccolgo quatto quatto i cocci del mio progetto originale, accuso il colpo ma non demordo.
+Naufragata la parte relativa alla pubblicazione delle leggi su github
+mi concentro sulla seconda parte, cioè la realizzazione di una mappa in grado di visualizzare e interagire 
+interattivamente con tutte le versioni del CAD.&lt;/p&gt;
+
+&lt;p&gt;Giro un pò in rete per prendere ispirazione su progetti di mappe e mi innamoro di quello realizzato nel 2012  da
+&lt;a href=&quot;http://driven-by-data.net/&quot; target=&quot;blank&quot;&gt;Gregor Aisch&lt;/a&gt; (CTO di datawrapper) per le 
+&lt;a href=&quot;http://visualisiert.net/parteiengesetz/&quot; target=&quot;blank&quot;&gt; leggi tedesche&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Decido quindi di riusarlo, estenderlo ed adattarlo al CAD.&lt;/p&gt;
+
+&lt;p&gt;Invece di partire però dal file JSON estratto con lo scraper, i cui dati non sono opendata ma
+sono &lt;a href=&quot;http://www.normattiva.it/static/legal.html&quot; target=&quot;blank&quot;&gt;licenziati&lt;/a&gt; in modo da non consentirne il riuso per fini commerciali, 
+decido di riutilizzare invece i dati del &lt;strong&gt;team-digitale&lt;/strong&gt;, che sono invece opendata licenziati dalla bellissima &lt;a href=&quot;https://creativecommons.org/publicdomain/zero/1.0/&quot; target=&quot;blank&quot;&gt;CC0&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Nasce quindi il progetto &lt;strong&gt;VisualCAD&lt;/strong&gt;, la mappa interattiva della storia del CAD.
+Per la prima volta (che io sappia) è possibile fotografare 
+tutta la storia del Codice dell’Amministrazione Digitale in un’unica infografica.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/visualcad/visualcad-big.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dalla prima versione del 2005 si sono succeduti ben &lt;strong&gt;29 aggiornamenti&lt;/strong&gt; e in 
+ &lt;strong&gt;VisualCAD&lt;/strong&gt; vengono rappresentati su colonne diverse.
+I quadratini corrispondono ai singoli articoli e il colore, come mostrato in legenda, ne evidenzia l’eventuale modifica, aggiunta, abrogazione
+effettuata dalla normativa specificata in alto alla colonna.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/visualcad/legenda.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dalla tendina è possibile selezionare ciascun articolo per ricostruire tutto l’iter di modifiche subito dallo
+stesso dalla prima versione sino all’ultima.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/visualcad/singoloiter.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;E’ inoltre possibile effettuare ricerche testuali nel titolo degli articoli inserendo del testo libero nel form relativo.&lt;/p&gt;
+
+&lt;p&gt;Passando col mouse sopra gli articoli viene visualizzato un breve estratto del testo e, nel caso di 
+articolo modificato, viene mostrato il nuovo testo in verde e il testo rimosso in rosso.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/visualcad/articolomodificato.png&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cliccando su ciascun quadratino è possibile infine visualizzare l’intero corpo dell’articolo e, cliccando sull’apposito pulsantino, evidenziare
+ il testo modificato.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/visualcad/modal.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;L’obiettivo è stato raggiunto.&lt;/p&gt;
+
+&lt;p&gt;In un’unica schermata è possibile navigare tutto il CAD con tutti i suoi aggiornamenti, in modo semplice, interattivo
+e fruibile da qualsiasi cittadino.&lt;/p&gt;
+
+&lt;p&gt;L’evoluzione di questo progetto potrebbe essere la creazione di nuove mappe per altre leggi partendo ad esempio dal file JSON &lt;em&gt;scrapato&lt;/em&gt;,
+in attesa che &lt;em&gt;normattiva&lt;/em&gt; licenzi i dati in &lt;strong&gt;opendata&lt;/strong&gt; e rilasci delle API per interrogare l’archivio delle leggi in modo flessibile.
+Sogno o utopia?&lt;/p&gt;
+
+&lt;p&gt;Ritornando al progetto, questo è il &lt;a href=&quot;http://www.visualcad.it&quot; target=&quot;blank&quot;&gt;sito&lt;/a&gt; di riferimento di VisualCAD.
+All’apertura potreste attendere un pò di secondi perchè i dati da caricare sono tanti.&lt;/p&gt;
+
+&lt;p&gt;Se questo progetto vi è piaciuto, mi aiutate a farlo conoscere con un 
+&lt;a href=&quot;http://twitter.com/share?url=http://www.visualcad.it&amp;amp;text=VisualCAD+-+la+mappa+online+e+interattiva+della+storia+del+CAD.+Perchè+anche+l'occhio+vuole+la+sua+parte!+@gpirrotta&quot;&gt;tweet&lt;/a&gt;? 
+Grazie!&lt;/p&gt;
+
+&lt;p&gt;E comunque, a parte gli scherzi,  &lt;strong&gt;grazie&lt;/strong&gt; mille a tutta la squadra del Team Digitale!&lt;/p&gt;
+
+&lt;p&gt;Commenti, critiche e suggerimenti sono i benvenuti!&lt;/p&gt;
+
+&lt;p&gt;That’s all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Il Codice dell’Amministrazione Digitale (CAD) è il testo normativo di riferimento della pubblica amministrazione che disciplina il processo di digitalizzazione dell’attività amministrativa. Da più di un decennio il CAD, cioè il decreto legislativo n.82 del 7/3/2005, viene sistematicamente bistrattato a colpi di leggi, decreti legislativi e decreti legge, come un vestito continuamente rattoppato a suon di taglia e cuci, a discapito delle povere pubbliche amministrazioni che hanno il compito di attuare le disposizioni normative. Dal testo originario del 2005, tra piccole e grandi modifiche, si sono succeduti ben 29 aggiornamenti. Ad ogni aggiornamento, per poter leggere il testo coordinato, è necessario apportare all’ultima versione del CAD tutte le modifiche previste dall’aggiornamento normativo. Paragonando quest’operazione al mondo informatico, potremmo dire che l’operazione effettuata è un merge di un fix o di una nuova feature nella codebase di un software.</summary></entry><entry><title type="html">Del riutilizzo dei dati meteo ai tempi dei Borboni</title><link href="http://giovanni.pirrotta.it/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni/" rel="alternate" type="text/html" title="Del riutilizzo dei dati meteo ai tempi dei Borboni" /><published>2017-12-20T01:40:08+00:00</published><updated>2017-12-20T01:40:08+00:00</updated><id>http://giovanni.pirrotta.it/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni/">&lt;p&gt;Tutto ebbe inizio un giorno quando, di buon mattino, in un vecchio baule antico della mia soffitta, ritrovai un vecchio manoscritto
 di racconti intitolato “&lt;em&gt;Digital Fabulas&lt;/em&gt;”, la cui prima pagina recitava:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -2159,45 +2295,4 @@ WHERE {
 &lt;/div&gt;
 &lt;p&gt;SPARQL language is similar to &lt;a href=&quot;http://www.contrib.andrew.cmu.edu/~shadow/sql/sql1992.txt&quot;&gt;SQL language&lt;/a&gt;. SPARQL selects data from the dataset by using a SELECT statement to determine which subset of selected data is returned. Also, SPARQL uses a WHERE clause to define graph patterns to find a match for in the query data set. Also the binding between variables and instances will generally return in table format but we can also specify other formats, such as JSON, RDF/XML, etc.&lt;/p&gt;
 
-&lt;p&gt;That’s all for now. In the next posts I will introduce how to develop a new ontology using the Semantic Web ingredients learned in the previous posts of this series. So, stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">In the previous post of this series I described the RDFa language specifying the most important advantages in using it. Now it’s the turn of the SPARQL, a sort of SQL language for the Semantic Web world.</summary></entry><entry><title type="html">Symfony Best Practices Italian Translation</title><link href="http://giovanni.pirrotta.it/blog/2014/10/17/symfony-best-practices-italian-translation/" rel="alternate" type="text/html" title="Symfony Best Practices Italian Translation" /><published>2014-10-17T17:00:00+00:00</published><updated>2014-10-17T17:00:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2014/10/17/symfony-best-practices-italian-translation</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2014/10/17/symfony-best-practices-italian-translation/">&lt;p&gt;Tutto ebbe inizio con un misterioso tweet di &lt;a href=&quot;https://twitter.com/sensiolabs&quot;&gt;@sensiolabs&lt;/a&gt;, la casa madre del framework &lt;a href=&quot;http://www.symfony.com&quot;&gt;Symfony&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/tweet-sensio.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;!--More--&gt;
-&lt;p&gt;#}&lt;/p&gt;
-
-&lt;p&gt;L’attesa fu breve, il mistero fu presto svelato.
-&lt;img src=&quot;/images/tweet-symfony.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Symfony ha finalmente deciso di &lt;a href=&quot;http://symfony.com/blog/introducing-the-official-symfony-best-practices&quot;&gt;rilasciare&lt;/a&gt; le linee guida ufficiali per lo sviluppo di applicazioni con il proprio framework.&lt;/p&gt;
-
-&lt;p&gt;La notizia del rilascio ha subito riscosso grandi entusiasmi da parte della comunità, che aspettava da tempo le best practices ufficiali da adottare per sfruttare appieno le funzionalità di Symfony, pur mantenendo alta la qualità di codice prodotto.&lt;/p&gt;
-
-&lt;p&gt;Nonostante la caratura ufficiale delle best-practices, ad onor del vero, da anni la comunità Symfony, fra le migliori al mondo in campo PHP e OOP, contribuisce con articoli, post, presentazioni e libri alla diffusione di tecniche, strategie e casi d’uso per riuscire a sfruttare al meglio le funzionalità del framework.&lt;/p&gt;
-
-&lt;p&gt;Consigliando come migliorare l’esperienza dello sviluppatore nell’utilizzare Symfony, di fatto, la comunità ha giocato un ruolo fondamentale per la diffusione del framework stesso contribuendo sia a migliorarlo che a renderlo più flessibile e sicuro.&lt;/p&gt;
-
-&lt;p&gt;Molte di queste risorse, disponibili sul Web, possono essere considerate dei veri e propri tesori da custodire e proteggere gelosamente. Confesso che alcune di queste intuizioni avrei voluto scoprirle tanti anni fa quando ho iniziato a cimentarmi con la filosofia OOP.
-&lt;em&gt;(Per i più curiosi consiglio di seguire &lt;a href=&quot;http://www.planet-php.net/&quot;&gt;planet-php.net&lt;/a&gt; )&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;E’ possibile scaricare le best practices ufficiali di Symfony direttamente dal &lt;a href=&quot;http://symfony.com/doc/current/best_practices/index.html&quot;&gt;sito Symfony&lt;/a&gt;.
-Anche se si tratta di una prima versione non definitiva, ho pensato di tradurla in italiano.
-Sotto trovate l’indice oppure andate sul mio repo &lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;La traduzione è in fase di revisione. Consigli e contributi (leggasi PR) per migliorare la comprensione e leggibilità sono i benvenuti.&lt;/p&gt;
-
-&lt;h2 id=&quot;symfony-best-practices&quot;&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it&quot;&gt;Symfony Best Practices&lt;/a&gt;&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-01.md&quot;&gt;&lt;strong&gt;Best Practices del Framework Symfony&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-02.md&quot;&gt;&lt;strong&gt;La creazione del progetto&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-03.md&quot;&gt;&lt;strong&gt;La configurazione&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-04.md&quot;&gt;&lt;strong&gt;Organizzare la logica di business&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-05.md&quot;&gt;&lt;strong&gt;I Controller&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-06.md&quot;&gt;&lt;strong&gt;I Template&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-07.md&quot;&gt;&lt;strong&gt;I Form&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-08.md&quot;&gt;&lt;strong&gt;L’Internazionalizzazione&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-09.md&quot;&gt;&lt;strong&gt;La Sicurezza&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-10.md&quot;&gt;&lt;strong&gt;I Web Assets&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/gpirrotta/symfony-best-practices-it/blob/master/it/capitolo-11.md&quot;&gt;&lt;strong&gt;I Test&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Tutto ebbe inizio con un misterioso tweet di @sensiolabs, la casa madre del framework Symfony.</summary></entry></feed>
+&lt;p&gt;That’s all for now. In the next posts I will introduce how to develop a new ontology using the Semantic Web ingredients learned in the previous posts of this series. So, stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">In the previous post of this series I described the RDFa language specifying the most important advantages in using it. Now it’s the turn of the SPARQL, a sort of SQL language for the Semantic Web world.</summary></entry></feed>

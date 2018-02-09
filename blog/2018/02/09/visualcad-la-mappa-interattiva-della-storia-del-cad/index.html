@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>VisualCAD: la mappa interattiva della storia del CAD - Giovanni Pirrotta</title>
+  <meta name="author" content="Giovanni Pirrotta">
+
+  
+  <meta name="description" content="
+    
+        
+  
+    
+      VisualCAD: la mappa interattiva della storia del CAD
+    
+    
+      
+
+        
+
+
+ February 09, 2018
+        
+      
+ ...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Giovanni Pirrotta" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-68654531-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body  
+      >
+<header role="banner"><hgroup>
+  <h1><a href="/">Giovanni Pirrotta</a></h1>
+  
+    <h2>Just a curious person</h2>
+  
+</hgroup>
+
+</header>
+<nav role="navigation"><ul class="subscription" data-subscription="rss">
+  
+  
+</ul>
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/atom.xml">RSS</a></li>
+  <li><a href="http://github.com/gpirrotta">Github</a></li>
+  <li><a href="http://twitter.com/gpirrotta">Twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/giovannipirrotta">Linkedin</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<div id="main">
+    <div id="content">
+        <div>
+    <article class="hentry" role="article">
+        
+  <header>
+    
+      <h1 class="entry-title">VisualCAD: la mappa interattiva della storia del CAD</h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ February 09, 2018
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Il Codice dell’Amministrazione Digitale (<strong>CAD</strong>) è il testo normativo di riferimento 
+della pubblica amministrazione che disciplina il processo di digitalizzazione
+dell’attività amministrativa.
+Da più di un decennio il CAD, cioè il <a href="http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82" target="blank">decreto legislativo n.82 del 7/3/2005</a>, viene sistematicamente
+<em>bistrattato</em> a colpi di leggi, decreti legislativi e decreti legge, come un vestito continuamente rattoppato
+ a suon di taglia e cuci, a discapito delle povere pubbliche amministrazioni che hanno il compito di attuare 
+ le disposizioni normative.
+Dal testo originario del 2005, tra piccole e grandi modifiche,
+si sono succeduti ben 29 aggiornamenti.
+Ad ogni aggiornamento, per poter leggere il testo coordinato, è necessario apportare all’ultima versione del CAD
+tutte le modifiche previste dall’aggiornamento normativo.
+Paragonando quest’operazione al mondo informatico, potremmo dire che l’operazione effettuata è un
+ <strong>merge</strong> di un <em>fix</em> o di una nuova <em>feature</em> nella <strong>codebase</strong> di un software.</p>
+
+<!--More-->
+<p><img class="center-image" src="/images/visualcad/cad.jpg" width="60%" /></p>
+
+<p>Ed è proprio da quest’idea di <em>merging</em> documentale che sono partito per riflettere sulla possibilità di
+considerare i testi normativi alla stregua di codici sorgente e di poter utilizzare i tool a disposizione per il versionamento
+del software, ad esempio <strong>Git</strong> ma anche <strong>Subversion</strong> o <strong>Mercurial</strong>, per tenere traccia di tutte le modifiche
+che avvengono fra le versioni delle leggi.</p>
+
+<p>Quest’idea in realtà non è nuova. Da diversi anni esistono dei progetti che supportano l’utilizzo
+di strumenti che, anche se nati per il mondo software, consentono sia
+di versionare i documenti normativi sia di far interagire i cittadini con i proponenti la legge,
+mettendoli in condizione di fornire feedback, consigli, critiche e/o spunti di miglioramento. 
+E’ un esempio il progetto <a href="https://github.com/bundestag/gesetze" target="blank">Bundes-Git</a> che
+raccoglie in un repository <strong>git</strong> le leggi e i regolamenti federali tedeschi in <a href="https://it.wikipedia.org/wiki/Markdown" target="blank">markdown</a>,
+cioè usando un formato in grado di migliorare la leggibilità e la fruibilità per gli utenti finali.</p>
+
+<p>Anche in Italia, in occasione del referendum costituzionale del 2016, c’è stato chi
+ha pensato bene di <a href="https://github.com/pmontrasio/costituzione" target="blank">versionare</a> 
+la costituzione corrente con quella che sarebbe stata se fosse passato il referendum confermativo.</p>
+
+<p>Ritornando al CAD, a fine gennaio avevo quindi intenzione di creare un repository <strong>git</strong> e caricare
+tutte le versioni del CAD, naturalmente con <strong>commit</strong> diversi, per consentire sia la lettura 
+del decreto legislativo  su piattaforme online di versionamento, come ad esempio
+<a target="blank" href="https://www.github.com">github</a>,
+sia per tenere traccia delle modifiche di capi, titoli, articoli e commi e poter fare confronti tra le varie 
+versioni. Successivamente avevo intenzione di creare una mappa dell’intero decreto, in grado di fornire
+all’utente il quadro generale non solo della versione corrente del CAD ma anche di tutte le precedenti.</p>
+
+<p>Per reperire il testo delle varie versioni ho riciclato e fixato in alcune parti un vecchissimo scraper, 
+sviluppato più di 4 anni fa per un progettino didattico, in grado
+ di estrarre dati da <strong>normattiva.it</strong> e di creare
+un file JSON con <em>capi</em>, <em>sezioni</em>, <em>articoli</em>, <em>versioni</em>, <em>testi</em>, <em>aggiornamenti</em>, <em>vigenze</em>,
+<em>riferimenti normativi</em> del CAD.</p>
+
+<p>Il file estratto lo potete trovare <a target="blank" href="http://giovanni.pirrotta.it/images/visualcad/cad.json">qui</a>.</p>
+
+<p>Era fine gennaio dicevo (<em>cioè due settimane fa</em>), avevo generato il file e accantonato il progetto per qualche settimana intendendo ritornarvi appena avessi avuto un pò più
+di tempo libero quando, ad un tratto…un fulmine a ciel sereno.</p>
+
+<p><img class="center-image" src="/images/visualcad/tweet.png" width="60%" /></p>
+
+<p>Il <a href="https://twitter.com/teamdigitaleIT" target="blank">team digitale</a> di <a href="https://twitter.com/diegopia" target="blank">Diego Piacentini</a> 
+carica su <a href="" target="blank">github</a> tutte le versioni del CAD andando
+a realizzare <strong>esattamente</strong> quello che avevo in mente io. Non solo. Rilasciano il CAD
+in formato <a href="https://it.wikipedia.org/wiki/ReStructuredText" target="blank">reStrucredText</a>, 
+collegano il repository al servizio di documentazione online 
+<a href="https://readthedocs.org/" target="blank">readthedocs</a>
+migliorando  di molto l’esperienza di leggibilità, con in più la possibilità
+ di confrontare le versioni, articolo per articolo, direttamente su 
+ <a href="https://github.com/italia/cad-docs/compare/v2016-08-26...v2017-12-13" target="blank">github</a>.</p>
+
+<p><em>Questa la mia reazione</em></p>
+
+<p><img class="center-image" src="/images/visualcad/cereal.png" width="40%" /></p>
+
+<p><em>M’avete fregato sul tempo…A Piacentì, A Team Digitale…‘ve possino!!!</em>  <strong>se scherza eh ;-)</strong></p>
+
+<p>Raccolgo quatto quatto i cocci del mio progetto originale, accuso il colpo ma non demordo.
+Naufragata la parte relativa alla pubblicazione delle leggi su github
+mi concentro sulla seconda parte, cioè la realizzazione di una mappa in grado di visualizzare e interagire 
+interattivamente con tutte le versioni del CAD.</p>
+
+<p>Giro un pò in rete per prendere ispirazione su progetti di mappe e mi innamoro di quello realizzato nel 2012  da
+<a href="http://driven-by-data.net/" target="blank">Gregor Aisch</a> (CTO di datawrapper) per le 
+<a href="http://visualisiert.net/parteiengesetz/" target="blank"> leggi tedesche</a>.</p>
+
+<p>Decido quindi di riusarlo, estenderlo ed adattarlo al CAD.</p>
+
+<p>Invece di partire però dal file JSON estratto con lo scraper, i cui dati non sono opendata ma
+sono <a href="http://www.normattiva.it/static/legal.html" target="blank">licenziati</a> in modo da non consentirne il riuso per fini commerciali, 
+decido di riutilizzare invece i dati del <strong>team-digitale</strong>, che sono invece opendata licenziati dalla bellissima <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="blank">CC0</a>.</p>
+
+<p>Nasce quindi il progetto <strong>VisualCAD</strong>, la mappa interattiva della storia del CAD.
+Per la prima volta (che io sappia) è possibile fotografare 
+tutta la storia del Codice dell’Amministrazione Digitale in un’unica infografica.</p>
+
+<p><img class="center-image" src="/images/visualcad/visualcad-big.png" width="100%" /></p>
+
+<p>Dalla prima versione del 2005 si sono succeduti ben <strong>29 aggiornamenti</strong> e in 
+ <strong>VisualCAD</strong> vengono rappresentati su colonne diverse.
+I quadratini corrispondono ai singoli articoli e il colore, come mostrato in legenda, ne evidenzia l’eventuale modifica, aggiunta, abrogazione
+effettuata dalla normativa specificata in alto alla colonna.</p>
+
+<p><img class="center-image" src="/images/visualcad/legenda.png" width="80%" /></p>
+
+<p>Dalla tendina è possibile selezionare ciascun articolo per ricostruire tutto l’iter di modifiche subito dallo
+stesso dalla prima versione sino all’ultima.</p>
+
+<p><img class="center-image" src="/images/visualcad/singoloiter.png" width="100%" /></p>
+
+<p>E’ inoltre possibile effettuare ricerche testuali nel titolo degli articoli inserendo del testo libero nel form relativo.</p>
+
+<p>Passando col mouse sopra gli articoli viene visualizzato un breve estratto del testo e, nel caso di 
+articolo modificato, viene mostrato il nuovo testo in verde e il testo rimosso in rosso.</p>
+
+<p><img class="center-image" src="/images/visualcad/articolomodificato.png" width="50%" /></p>
+
+<p>Cliccando su ciascun quadratino è possibile infine visualizzare l’intero corpo dell’articolo e, cliccando sull’apposito pulsantino, evidenziare
+ il testo modificato.</p>
+
+<p><img class="center-image" src="/images/visualcad/modal.png" width="60%" /></p>
+
+<p>L’obiettivo è stato raggiunto.</p>
+
+<p>In un’unica schermata è possibile navigare tutto il CAD con tutti i suoi aggiornamenti, in modo semplice, interattivo
+e fruibile da qualsiasi cittadino.</p>
+
+<p>L’evoluzione di questo progetto potrebbe essere la creazione di nuove mappe per altre leggi partendo ad esempio dal file JSON <em>scrapato</em>,
+in attesa che <em>normattiva</em> licenzi i dati in <strong>opendata</strong> e rilasci delle API per interrogare l’archivio delle leggi in modo flessibile.
+Sogno o utopia?</p>
+
+<p>Ritornando al progetto, questo è il <a href="http://www.visualcad.it" target="blank">sito</a> di riferimento di VisualCAD.
+All’apertura potreste attendere un pò di secondi perchè i dati da caricare sono tanti.</p>
+
+<p>Se questo progetto vi è piaciuto, mi aiutate a farlo conoscere con un 
+<a href="http://twitter.com/share?url=http://www.visualcad.it&amp;text=VisualCAD+-+la+mappa+online+e+interattiva+della+storia+del+CAD.+Perchè+anche+l'occhio+vuole+la+sua+parte!+@gpirrotta">tweet</a>? 
+Grazie!</p>
+
+<p>E comunque, a parte gli scherzi,  <strong>grazie</strong> mille a tutta la squadra del Team Digitale!</p>
+
+<p>Commenti, critiche e suggerimenti sono i benvenuti!</p>
+
+<p>That’s all folks! Stay tuned!</p>
+</div>
+
+
+        <footer>
+            <p class="meta">
+                
+<span class="byline author vcard">Posted by <span class="fn">Giovanni Pirrotta</span></span>
+
+                <time pubdate>
+                February 09, 2018
+                </time>
+
+                <span class="categories">
+                
+
+                
+                <a class="category" href="/categories/cad">cad</a>,
+                
+                <a class="category" href="/categories/codice-amministrazione-digitale">codice-amministrazione-digitale</a>,
+                
+                <a class="category" href="/categories/aggiornamenti">aggiornamenti</a>,
+                
+                <a class="category" href="/categories/leggi">leggi</a>,
+                
+                <a class="category" href="/categories/pubblica-amministrazione">pubblica-amministrazione</a>,
+                
+                <a class="category" href="/categories/team-digitale">team-digitale</a>
+                
+                </span>
+            </p>
+            
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/" data-via="gpirrotta" data-counturl="http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+            
+            <p class="meta">
+                
+                <a class="basic-alignment left" href="/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni/" title="Previous Post: Del riutilizzo dei dati meteo ai tempi dei Borboni">&laquo; Del riutilizzo dei dati meteo ai tempi dei Borboni</a>
+                
+                
+            </p>
+        </footer>
+    </article>
+    
+    <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/">VisualCAD: la mappa interattiva della storia del CAD</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni/">Del riutilizzo dei dati meteo ai tempi dei Borboni</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/07/04/foiapop-accesso-civico-data-driven/">FoiaPop: accesso civico data-driven</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">Citybot: la tua città, smart, in pochi click</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/28/protezione-civile-palermo-telegram-bot/">Quando un BOT può salvarti la vita!</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+
+
+
+</aside>
+
+
+
+    </div>
+</div>
+<footer role="contentinfo"><p>
+  Copyright &copy; 2018 - Giovanni Pirrotta -
+
+  <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+</p>
+
+</footer>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gpirrotta';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/';
+        var disqus_url = 'http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<script>
+  $(document).ready(function() {  
+  var stickyNavTop = $('nav').offset().top;  
+    
+  var stickyNav = function(){  
+  var scrollTop = $(window).scrollTop();  
+         
+  if (scrollTop > stickyNavTop) {   
+      $('nav').addClass('sticky');  
+  } else {  
+      $('nav').removeClass('sticky');   
+  }  
+  };  
+    
+  stickyNav();  
+    
+  $(window).scroll(function() {  
+      stickyNav();  
+  });  
+  });  
+</script>
+
+
+</body>
+</html>

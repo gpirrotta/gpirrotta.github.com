@@ -4,7 +4,7 @@
   <title><![CDATA[Giovanni Pirrotta]]></title>
   <link href="http://giovanni.pirrotta.it/atom.xml" rel="self"/>
   <link href="http://giovanni.pirrotta.it/"/>
-  <updated>2017-12-20T16:46:32+00:00</updated>
+  <updated>2018-02-09T17:41:39+00:00</updated>
   <id>http://giovanni.pirrotta.it/</id>
   <author>
     <name><![CDATA[Giovanni Pirrotta]]></name>
@@ -12,6 +12,151 @@
   </author>
   <generator uri="https://jekyllrb.com">Jekyll</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[VisualCAD: la mappa interattiva della storia del CAD]]></title>
+    <link href="http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/"/>
+    <updated>2018-02-09T01:40:08+00:00</updated>
+    <id>http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad</id>
+    <content type="html"><![CDATA[<p>Il Codice dell’Amministrazione Digitale (<strong>CAD</strong>) è il testo normativo di riferimento 
+della pubblica amministrazione che disciplina il processo di digitalizzazione
+dell’attività amministrativa.
+Da più di un decennio il CAD, cioè il <a href="http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82" target="blank">decreto legislativo n.82 del 7/3/2005</a>, viene sistematicamente
+<em>bistrattato</em> a colpi di leggi, decreti legislativi e decreti legge, come un vestito continuamente rattoppato
+ a suon di taglia e cuci, a discapito delle povere pubbliche amministrazioni che hanno il compito di attuare 
+ le disposizioni normative.
+Dal testo originario del 2005, tra piccole e grandi modifiche,
+si sono succeduti ben 29 aggiornamenti.
+Ad ogni aggiornamento, per poter leggere il testo coordinato, è necessario apportare all’ultima versione del CAD
+tutte le modifiche previste dall’aggiornamento normativo.
+Paragonando quest’operazione al mondo informatico, potremmo dire che l’operazione effettuata è un
+ <strong>merge</strong> di un <em>fix</em> o di una nuova <em>feature</em> nella <strong>codebase</strong> di un software.</p>
+
+<!--More-->
+<p><img class="center-image" src="/images/visualcad/cad.jpg" width="60%" /></p>
+
+<p>Ed è proprio da quest’idea di <em>merging</em> documentale che sono partito per riflettere sulla possibilità di
+considerare i testi normativi alla stregua di codici sorgente e di poter utilizzare i tool a disposizione per il versionamento
+del software, ad esempio <strong>Git</strong> ma anche <strong>Subversion</strong> o <strong>Mercurial</strong>, per tenere traccia di tutte le modifiche
+che avvengono fra le versioni delle leggi.</p>
+
+<p>Quest’idea in realtà non è nuova. Da diversi anni esistono dei progetti che supportano l’utilizzo
+di strumenti che, anche se nati per il mondo software, consentono sia
+di versionare i documenti normativi sia di far interagire i cittadini con i proponenti la legge,
+mettendoli in condizione di fornire feedback, consigli, critiche e/o spunti di miglioramento. 
+E’ un esempio il progetto <a href="https://github.com/bundestag/gesetze" target="blank">Bundes-Git</a> che
+raccoglie in un repository <strong>git</strong> le leggi e i regolamenti federali tedeschi in <a href="https://it.wikipedia.org/wiki/Markdown" target="blank">markdown</a>,
+cioè usando un formato in grado di migliorare la leggibilità e la fruibilità per gli utenti finali.</p>
+
+<p>Anche in Italia, in occasione del referendum costituzionale del 2016, c’è stato chi
+ha pensato bene di <a href="https://github.com/pmontrasio/costituzione" target="blank">versionare</a> 
+la costituzione corrente con quella che sarebbe stata se fosse passato il referendum confermativo.</p>
+
+<p>Ritornando al CAD, a fine gennaio avevo quindi intenzione di creare un repository <strong>git</strong> e caricare
+tutte le versioni del CAD, naturalmente con <strong>commit</strong> diversi, per consentire sia la lettura 
+del decreto legislativo  su piattaforme online di versionamento, come ad esempio
+<a target="blank" href="https://www.github.com">github</a>,
+sia per tenere traccia delle modifiche di capi, titoli, articoli e commi e poter fare confronti tra le varie 
+versioni. Successivamente avevo intenzione di creare una mappa dell’intero decreto, in grado di fornire
+all’utente il quadro generale non solo della versione corrente del CAD ma anche di tutte le precedenti.</p>
+
+<p>Per reperire il testo delle varie versioni ho riciclato e fixato in alcune parti un vecchissimo scraper, 
+sviluppato più di 4 anni fa per un progettino didattico, in grado
+ di estrarre dati da <strong>normattiva.it</strong> e di creare
+un file JSON con <em>capi</em>, <em>sezioni</em>, <em>articoli</em>, <em>versioni</em>, <em>testi</em>, <em>aggiornamenti</em>, <em>vigenze</em>,
+<em>riferimenti normativi</em> del CAD.</p>
+
+<p>Il file estratto lo potete trovare <a target="blank" href="http://giovanni.pirrotta.it/images/visualcad/cad.json">qui</a>.</p>
+
+<p>Era fine gennaio dicevo (<em>cioè due settimane fa</em>), avevo generato il file e accantonato il progetto per qualche settimana intendendo ritornarvi appena avessi avuto un pò più
+di tempo libero quando, ad un tratto…un fulmine a ciel sereno.</p>
+
+<p><img class="center-image" src="/images/visualcad/tweet.png" width="60%" /></p>
+
+<p>Il <a href="https://twitter.com/teamdigitaleIT" target="blank">team digitale</a> di <a href="https://twitter.com/diegopia" target="blank">Diego Piacentini</a> 
+carica su <a href="" target="blank">github</a> tutte le versioni del CAD andando
+a realizzare <strong>esattamente</strong> quello che avevo in mente io. Non solo. Rilasciano il CAD
+in formato <a href="https://it.wikipedia.org/wiki/ReStructuredText" target="blank">reStrucredText</a>, 
+collegano il repository al servizio di documentazione online 
+<a href="https://readthedocs.org/" target="blank">readthedocs</a>
+migliorando  di molto l’esperienza di leggibilità, con in più la possibilità
+ di confrontare le versioni, articolo per articolo, direttamente su 
+ <a href="https://github.com/italia/cad-docs/compare/v2016-08-26...v2017-12-13" target="blank">github</a>.</p>
+
+<p><em>Questa la mia reazione</em></p>
+
+<p><img class="center-image" src="/images/visualcad/cereal.png" width="40%" /></p>
+
+<p><em>M’avete fregato sul tempo…A Piacentì, A Team Digitale…‘ve possino!!!</em>  <strong>se scherza eh ;-)</strong></p>
+
+<p>Raccolgo quatto quatto i cocci del mio progetto originale, accuso il colpo ma non demordo.
+Naufragata la parte relativa alla pubblicazione delle leggi su github
+mi concentro sulla seconda parte, cioè la realizzazione di una mappa in grado di visualizzare e interagire 
+interattivamente con tutte le versioni del CAD.</p>
+
+<p>Giro un pò in rete per prendere ispirazione su progetti di mappe e mi innamoro di quello realizzato nel 2012  da
+<a href="http://driven-by-data.net/" target="blank">Gregor Aisch</a> (CTO di datawrapper) per le 
+<a href="http://visualisiert.net/parteiengesetz/" target="blank"> leggi tedesche</a>.</p>
+
+<p>Decido quindi di riusarlo, estenderlo ed adattarlo al CAD.</p>
+
+<p>Invece di partire però dal file JSON estratto con lo scraper, i cui dati non sono opendata ma
+sono <a href="http://www.normattiva.it/static/legal.html" target="blank">licenziati</a> in modo da non consentirne il riuso per fini commerciali, 
+decido di riutilizzare invece i dati del <strong>team-digitale</strong>, che sono invece opendata licenziati dalla bellissima <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="blank">CC0</a>.</p>
+
+<p>Nasce quindi il progetto <strong>VisualCAD</strong>, la mappa interattiva della storia del CAD.
+Per la prima volta (che io sappia) è possibile fotografare 
+tutta la storia del Codice dell’Amministrazione Digitale in un’unica infografica.</p>
+
+<p><img class="center-image" src="/images/visualcad/visualcad-big.png" width="100%" /></p>
+
+<p>Dalla prima versione del 2005 si sono succeduti ben <strong>29 aggiornamenti</strong> e in 
+ <strong>VisualCAD</strong> vengono rappresentati su colonne diverse.
+I quadratini corrispondono ai singoli articoli e il colore, come mostrato in legenda, ne evidenzia l’eventuale modifica, aggiunta, abrogazione
+effettuata dalla normativa specificata in alto alla colonna.</p>
+
+<p><img class="center-image" src="/images/visualcad/legenda.png" width="80%" /></p>
+
+<p>Dalla tendina è possibile selezionare ciascun articolo per ricostruire tutto l’iter di modifiche subito dallo
+stesso dalla prima versione sino all’ultima.</p>
+
+<p><img class="center-image" src="/images/visualcad/singoloiter.png" width="100%" /></p>
+
+<p>E’ inoltre possibile effettuare ricerche testuali nel titolo degli articoli inserendo del testo libero nel form relativo.</p>
+
+<p>Passando col mouse sopra gli articoli viene visualizzato un breve estratto del testo e, nel caso di 
+articolo modificato, viene mostrato il nuovo testo in verde e il testo rimosso in rosso.</p>
+
+<p><img class="center-image" src="/images/visualcad/articolomodificato.png" width="50%" /></p>
+
+<p>Cliccando su ciascun quadratino è possibile infine visualizzare l’intero corpo dell’articolo e, cliccando sull’apposito pulsantino, evidenziare
+ il testo modificato.</p>
+
+<p><img class="center-image" src="/images/visualcad/modal.png" width="60%" /></p>
+
+<p>L’obiettivo è stato raggiunto.</p>
+
+<p>In un’unica schermata è possibile navigare tutto il CAD con tutti i suoi aggiornamenti, in modo semplice, interattivo
+e fruibile da qualsiasi cittadino.</p>
+
+<p>L’evoluzione di questo progetto potrebbe essere la creazione di nuove mappe per altre leggi partendo ad esempio dal file JSON <em>scrapato</em>,
+in attesa che <em>normattiva</em> licenzi i dati in <strong>opendata</strong> e rilasci delle API per interrogare l’archivio delle leggi in modo flessibile.
+Sogno o utopia?</p>
+
+<p>Ritornando al progetto, questo è il <a href="http://www.visualcad.it" target="blank">sito</a> di riferimento di VisualCAD.
+All’apertura potreste attendere un pò di secondi perchè i dati da caricare sono tanti.</p>
+
+<p>Se questo progetto vi è piaciuto, mi aiutate a farlo conoscere con un 
+<a href="http://twitter.com/share?url=http://www.visualcad.it&amp;text=VisualCAD+-+la+mappa+online+e+interattiva+della+storia+del+CAD.+Perchè+anche+l'occhio+vuole+la+sua+parte!+@gpirrotta">tweet</a>? 
+Grazie!</p>
+
+<p>E comunque, a parte gli scherzi,  <strong>grazie</strong> mille a tutta la squadra del Team Digitale!</p>
+
+<p>Commenti, critiche e suggerimenti sono i benvenuti!</p>
+
+<p>That’s all folks! Stay tuned!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Del riutilizzo dei dati meteo ai tempi dei Borboni]]></title>
@@ -3429,113 +3574,6 @@ The semantic technologies provide necessary tools to reuse information implement
 <p>But, how do we represent the information written in HTML in a structured way? And how do we specify the meaning of each single abstract or concrete concept? The reply in next posts!</p>
 
 <p>Stay tuned!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Terme Vigliatore Statistics]]></title>
-    <link href="http://giovanni.pirrotta.it/blog/2013/06/12/terme-vigliatore-e-la-sua-storia-amministrativa/"/>
-    <updated>2013-06-12T09:43:00+00:00</updated>
-    <id>http://giovanni.pirrotta.it/blog/2013/06/12/terme-vigliatore-e-la-sua-storia-amministrativa</id>
-    <content type="html"><![CDATA[<p>Il popolo sovrano ha deciso.<br />
-<a href="http://it.wikipedia.org/wiki/Terme_Vigliatore">Terme Vigliatore</a> ha eletto il suo primo cittadino riconfermando il sindaco uscente.<br />
-Personalmente non ne potevo più del fermento elettorale che si era innescato da mesi e
-che vedeva i protagonisti delle varie liste, dei movimenti e degli schieramenti darsele (metaforicamente parlando) di santa ragione per accrescere il proprio bacino elettorale.<br />
-Tutto questo è ormai (e per fortuna) acqua passata!</p>
-
-<p>Da qualche tempo però, appassionato di <a href="http://it.wikipedia.org/wiki/Data_mining">data mining</a>,
-è nato in me il desiderio di effettuare ricerche statistiche sulla storia delle amministrazioni passate, per ricavarne qualcosa di interessante e curioso.</p>
-
-<!--More-->
-
-<p>Primo passo, la ricerca di fonti attendibili dalle quali prelevare i dati per iniziare le elaborazioni.</p>
-
-<p>Dopo una prima ricerca infruttuosa sul sito del <a href="http://www.comune.termevigliatore.me.it/public/">comune</a> ho trovato nel
-sito del <strong>Ministero dell’Interno</strong> e nello specifico in questa <a href="http://amministratori.interno.it/amministratori/AmmIndex5.htm">pagina</a>
-informazioni davvero interessanti.
-La pagina consente infatti di scaricare tutti gli archivi in formato standard
-<a href="http://it.wikipedia.org/wiki/Comma-separated_values">CSV</a> relativi agli amministratori comunali, provinciali e
-regionali di tutti i comuni d’Italia con rilevazioni annuali dal 1985 al 2012.</p>
-
-<p>Possiamo partire!</p>
-
-<p>Per ogni amministratore, sia esso sindaco, assessore o consigliere, l’archivio riporta, tra i tanti codici identificativi, anche alcune informazioni di carattere personale come ad esempio i seguenti dati:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>- cognome
-- nome
-- sesso
-- data di nascita
-- comune italiano o stato estero di nascita
-- descrizione carica
-- descrizione partito
-- descrizione titolo di studio
-- descrizione professione
-- anno di elezione
-</code></pre>
-</div>
-
-<p>Dopo un’oretta passata tra script bash di estrazione, conversione e riconciliazione dei dati vediamo cosa ne è uscito
-fuori.</p>
-
-<p>Innanzitutto ho trovato dati relativi al comune di Terme Vigliatore solo dal 1988 fino al 2012. Inoltre,
-inspiegabilmente, il Ministero degli Interni non fornisce alcun dato del nostro paese nel 2002.
-Che sarà mai successo nel 2002?<br />
-Non verranno presi infine in considerazione gli anni relativi all’ultimo commissariamento (2005-2007) in quanto
-mancanti.</p>
-
-<p>Bene, cominciamo a farci qualche domanda e a rispondere mostrando le statistiche elaborate!</p>
-
-<p>** 1) Quante donne hanno amministrato Terme Vigliatore negli ultimi 24 anni? **</p>
-
-<p>Poche; aggiungo io, purtroppo. Su un totale di <strong>79</strong> amministratori tra sindaci, consiglieri e assessori, solo
-l’ <strong>11%</strong> di donne sono salite sullo <em>scranno</em> comunale.</p>
-
-<p><img src="/images/elezioni/distribuzione-sessi.png" alt="Image" class="center-image" /></p>
-
-<p>** 2) Qual è stato il livello di istruzione dei nostri amministratori? **</p>
-
-<p><img src="/images/elezioni/livello-istruzione.png" alt="Image" class="center-image" /></p>
-
-<p>** 3) Che lavoro facevano i nostri amministratori? **</p>
-
-<p><img src="/images/elezioni/professioni-amministratori.png" alt="Image" class="center-image" /></p>
-
-<p>** 4) Dove sono nati i nostri amministratori? **</p>
-
-<p>Fino al 28 giugno 1966 Terme Vigliatore faceva parte del comune di Castroreale, motivo per cui molti amministratori, pur essendo nati a Terme Vigliatore, risultano all’anagrafe nati a Castroreale.</p>
-
-<p><img src="/images/elezioni/luogo-nascita.png" alt="Image" class="center-image" /></p>
-
-<p>** 5) Qual era l’età media degli amministratori? **</p>
-
-<p><img src="/images/elezioni/eta-media-amministratori2.png" alt="Image" class="center-image" /></p>
-
-<p>** 6) Chi sono stati i nostri amministratori e per quanto tempo? **<br />
-(Il totale anni è dato dalla somma di ciascun amministratore considerando tutte le cariche ricoperte nel periodo di riferimento - es. 5 = 3 (da consigliere) + 2 (da assessore))</p>
-
-<p><img src="/images/elezioni/anni-in-carica-amministratori.png" alt="Image" class="center-image" /></p>
-
-<p>That’s all folks!</p>
-
-<p>Prima di chiudere volevo esprimere un augurio al sindaco e ai neo-consiglieri (soprattutto ai più giovani) affinchè la loro attività amministrativa possa innescare compiti, processi e modelli organizzativi ispirati sempre più a principi di:</p>
-
-<ul>
-  <li>
-    <p><strong>trasparenza</strong>: perchè noi cittadini dobbiamo poter misurare e valutare l’attività amministrativa, dobbiamo essere messi in condizione di monitorare e giudicare i processi decisionali adottati, con strumenti semplici e alla portata di tutti;</p>
-  </li>
-  <li>
-    <p><strong>apertura</strong>: i dati prodotti dal comune, in quanto finanziati da denaro pubblico, appartengono al cittadino e a quest’ultimo devono ritornare; l’analisi dei dati prodotti dall’attività amministrativa rappresenta la chiave oggettiva per giudicare la virtuosità di un comune, per confrontarlo con realtà simili o del comprensorio, per mettere in evidenza eventuali sprechi, per individuare ambiti da migliorare, etc;</p>
-  </li>
-  <li>
-    <p><strong>partecipazione</strong>: perchè noi cittadini dobbiamo poter essere coinvolti e resi partecipi alla gestione amministrativa mediante anche strumenti tecnologici, piattaforme online di ascolto, forum di partecipazione democratica che possano stimolare proposte e interventi effettivamente legati alle esigenze e necessità dei cittadini. Nell’era del Web, esistono decine di applicazioni informatiche, anche a costo 0, che consentirebbero di appiattire il <em>gap</em> esistente tra i cittadini e il palazzo comunale, tra elettori ed eletti;</p>
-  </li>
-  <li>
-    <p><strong>collaborazione</strong>: perchè non si consideri il comune come un’istituzione disconnessa a se stante, modello <em>isola</em>, ma invece come cellula viva all’interno di una rete collaborativa composta anche da altri enti, organizzazioni, associazioni e movimenti con i quali instaurare rapporti di crescita e benessere sociale, artistico e culturale.</p>
-  </li>
-</ul>
-
-<p>In una sola parola: <a href="http://it.wikipedia.org/wiki/Open_government"><strong>open government</strong></a>!</p>
-
 ]]></content>
   </entry>
   
