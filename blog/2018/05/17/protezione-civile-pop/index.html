@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Protezione Civile POP: crea gli avvisi di allerta della tua città - Giovanni Pirrotta</title>
+  <meta name="author" content="Giovanni Pirrotta">
+
+  
+  <meta name="description" content="
+    
+        
+  
+    
+      Protezione Civile POP: crea gli avvisi di allerta della tua città
+    
+    
+      
+
+        
+
+
+ May 17, 2018
+        
+...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Giovanni Pirrotta" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-68654531-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body  
+      >
+<header role="banner"><hgroup>
+  <h1><a href="/">Giovanni Pirrotta</a></h1>
+  
+    <h2>Just a curious person</h2>
+  
+</hgroup>
+
+</header>
+<nav role="navigation"><ul class="subscription" data-subscription="rss">
+  
+  
+</ul>
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/atom.xml">RSS</a></li>
+  <li><a href="http://github.com/gpirrotta">Github</a></li>
+  <li><a href="http://twitter.com/gpirrotta">Twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/giovannipirrotta">Linkedin</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<div id="main">
+    <div id="content">
+        <div>
+    <article class="hentry" role="article">
+        
+  <header>
+    
+      <h1 class="entry-title">Protezione Civile POP: crea gli avvisi di allerta della tua città</h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ May 17, 2018
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Dal 5 marzo di quest’anno il <a href="http://www.protezionecivile.gov.it/" target="blank">Dipartimento della Protezione Civile</a> 
+pubblica sul proprio <a href="http://www.protezionecivile.gov.it/jcms/it/bollettini_di_criticita.wp" target="blank">sito</a> i bollettini di criticità 
+nazionale e di allerta in formato xml, shape, csv e pdf. <strong>C’è di più!</strong> Dopo circa un mese gli stessi dati sono stati rilasciati con licenza aperta, cioè riutilizzabili liberamente in altri contesti.
+<!--More--></p>
+
+<p>Già in un mio precedente <a href="http://giovanni.pirrotta.it/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni/" target="blank">post</a>
+ho raccontato come aprire i dati della <a target="blank" href="http://www.regione.sicilia.it/presidenza/protezionecivile/">Protezione Civile</a> della Regione Siciliana 
+a partire dai bollettini PDF che pubblicavano ogni giorno sul loro sito.</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/bollettino.png" width="60%" /></p>
+
+<p>Con la pubblicazione in opendata dei dati della protezione civile su scala nazionale il cambio di passo
+ è davvero notevole e diventa realistico progettare importanti servizi digitali che siano sostenibili e a beneficio dei cittadini.</p>
+
+<p>Stimolato anche dall’amico <a target="blank" href="https://twitter.com/aborruso">Andrea Borruso</a>, che già aveva scritto 
+un <a href="http://blog.ondata.it/i-nuovi-bollettini-di-allerta-della-protezione-civile-sono-opendata/" target="blank">post</a> 
+sulla pubblicazione di questi dati,</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/borruso.png" width="60%" /></p>
+
+<p>vediamo come ottenere una maggiore flessibilità e facilità di accesso.</p>
+
+<p>Sin da subito, tuttavia, noto alcune criticità.</p>
+
+<ul>
+  <li>I link ai dati non sono univoci; una parte del link è costituita dal giorno di rilascio a cui vengono aggiunti 4 numeri random. Sarà l’orario di rilascio??? Non è dato sapere. 
+Ne segue che per estrarre il link dovrò ricorrere allo <em>scraping</em>, purtroppo :-(</li>
+  <li>I link ai vari formati disponibili (xml, pdf, shp) in realtà rimandano a un file <strong>zip</strong>, all’interno del quale si trovano i dati della protezione civile, che non è proprio
+il massimo per accedere programmaticamente al dato.</li>
+</ul>
+
+<p>I dati dovrebbero invece essere esposti in modo da garantire il massimo livello di flessibilità, secondo un formato standard e strutturato,  in grado
+ di filtrare i dati da consumare secondo le proprie specifiche necessità.</p>
+
+<p>Uno dei modi più semplici e facili per accedere a dati su Webva è tramite <strong>API</strong> dedicate in formato <strong>JSON</strong>.</p>
+
+<p>JSON (JavaScript Object Notation) è un formato aperto, semplice e adatto alla memorizzazione di informazioni e ai trasferimenti di dati dal client al server o viceversa.</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/json.png" width="60%" /></p>
+
+<p>Per la varietà di ambiti di applicazione, oltre al formato JSON, scelgo di esporre anche i dati in formato <strong>RSS</strong>.</p>
+
+<p>RSS è uno dei più popolari formati per la distribuzione di contenuti Web; è basato su XML, da cui ha ereditato la semplicità, l’estensibilità e la flessibilità. 
+Attraverso particolare software chiamati <strong>feedreader</strong> è possibile convogliare tutti i feed di interesse in un’unica applicazione (Web, standalone o mobile) in modo da avere in un unico punto le informazioni di tutti i siti di interesse senza doverli visitare manualmente ad uno ad uno.</p>
+
+<p>Inoltre gli RSS si integrano in modo naturale con una serie di applicazioni, servizi e tool online con i quali è possibile creare nuovi servizi.
+Il servizio <a href="https://ifttt.com" target="blank">IFTTT</a>, ad esempio, è  in grado di agganciare un 
+feed RSS a tantissimi altri servizi: social newtork, app di instant messaging, email, applicazioni di domotica in grado di accendere lampade, aprire finestre, avviare elettrodomestici e tanto altro.</p>
+
+<p>Immaginate una lampada che cambia colore a seconda del colore dell’allerta meteo del giorno successivo ricordandovi ad esempio di lavare e stendere i panni oggi perchè domani sono
+previsti forti temporali. E che automaticamente disattiva l’irrigazione del giardino per il giorno successivo riattivandosi successivamente in assenza di allerta.
+Questi sono solo alcuni esempi di applicazioni <em>potenzialmente</em> realizzabili grazie al riutilizzo dei dati della Protezione Civile, riusabili perchè <strong>opendata</strong>.</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/rss-to-social.png" width="80%" /></p>
+
+<p>Una volta deciso il formato da esporre voglio poter accedere ai dati in modo da personalizzare la mia richiesta in base  all’uso che ne devo fare, secondo le seguenti caratteristiche:</p>
+
+<ul>
+  <li>le informazioni devono riferirsi alla città in cui vivo o di cui mi interessa sapere le previsioni;</li>
+  <li>devo poter scegliere la tipologia di rischio (idraulico, idrogeologico e temporali) di cui mi interessano le informazioni;</li>
+  <li>devo poter scegliere il livello minimo di allerta, tra verde, gialla, arancione e rossa (vedi figura);</li>
+  <li>devo poter scegliere se mi interessano le previsioni del giorno corrente o del giorno successivo.</li>
+</ul>
+
+<p><img class="center-image" src="/images/protezionecivilerss/legenda.jpg" width="35%" /></p>
+
+<p>Iniziamo dal primo punto.</p>
+
+<p>Il Bollettino di criticità nazionale/allerta della Protezione Civile segnala la valutazione dei livelli di criticità/allerta idraulica, 
+per temporali e idrogeologica mediamente attesi fino alle 24.00 del giorno di emissione e nelle 24 ore del giorno successive 
+sulle <strong>156 zone di allerta</strong> (vedi figura) in cui è suddiviso il territorio italiano. Il documento viene pubblicato ogni giorno, di norma, alle 16.00.</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/zone-italia.png" width="60%" /></p>
+
+<p>Le zone definite dalla Protezione Civile non combaciano con le province italiane per cui il primo problema da risolvere è individuare la zona di appartenenza di ciascuna città italiana.
+Per fare questo utilizzo il seguente script <strong>python</strong>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">shapefile</span>
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">Point</span> 
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">shape</span> 
+<span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="c"># Apro il formato shape dei dati</span>
+<span class="n">shp</span> <span class="o">=</span> <span class="n">shapefile</span><span class="o">.</span><span class="n">Reader</span><span class="p">(</span><span class="s">'data/20180502_1615_today'</span><span class="p">)</span> 
+
+<span class="c"># leggo tutti i poligoni</span>
+<span class="n">all_shapes</span> <span class="o">=</span> <span class="n">shp</span><span class="o">.</span><span class="n">shapes</span><span class="p">()</span> 
+
+<span class="c"># e tutte le informazioni associate ai poligoni</span>
+<span class="n">all_records</span> <span class="o">=</span> <span class="n">shp</span><span class="o">.</span><span class="n">records</span><span class="p">()</span>
+
+<span class="c"># ottengo il numero dei poligoni</span>
+<span class="n">len_shapes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_shapes</span><span class="p">)</span>
+
+<span class="c"># inizializzo un file CSV in scrittura</span>
+<span class="n">ofile</span>  <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'comuni-con-zone.csv'</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span>
+<span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">ofile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">','</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s">'"'</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="n">csv</span><span class="o">.</span><span class="n">QUOTE_NONNUMERIC</span><span class="p">)</span>
+
+<span class="n">rownum</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c"># il file comuni.csv contiene tutte le città italiane con le relative latitudini e longitudini</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"comuni.csv"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        
+        <span class="c"># la prima riga la salto perchè è l'header</span>
+        <span class="k">if</span> <span class="n">rownum</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">header</span> <span class="o">=</span> <span class="n">row</span>
+            <span class="n">header</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'zona_protezione_civile'</span><span class="p">)</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+            <span class="n">rownum</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c"># per ogni città mi creo un oggetto Point a cui passo</span>
+            <span class="c"># nel costruttore la latitudine e la longitudine</span>
+            <span class="n">point</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+            
+            <span class="c"># devo capire dentro quale shape si trova il punto </span>
+            <span class="c"># per cui ciclo su tutti i poligoni della protezione civile    </span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_shapes</span><span class="p">):</span>
+                <span class="c"># leggo il poligono i-esimo</span>
+                <span class="n">boundary</span> <span class="o">=</span> <span class="n">all_shapes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> 
+                
+                <span class="c"># se il punto, cioè la città, si trova dentro il poligono</span>
+                <span class="k">if</span> <span class="n">point</span><span class="o">.</span><span class="n">within</span><span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">boundary</span><span class="p">)):</span>  
+                    <span class="c"># aggiungo la zona alla riga</span>
+                    <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">all_records</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="c"># e la salvo in un nuovo file CSV</span>
+                    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+                    <span class="k">break</span>
+
+</code></pre>
+</div>
+<p>Alla fine dello script verrà creato un nuovo file CSV chiamato <em>comuni-con-zone.csv</em> identico al file di partenza <em>comuni.csv</em> con in più la colonna <strong>zona</strong> della Protezione Civile per ogni città.</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/csv-zone.png" width="80%" /></p>
+
+<p>Questa è la parte più difficile di tutta l’applicazione. Una volta estratte le zone di ogni città il passo è breve. Nello stesso zip che contiene il formato SHP dei dati
+sono presenti due file CSV contenenti le previsioni della protezione civile del giorno stesso e del giorno successivo, le tipologie di rischio e il livello di allerta. 
+Sempre con uno script python leggo questi dati, li organizzo secondo le mie necessità e li salvo banalmente su un db mysql. 
+Quest’ultimo script lo collego ad un <em>job cron</em> che quotidianamente mi aggiornerà i dati del db.</p>
+
+<p>La parte dell’applicazione relativa alla <em>data integration</em> è conclusa. Vediamo adesso come implementare la <strong>web-application</strong>.</p>
+
+<p>Per generare la richiesta API e il feed RSS viene sviluppata un’interfaccia Web in grado di configurare le opzioni in modo da massimizzarne la flessibilità.</p>
+
+<p>Secondo i seguenti parametri API:</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/parametri-api.png" /></p>
+
+<p>Di seguito come appare l’interfaccia Web.</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/protezionecivilepop2.png" /></p>
+
+<p>La <strong>web-application</strong>, di fatto un configuratore delle API, è di utilizzo immediato.<br />
+ Basta scegliere la città di interesse, il rischio, la soglia minima di allerta, il giorno di interesse, il formato e il gioco è fatto!</p>
+
+<h3 id="flusso-json">Flusso JSON</h3>
+
+<p><img class="center-image" src="/images/protezionecivilerss/json-output.png" /></p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/json-terme.png" /></p>
+
+<h3 id="feed-rss">Feed RSS</h3>
+
+<p><img class="center-image" src="/images/protezionecivilerss/rss-output.png" /></p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/rss-terme.png" /></p>
+
+<p><strong>N.B.</strong> Con la scelta della soglia minima di allerta il flusso verrà generato solo se l’allerta è maggiore o uguale a quella scelta.
+Per cui, se l’allerta scelta è quella <strong>arancione</strong>, il flusso conterrà eventuali allerte arancioni e rosse ma  non bianche e gialle.</p>
+
+<p>L’applicazione si trova al seguente indirizzo:</p>
+
+<p><a href="http://www.protezionecivilepop.tk" target="blank">Protezione Civile POP</a></p>
+
+<p>Nei prossimi post vedremo come agganciare i feed RSS ad altri servizi esterni, come ad esempio Facebook, Twitter e Telegram.</p>
+
+<p>Se questo progetto ti è piaciuto, mi aiuti a farlo conoscere con un 
+<a href="http://twitter.com/share?url=http://www.protezionecivilepop.tk&amp;text=Protezione+Civile+POP+:+crea+gli+avvisi+di+allerta+della+tua+città+@gpirrotta">tweet</a>? 
+Grazie!</p>
+
+<p>That’s all folks! Stay tuned!</p>
+</div>
+
+
+        <footer>
+            <p class="meta">
+                
+<span class="byline author vcard">Posted by <span class="fn">Giovanni Pirrotta</span></span>
+
+                <time pubdate>
+                May 17, 2018
+                </time>
+
+                <span class="categories">
+                
+
+                
+                <a class="category" href="/categories/protezione-civile">protezione-civile</a>,
+                
+                <a class="category" href="/categories/opendata">opendata</a>,
+                
+                <a class="category" href="/categories/rss">rss</a>,
+                
+                <a class="category" href="/categories/api">api</a>,
+                
+                <a class="category" href="/categories/json">json</a>
+                
+                </span>
+            </p>
+            
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop/" data-via="gpirrotta" data-counturl="http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+            
+            <p class="meta">
+                
+                <a class="basic-alignment left" href="/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/" title="Previous Post: VisualCAD: la mappa interattiva della storia del CAD">&laquo; VisualCAD: la mappa interattiva della storia del CAD</a>
+                
+                
+            </p>
+        </footer>
+    </article>
+    
+    <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2018/05/17/protezione-civile-pop/">Protezione Civile POP: crea gli avvisi di allerta della tua città</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/">VisualCAD: la mappa interattiva della storia del CAD</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni/">Del riutilizzo dei dati meteo ai tempi dei Borboni</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/07/04/foiapop-accesso-civico-data-driven/">FoiaPop: accesso civico data-driven</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/04/09/citybot-la-tua-citta-smart-in-pochi-click/">Citybot: la tua città, smart, in pochi click</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+
+
+
+</aside>
+
+
+
+    </div>
+</div>
+<footer role="contentinfo"><p>
+  Copyright &copy; 2018 - Giovanni Pirrotta -
+
+  <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+</p>
+
+</footer>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gpirrotta';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop/';
+        var disqus_url = 'http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<script>
+  $(document).ready(function() {  
+  var stickyNavTop = $('nav').offset().top;  
+    
+  var stickyNav = function(){  
+  var scrollTop = $(window).scrollTop();  
+         
+  if (scrollTop > stickyNavTop) {   
+      $('nav').addClass('sticky');  
+  } else {  
+      $('nav').removeClass('sticky');   
+  }  
+  };  
+    
+  stickyNav();  
+    
+  $(window).scroll(function() {  
+      stickyNav();  
+  });  
+  });  
+</script>
+
+
+</body>
+</html>

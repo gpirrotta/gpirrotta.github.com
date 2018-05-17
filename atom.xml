@@ -4,7 +4,7 @@
   <title><![CDATA[Giovanni Pirrotta]]></title>
   <link href="http://giovanni.pirrotta.it/atom.xml" rel="self"/>
   <link href="http://giovanni.pirrotta.it/"/>
-  <updated>2018-02-09T19:04:35+00:00</updated>
+  <updated>2018-05-17T15:27:14+00:00</updated>
   <id>http://giovanni.pirrotta.it/</id>
   <author>
     <name><![CDATA[Giovanni Pirrotta]]></name>
@@ -12,6 +12,196 @@
   </author>
   <generator uri="https://jekyllrb.com">Jekyll</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Protezione Civile POP: crea gli avvisi di allerta della tua città]]></title>
+    <link href="http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop/"/>
+    <updated>2018-05-17T01:40:08+00:00</updated>
+    <id>http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop</id>
+    <content type="html"><![CDATA[<p>Dal 5 marzo di quest’anno il <a href="http://www.protezionecivile.gov.it/" target="blank">Dipartimento della Protezione Civile</a> 
+pubblica sul proprio <a href="http://www.protezionecivile.gov.it/jcms/it/bollettini_di_criticita.wp" target="blank">sito</a> i bollettini di criticità 
+nazionale e di allerta in formato xml, shape, csv e pdf. <strong>C’è di più!</strong> Dopo circa un mese gli stessi dati sono stati rilasciati con licenza aperta, cioè riutilizzabili liberamente in altri contesti.
+<!--More--></p>
+
+<p>Già in un mio precedente <a href="http://giovanni.pirrotta.it/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni/" target="blank">post</a>
+ho raccontato come aprire i dati della <a target="blank" href="http://www.regione.sicilia.it/presidenza/protezionecivile/">Protezione Civile</a> della Regione Siciliana 
+a partire dai bollettini PDF che pubblicavano ogni giorno sul loro sito.</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/bollettino.png" width="60%" /></p>
+
+<p>Con la pubblicazione in opendata dei dati della protezione civile su scala nazionale il cambio di passo
+ è davvero notevole e diventa realistico progettare importanti servizi digitali che siano sostenibili e a beneficio dei cittadini.</p>
+
+<p>Stimolato anche dall’amico <a target="blank" href="https://twitter.com/aborruso">Andrea Borruso</a>, che già aveva scritto 
+un <a href="http://blog.ondata.it/i-nuovi-bollettini-di-allerta-della-protezione-civile-sono-opendata/" target="blank">post</a> 
+sulla pubblicazione di questi dati,</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/borruso.png" width="60%" /></p>
+
+<p>vediamo come ottenere una maggiore flessibilità e facilità di accesso.</p>
+
+<p>Sin da subito, tuttavia, noto alcune criticità.</p>
+
+<ul>
+  <li>I link ai dati non sono univoci; una parte del link è costituita dal giorno di rilascio a cui vengono aggiunti 4 numeri random. Sarà l’orario di rilascio??? Non è dato sapere. 
+Ne segue che per estrarre il link dovrò ricorrere allo <em>scraping</em>, purtroppo :-(</li>
+  <li>I link ai vari formati disponibili (xml, pdf, shp) in realtà rimandano a un file <strong>zip</strong>, all’interno del quale si trovano i dati della protezione civile, che non è proprio
+il massimo per accedere programmaticamente al dato.</li>
+</ul>
+
+<p>I dati dovrebbero invece essere esposti in modo da garantire il massimo livello di flessibilità, secondo un formato standard e strutturato,  in grado
+ di filtrare i dati da consumare secondo le proprie specifiche necessità.</p>
+
+<p>Uno dei modi più semplici e facili per accedere a dati su Webva è tramite <strong>API</strong> dedicate in formato <strong>JSON</strong>.</p>
+
+<p>JSON (JavaScript Object Notation) è un formato aperto, semplice e adatto alla memorizzazione di informazioni e ai trasferimenti di dati dal client al server o viceversa.</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/json.png" width="60%" /></p>
+
+<p>Per la varietà di ambiti di applicazione, oltre al formato JSON, scelgo di esporre anche i dati in formato <strong>RSS</strong>.</p>
+
+<p>RSS è uno dei più popolari formati per la distribuzione di contenuti Web; è basato su XML, da cui ha ereditato la semplicità, l’estensibilità e la flessibilità. 
+Attraverso particolare software chiamati <strong>feedreader</strong> è possibile convogliare tutti i feed di interesse in un’unica applicazione (Web, standalone o mobile) in modo da avere in un unico punto le informazioni di tutti i siti di interesse senza doverli visitare manualmente ad uno ad uno.</p>
+
+<p>Inoltre gli RSS si integrano in modo naturale con una serie di applicazioni, servizi e tool online con i quali è possibile creare nuovi servizi.
+Il servizio <a href="https://ifttt.com" target="blank">IFTTT</a>, ad esempio, è  in grado di agganciare un 
+feed RSS a tantissimi altri servizi: social newtork, app di instant messaging, email, applicazioni di domotica in grado di accendere lampade, aprire finestre, avviare elettrodomestici e tanto altro.</p>
+
+<p>Immaginate una lampada che cambia colore a seconda del colore dell’allerta meteo del giorno successivo ricordandovi ad esempio di lavare e stendere i panni oggi perchè domani sono
+previsti forti temporali. E che automaticamente disattiva l’irrigazione del giardino per il giorno successivo riattivandosi successivamente in assenza di allerta.
+Questi sono solo alcuni esempi di applicazioni <em>potenzialmente</em> realizzabili grazie al riutilizzo dei dati della Protezione Civile, riusabili perchè <strong>opendata</strong>.</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/rss-to-social.png" width="80%" /></p>
+
+<p>Una volta deciso il formato da esporre voglio poter accedere ai dati in modo da personalizzare la mia richiesta in base  all’uso che ne devo fare, secondo le seguenti caratteristiche:</p>
+
+<ul>
+  <li>le informazioni devono riferirsi alla città in cui vivo o di cui mi interessa sapere le previsioni;</li>
+  <li>devo poter scegliere la tipologia di rischio (idraulico, idrogeologico e temporali) di cui mi interessano le informazioni;</li>
+  <li>devo poter scegliere il livello minimo di allerta, tra verde, gialla, arancione e rossa (vedi figura);</li>
+  <li>devo poter scegliere se mi interessano le previsioni del giorno corrente o del giorno successivo.</li>
+</ul>
+
+<p><img class="center-image" src="/images/protezionecivilerss/legenda.jpg" width="35%" /></p>
+
+<p>Iniziamo dal primo punto.</p>
+
+<p>Il Bollettino di criticità nazionale/allerta della Protezione Civile segnala la valutazione dei livelli di criticità/allerta idraulica, 
+per temporali e idrogeologica mediamente attesi fino alle 24.00 del giorno di emissione e nelle 24 ore del giorno successive 
+sulle <strong>156 zone di allerta</strong> (vedi figura) in cui è suddiviso il territorio italiano. Il documento viene pubblicato ogni giorno, di norma, alle 16.00.</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/zone-italia.png" width="60%" /></p>
+
+<p>Le zone definite dalla Protezione Civile non combaciano con le province italiane per cui il primo problema da risolvere è individuare la zona di appartenenza di ciascuna città italiana.
+Per fare questo utilizzo il seguente script <strong>python</strong>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">shapefile</span>
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">Point</span> 
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">shape</span> 
+<span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="c"># Apro il formato shape dei dati</span>
+<span class="n">shp</span> <span class="o">=</span> <span class="n">shapefile</span><span class="o">.</span><span class="n">Reader</span><span class="p">(</span><span class="s">'data/20180502_1615_today'</span><span class="p">)</span> 
+
+<span class="c"># leggo tutti i poligoni</span>
+<span class="n">all_shapes</span> <span class="o">=</span> <span class="n">shp</span><span class="o">.</span><span class="n">shapes</span><span class="p">()</span> 
+
+<span class="c"># e tutte le informazioni associate ai poligoni</span>
+<span class="n">all_records</span> <span class="o">=</span> <span class="n">shp</span><span class="o">.</span><span class="n">records</span><span class="p">()</span>
+
+<span class="c"># ottengo il numero dei poligoni</span>
+<span class="n">len_shapes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_shapes</span><span class="p">)</span>
+
+<span class="c"># inizializzo un file CSV in scrittura</span>
+<span class="n">ofile</span>  <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'comuni-con-zone.csv'</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span>
+<span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">ofile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">','</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s">'"'</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="n">csv</span><span class="o">.</span><span class="n">QUOTE_NONNUMERIC</span><span class="p">)</span>
+
+<span class="n">rownum</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c"># il file comuni.csv contiene tutte le città italiane con le relative latitudini e longitudini</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"comuni.csv"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        
+        <span class="c"># la prima riga la salto perchè è l'header</span>
+        <span class="k">if</span> <span class="n">rownum</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">header</span> <span class="o">=</span> <span class="n">row</span>
+            <span class="n">header</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'zona_protezione_civile'</span><span class="p">)</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+            <span class="n">rownum</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c"># per ogni città mi creo un oggetto Point a cui passo</span>
+            <span class="c"># nel costruttore la latitudine e la longitudine</span>
+            <span class="n">point</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+            
+            <span class="c"># devo capire dentro quale shape si trova il punto </span>
+            <span class="c"># per cui ciclo su tutti i poligoni della protezione civile    </span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_shapes</span><span class="p">):</span>
+                <span class="c"># leggo il poligono i-esimo</span>
+                <span class="n">boundary</span> <span class="o">=</span> <span class="n">all_shapes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> 
+                
+                <span class="c"># se il punto, cioè la città, si trova dentro il poligono</span>
+                <span class="k">if</span> <span class="n">point</span><span class="o">.</span><span class="n">within</span><span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">boundary</span><span class="p">)):</span>  
+                    <span class="c"># aggiungo la zona alla riga</span>
+                    <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">all_records</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="c"># e la salvo in un nuovo file CSV</span>
+                    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+                    <span class="k">break</span>
+
+</code></pre>
+</div>
+<p>Alla fine dello script verrà creato un nuovo file CSV chiamato <em>comuni-con-zone.csv</em> identico al file di partenza <em>comuni.csv</em> con in più la colonna <strong>zona</strong> della Protezione Civile per ogni città.</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/csv-zone.png" width="80%" /></p>
+
+<p>Questa è la parte più difficile di tutta l’applicazione. Una volta estratte le zone di ogni città il passo è breve. Nello stesso zip che contiene il formato SHP dei dati
+sono presenti due file CSV contenenti le previsioni della protezione civile del giorno stesso e del giorno successivo, le tipologie di rischio e il livello di allerta. 
+Sempre con uno script python leggo questi dati, li organizzo secondo le mie necessità e li salvo banalmente su un db mysql. 
+Quest’ultimo script lo collego ad un <em>job cron</em> che quotidianamente mi aggiornerà i dati del db.</p>
+
+<p>La parte dell’applicazione relativa alla <em>data integration</em> è conclusa. Vediamo adesso come implementare la <strong>web-application</strong>.</p>
+
+<p>Per generare la richiesta API e il feed RSS viene sviluppata un’interfaccia Web in grado di configurare le opzioni in modo da massimizzarne la flessibilità.</p>
+
+<p>Secondo i seguenti parametri API:</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/parametri-api.png" /></p>
+
+<p>Di seguito come appare l’interfaccia Web.</p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/protezionecivilepop2.png" /></p>
+
+<p>La <strong>web-application</strong>, di fatto un configuratore delle API, è di utilizzo immediato.<br />
+ Basta scegliere la città di interesse, il rischio, la soglia minima di allerta, il giorno di interesse, il formato e il gioco è fatto!</p>
+
+<h3 id="flusso-json">Flusso JSON</h3>
+
+<p><img class="center-image" src="/images/protezionecivilerss/json-output.png" /></p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/json-terme.png" /></p>
+
+<h3 id="feed-rss">Feed RSS</h3>
+
+<p><img class="center-image" src="/images/protezionecivilerss/rss-output.png" /></p>
+
+<p><img class="center-image" src="/images/protezionecivilerss/rss-terme.png" /></p>
+
+<p><strong>N.B.</strong> Con la scelta della soglia minima di allerta il flusso verrà generato solo se l’allerta è maggiore o uguale a quella scelta.
+Per cui, se l’allerta scelta è quella <strong>arancione</strong>, il flusso conterrà eventuali allerte arancioni e rosse ma  non bianche e gialle.</p>
+
+<p>L’applicazione si trova al seguente indirizzo:</p>
+
+<p><a href="http://www.protezionecivilepop.tk" target="blank">Protezione Civile POP</a></p>
+
+<p>Nei prossimi post vedremo come agganciare i feed RSS ad altri servizi esterni, come ad esempio Facebook, Twitter e Telegram.</p>
+
+<p>Se questo progetto ti è piaciuto, mi aiuti a farlo conoscere con un 
+<a href="http://twitter.com/share?url=http://www.protezionecivilepop.tk&amp;text=Protezione+Civile+POP+:+crea+gli+avvisi+di+allerta+della+tua+città+@gpirrotta">tweet</a>? 
+Grazie!</p>
+
+<p>That’s all folks! Stay tuned!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[VisualCAD: la mappa interattiva della storia del CAD]]></title>
@@ -3520,60 +3710,6 @@ obbligatoria ex d.lgs 33: questi dati dovrebbero essere “replicati” anche ne
 </ul>
 
 <p>Per non incorrere in violazioni della privacy invito quindi, a chiunque volesse utilizzare e/o estendere la libreria, di effettuare solo lo scraping degli atti amministrativi del primo punto.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Can machines think?]]></title>
-    <link href="http://giovanni.pirrotta.it/blog/2013/07/04/can-machines-think/"/>
-    <updated>2013-07-04T16:27:00+00:00</updated>
-    <id>http://giovanni.pirrotta.it/blog/2013/07/04/can-machines-think</id>
-    <content type="html"><![CDATA[<p>Suppose we want to become a policeman and to participate in the selection we need to complete the online request application available in the police Website. To do this, we decide to rely this task to our software agent to achieve an independent interaction between the software agent and the police homepage. Simplifying a lot, our software agent could start from the police homepage and, through string-matching analysis and exploration of the links, it might be able to recognize a page containing the words <strong>selection</strong> and <strong>2013</strong> and it could “think” to have found the right page to start its interaction.</p>
-
-<!--More-->
-
-<p>Imagine we encounter the sentence</p>
-
-<blockquote>
-  <p>In 2013, the minimum required height for male candidate is 1.65</p>
-</blockquote>
-
-<p>Obviously, a human being would have no trouble understanding in reading time the semantics of the sentence, because he is a being endowed with intelligence. For a man there are no problems to understand the difference between numbers <strong>2013</strong> and <strong>1.65</strong>, the first indicating the year and the second the height.</p>
-
-<p>But, how can you say this to the computer? Is the computer able to understand unambiguously the sentence, grasping all nuances? Of course, our software agent cannot automatically extract semantics from text since the only text itself is meaningless for machines. Then, how can we help our software to understand the text; what can we do to make it more intelligent?</p>
-
-<p>The only way to help the computer to understand <strong>something</strong> is to rewrite the sentence in a structured way, using markers to define the meaning of parts.</p>
-
-<p>For example, we can rewrite the previous sentence using the following markers:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>[Start of requirements]
-	[A date] {In 2013}
-	[closely] {the minimum}
-	[it is not accessible without] {required}
-	[a measure] {height}
-	[a genre] {for male}
-	[those who want to access] {candidate}
-	[semantic link {height}] {is}
-	[limitation for access] {1.65}
-[end of sentence] {.}
-</code></pre>
-</div>
-
-<p>In this way, we specify each concept with a marker indicating the semantics and allowing a software agent to interpret the meaning of terms enclosed in braces automatically. Although our goal is to fill the request application for the police selection, we can easily see that the simple understanding of a sentence can be a difficult task for a non-human user.
-You can already guess now that the understanding of the text above mentioned in the labeled sentences depends on the ability of a software to know the meaning of the markers. Thus, the idea is to create markers, as terms of a vocabulary formally defined, powerful enough to set and share meaning by machines.</p>
-
-<p>The future of the Web, according to Tim Berners-Lee <a href="http://www.xml.com/pub/a/2000/12/xml2000/timbl.html">vision</a>, is to extend the actual Web into an environment where we can publish not only data, but also information describing the data, called metadata, which are essential to determine their meaning. We have to decorate pages with extra information to explain the meaning contained. To achieve this target we have to use a knowledge representation common model, shared by all people and sufficiently expressive.</p>
-
-<p>All information will be expressed by formal descriptive statements saying the relationship existing between two resources (<em>i.e. Michael is a student, the sky is blue, etc.</em>) and data can be represented as a <strong>giant global graph</strong>, highly interconnected and finally <strong>machine-understandable</strong>.</p>
-
-<p>The Semantic Web goal is to extend the actual Web, transforming it into the <a href="http://www.linkeddata.org/"><strong>Web of Data</strong></a>.
-The semantic technologies provide necessary tools to reuse information implementing systems for <strong>typifying</strong> content and links between pages. The Semantic Web research area includes a <a href="http://www.w3.org/standards/semanticweb/">set</a> of evolving technologies, standards and tools forming a technological stack; each level represents the basis for the levels defined at higher levels as we can see in the Figure.</p>
-
-<p><img src="/images/semantic_web_stack.jpg" alt="Image" class="center-image" /></p>
-
-<p>But, how do we represent the information written in HTML in a structured way? And how do we specify the meaning of each single abstract or concrete concept? The reply in next posts!</p>
-
-<p>Stay tuned!</p>
 ]]></content>
   </entry>
   

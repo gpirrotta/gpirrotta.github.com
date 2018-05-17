@@ -1,4 +1,185 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://giovanni.pirrotta.it/feed.xml" rel="self" type="application/atom+xml" /><link href="http://giovanni.pirrotta.it/" rel="alternate" type="text/html" /><updated>2018-02-09T19:04:35+00:00</updated><id>http://giovanni.pirrotta.it/</id><title type="html">Giovanni Pirrotta</title><author><name>Giovanni Pirrotta</name></author><entry><title type="html">VisualCAD: la mappa interattiva della storia del CAD</title><link href="http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/" rel="alternate" type="text/html" title="VisualCAD: la mappa interattiva della storia del CAD" /><published>2018-02-09T01:40:08+00:00</published><updated>2018-02-09T01:40:08+00:00</updated><id>http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/">&lt;p&gt;Il Codice dell’Amministrazione Digitale (&lt;strong&gt;CAD&lt;/strong&gt;) è il testo normativo di riferimento 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://giovanni.pirrotta.it/feed.xml" rel="self" type="application/atom+xml" /><link href="http://giovanni.pirrotta.it/" rel="alternate" type="text/html" /><updated>2018-05-17T15:27:14+00:00</updated><id>http://giovanni.pirrotta.it/</id><title type="html">Giovanni Pirrotta</title><author><name>Giovanni Pirrotta</name></author><entry><title type="html">Protezione Civile POP: crea gli avvisi di allerta della tua città</title><link href="http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop/" rel="alternate" type="text/html" title="Protezione Civile POP: crea gli avvisi di allerta della tua città" /><published>2018-05-17T01:40:08+00:00</published><updated>2018-05-17T01:40:08+00:00</updated><id>http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop/">&lt;p&gt;Dal 5 marzo di quest’anno il &lt;a href=&quot;http://www.protezionecivile.gov.it/&quot; target=&quot;blank&quot;&gt;Dipartimento della Protezione Civile&lt;/a&gt; 
+pubblica sul proprio &lt;a href=&quot;http://www.protezionecivile.gov.it/jcms/it/bollettini_di_criticita.wp&quot; target=&quot;blank&quot;&gt;sito&lt;/a&gt; i bollettini di criticità 
+nazionale e di allerta in formato xml, shape, csv e pdf. &lt;strong&gt;C’è di più!&lt;/strong&gt; Dopo circa un mese gli stessi dati sono stati rilasciati con licenza aperta, cioè riutilizzabili liberamente in altri contesti.
+&lt;!--More--&gt;&lt;/p&gt;
+
+&lt;p&gt;Già in un mio precedente &lt;a href=&quot;http://giovanni.pirrotta.it/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni/&quot; target=&quot;blank&quot;&gt;post&lt;/a&gt;
+ho raccontato come aprire i dati della &lt;a target=&quot;blank&quot; href=&quot;http://www.regione.sicilia.it/presidenza/protezionecivile/&quot;&gt;Protezione Civile&lt;/a&gt; della Regione Siciliana 
+a partire dai bollettini PDF che pubblicavano ogni giorno sul loro sito.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/protezionecivilerss/bollettino.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Con la pubblicazione in opendata dei dati della protezione civile su scala nazionale il cambio di passo
+ è davvero notevole e diventa realistico progettare importanti servizi digitali che siano sostenibili e a beneficio dei cittadini.&lt;/p&gt;
+
+&lt;p&gt;Stimolato anche dall’amico &lt;a target=&quot;blank&quot; href=&quot;https://twitter.com/aborruso&quot;&gt;Andrea Borruso&lt;/a&gt;, che già aveva scritto 
+un &lt;a href=&quot;http://blog.ondata.it/i-nuovi-bollettini-di-allerta-della-protezione-civile-sono-opendata/&quot; target=&quot;blank&quot;&gt;post&lt;/a&gt; 
+sulla pubblicazione di questi dati,&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/protezionecivilerss/borruso.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;vediamo come ottenere una maggiore flessibilità e facilità di accesso.&lt;/p&gt;
+
+&lt;p&gt;Sin da subito, tuttavia, noto alcune criticità.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I link ai dati non sono univoci; una parte del link è costituita dal giorno di rilascio a cui vengono aggiunti 4 numeri random. Sarà l’orario di rilascio??? Non è dato sapere. 
+Ne segue che per estrarre il link dovrò ricorrere allo &lt;em&gt;scraping&lt;/em&gt;, purtroppo :-(&lt;/li&gt;
+  &lt;li&gt;I link ai vari formati disponibili (xml, pdf, shp) in realtà rimandano a un file &lt;strong&gt;zip&lt;/strong&gt;, all’interno del quale si trovano i dati della protezione civile, che non è proprio
+il massimo per accedere programmaticamente al dato.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I dati dovrebbero invece essere esposti in modo da garantire il massimo livello di flessibilità, secondo un formato standard e strutturato,  in grado
+ di filtrare i dati da consumare secondo le proprie specifiche necessità.&lt;/p&gt;
+
+&lt;p&gt;Uno dei modi più semplici e facili per accedere a dati su Webva è tramite &lt;strong&gt;API&lt;/strong&gt; dedicate in formato &lt;strong&gt;JSON&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;JSON (JavaScript Object Notation) è un formato aperto, semplice e adatto alla memorizzazione di informazioni e ai trasferimenti di dati dal client al server o viceversa.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/protezionecivilerss/json.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Per la varietà di ambiti di applicazione, oltre al formato JSON, scelgo di esporre anche i dati in formato &lt;strong&gt;RSS&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;RSS è uno dei più popolari formati per la distribuzione di contenuti Web; è basato su XML, da cui ha ereditato la semplicità, l’estensibilità e la flessibilità. 
+Attraverso particolare software chiamati &lt;strong&gt;feedreader&lt;/strong&gt; è possibile convogliare tutti i feed di interesse in un’unica applicazione (Web, standalone o mobile) in modo da avere in un unico punto le informazioni di tutti i siti di interesse senza doverli visitare manualmente ad uno ad uno.&lt;/p&gt;
+
+&lt;p&gt;Inoltre gli RSS si integrano in modo naturale con una serie di applicazioni, servizi e tool online con i quali è possibile creare nuovi servizi.
+Il servizio &lt;a href=&quot;https://ifttt.com&quot; target=&quot;blank&quot;&gt;IFTTT&lt;/a&gt;, ad esempio, è  in grado di agganciare un 
+feed RSS a tantissimi altri servizi: social newtork, app di instant messaging, email, applicazioni di domotica in grado di accendere lampade, aprire finestre, avviare elettrodomestici e tanto altro.&lt;/p&gt;
+
+&lt;p&gt;Immaginate una lampada che cambia colore a seconda del colore dell’allerta meteo del giorno successivo ricordandovi ad esempio di lavare e stendere i panni oggi perchè domani sono
+previsti forti temporali. E che automaticamente disattiva l’irrigazione del giardino per il giorno successivo riattivandosi successivamente in assenza di allerta.
+Questi sono solo alcuni esempi di applicazioni &lt;em&gt;potenzialmente&lt;/em&gt; realizzabili grazie al riutilizzo dei dati della Protezione Civile, riusabili perchè &lt;strong&gt;opendata&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/protezionecivilerss/rss-to-social.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una volta deciso il formato da esporre voglio poter accedere ai dati in modo da personalizzare la mia richiesta in base  all’uso che ne devo fare, secondo le seguenti caratteristiche:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;le informazioni devono riferirsi alla città in cui vivo o di cui mi interessa sapere le previsioni;&lt;/li&gt;
+  &lt;li&gt;devo poter scegliere la tipologia di rischio (idraulico, idrogeologico e temporali) di cui mi interessano le informazioni;&lt;/li&gt;
+  &lt;li&gt;devo poter scegliere il livello minimo di allerta, tra verde, gialla, arancione e rossa (vedi figura);&lt;/li&gt;
+  &lt;li&gt;devo poter scegliere se mi interessano le previsioni del giorno corrente o del giorno successivo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/protezionecivilerss/legenda.jpg&quot; width=&quot;35%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Iniziamo dal primo punto.&lt;/p&gt;
+
+&lt;p&gt;Il Bollettino di criticità nazionale/allerta della Protezione Civile segnala la valutazione dei livelli di criticità/allerta idraulica, 
+per temporali e idrogeologica mediamente attesi fino alle 24.00 del giorno di emissione e nelle 24 ore del giorno successive 
+sulle &lt;strong&gt;156 zone di allerta&lt;/strong&gt; (vedi figura) in cui è suddiviso il territorio italiano. Il documento viene pubblicato ogni giorno, di norma, alle 16.00.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/protezionecivilerss/zone-italia.png&quot; width=&quot;60%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Le zone definite dalla Protezione Civile non combaciano con le province italiane per cui il primo problema da risolvere è individuare la zona di appartenenza di ciascuna città italiana.
+Per fare questo utilizzo il seguente script &lt;strong&gt;python&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;shapefile&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;shapely.geometry&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt; 
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;shapely.geometry&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt; 
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Apro il formato shape dei dati&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;shp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shapefile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data/20180502_1615_today'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+
+&lt;span class=&quot;c&quot;&gt;# leggo tutti i poligoni&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;all_shapes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shapes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; 
+
+&lt;span class=&quot;c&quot;&gt;# e tutte le informazioni associate ai poligoni&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;all_records&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;records&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# ottengo il numero dei poligoni&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;len_shapes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all_shapes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# inizializzo un file CSV in scrittura&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ofile&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'comuni-con-zone.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;w&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ofile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delimiter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;quotechar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&quot;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;quoting&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;QUOTE_NONNUMERIC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;rownum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# il file comuni.csv contiene tutte le città italiane con le relative latitudini e longitudini&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;comuni.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;r&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        
+        &lt;span class=&quot;c&quot;&gt;# la prima riga la salto perchè è l'header&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rownum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'zona_protezione_civile'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;writerow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;rownum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;c&quot;&gt;# per ogni città mi creo un oggetto Point a cui passo&lt;/span&gt;
+            &lt;span class=&quot;c&quot;&gt;# nel costruttore la latitudine e la longitudine&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+            
+            &lt;span class=&quot;c&quot;&gt;# devo capire dentro quale shape si trova il punto &lt;/span&gt;
+            &lt;span class=&quot;c&quot;&gt;# per cui ciclo su tutti i poligoni della protezione civile    &lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;len_shapes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+                &lt;span class=&quot;c&quot;&gt;# leggo il poligono i-esimo&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;boundary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;all_shapes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; 
+                
+                &lt;span class=&quot;c&quot;&gt;# se il punto, cioè la città, si trova dentro il poligono&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;point&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;within&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boundary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;  
+                    &lt;span class=&quot;c&quot;&gt;# aggiungo la zona alla riga&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all_records&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+                    &lt;span class=&quot;c&quot;&gt;# e la salvo in un nuovo file CSV&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;writerow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Alla fine dello script verrà creato un nuovo file CSV chiamato &lt;em&gt;comuni-con-zone.csv&lt;/em&gt; identico al file di partenza &lt;em&gt;comuni.csv&lt;/em&gt; con in più la colonna &lt;strong&gt;zona&lt;/strong&gt; della Protezione Civile per ogni città.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/protezionecivilerss/csv-zone.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Questa è la parte più difficile di tutta l’applicazione. Una volta estratte le zone di ogni città il passo è breve. Nello stesso zip che contiene il formato SHP dei dati
+sono presenti due file CSV contenenti le previsioni della protezione civile del giorno stesso e del giorno successivo, le tipologie di rischio e il livello di allerta. 
+Sempre con uno script python leggo questi dati, li organizzo secondo le mie necessità e li salvo banalmente su un db mysql. 
+Quest’ultimo script lo collego ad un &lt;em&gt;job cron&lt;/em&gt; che quotidianamente mi aggiornerà i dati del db.&lt;/p&gt;
+
+&lt;p&gt;La parte dell’applicazione relativa alla &lt;em&gt;data integration&lt;/em&gt; è conclusa. Vediamo adesso come implementare la &lt;strong&gt;web-application&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Per generare la richiesta API e il feed RSS viene sviluppata un’interfaccia Web in grado di configurare le opzioni in modo da massimizzarne la flessibilità.&lt;/p&gt;
+
+&lt;p&gt;Secondo i seguenti parametri API:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/protezionecivilerss/parametri-api.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Di seguito come appare l’interfaccia Web.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/protezionecivilerss/protezionecivilepop2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La &lt;strong&gt;web-application&lt;/strong&gt;, di fatto un configuratore delle API, è di utilizzo immediato.&lt;br /&gt;
+ Basta scegliere la città di interesse, il rischio, la soglia minima di allerta, il giorno di interesse, il formato e il gioco è fatto!&lt;/p&gt;
+
+&lt;h3 id=&quot;flusso-json&quot;&gt;Flusso JSON&lt;/h3&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/protezionecivilerss/json-output.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/protezionecivilerss/json-terme.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;feed-rss&quot;&gt;Feed RSS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/protezionecivilerss/rss-output.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/protezionecivilerss/rss-terme.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; Con la scelta della soglia minima di allerta il flusso verrà generato solo se l’allerta è maggiore o uguale a quella scelta.
+Per cui, se l’allerta scelta è quella &lt;strong&gt;arancione&lt;/strong&gt;, il flusso conterrà eventuali allerte arancioni e rosse ma  non bianche e gialle.&lt;/p&gt;
+
+&lt;p&gt;L’applicazione si trova al seguente indirizzo:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.protezionecivilepop.tk&quot; target=&quot;blank&quot;&gt;Protezione Civile POP&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Nei prossimi post vedremo come agganciare i feed RSS ad altri servizi esterni, come ad esempio Facebook, Twitter e Telegram.&lt;/p&gt;
+
+&lt;p&gt;Se questo progetto ti è piaciuto, mi aiuti a farlo conoscere con un 
+&lt;a href=&quot;http://twitter.com/share?url=http://www.protezionecivilepop.tk&amp;amp;text=Protezione+Civile+POP+:+crea+gli+avvisi+di+allerta+della+tua+città+@gpirrotta&quot;&gt;tweet&lt;/a&gt;? 
+Grazie!&lt;/p&gt;
+
+&lt;p&gt;That’s all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Dal 5 marzo di quest’anno il Dipartimento della Protezione Civile pubblica sul proprio sito i bollettini di criticità nazionale e di allerta in formato xml, shape, csv e pdf. C’è di più! Dopo circa un mese gli stessi dati sono stati rilasciati con licenza aperta, cioè riutilizzabili liberamente in altri contesti.</summary></entry><entry><title type="html">VisualCAD: la mappa interattiva della storia del CAD</title><link href="http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/" rel="alternate" type="text/html" title="VisualCAD: la mappa interattiva della storia del CAD" /><published>2018-02-09T01:40:08+00:00</published><updated>2018-02-09T01:40:08+00:00</updated><id>http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/">&lt;p&gt;Il Codice dell’Amministrazione Digitale (&lt;strong&gt;CAD&lt;/strong&gt;) è il testo normativo di riferimento 
 della pubblica amministrazione che disciplina il processo di digitalizzazione
 dell’attività amministrativa.
 Da più di un decennio il CAD, cioè il &lt;a href=&quot;http://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82&quot; target=&quot;blank&quot;&gt;decreto legislativo n.82 del 7/3/2005&lt;/a&gt;, viene sistematicamente
@@ -2226,73 +2407,4 @@ Behat and Mink. (Let me know if you know).&lt;/p&gt;
 &lt;p&gt;So, to fill the gap, I developed the &lt;a href=&quot;http://www.pirrotta.it/behat-mink-translator&quot;&gt;Behat-Gherkin/Mink Translator&lt;/a&gt;
 in order to generate on the fly the native language syntax documentation that PHP developers can use for their job.&lt;/p&gt;
 
-&lt;p&gt;Thas’all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Recently I started to develop my software using Behaviour-Driven Development approach and, since my preferred programming language is PHP, I chose one of the most popular existing acceptance testing tool, namely Behat.</summary></entry><entry><title type="html">Semantic Web Ingredients: the SPARQL language</title><link href="http://giovanni.pirrotta.it/blog/2014/10/27/semantic-web-ingredients-the-sparql-language/" rel="alternate" type="text/html" title="Semantic Web Ingredients: the SPARQL language" /><published>2014-10-27T18:15:00+00:00</published><updated>2014-10-27T18:15:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2014/10/27/semantic-web-ingredients-the-sparql-language</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2014/10/27/semantic-web-ingredients-the-sparql-language/">&lt;p&gt;In the previous &lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa/&quot;&gt;post&lt;/a&gt; of this series I described the RDFa language specifying the most important advantages in using it. 
-Now it’s the turn of the SPARQL, a sort of SQL language for the Semantic Web world. 
-&lt;!--More--&gt;#}&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/semantic-web/sparql.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&quot;http://www.w3.org/TR/rdf-sparql-query/&quot;&gt;SPARQL language&lt;/a&gt; is a W3C Recommendation defining a standard way to retrieve data from RDF graphs distributed on the Web. SPARQL performs complex &lt;code class=&quot;highlighter-rouge&quot;&gt;joins&lt;/code&gt; exploring data by querying unknown relationships. The querying criterion is based on pattern matching mechanisms, and, in particular, on &lt;code class=&quot;highlighter-rouge&quot;&gt;triple pattern&lt;/code&gt; constructs, that reflect the RDF triple assertion model and provide a flexible model for finding matches.&lt;/p&gt;
-
-&lt;p&gt;Triple patterns are just like triples, except that any of the parts of a triple can be replaced with a variable. For example, in the following pattern &lt;code class=&quot;highlighter-rouge&quot;&gt;?book ex:title ?title&lt;/code&gt;, in place of the subject and of the object, two variables are involed, marked with &lt;code class=&quot;highlighter-rouge&quot;&gt;?&lt;/code&gt;, that act as unknown variables while the &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:title&lt;/code&gt; property acts as a constant. SPARQL variables can match any resources or literals in the RDF dataset.&lt;/p&gt;
-
-&lt;p&gt;The SPARQL skeleton is:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# prefix declarations
-PREFIX ex: &amp;lt;http://example.org/&amp;gt;
-...
-# dataset definition
-FROM ...
-
-# result clause
-SELECT ...
-
-# query pattern
-WHERE {
-...
-}
-
-# query modifiers
-ORDER BY ...
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;In the graph &lt;code class=&quot;highlighter-rouge&quot;&gt;http://example.org/books.rdf&lt;/code&gt; we want to find all book resources (&lt;code class=&quot;highlighter-rouge&quot;&gt;?book&lt;/code&gt;) and all person resources (&lt;code class=&quot;highlighter-rouge&quot;&gt;?person&lt;/code&gt;) linked with the &lt;code class=&quot;highlighter-rouge&quot;&gt;ex:hasAuthor&lt;/code&gt; predicate. So, book titles (&lt;code class=&quot;highlighter-rouge&quot;&gt;?book_title&lt;/code&gt;) associated with relative authors’ name and surname (&lt;code class=&quot;highlighter-rouge&quot;&gt;?person_name&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;person_surname&lt;/code&gt;) are returned.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PREFIX ex: &amp;lt;http://example.org/&amp;gt;
-SELECT ?book_title ?person_name ?person_surname
-FROM &amp;lt;http://example.org/books.rdf&amp;gt;
-WHERE {
-       ?book a ex:Book;
-             ex:title ?book_title;
-             ex:hasAuthor ?person.
-       ?person ex:name ?person_name;
-               ex:surname ?person_surname.
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;the-sparql-structure&quot;&gt;The SPARQL structure&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;PREFIX&lt;/strong&gt; clause defines prefixes and namespaces, for abbreviating URIs;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;SELECT&lt;/strong&gt; clause defines the information we want to retrieve from the statement repository;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;FROM&lt;/strong&gt; clause defines the RDF graph(s) to explore. It can be a local or remote source; we can also set the &lt;strong&gt;FROM NAMED&lt;/strong&gt; and &lt;strong&gt;GRAPH&lt;/strong&gt; clauses to specify multiple data sources;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;WHERE&lt;/strong&gt; clause defines the graph pattern to find a match in the dataset; it represents the most important SPARQL clause in the query;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;ORDER BY&lt;/strong&gt; ordering, slicing and other rearranging query results.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is the result:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;------------------------------------------------------------------------
-| book_title                             | person_name | person_surname |
-========================================================================
-|&quot;UML Distilled&quot;                         | &quot;Martin&quot;    | &quot;Fowler&quot;       |
-------------------------------------------------------------------------
-|&quot;Test-Driven Development: By Example&quot;   | &quot;Kent&quot;      | &quot;Beck&quot;         |
-------------------------------------------------------------------------
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;SPARQL language is similar to &lt;a href=&quot;http://www.contrib.andrew.cmu.edu/~shadow/sql/sql1992.txt&quot;&gt;SQL language&lt;/a&gt;. SPARQL selects data from the dataset by using a SELECT statement to determine which subset of selected data is returned. Also, SPARQL uses a WHERE clause to define graph patterns to find a match for in the query data set. Also the binding between variables and instances will generally return in table format but we can also specify other formats, such as JSON, RDF/XML, etc.&lt;/p&gt;
-
-&lt;p&gt;That’s all for now. In the next posts I will introduce how to develop a new ontology using the Semantic Web ingredients learned in the previous posts of this series. So, stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">In the previous post of this series I described the RDFa language specifying the most important advantages in using it. Now it’s the turn of the SPARQL, a sort of SQL language for the Semantic Web world.</summary></entry></feed>
+&lt;p&gt;Thas’all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Recently I started to develop my software using Behaviour-Driven Development approach and, since my preferred programming language is PHP, I chose one of the most popular existing acceptance testing tool, namely Behat.</summary></entry></feed>
