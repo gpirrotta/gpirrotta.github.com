@@ -1,4 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://giovanni.pirrotta.it/feed.xml" rel="self" type="application/atom+xml" /><link href="http://giovanni.pirrotta.it/" rel="alternate" type="text/html" /><updated>2018-05-17T18:50:51+00:00</updated><id>http://giovanni.pirrotta.it/</id><title type="html">Giovanni Pirrotta</title><author><name>Giovanni Pirrotta</name></author><entry><title type="html">Protezione Civile POP: crea gli avvisi di allerta della tua città</title><link href="http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop/" rel="alternate" type="text/html" title="Protezione Civile POP: crea gli avvisi di allerta della tua città" /><published>2018-05-17T01:40:08+00:00</published><updated>2018-05-17T01:40:08+00:00</updated><id>http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop/">&lt;p&gt;Dal 5 marzo di quest’anno il &lt;a href=&quot;http://www.protezionecivile.gov.it/&quot; target=&quot;blank&quot;&gt;Dipartimento della Protezione Civile&lt;/a&gt; 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://giovanni.pirrotta.it/feed.xml" rel="self" type="application/atom+xml" /><link href="http://giovanni.pirrotta.it/" rel="alternate" type="text/html" /><updated>2018-10-01T04:41:58+00:00</updated><id>http://giovanni.pirrotta.it/</id><title type="html">Giovanni Pirrotta</title><author><name>Giovanni Pirrotta</name></author><entry><title type="html">Linked Data for a Better Web</title><link href="http://giovanni.pirrotta.it/blog/2018/07/27/linked-data-the-four-rules/" rel="alternate" type="text/html" title="Linked Data for a Better Web" /><published>2018-07-27T01:40:08+00:00</published><updated>2018-07-27T01:40:08+00:00</updated><id>http://giovanni.pirrotta.it/blog/2018/07/27/linked-data-the-four-rules</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2018/07/27/linked-data-the-four-rules/">&lt;p&gt;In the previous Semantic Web posts [&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/05/24/semantic-web-what/&quot; target=&quot;blank&quot;&gt;1&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/06/03/limits-of-the-web-today/&quot; target=&quot;blank&quot;&gt;2&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/07/04/can-machines-think/&quot; target=&quot;blank&quot;&gt;3&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/11/20/xml-limits/&quot; target=&quot;blank&quot;&gt;4&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/12/23/the-rdf-model/&quot; target=&quot;blank&quot;&gt;5&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/&quot; target=&quot;blank&quot;&gt;6&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/07/22/semantic-web-ingredients-the-web-ontology-language/&quot; target=&quot;blank&quot;&gt;7&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa/&quot; target=&quot;blank&quot;&gt;8&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/10/27/semantic-web-ingredients-the-sparql-language/&quot; target=&quot;blank&quot;&gt;9&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2015/10/18/developing-an-ontology/&quot; target=&quot;blank&quot;&gt;10&lt;/a&gt;] I introduced tools, standards and languages to try to overcome the problem to integrate and reuse information between different applications. In this post I am going to describe a different way to present and share data on the Web, that, in recent years, played an important role in the development of Semantic Web applications concretely showing the benefits of semantic technologies.
+In 2006, the  father of the HTML language and of the Semantic Web, &lt;strong&gt;Tim Berners–Lee&lt;/strong&gt;, proposed a very simple way to publish structured data on the Web. The &lt;strong&gt;Linked Data&lt;/strong&gt; era began!
+&lt;!--More--&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/linkeddata/linked_data.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From the technological point of view, Tim Berners–Lee invented nothing new but simply defined some rules for publication and interlinking RDF data on the Web, thus stirring up a very high interest by the scientific and business community around the world.&lt;/p&gt;
+
+&lt;h3 id=&quot;linked-data-rules&quot;&gt;Linked Data Rules&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://www.w3.org/DesignIssues/LinkedData.html&quot; target=&quot;blank&quot;&gt;Linked Data principles&lt;/a&gt; recommend to:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;Use URIs as names for things&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Use HTTP URIs so that people can look up those names&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;When someone looks up a URI, provide useful information, using the standards&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Include links to other URIs, so that they can discover more things&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The basic principle of &lt;strong&gt;Linked Data&lt;/strong&gt; is that data value increases if it is interlinked with other data. Structured data should be published using semantic languages and data would be linked with external sources through typed RDF links. The current Web is similar to a large filesystem where documents are scattered without information on the content meaning, and connected using &lt;strong&gt;untyped&lt;/strong&gt; meaningless links. Instead, the &lt;a href=&quot;http://linkeddata.org&quot; target=&quot;blank&quot;&gt;Web of Data&lt;/a&gt; can be considered as a huge global database published on the Web, available to all interested people that may query, integrate, reuse, export data to develop applications on top of it. Increasing RDF links between resources belonging to different datasources means allowing search engines to carry out flexible queries similar to those provided by a relational database. Before talking about the four &lt;strong&gt;Linked Data principles&lt;/strong&gt;, we define some terms that will help us go forward in this post.&lt;/p&gt;
+
+&lt;p&gt;As known, each &lt;code class=&quot;highlighter-rouge&quot;&gt;URL&lt;/code&gt; is a particular type of &lt;code class=&quot;highlighter-rouge&quot;&gt;URI&lt;/code&gt;, starting from &lt;code class=&quot;highlighter-rouge&quot;&gt;http:&lt;/code&gt; string, defining the path to find a specific resource on the Web. The &lt;code class=&quot;highlighter-rouge&quot;&gt;http:&lt;/code&gt; scheme of each URL also specifies the protocol used to access on the net through browsers; each URL address is then called &lt;code class=&quot;highlighter-rouge&quot;&gt;deferencable&lt;/code&gt;  because it is relative to a resource on the Web retrievable through a well–known mechanism. Instead, putting in our browser URIs with &lt;code class=&quot;highlighter-rouge&quot;&gt;tag:&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;urn:&lt;/code&gt; schemes, we are not able to find any resources because the relative protocols do not specify how to find items. In this case we know the URIs as &lt;code class=&quot;highlighter-rouge&quot;&gt;not deferencable&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;first Linked Data rule&lt;/strong&gt; states to use URIs as names for things but not only things related to Web such as images, documents, video and so forth, but also for real–world objects like people, hotels, cars and even abstract ideas and non–existing things.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;second rule&lt;/strong&gt; proposes to use HTTP URIs so that people can look up those names. The reason of this is very simple. The &lt;code class=&quot;highlighter-rouge&quot;&gt;http://&lt;/code&gt; scheme is the only URI scheme that is widely supported in today’s tools and infrastructure. All others require extra effort for passing proxies and firewall layers, for resolver Web services and so on; then, the HTTP protocol can be seen as a universal door to access all resources URIs.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;third Linked Data rule&lt;/strong&gt; states that when someone looks up a URI, the server would always provide useful information, using the standards. But, given a specific URI, how can we find out what it identifies? Before answering this question we have to classify the resources in two types:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Information Resources&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Non-Information Resources&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Information resources&lt;/em&gt; are identified by directly deferencable URI, and the result of the request is sent to the browser immediately. When a user requires information resources, the server Web generates a new representation of that resource returning an HTTP response code &lt;code class=&quot;highlighter-rouge&quot;&gt;200 OK&lt;/code&gt;.
+We can imagine an information resource as all that can be trasmitted electronically and can be viewed in a browser.
+All URIs not directly deferencable are called instead &lt;em&gt;non–information resources.&lt;/em&gt; Browsers can only display information resources; therefore, to provide a representation of non–information resources you perform a double step trick. When a user wants to find a non–information resource the Web server redirects to an information resource URI through the HTTP response code &lt;code class=&quot;highlighter-rouge&quot;&gt;303 See Other&lt;/code&gt;. Then, the client performs a new request deferencing the just arrived information resource, finally obtaining a representation of the non–information resource.
+So far we have explained how all information resources types can be deferenced using URIs. But, how does the Web server know which information resource has to be returned for a non–information URI request?
+The answer is very simple and is related to the HTTP protocol;
+in fact, in the &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTP Accept header&lt;/code&gt; of the HTTP client request, we can specify the &lt;code class=&quot;highlighter-rouge&quot;&gt;MIME type&lt;/code&gt; of the representation type we want.
+The Web server reads the requests and starts the content negotiation mechanism to give back the right information resource URI related with the specified representation. Then, if a user requires a non–information resource URI and wants to display it in a normal browser, the client will send in the HTTP Header the attribute &lt;code class=&quot;highlighter-rouge&quot;&gt;Accept: text/html&lt;/code&gt;, while for example, if we want to see the resource in an RDF browser, the attribute will be &lt;code class=&quot;highlighter-rouge&quot;&gt;Accept: application/rdf+xml&lt;/code&gt;. Therefore, the server will return the related information resource URI that the client will be able to deference displaying the information needed. The following figure shows the content negotiation mechanism.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/linkeddata/rdf-content-negotiation.png&quot; width=&quot;90%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dereferenceable URIs can be constructed using two approaches preserving the implicit identity function.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Hash approach&lt;/em&gt;. In this case the URI is splitted into two parts separated by a hash symbol &lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt;. This type of URI cannot be directly deferencable so we can use it to identify non–informative
+resources without creating ambiguity because the HTTP protocol, before sending the request to the server, strips off the string after the hash symbol, to retrieve the information resource representation
+containing the non–resource information description. For example, using this approach to identify the poet &lt;em&gt;Dante Alighieri&lt;/em&gt;, the URI could be: &lt;code class=&quot;highlighter-rouge&quot;&gt;http://example.org/poets.rdf#dalighieri&lt;/code&gt;.
+In the content negotiation mechanism, the part after the hash symbol will be removed and the server will return the &lt;code class=&quot;highlighter-rouge&quot;&gt;http://example.org/poets.rdf&lt;/code&gt; URL within which we will find information about the &lt;code class=&quot;highlighter-rouge&quot;&gt;dalighieri&lt;/code&gt; resource in RDF format.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Slash approach&lt;/em&gt;. In this case the non information resource is identified by the string following the last slash symbol &lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt;, and to deference this type of URI, as seen above, the &lt;code class=&quot;highlighter-rouge&quot;&gt;303 - See Other&lt;/code&gt; negotiation mechanism is adopted in order to find the right resource representation. For example, using this approach to identify the person &lt;em&gt;Dante Alighieri&lt;/em&gt;, the URI could be:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;http://example.org/dalighieri&lt;/code&gt;. This resource does not exist in the server, then it sends a &lt;code class=&quot;highlighter-rouge&quot;&gt;303&lt;/code&gt; redirect to client saying that information about that resource can be found in the &lt;code class=&quot;highlighter-rouge&quot;&gt;http://example.org/poets.rdf&lt;/code&gt; file within which we will find information about the &lt;code class=&quot;highlighter-rouge&quot;&gt;dalighieri&lt;/code&gt; resource in RDF format.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The semantic languages allow to exposes on the Web a large amount of data, and choosing the right URI approach can be fundamental to ensure a good performance of the system. Imagine a large single RDF file published on the Web containing millions of URIs, and let us use the hash approach. When a client wants to retrieve a single resource inside the file, although the resource would be at the top of the file, the server has to return the whole heavy file to find the related URI resource. This can be a bottleneck for the functioning of the system; so, depending on dataset size, we can adopt different strategies combining slash or hash approaches for deferencing URIs, to ensure the better performance to client requests.&lt;/p&gt;
+
+&lt;h3 id=&quot;linked-open-data&quot;&gt;Linked Open Data&lt;/h3&gt;
+
+&lt;p&gt;The &lt;strong&gt;fourth and last Linked Data rule&lt;/strong&gt; states to include links to other URIs in order to discover more things. This principle represents one of the most important rules because by adding RDF links to resources especially belonging to different datasets, we increase the amount of information available on the Web for those resources. Publishing data on the Web using the RDF data model following linked data rules means that clients can look up every URI in a huge graph to retrieve additional external information coming from different sources, merging and exploring datasets, querying and developing applications thus increasing the resource original value.&lt;/p&gt;
+
+&lt;p&gt;In 2007, the W3C SWEO group proposed the &lt;a href=&quot;http://linkeddata.org/&quot; target=&quot;blank&quot;&gt;Linking Open Data (LOD)&lt;/a&gt; community project whose goal is to &lt;em&gt;extend the Web with a data commons by publishing various open data sets as RDF on the Web and by setting RDF links between data items from different data sources&lt;/em&gt; (&lt;a href=&quot;https://www.w3.org/DesignIssues/LinkedData.html&quot; target=&quot;blank&quot;&gt;link&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;In this project, some people embraced the Tim Berners–Lee rules and started to publish open data on the Web making interlinked datasets available.&lt;/p&gt;
+
+&lt;p&gt;The open data ideals state that data must be freely reusable by everyone without paying royalties. The LOD community aims to convert all open datasets available on the Web in RDF format to expose them
+in a structured way, in order to finally allow the free reuse by all, especially by machines that use the potentiality of semantic technologies. The first LOD interlinked datasets were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wiki.dbpedia.org/&quot; target=&quot;blank&quot;&gt;DBpedia&lt;/a&gt;: a dataset containing extracted data from Wikipedia; the DBpedia data set currently provides information about 4.58 million things (English version), including 1,445,000 persons, 735,000   places, 411,000 creative works (including 123,000 music albums, 87,000 films and 19,000 videogames), 241,000 organizations (including 58,000 companies and 49,000 educational institutions), 251,000 species and 6,000 diseases.
+ It provides localized versions in 125 languages. Altogether, the DBpedia data set consists of (more than) 3 billion RDF triples (2014 statistics);&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.informatik.uni-trier.de/ ley/db/&quot; target=&quot;blank&quot;&gt;DBLP Bibliography&lt;/a&gt;: provides bibliographic information about scientific papers; it contains about 800,000 articles, 400,000 authors, and approximately 15 million triples;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.geonames.org/&quot; target=&quot;blank&quot;&gt;GeoNames&lt;/a&gt;: provides RDF descriptions of geographical features worldwide.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://revyu.com/&quot; target=&quot;blank&quot;&gt;Revyu&lt;/a&gt;: a Review service that consumes and publishes Linked  Data, primarily from DBpedia.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.foaf-project.org/&quot; target=&quot;blank&quot;&gt;FOAF&lt;/a&gt;: a dataset describing persons, their properties and relationships.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From 2007, many projects, communities and developers contributed to increase the number of interlinked dataset inside the LOD cloud diagram. Currently, the LOD project is composed by 1224 data sets encoding more than 31 billion RDF triples, which are interlinked by around 504 million RDF links (2014). The Linking Open Data diagram can be seen in the following figure:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/linkeddata/lod_big2.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Starting from LOD RDF structured data, we can develop very interesting semantic applications such as browsers, user interfaces, search engine crawlers and reasoning engines. 
+Everybody can contribute to increase the LOD diagram, converting open data to RDF and making it available as linked data and/or SPARQL endpoint on the Web.
+Thus, linked data paradigm is a way of publishing data on the Web; furthermore, due to semantic Web languages, it encourages reuse, reduces redundancy, and at the same time, maximizes the semantic interoperability
+between applications.&lt;/p&gt;
+
+&lt;p&gt;That’s all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">In the previous Semantic Web posts [1,2,3,4,5,6,7,8,9,10] I introduced tools, standards and languages to try to overcome the problem to integrate and reuse information between different applications. In this post I am going to describe a different way to present and share data on the Web, that, in recent years, played an important role in the development of Semantic Web applications concretely showing the benefits of semantic technologies. In 2006, the father of the HTML language and of the Semantic Web, Tim Berners–Lee, proposed a very simple way to publish structured data on the Web. The Linked Data era began!</summary></entry><entry><title type="html">Protezione Civile POP: crea gli avvisi di allerta della tua città</title><link href="http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop/" rel="alternate" type="text/html" title="Protezione Civile POP: crea gli avvisi di allerta della tua città" /><published>2018-05-17T01:40:08+00:00</published><updated>2018-05-17T01:40:08+00:00</updated><id>http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2018/05/17/protezione-civile-pop/">&lt;p&gt;Dal 5 marzo di quest’anno il &lt;a href=&quot;http://www.protezionecivile.gov.it/&quot; target=&quot;blank&quot;&gt;Dipartimento della Protezione Civile&lt;/a&gt; 
 pubblica sul proprio &lt;a href=&quot;http://www.protezionecivile.gov.it/jcms/it/bollettini_di_criticita.wp&quot; target=&quot;blank&quot;&gt;sito&lt;/a&gt; i bollettini di criticità 
 nazionale e di allerta in formato xml, shape, csv e pdf. &lt;strong&gt;C’è di più!&lt;/strong&gt; Dopo circa un mese gli stessi dati sono stati rilasciati con licenza aperta, cioè riutilizzabili liberamente in altri contesti.
 &lt;!--More--&gt;&lt;/p&gt;
@@ -2338,76 +2428,4 @@ ad innescare processi e modelli organizzativi ispirati sempre più a principi di
 
 &lt;p&gt;Feedback, bug, consigli, pareri e critiche costruttive sono i benvenuti!&lt;/p&gt;
 
-&lt;p&gt;That’s all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Metti che è da una vita che non aggiorno questo blog, metti che sono sostenitore da tanti anni degli Open Data e di tutto ciò che gli gira attorno, metti che finalmente sono in ferie e ho qualche giorno libero da dedicare a qualche idea che mi porto dietro da qualche mese, bene, metti insieme tutto questo :-) Ma partiamo dall’inizio, a circa un mese fa.</summary></entry><entry><title type="html">Behat-Gherkin/Mink: one translator to rule them all</title><link href="http://giovanni.pirrotta.it/blog/2015/02/17/behat-gherkin-mink-one-translator-to-rule-them-all/" rel="alternate" type="text/html" title="Behat-Gherkin/Mink: one translator to rule them all" /><published>2015-02-17T08:12:00+00:00</published><updated>2015-02-17T08:12:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2015/02/17/behat-gherkin-mink-one-translator-to-rule-them-all</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2015/02/17/behat-gherkin-mink-one-translator-to-rule-them-all/">&lt;p&gt;Recently I started to develop my software using &lt;a href=&quot;http://it.wikipedia.org/wiki/Behavior-driven_development&quot;&gt;Behaviour-Driven Development&lt;/a&gt; approach and, since my
- preferred programming language is PHP, I chose one of the most popular existing acceptance
- testing tool, namely &lt;a href=&quot;http://behat.org/&quot;&gt;Behat&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--More--&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/behat.png&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Behat tests a feature by executing its scenarios’ steps in a context.
-It allows you to write your user stories in the natural language taking advantage of Gherkin language syntax.&lt;/p&gt;
-
-&lt;p&gt;Afterwords I chose to write user stories in my native language and Behat helped me by providing
- Italian gherkin keyword translations. At this time it supports 62 native languages.&lt;/p&gt;
-
-&lt;p&gt;In order to know the Gherkin keyword translation for the Italian language you must digit in console:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;behat --story-syntax --lang=it
-
-# language: it
-Funzionalità: Internal operations
-  In order to stay secret
-  As a secret organization
-  We need to be able to erase past agents' memory
-
-  Contesto:
-    [Date|Dati|Data|Dato] there is agent A
-    E there is agent B
-
-  Scenario: Erasing agent memory
-    [Date|Dati|Data|Dato] there is agent J
-    E there is agent K
-    Quando I erase agent K's memory
-    Allora there should be agent J
-    Ma there should not be agent K
-
-  Schema dello scenario: Erasing other agents' memory
-    [Date|Dati|Data|Dato] there is agent &amp;lt;agent1&amp;gt;
-    E there is agent &amp;lt;agent2&amp;gt;
-    Quando I erase agent &amp;lt;agent2&amp;gt;'s memory
-    Allora there should be agent &amp;lt;agent1&amp;gt;
-    Ma there should not be agent &amp;lt;agent2&amp;gt;
-
-    Esempi:
-      | agent1 | agent2 |
-      | D      | M      |
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Using behat in Web applications I like the &lt;a href=&quot;https://github.com/Behat/MinkExtension&quot;&gt;Behat extension for Mink&lt;/a&gt;,
-a browser emulator abstraction layer. It hides emulator differences behind a single consistent
-API and represents a bridge towards real browser emulators such as&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://mink.behat.org/en/latest/drivers/goutte.html&quot;&gt;Goutte&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://mink.behat.org/en/latest/drivers/browserkit.html&quot;&gt;BrowserKit&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://mink.behat.org/en/latest/drivers/selenium2.html&quot;&gt;Selenium2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://mink.behat.org/en/latest/drivers/zombie.html&quot;&gt;Zombie&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://mink.behat.org/en/latest/drivers/sahi.html&quot;&gt;Sahi&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://mink.behat.org/en/latest/drivers/selenium.html&quot;&gt;Selenium&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Mink extension supports 17 different languages so I found the Italian XLIFF file, in the source code,
- (&lt;a href=&quot;https://github.com/Behat/MinkExtension/blob/master/i18n/it.xliff&quot;&gt;see github&lt;/a&gt;) containing the patterns of Italian
- sentences recognized by the library.&lt;/p&gt;
-
-&lt;p&gt;Apart some &lt;a href=&quot;http://blog.lepine.pro/wp-content/uploads/2012/03/behat-cheat-sheet-en.pdf&quot;&gt;English PDF cheatsheets&lt;/a&gt;
-I have not found much readable native language syntax documentation about
-Behat and Mink. (Let me know if you know).&lt;/p&gt;
-
-&lt;p&gt;So, to fill the gap, I developed the &lt;a href=&quot;http://www.pirrotta.it/behat-mink-translator&quot;&gt;Behat-Gherkin/Mink Translator&lt;/a&gt;
-in order to generate on the fly the native language syntax documentation that PHP developers can use for their job.&lt;/p&gt;
-
-&lt;p&gt;Thas’all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Recently I started to develop my software using Behaviour-Driven Development approach and, since my preferred programming language is PHP, I chose one of the most popular existing acceptance testing tool, namely Behat.</summary></entry></feed>
+&lt;p&gt;That’s all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Metti che è da una vita che non aggiorno questo blog, metti che sono sostenitore da tanti anni degli Open Data e di tutto ciò che gli gira attorno, metti che finalmente sono in ferie e ho qualche giorno libero da dedicare a qualche idea che mi porto dietro da qualche mese, bene, metti insieme tutto questo :-) Ma partiamo dall’inizio, a circa un mese fa.</summary></entry></feed>
