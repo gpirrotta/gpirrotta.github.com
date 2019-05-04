@@ -1,4 +1,176 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://giovanni.pirrotta.it/feed.xml" rel="self" type="application/atom+xml" /><link href="http://giovanni.pirrotta.it/" rel="alternate" type="text/html" /><updated>2018-10-01T04:41:58+00:00</updated><id>http://giovanni.pirrotta.it/</id><title type="html">Giovanni Pirrotta</title><author><name>Giovanni Pirrotta</name></author><entry><title type="html">Linked Data for a Better Web</title><link href="http://giovanni.pirrotta.it/blog/2018/07/27/linked-data-the-four-rules/" rel="alternate" type="text/html" title="Linked Data for a Better Web" /><published>2018-07-27T01:40:08+00:00</published><updated>2018-07-27T01:40:08+00:00</updated><id>http://giovanni.pirrotta.it/blog/2018/07/27/linked-data-the-four-rules</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2018/07/27/linked-data-the-four-rules/">&lt;p&gt;In the previous Semantic Web posts [&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/05/24/semantic-web-what/&quot; target=&quot;blank&quot;&gt;1&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/06/03/limits-of-the-web-today/&quot; target=&quot;blank&quot;&gt;2&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/07/04/can-machines-think/&quot; target=&quot;blank&quot;&gt;3&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/11/20/xml-limits/&quot; target=&quot;blank&quot;&gt;4&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/12/23/the-rdf-model/&quot; target=&quot;blank&quot;&gt;5&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/&quot; target=&quot;blank&quot;&gt;6&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/07/22/semantic-web-ingredients-the-web-ontology-language/&quot; target=&quot;blank&quot;&gt;7&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa/&quot; target=&quot;blank&quot;&gt;8&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/10/27/semantic-web-ingredients-the-sparql-language/&quot; target=&quot;blank&quot;&gt;9&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2015/10/18/developing-an-ontology/&quot; target=&quot;blank&quot;&gt;10&lt;/a&gt;] I introduced tools, standards and languages to try to overcome the problem to integrate and reuse information between different applications. In this post I am going to describe a different way to present and share data on the Web, that, in recent years, played an important role in the development of Semantic Web applications concretely showing the benefits of semantic technologies.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://giovanni.pirrotta.it/feed.xml" rel="self" type="application/atom+xml" /><link href="http://giovanni.pirrotta.it/" rel="alternate" type="text/html" /><updated>2019-05-04T06:03:10+00:00</updated><id>http://giovanni.pirrotta.it/</id><title type="html">Giovanni Pirrotta</title><author><name>Giovanni Pirrotta</name></author><entry><title type="html">Alla scoperta di Ontopia, il Knowledge Graph della PA Italiana</title><link href="http://giovanni.pirrotta.it/blog/2019/05/04/alla-scoperta-di-ontopia-il-knowledge-graph-della-pa-italiana/" rel="alternate" type="text/html" title="Alla scoperta di Ontopia, il Knowledge Graph della PA Italiana" /><published>2019-05-04T01:40:08+00:00</published><updated>2019-05-04T01:40:08+00:00</updated><id>http://giovanni.pirrotta.it/blog/2019/05/04/alla-scoperta-di-ontopia-il-knowledge-graph-della-pa-italiana</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2019/05/04/alla-scoperta-di-ontopia-il-knowledge-graph-della-pa-italiana/">&lt;p&gt;Cos’è &lt;strong&gt;Ontopia&lt;/strong&gt;? E’ una famiglia di ontologie e di vocabolari controllati pensata per il mondo della pubbliche amministrazioni. Sì, ma cos’è un’&lt;strong&gt;ontologia&lt;/strong&gt;?
+Un’ontologia è la concettualizzazione di una realtà di interesse ottenuta mediante la definizione formale di un dominio specifico attraverso un linguaggio di modellizzazione.&lt;/p&gt;
+
+&lt;p&gt;Seee, vabbè, buonanotte. Giovà, me so perso… concettualizzazione, modellizzazione, linguaggio??? Ma che vor dì???&lt;/p&gt;
+
+&lt;!--More--&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/ontopia/arya-meme.jpg&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ok, cominciamo dall’inizio e con una storia.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lucy&lt;/strong&gt; accompagna la madre dal dottore che, dopo averla visitata, le prescrive delle sedute di fisioterapia. 
+Lucy chiede al suo &lt;strong&gt;smartphone&lt;/strong&gt; di trovare la lista dei dottori coperti dall’assicurazione della madre col più alto numero di feedback positivi secondo il servizio sanitario nazionale e che non siano lontani più di 20 chilometri dalla casa della madre.
+Lo smartphone di Lucy recupera l’agenda dei dottori più vicini e crea dei potenziali appuntamenti compatibili sia con l’agenda personale di Lucy sia con l’agenda del fratello &lt;strong&gt;Pete&lt;/strong&gt;, con cui Lucy dovrà organizzarsi per accompagnare la madre alle sedute. Immediatamente Pete riceve sul suo smartphone l’elenco dei potenziali appuntamenti ma su alcune date non è d’accordo; Pete modifica quindi alcune date e riduce la distanza massima dei dottori da cercare a 15 chilometri. Queste restrizioni portano alla generazione di un nuovo calendario di potenziali appuntamenti. Lucy riceve le nuove date generate e le vanno bene. In questo modo le sedute di fisioterapia vengono automaticamente prenotate nell’agenda del dottore selezionato.&lt;/p&gt;
+
+&lt;p&gt;Questo racconto è tratto dal famoso articolo del &lt;a href=&quot;http://www-sop.inria.fr/acacia/cours/essi2006/Scientific%20American_%20Feature%20Article_%20The%20Semantic%20Web_%20May%202001.pdf&quot;&gt;Scientific American del 2001&lt;/a&gt;, in cui &lt;strong&gt;Tim Berners-Lee&lt;/strong&gt;, creatore del &lt;strong&gt;Web&lt;/strong&gt; e del &lt;strong&gt;Semantic Web&lt;/strong&gt;, descrive la sua idea di Web, un ambiente in cui i programmi sono in grado di comprendere il significato delle parole e di prendere decisioni in modo autonomo.&lt;/p&gt;
+
+&lt;p&gt;Il Web così come lo conosciamo è costituito da pagine esplorabili all’interno di applicazioni chiamate &lt;strong&gt;browser&lt;/strong&gt;, utilizzate dagli utenti per navigare la rete. I browser hanno il compito di rappresentare le pagine favorendo lo &lt;strong&gt;scambio&lt;/strong&gt; di informazioni tra umani. Gli stessi browser, però, non sanno nulla degli argomenti trattati nella pagine, non sono in grado di &lt;strong&gt;comprendere&lt;/strong&gt; il significato delle informazioni rappresentate né sono dotati di intelligenza per improvvisare &lt;strong&gt;ragionamenti&lt;/strong&gt; logici in piena autonomia. Possiamo dire quindi che le informazioni rappresentate nelle pagine Web non favoriscono lo scambio tra programmi.&lt;/p&gt;
+
+&lt;p&gt;Ma come possono diventare &lt;strong&gt;intelligenti&lt;/strong&gt; le macchine? Come possono capire il &lt;strong&gt;significato&lt;/strong&gt; delle informazioni presenti nel Web?&lt;/p&gt;
+
+&lt;p&gt;Per rendere il Web intelligente è necessario creare un &lt;strong&gt;ambiente&lt;/strong&gt; in cui a tutte le “cose” esistenti vengono associate informazioni e dati (&lt;strong&gt;metadati&lt;/strong&gt;) in grado di specificarne il contesto semantico in un formato adatto all’interpretazione e all’elaborazione automatica. Le macchine non hanno l’abilità di capire il significato delle parole, a meno che non si creino le &lt;strong&gt;condizioni&lt;/strong&gt; affinché  possano comprendere e questo deve essere fatto in un &lt;strong&gt;linguaggio&lt;/strong&gt; a loro comprensibile. Questo nuovo tipo di ambiente prende il nome di &lt;strong&gt;Web Semantico&lt;/strong&gt; e, non solo consente lo scambio di informazioni tra programmi ma aumenta indirettamente ed esponenzialmente anche la quantità di informazioni che possono utilizzare gli esseri umani.&lt;/p&gt;
+
+&lt;p&gt;Uno specifico ambito di conoscenza può essere rappresentato in modo comprensibile dalle macchine utilizzando gli strumenti del Web Semantico, codificando cioè le informazioni tramite i concetti del dominio (&lt;em&gt;classi&lt;/em&gt;, &lt;em&gt;proprietà&lt;/em&gt;, e &lt;em&gt;restrizioni&lt;/em&gt;). Il risultato di queste concettualizzazioni viene definito comunemente &lt;strong&gt;ontologia&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Non è scopo di questo post entrare nel dettaglio sugli strumenti tecnici del Web Semantico. Per maggiori informazioni potete fare riferimento alla serie di post presenti in questo blog: [&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/05/24/semantic-web-what/&quot; target=&quot;blank&quot;&gt;1&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/06/03/limits-of-the-web-today/&quot; target=&quot;blank&quot;&gt;2&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/07/04/can-machines-think/&quot; target=&quot;blank&quot;&gt;3&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/11/20/xml-limits/&quot; target=&quot;blank&quot;&gt;4&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/12/23/the-rdf-model/&quot; target=&quot;blank&quot;&gt;5&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/&quot; target=&quot;blank&quot;&gt;6&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/07/22/semantic-web-ingredients-the-web-ontology-language/&quot; target=&quot;blank&quot;&gt;7&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa/&quot; target=&quot;blank&quot;&gt;8&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/10/27/semantic-web-ingredients-the-sparql-language/&quot; target=&quot;blank&quot;&gt;9&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2015/10/18/developing-an-ontology/&quot; target=&quot;blank&quot;&gt;10&lt;/a&gt;]&lt;/p&gt;
+
+&lt;h3 id=&quot;perchè-ontopia&quot;&gt;Perchè Ontopia&lt;/h3&gt;
+
+&lt;p&gt;Per spiegare le motivazioni che hanno dato origine al progetto Ontopia prendiamo ad esempio il dominio dei &lt;strong&gt;servizi pubblici&lt;/strong&gt; delle PA.&lt;/p&gt;
+
+&lt;p&gt;Alcuni di essi, anche se non tantissimi, sono disponibili online. Nonostante questo, però, i servizi pubblici potrebbero essere più efficienti se non esistessero barriere tra i servizi stessi, i sistemi IT e i dati.
+Uno dei più grandi problemi delle PA avviene quando i dati dei sistemi IT &lt;em&gt;non possono essere scambiati&lt;/em&gt; tra sistemi diversi perché descritti in modo &lt;strong&gt;incompatibile&lt;/strong&gt;; ciò avviene quando abbiamo &lt;strong&gt;problemi di semantica&lt;/strong&gt;. Per superare questo ostacolo è necessario creare delle &lt;em&gt;connessioni significative&lt;/em&gt; tra dati e per fare questo è necessario seguire &lt;strong&gt;standard aperti&lt;/strong&gt; e &lt;strong&gt;condivisi&lt;/strong&gt;.
+Questo limite non deve riguardare però solo il territorio nazionale; il patrimonio informativo delle PA dovrebbe essere riutilizzato e condiviso tra i tutti gli stati d’Europa e collegato insieme ad altre pubbliche amministrazioni, aziende e cittadini in un unico mercato digitale europeo.&lt;/p&gt;
+
+&lt;p&gt;Anche la &lt;strong&gt;Commissione Europea&lt;/strong&gt;, nel documento quadro &lt;em&gt;European Interoperability Framework&lt;/em&gt;, che mira a potenziare l’interoperabilità dei servizi pubblici nell’Unione Europea, afferma infatti che “&lt;em&gt;l’agenda digitale può decollare solo se è garantita un’interoperabilità basata su standard e piattaforme aperte&lt;/em&gt;”.&lt;/p&gt;
+
+&lt;p&gt;Purtroppo, però, nelle PA italiane si riscontrano ancora le seguenti criticità:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;mancanza di standard condivisi&lt;/strong&gt; in uso alle applicazioni software che gestiscono l’attività amministrativa;&lt;/li&gt;
+  &lt;li&gt;ogni applicativo, il più delle volte proprietario, gestisce i dati della PA secondo logiche che &lt;strong&gt;non supportano nativamente l’interoperabilità semantica&lt;/strong&gt;, cioè lo stesso concetto di un dominio condiviso tra diverse PA viene rappresentato in modo diverso a seconda dell’applicativo che lo gestisce.  A questo costo si aggiunge spesso anche quello causato dal &lt;strong&gt;lock-in&lt;/strong&gt; del fornitore, cioè quando le PA, per la difficoltà a migrare verso sistemi IT più moderni offerti da aziende terze, rimangono imprigionate allo stesso fornitore ICT;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;mancanza di una regia unica nazionale&lt;/strong&gt; che proponga e imponga dall’alto l’utilizzo di una solida e stabile architettura dell’informazione dei dati pubblici e che obblighi i fornitori ICT a rilasciare i propri applicativi secondo tali standard.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In realtà sull’ultimo punto è necessario aggiungere qualcosa, ma procediamo per passi.&lt;/p&gt;
+
+&lt;p&gt;Dal punto di vista normativo l’Italia da anni insiste e incentiva l’adozione di standard condivisi come dimostrano i seguenti riferimenti:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Art. 20 - Comunità intelligenti&lt;/strong&gt; - della legge n. 221 del 17 dicembre 2012, recante misure urgenti per la crescita del Paese:
+    &lt;ul&gt;
+      &lt;li&gt;L’Agenzia per l’Italia Digitale (AGID) definisce strategie e obiettivi, coordina il processo di attuazione e predispone gli strumenti tecnologici ed economici per il progresso delle comunità intelligenti. A tal fine l’Agenzia: […]
+c) emana le linee guida recanti definizione di standard tecnici, compresa la determinazione delle ontologie dei servizi e dei dati delle comunità intelligenti;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Linee guida per la valorizzazione del patrimonio informativo della Pubblica Amministrazione&lt;/strong&gt; - AGID:
+    &lt;ul&gt;
+      &lt;li&gt;Il documento,[…], approfondisce l’uso di un insieme di standard di base e di ontologie e vocabolari specifici per categorie trasversali e verticali di dati delle pubbliche amministrazioni, al fine di guidare nell’effettiva implementazione dei modelli proposti, i.e., dei dati e dei metadati, e operativo.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Vocabolari controllati e modelli di dati&lt;/strong&gt; - Capitolo 4 del Piano Triennale ICT 2017/19&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Con queste premesse normative, da diversi anni l’AGID, Agenzia per l’Italia Digitale, in collaborazione con il Team per la Trasformazione Digitale, ha quindi intrapreso l’ardua sfida di &lt;strong&gt;standardizzare il patrimonio informativo della pubblica amministrazione&lt;/strong&gt;, creando  una famiglia di modelli di dati, cioè &lt;strong&gt;ontologie&lt;/strong&gt;, con lo scopo di identificare e definire schemi condivisi per dati trasversali e non, ai diversi domini applicativi delle PA. Contemporaneamente l’AGID ha sviluppato dei &lt;strong&gt;vocabolari controllati&lt;/strong&gt;, ottenuti armonizzando e standardizzando tassonomie, codici e nomenclature, da utilizzare come categorizzazioni nelle ontologie e nelle basi di dati pubbliche.&lt;/p&gt;
+
+&lt;p&gt;Questa iniziativa dell’AGID prende il nome di &lt;strong&gt;Ontopia&lt;/strong&gt; e rappresenta, a mio avviso, uno dei più interessanti e ambiziosi progetti di AGID, perché costituisce la base e le fondamenta su cui, in maniera imprescindibile, dovrà essere fondata la pubblica amministrazione del futuro e da cui si dovrà partire per riuscire a dare una nuova immagine alle PA.
+Una PA che sia &lt;strong&gt;moderna&lt;/strong&gt; e &lt;strong&gt;innovativa&lt;/strong&gt;, &lt;strong&gt;trasparente&lt;/strong&gt; e &lt;strong&gt;aperta&lt;/strong&gt;, i cui dati siano &lt;strong&gt;semanticamente interoperabili&lt;/strong&gt;, per facilitare lo sviluppo di nuovi sistemi informativi, per agevolare lo scambio di dati, per abilitare l’integrazione tra dati provenienti da fonti diverse.&lt;/p&gt;
+
+&lt;p&gt;Standardizzare l’architettura del patrimonio informativo delle pubbliche amministrazioni significa definire un linguaggio comune per l’interscambio dei dati, significa creare un ambiente in cui poter interrogare quello che viene chiamato il &lt;strong&gt;grafo della conoscenza della pubblica amministrazione italiana&lt;/strong&gt; o &lt;strong&gt;Knowledge Graph&lt;/strong&gt;. E tutto questo, in Ontopia, viene fatto sfruttando le potenzialità del &lt;strong&gt;Web Semantico&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Il progetto Ontopia è sviluppato con il supporto del laboratorio di tecnologie semantiche dell’&lt;a href=&quot;https://www.istc.cnr.it/&quot;&gt;Istituto di Scienze e Tecnologie della Cognizione (ISTC) del CNR&lt;/a&gt; e in collaborazione con diversi enti centrali e locali; è rilasciato con licenza aperta ed è allineata ai cosiddetti Core Vocabulary del programma &lt;a href=&quot;https://ec.europa.eu/isa2/home_en&quot;&gt;ISA2 della Commissione Europea&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I &lt;strong&gt;principi&lt;/strong&gt; cardine su cui si basa Ontopia sono:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;il processo di creazione del progetto Ontopia si è avvalso di una metodologia iterativa, incrementale e collaborativa di modellazione delle ontologie basata su pattern, cioè su soluzioni di modellazione per problemi che ricorrono con frequenza. Questa pratica metodologica prende il nome di &lt;strong&gt;Agile eXtreme Design&lt;/strong&gt; ed è stata associata all’uso dei &lt;a href=&quot;http://ontologydesignpatterns.org/wiki/Main_Page&quot;&gt;design pattern per le ontologie&lt;/a&gt;;&lt;/li&gt;
+  &lt;li&gt;il progetto ha respiro europeo e la lingua di riferimento è l’inglese; le etichette degli elementi dell’ontologia e dei vocabolari controllati sono in inglese, in italiano e a volte in tedesco;&lt;/li&gt;
+  &lt;li&gt;ogni elemento dell’ontologia è identificato univocamente da una &lt;strong&gt;URI&lt;/strong&gt;, resa persistente dal servizio &lt;a href=&quot;https://w3id.org/&quot; target=&quot;_blank&quot;&gt;w3id.org&lt;/a&gt;;&lt;/li&gt;
+  &lt;li&gt;le ontologie e i vocabolari controllati sono disponibili in varie serializzazioni: &lt;strong&gt;rdf/xml&lt;/strong&gt;, &lt;strong&gt;rdf/turtle&lt;/strong&gt;, &lt;strong&gt;json-ld&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;è possibile navigare tra le ontologie e i vocabolari controllati tramite &lt;strong&gt;interfaccia Web&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;è possibile fare interrogazioni tramite un &lt;strong&gt;endpoint SPARQL&lt;/strong&gt; disponibile al seguente &lt;a href=&quot;ontopia.daf.teamdigitale.it/sparql&quot; target=&quot;_blank&quot;&gt;link&lt;/a&gt;;&lt;/li&gt;
+  &lt;li&gt;il progetto Ontopia &lt;strong&gt;riusa&lt;/strong&gt; ontologie in modo indiretto ed effettua gli &lt;strong&gt;allineamenti&lt;/strong&gt; in file separati.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;L’approccio tecnico di modellazione di Ontopia è rappresentato nella seguente figura:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/ontopia/ontopia-tecnico.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tipicamente, nel creare un’ontologia, i componenti più importanti sono le &lt;strong&gt;classi&lt;/strong&gt; e le &lt;strong&gt;proprietà&lt;/strong&gt;. Le ontologie del progetto Ontopia fanno riferimento a &lt;strong&gt;profili applicativi nazionali&lt;/strong&gt;, cioè sono state sviluppate tenendo in considerazione, da un lato l’esistenza di eventuali modelli di dati europei e/o internazionali, in modo da non dover reinventare la ruota, dall’altro declinando le ontologie su &lt;strong&gt;profili di conformità&lt;/strong&gt; alla realtà italiana, cioè inserendo vincoli restrittivi in grado di descrivere un dettaglio più rispondente al mondo delle PA nazionali grazie ai quali è possibile migliorare e mantenere una più alta qualità dei dati descritti.&lt;/p&gt;
+
+&lt;p&gt;Inoltre, i concetti delle ontologie sono collegati esternamente ad un vocabolario controllato. 
+Un esempio fra tutti. Nell’ontologia delle &lt;strong&gt;Strutture Ricettive&lt;/strong&gt; (&lt;a href=&quot;https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/Ontologie/ACCO&quot;&gt;ACCO&lt;/a&gt;), la classe &lt;code class=&quot;highlighter-rouge&quot;&gt;Accomodation&lt;/code&gt;, che è la classe principale che definisce la struttura ricettiva, ha la proprietà  &lt;code class=&quot;highlighter-rouge&quot;&gt;hasAccommodationTypology&lt;/code&gt; il cui oggetto deve essere un concetto di tipo &lt;code class=&quot;highlighter-rouge&quot;&gt;AccommodationTypology&lt;/code&gt;. Le istanze di questa classe sono concetti del vocabolario controllato &lt;code class=&quot;highlighter-rouge&quot;&gt;https://w3id.org/italia/controlled-vocabulary/classifications-for-accommodation-facilities/accommodation-typology&lt;/code&gt;
+definito esternamente all’ontologia. Tra queste istanze, che sono concetti definiti formalmente e univocamente tramite URI, troviamo ad esempio &lt;strong&gt;Motel&lt;/strong&gt;, &lt;strong&gt;Agriturismo&lt;/strong&gt;, &lt;strong&gt;Ostello per la gioventù&lt;/strong&gt;, etc.&lt;/p&gt;
+
+&lt;p&gt;Le ontologie di Ontopia non sono autoreferenziali e chiuse a se stesse ma riutilizzano ontologie e vocabolari controllati esistenti, e definiscono, in un file esterno, tutti gli allineamenti del caso. Ad esempio, il concetto di &lt;strong&gt;Organization&lt;/strong&gt; viene definito nell’ ontologia &lt;a href=&quot;https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/Ontologie/COV&quot;&gt;Core Organization Vocabulary&lt;/a&gt; di Ontopia ma viene anche allineato al concetto &lt;strong&gt;Organization&lt;/strong&gt; dell’ontologia &lt;a href=&quot;https://www.w3.org/TR/vocab-org/&quot;&gt;Organization&lt;/a&gt; del consorzio &lt;strong&gt;W3C&lt;/strong&gt;. Nel file esterno di allinamento troviamo infatti la definizione &lt;code class=&quot;highlighter-rouge&quot;&gt;covapit:Organization&lt;/code&gt; di Ontopia &lt;em&gt;sottoclasse&lt;/em&gt; di &lt;code class=&quot;highlighter-rouge&quot;&gt;org:Organization&lt;/code&gt; dell’ontologia &lt;strong&gt;W3C&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;La possibilità di estendere e riusare i concetti delle ontologie ha un impatto molto forte in termini di integrazione dei dati di Ontopia con altri dati esterni, modellati con ontologie direttamente o indirettamente allineate con Ontopia.
+Allineare ontologie significa costruire ponti tra grafi di conoscenza diversi, supportare e favorire lo scambio di informazioni, abbattere e superare l’approccio a silos solitamente adottato nelle PA italiane.&lt;/p&gt;
+
+&lt;p&gt;La seguente figura illustra invece lo &lt;strong&gt;stack ontologico&lt;/strong&gt; del progetto Ontopia.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/ontopia/ontopia-stack.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In Ontopia possiamo distinguere diversi &lt;strong&gt;livelli&lt;/strong&gt; di ontologie organizzate a stack, dove le ontologie dei livelli più bassi sono riutilizzate dalle ontologie di livello più alto e mai il contrario. L’appartenenza ad uno specifico livello dipende dalle caratteristiche dell’ontologia stessa e dallo scopo per cui è stata sviluppata.&lt;/p&gt;
+
+&lt;p&gt;I livelli di Ontopia sono:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Livello fondazionale L0&lt;/strong&gt; - l’ontologia &lt;strong&gt;L0&lt;/strong&gt; rappresenta un’ontologia di tipo &lt;strong&gt;top level&lt;/strong&gt;; sono definiti termini molto generali utilizzati in tutte le altre ontologie di Ontopia, ad esempio concetti come &lt;em&gt;Evento&lt;/em&gt;, &lt;em&gt;Sistema&lt;/em&gt;, &lt;em&gt;Caratteristica&lt;/em&gt;, &lt;em&gt;Entità&lt;/em&gt;, &lt;em&gt;Location&lt;/em&gt;. L’ontologia L0 rappresenta il fulcro del progetto Ontopia e consente a tutte le altre ontologie del progetto di essere collegate tra loro.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Livello core&lt;/strong&gt; - le ontologie del livello &lt;strong&gt;core&lt;/strong&gt; sono indipendenti dai concetti dei domini verticali e possono essere usati per descrivere in maniera trasversale concetti di più dataset. Fanno parte di questo livello le ontologie:
+    &lt;ul&gt;
+      &lt;li&gt;sulle &lt;em&gt;persone&lt;/em&gt;, sviluppata in collaborazione con ISTAT;&lt;/li&gt;
+      &lt;li&gt;sulle &lt;em&gt;organizzazioni&lt;/em&gt;, sviluppata a partire dall’indice delle pubbliche amministrazioni &lt;strong&gt;IPA&lt;/strong&gt;;&lt;/li&gt;
+      &lt;li&gt;sui &lt;em&gt;luoghi&lt;/em&gt;, sviluppato con ISTAT e l’agenzia delle Entrate.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Livello di supporto&lt;/strong&gt; - le ontologie di questo livello modellano concetti di supporto alle altre ontologie; troviamo concetti relativi al &lt;em&gt;tempo&lt;/em&gt;, ai &lt;em&gt;ruoli&lt;/em&gt;, alle &lt;em&gt;unità di misura&lt;/em&gt;, ai &lt;em&gt;prezzi&lt;/em&gt;, ai &lt;em&gt;social media&lt;/em&gt;, ai &lt;em&gt;punti di interesse&lt;/em&gt;, alle &lt;em&gt;lingue&lt;/em&gt;, alle &lt;em&gt;condizioni di accesso&lt;/em&gt;, etc.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Livello di dominio&lt;/strong&gt; - le ontologie di questo livello modellano concetti relativi a domini specifici. Sono presenti le ontologie relative:
+    &lt;ul&gt;
+      &lt;li&gt;alle &lt;em&gt;Strutture Ricettive&lt;/em&gt;;&lt;/li&gt;
+      &lt;li&gt;agli &lt;em&gt;Eventi IOT&lt;/em&gt;, utilizzata per modellare il traffico in tempo reale;&lt;/li&gt;
+      &lt;li&gt;agli &lt;em&gt;Eventi pubblici&lt;/em&gt;;&lt;/li&gt;
+      &lt;li&gt;al &lt;em&gt;Mondo della Cultura&lt;/em&gt;;&lt;/li&gt;
+      &lt;li&gt;ai &lt;em&gt;Servizi Pubblici&lt;/em&gt;, utilizzata nella piattaforma &lt;em&gt;servizi.gov.it&lt;/em&gt;;&lt;/li&gt;
+      &lt;li&gt;ai &lt;em&gt;Contratti Pubblici&lt;/em&gt;, sviluppata insieme ad ANAC, Regione Piemonte e Synapta.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Vocabolari controllati&lt;/strong&gt; - tassonomie di termini ricorrenti da utilizzare come istanze di dati per le ontologie di Ontopia e nelle basi di dati pubbliche;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Ontologie per i metadati&lt;/strong&gt;: in questa categoria fanno parte le ontologie &lt;strong&gt;DCAT-APIT&lt;/strong&gt;, per la metadatazione dei cataloghi dati e l’ontologia &lt;strong&gt;ADMC-APIT&lt;/strong&gt;, per metadatare le ontologie stesse.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;dove-si-trova-ontopia&quot;&gt;Dove si trova Ontopia?&lt;/h3&gt;
+&lt;p&gt;Ontopia è un progetto aperto, fortemente collaborativo e partecipativo. Tutte le risorse disponibili sono su un repository &lt;a href=&quot;https://github.com/italia/daf-ontologie-vocabolari-controllati&quot;&gt;GitHub&lt;/a&gt; in cui è possibile partecipare, sia aprendo o rispondendo a issues, per consigli, suggerimenti, feedback sulle ontologie e i vocabolari controllati, sia inviando, tramite PR, eventuali estensioni, modifiche e/o correzioni degli attuali schemi caricati.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;center-image&quot; src=&quot;/images/ontopia/ontopia-github.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusioni&quot;&gt;Conclusioni&lt;/h3&gt;
+
+&lt;p&gt;In questo post ho voluto raccontare, seppur in maniera introduttiva, il progetto &lt;strong&gt;Ontopia&lt;/strong&gt;, una delle iniziative istituzionali più sfidanti degli ultimi anni. Una piattaforma di modelli di dati &lt;strong&gt;istituzionale&lt;/strong&gt;, &lt;strong&gt;aperta&lt;/strong&gt; e creata in modo &lt;strong&gt;collaborativo&lt;/strong&gt; con centri di ricerca (CNR Roma), con pubbliche amministrazioni (ISTAT, MIBAC, Regione Piemonte, ANAC, Comune Palermo e Udine, Provincia Autonoma di Trento) e soprattutto con tutte le persone che vogliono contribuire al progetto, interagendo con GitHub.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Una piccola nota personale&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Circa 10 anni fa, durante il mio dottorato di ricerca, mi appassionai di Semantic Web e creai delle ontologie per la rappresentazione sia del mondo universitario italiano (&lt;a href=&quot;http://www.gpirrotta.tk/sw/swiup/&quot;&gt;SWIUP&lt;/a&gt;) sia delle statistiche dell’anagrafe studenti (&lt;a href=&quot;http://www.gpirrotta.tk/sw/loius/&quot;&gt;LOIUS&lt;/a&gt;). In quella attività di ricerca descrissi in modo formale un pezzetto di pubblica amministrazione, nello specifico quella del Ministero dell’Istruzione, Università e Ricerca (&lt;strong&gt;MIUR&lt;/strong&gt;). Quell’esperienza mi insegnò molte cose sul mondo del Semantic Web e dei Linked Data; appresi come definire modelli per la rappresentazione della conoscenza e come favorire l’interoperabilità semantica in contesti molto particolari come il mondo delle PA. 
+Tuttavia quel lavoro morì subito dopo la consegna della tesi e da allora sono trascorsi quasi 10 anni.&lt;/p&gt;
+
+&lt;p&gt;In &lt;strong&gt;Ontopia&lt;/strong&gt;, in quest’ambizioso progetto istituzionale che si impone in maniera così massiccia e trasversale sui domini applicativi delle PA, rivedo la concretizzazione reale e consistente di ciò che in una piccolissima parte avevo cercato di fare anch’io 10 anni fa, cercare cioè di rendere la PA più moderna; sono fortemente convinto che Ontopia sia la rotta giusta da seguire, supportare e incoraggiare, motivo per cui mi sento stimolato, nel mio piccolo, a contribuire al progetto.&lt;/p&gt;
+
+&lt;p&gt;Da Ontopia sto imparando molto, sto studiando l’approccio utilizzato per la creazione delle ontologie e dei vocabolari controllati e ho scoperto nuove tecniche di modellazione basate sui design pattern che non conoscevo.&lt;/p&gt;
+
+&lt;p&gt;Sto studiando, ho ancora tanto da imparare e sto cercando di dare il mio contributo nei seguenti modi:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ho suggerito dei vocabolari controllati per il mondo universitario confrontandomi principalmente con &lt;a href=&quot;https://twitter.com/GiorgiaLodi&quot;&gt;Giorgia Lodi&lt;/a&gt;, consulente AGID, coordinatrice del progetto Ontopia, nonché esperta di Semantic Web. Sono nati &lt;a href=&quot;https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/classifications-for-universities&quot;&gt;due vocabolari&lt;/a&gt; controllati che ho proposto tramite PR su GitHub e che adesso fanno parte di Ontopia;&lt;/li&gt;
+  &lt;li&gt;con &lt;a href=&quot;https://twitter.com/dataibi&quot;&gt;Davide Taibi&lt;/a&gt; stiamo cercando di &lt;strong&gt;“ontopizzare”&lt;/strong&gt; l’ontologia &lt;a href=&quot;http://www.openars.org&quot;&gt;OpenARS&lt;/a&gt;, modello di dati sviluppato per la rappresentazione dei dati sull’attività parlamentare dell’&lt;a href=&quot;http://www.ars.sicilia.it&quot;&gt;Assemblea Regionale Siciliana&lt;/a&gt; (ARS), che abbiamo presentato l’anno scorso a Palermo in occasione del &lt;a href=&quot;http://ods2018.opendatasicilia.it/&quot;&gt;raduno annuale&lt;/a&gt; della comunità Open Data Sicilia;&lt;/li&gt;
+  &lt;li&gt;ho rispolverato il mio vecchio progetto di modellazione del dominio delle università italiane e ho intenzione di creare una nuova ontologia - integrata con Ontopia - in grado di rappresentare concetti, relazioni e proprietà delle offerte formative e dei manifesti degli studi delle Università italiane;&lt;/li&gt;
+  &lt;li&gt;infine, non per importanza, sto cercando di portare Ontopia anche all’interno della PA in cui lavoro: ho progettato e implementato una piattaforma prototipo per la gestione della carta dei servizi, rendendola compliant allo standard europeo CPSV-AP nella sua declinazione italiana &lt;a href=&quot;https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/Ontologie/CPSV&quot;&gt;CPSV-AP_IT&lt;/a&gt; (&lt;em&gt;Core Public Service Vocabolary -  Application Profile Italy&lt;/em&gt;) di Ontopia. Il prototipo è in grado di generare &lt;em&gt;al volo&lt;/em&gt; lo schema RDF della carta dei servizi e di renderlo disponibile online per poter consentire in futuro l’&lt;strong&gt;harvesting&lt;/strong&gt; dal portale &lt;em&gt;servizi.gov.it&lt;/em&gt;. 
+ La piattaforma è inoltre in grado di creare automaticamente i &lt;strong&gt;file .RST&lt;/strong&gt; (&lt;a href=&quot;https://it.wikipedia.org/wiki/ReStructuredText&quot;&gt;reStructuredText&lt;/a&gt;) necessari per generare automaticamente la documentazione tramite &lt;a href=&quot;http://www.sphinx-doc.org/en/master/&quot;&gt;SPHINX&lt;/a&gt;, secondo le linee guida del progetto &lt;a href=&quot;https://docs.italia.it/&quot;&gt;Docs Italia&lt;/a&gt; del Team per la Trasformazione Digitale. Ciò consentirà la pubblicazione automatica della carta dei servizi sul portale nazionale dei documenti pubblici digitali.
+ Infine, la piattaforma è in grado di dialogare con un chatbot &lt;a href=&quot;https://www.telegram.org/&quot;&gt;Telegram&lt;/a&gt; sia per ottenere le informazioni dei servizi pubblici sia per fruire di servizi di geolocalizzazione e indicazioni stradali dei servizi pubblici offline. 
+ In futuro spero di poter condividere quest’esperienza di progetto attraverso i canali ufficiali della mia PA.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Da diversi mesi avevo intenzione di scrivere un post sul progetto Ontopia e, complice il lungo ponte di Pasqua, finalmente ho trovato il tempo per farlo. Spero di essere riuscito a trasmettere un po’ di interesse e di entusiasmo a tutte quelle persone che hanno a che fare con il mondo delle PA a vario titolo (amministratori, dirigenti, dipendenti)  e che sono chiamate a fare scelte importanti nei propri enti in materia di innovazione e modernizzazione.&lt;/p&gt;
+
+&lt;p&gt;Molto di ciò che ho scritto l’ho potuto apprendere da Giorgia Lodi, esperta di tecnologie semantiche, professionista di altissima competenza, che ringrazio.&lt;/p&gt;
+
+&lt;p&gt;Per maggiori approfondimenti sul progetto Ontopia sono disponibili le seguenti risorse online, da cui sono stato fortemente ispirato.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[&lt;strong&gt;Homepage&lt;/strong&gt;] - &lt;a href=&quot;https://github.com/italia/daf-ontologie-vocabolari-controllati&quot;&gt;Progetto Ontopia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[&lt;strong&gt;Slide&lt;/strong&gt;] - &lt;a href=&quot;http://ods2018.opendatasicilia.it/presentazioni/Lodi-OntoPiA.pdf&quot;&gt;G.Lodi - OntoPiA – la rete di ontologie e vocabolari controllati per la pubblica amministrazione&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[&lt;strong&gt;Webinar&lt;/strong&gt;] - &lt;a href=&quot;https://vimeo.com/282521928&quot;&gt;G.Lodi OntoPiA - la rete di ontologie e vocabolari&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Cos’è Ontopia? E’ una famiglia di ontologie e di vocabolari controllati pensata per il mondo della pubbliche amministrazioni. Sì, ma cos’è un’ontologia? Un’ontologia è la concettualizzazione di una realtà di interesse ottenuta mediante la definizione formale di un dominio specifico attraverso un linguaggio di modellizzazione. Seee, vabbè, buonanotte. Giovà, me so perso… concettualizzazione, modellizzazione, linguaggio??? Ma che vor dì???</summary></entry><entry><title type="html">Linked Data for a Better Web</title><link href="http://giovanni.pirrotta.it/blog/2018/07/27/linked-data-the-four-rules/" rel="alternate" type="text/html" title="Linked Data for a Better Web" /><published>2018-07-27T01:40:08+00:00</published><updated>2018-07-27T01:40:08+00:00</updated><id>http://giovanni.pirrotta.it/blog/2018/07/27/linked-data-the-four-rules</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2018/07/27/linked-data-the-four-rules/">&lt;p&gt;In the previous Semantic Web posts [&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/05/24/semantic-web-what/&quot; target=&quot;blank&quot;&gt;1&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/06/03/limits-of-the-web-today/&quot; target=&quot;blank&quot;&gt;2&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/07/04/can-machines-think/&quot; target=&quot;blank&quot;&gt;3&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/11/20/xml-limits/&quot; target=&quot;blank&quot;&gt;4&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2013/12/23/the-rdf-model/&quot; target=&quot;blank&quot;&gt;5&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/&quot; target=&quot;blank&quot;&gt;6&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/07/22/semantic-web-ingredients-the-web-ontology-language/&quot; target=&quot;blank&quot;&gt;7&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa/&quot; target=&quot;blank&quot;&gt;8&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2014/10/27/semantic-web-ingredients-the-sparql-language/&quot; target=&quot;blank&quot;&gt;9&lt;/a&gt;,&lt;a href=&quot;http://giovanni.pirrotta.it/blog/2015/10/18/developing-an-ontology/&quot; target=&quot;blank&quot;&gt;10&lt;/a&gt;] I introduced tools, standards and languages to try to overcome the problem to integrate and reuse information between different applications. In this post I am going to describe a different way to present and share data on the Web, that, in recent years, played an important role in the development of Semantic Web applications concretely showing the benefits of semantic technologies.
 In 2006, the  father of the HTML language and of the Semantic Web, &lt;strong&gt;Tim Berners–Lee&lt;/strong&gt;, proposed a very simple way to publish structured data on the Web. The &lt;strong&gt;Linked Data&lt;/strong&gt; era began!
 &lt;!--More--&gt;&lt;/p&gt;
 
@@ -2039,393 +2211,4 @@ a farlo conoscere in giro sui social, grazie.&lt;/p&gt;
 
 &lt;p&gt;Idee, critiche e suggerimenti sono benvenuti.&lt;/p&gt;
 
-&lt;p&gt;That’s all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">In questi ultimi tempi in rete si fa un gran parlare di BOT (abbreviazione di robot), ovvero quei programmi che fanno credere all’utente di parlare con una persona reale ma che di fatto sono risponditori automatici utili per fornire servizi vari come ad esempio il meteo, news, quiz, sondaggi, giochi, etc. Il motivo di tutto questo proliferare di BOT è dovuto principalmente all’apertura di Telegram, nella sua versione 3, al mondo degli sviluppatori. Attraverso l’utilizzo di API ufficiali, infatti, è ora possibile creare, gestire e interagire con programmi BOT, personalizzandoli secondo le proprie esigenze.</summary></entry><entry><title type="html">Parking In Messina. quando la ZTL incontra gli Open Data</title><link href="http://giovanni.pirrotta.it/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/" rel="alternate" type="text/html" title="Parking In Messina. quando la ZTL incontra gli Open Data" /><published>2015-08-12T06:00:00+00:00</published><updated>2015-08-12T06:00:00+00:00</updated><id>http://giovanni.pirrotta.it/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data</id><content type="html" xml:base="http://giovanni.pirrotta.it/blog/2015/08/12/parking-messina-quando-la-ztl-incontra-gli-open-data/">&lt;p&gt;Metti che è da una vita che non aggiorno questo blog, metti che sono sostenitore da
-tanti anni degli &lt;a href=&quot;https://it.wikipedia.org/wiki/Dati_aperti&quot; target=&quot;blank&quot;&gt;Open Data&lt;/a&gt; e di tutto ciò che gli gira attorno, metti che finalmente sono in ferie e ho
-qualche giorno libero da dedicare a qualche idea che mi porto dietro da qualche mese, bene, metti insieme tutto questo :-)&lt;/p&gt;
-
-&lt;p&gt;Ma partiamo dall’inizio, a circa un mese fa.&lt;/p&gt;
-
-&lt;!--More--&gt;
-
-&lt;p&gt;Lo scorso &lt;strong&gt;10-11-12 luglio&lt;/strong&gt; si è svolta a Patti (ME) l’&lt;a href=&quot;http://www.lostrettodigitale.org/summer-school-su-opendata-il-programma/&quot; target=&quot;blank&quot;&gt;Open Data Summer School&lt;/a&gt;,
-organizzata dallo &lt;a href=&quot;http://www.lostrettodigitale.org/&quot; target=&quot;blank&quot;&gt;Stretto Digitale &lt;/a&gt;
-nei locali del &lt;a href=&quot;https://caffegalante.wordpress.com/&quot; target=&quot;blank&quot;&gt;caffè Galante&lt;/a&gt;.
-Ovviamente non potevo lasciarmi scappare un’occasione del genere e nei tre giorni ho avuto l’opportunità di conoscere
-pilastri del movimento Open Data italiani come &lt;a href=&quot;https://twitter.com/piersoft&quot; target=&quot;blank&quot;&gt;Pier Francesco Paolicelli (Piersoft)&lt;/a&gt;,
-&lt;a href=&quot;https://twitter.com/aborruso&quot; target=&quot;blank&quot;&gt;Andrea Borruso&lt;/a&gt; e
-&lt;a href=&quot;https://twitter.com/nelsonmau&quot; target=&quot;blank&quot;&gt;Andrea Nelson Mauro&lt;/a&gt;.
-Sono stati giorni intensissimi nei quali ciascuno dei relatori ha condiviso la propria esperienza e la propria passione,
-mostrando esempi concreti di come sia possibile riusare i dati aperti in altri contesti, per accrescerne il valore originale,
-scoprendo ad esempio relazioni nuove dei dati con altre informazioni apparentemente sconnesse.
-Tutto questo servendosi di mappe, tool per estrarre e/o convertire pdf, per creare grafici, diagrammi e infografiche.
-Per un resoconto dettagliato dell’evento invito a leggere l’ottimo
-&lt;a href=&quot;https://caffegalante.wordpress.com/2015/08/10/la-summer-school-sugli-open-data-de-lo-stretto-digitale/&quot; target=&quot;blank&quot;&gt;post&lt;/a&gt; di
-&lt;a href=&quot;https://twitter.com/picomiles&quot; target=&quot;blank&quot;&gt;Nino Galante&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In passato ho avuto modo di lavorare con gli Open Data sia per motivi di ricerca in ambito Semantic Web
-(&lt;a target=&quot;blank&quot; href=&quot;http://www.linkedopendata.it/datasets/loius-linking-italian-university-statistics-project&quot;&gt;LOIUS Platform&lt;/a&gt;),
-sia per progetti personali (&lt;a target=&quot;blank&quot; href=&quot;http://giovanni.pirrotta.it/blog/2013/07/22/openalbopretorio-apriti-sesamo/&quot;&gt; OpenAlboPretorio&lt;/a&gt;,
-&lt;a target=&quot;blank&quot; href=&quot;http://giovanni.pirrotta.it/blog/2013/08/28/opengazzettaufficiale-la-legge-e-open-per-tutti/&quot;&gt;OpenGazzettaUfficiale&lt;/a&gt; - offline -,
-&lt;a target=&quot;blank&quot; href=&quot;https://github.com/gpirrotta/opensanita&quot;&gt;OpenSanita&lt;/a&gt;).
-Secondo i principi &lt;strong&gt;Open Data&lt;/strong&gt; i dati andrebbero trattati come &lt;strong&gt;beni comuni&lt;/strong&gt;, in quanto appartenenti al genere umano.
-Per definirsi &lt;strong&gt;Open Data&lt;/strong&gt; i dati&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;devono essere disponibili secondo i termini di una licenza che ne permetta l’utilizzo da parte di chiunque, anche
- per finalità commerciali, in formato disaggregato;&lt;/li&gt;
-  &lt;li&gt;devono essere accessibili attraverso le tecnologie dell’informazione in formati aperti e in modo automatico da parte di programmi;&lt;/li&gt;
-  &lt;li&gt;devono essere resi disponibili gratuitamente.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Durante la summer school i relatori hanno presentato svariati esempi di mashup di dati,
-utilizzando diversi tool, script e programmi, integrandoli maggiormente con le mappe di &lt;a target=&quot;blank&quot; href=&quot;http://www.openstreetmap.org/&quot;&gt;OpenStreetMap &lt;/a&gt;
-(OSM), progetto collaborativo finalizzato a creare mappe a contenuto libero del mondo.
-Il progetto rappresenta una raccolta mondiale di dati geografici avente come scopo principale la creazione di mappe e cartografie.&lt;/p&gt;
-
-&lt;p&gt;Sono rimasto particolarmente colpito quando Piersoft, a proposito di Smart Cities e Open Data, ha fatto cenno
-ad una APP per smartphone, sviluppata non ricordo per quale città, in grado di calcolare la tariffa oraria per i
-parcheggi in zona ZTL, in base alla posizione GPS dello smartphone. Mi sono portato a casa quell’idea e il desiderio
-di sperimentare qualcosa del genere anche per la città in cui lavoro, ovvero Messina.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/challenge_accepted.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Andando sul sito dell’&lt;a href=&quot;http://www.atmmessina.it&quot; target=&quot;blank&quot;&gt;ATM Messina&lt;/a&gt; le uniche informazioni relative
- alle tariffe orarie dei parcheggi in ZTL sono presenti in questa &lt;a href=&quot;http://www.atmmessina.it/altri.asp?id=5&quot; target=&quot;blank&quot;&gt;pagina&lt;/a&gt;.
-Nella stessa pagina è presente anche la piantina dei lotti ZTL di seguito mostrata.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/piantinaZTL.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Primi guai all’orizzonte.&lt;/strong&gt; In calce alla &lt;a href=&quot;http://www.atmmessina.it/altri.asp?id=5&quot; target=&quot;blank&quot;&gt;pagina del sito &lt;/a&gt;
-è riportato il seguente disclaimer:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Copyright C 2015 - ATM MESSINA -   E' vietata la riproduzione anche parziale.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/meme-why.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I dati quindi non possono essere usati neanche in modo parziale. In realtà l’ATM, essendo un &lt;strong&gt;ente strumentale&lt;/strong&gt; del comune,
-&lt;em&gt;dovrebbe&lt;/em&gt;  rilasciare i dati con licenza aperta considerato che si tratta di dati pubblici di un ente legato ad una pubblica
-amministrazione, cioè il comune di Messina.&lt;/p&gt;
-
-&lt;p&gt;L’ATM dovrebbe seguire l’esempio di altre municipalizzate italiane  (come ad esempio del comune di &lt;a href=&quot;http://www.agenziamobilita.roma.it/it/progetti/open-data/&quot; target=&quot;blank&quot;&gt;Roma&lt;/a&gt;),
-che hanno iniziato ad aprire agli sviluppatori i propri dati su traffico e mobilità, per incentivare lo sviluppo di app
-in grado di trasformare le città e renderle  più &lt;strong&gt;Smart&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Tuttavia, immaginiamo per un attimo che non esista nessun copyright su questi dati, anzi immaginiamo che i dati siano rilasciati
-in modalità &lt;strong&gt;Open Data&lt;/strong&gt;.  Cosa potremmo farci? In che senso i dati aperti possono essere riusati in contesti diversi
-da quello di origine aumentandone il valore originale? In che senso i dati aperti possono fare da volano allo sviluppo di attività
-imprenditoriali private?&lt;/p&gt;
-
-&lt;p&gt;Per rispondere a tutte queste domande vedremo in questo post come implementare un ipotetico
-scenario attraverso lo sviluppo di un’applicazione reale. Scopo di questo
-esperimento è rafforzare la tesi secondo cui la pubblica amministrazione, nel rilasciare dati in modalità &lt;strong&gt;Open Data&lt;/strong&gt;
-promuove l’innovazione permanente favorendo lo sviluppo economico del terzo millennio.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;
-&lt;em&gt;L’intero progetto, chiamato “PARKING IN MESSINA”, è da intendersi volutamente a carattere DIDATTICO, SPERIMENTALE e
-assolutamente NON A SCOPO DI LUCRO.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Cominciamo allora!&lt;/p&gt;
-
-&lt;p&gt;La prima cosa che decido di fare è disegnare su openstreetmap i lotti ZTL della città di Messina.
-Per fare questo scelgo di usare il tool &lt;a href=&quot;http://umap.openstreetmap.fr/it/&quot; target=&quot;blank&quot;&gt;UMAP&lt;/a&gt;,
-un software libero in grado di creare mappe che fanno uso di OpenStreetMap come sfondo. Con UMAP è possibile aggiungere alla
-mappa punti di interesse, marcatori, linee, poligoni, colori, icone. E’ possibile inoltre sia importare che esportare i dati nei
- formati più conosciuti (geojson, gpx, kml, osm, etc).&lt;/p&gt;
-
-&lt;p&gt;La cosa più disarmante di UMAP è la facilità di utilizzo, praticamente a portata di bambino. Per raggiungere il mio obiettivo
-ho disegnato i poligoni così come appaiono nella piantina ZTL, specificando per ciascun poligono le informazioni relative
-alla tariffa oraria del lotto.
-Prova a cliccare su uno dei lotti colorati.&lt;/p&gt;
-
-&lt;h2 id=&quot;messina-piano-tariffario-ztl&quot;&gt;Messina Piano Tariffario ZTL&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;http://umap.openstreetmap.fr/it/map/messina-piano-tariffario-aree-ztl_49528&quot;&gt;Visualliza schermo intero&lt;/a&gt;&amp;lt;/p&amp;gt;&lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;700px&quot; frameborder=&quot;0&quot; src=&quot;http://umap.openstreetmap.fr/it/map/messina-piano-tariffario-aree-ztl_49528?scaleControl=false&amp;amp;miniMap=false&amp;amp;scrollWheelZoom=false&amp;amp;zoomControl=true&amp;amp;allowEdit=false&amp;amp;moreControl=true&amp;amp;datalayersControl=true&amp;amp;onLoadPanel=undefined&amp;amp;captionBar=false&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;A questo punto posso entrare in ZTL a Messina, aprire la mappa appena creata con il mio smartphone,
-selezionare il lotto nel quale si trova la mia autovettura e magicamente  apparirà la tariffa oraria da pagare.&lt;/p&gt;
-
-&lt;p&gt;Tutti felici, tutti contenti, arrivederci e grazie?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/lol.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;ma-anche-no&quot;&gt;Ma anche no!&lt;/h2&gt;
-
-&lt;p&gt;Quando parcheggio la mia autovettura in un’area dove non conosco la tariffa ZTL, la mappa appena creata mi evita di dover
-andare per strada alla ricerca del cartello stradale indicante la tariffa vigente in quella via, ma mi costringe a
-selezionare manualmente la regione colorata nella mappa.
-Per alcuni potrebbe bastare questo, ma dato che sono una persona moooolto &lt;strong&gt;pigra&lt;/strong&gt;, come del resto tanti informatici, il dover
-pensare a dove mi trovo e selezionare l’area colorata nella mappa rappresenta uno spreco di tempo imperdonabile.
-Deleghiamo all’applicazione il lavoro sporco!&lt;/p&gt;
-
-&lt;p&gt;Per eliminare questo spreco è necessario quindi:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;far capire all’applicazione la posizione del mio dispositivo mobile e&lt;/li&gt;
-  &lt;li&gt;se sono all’interno della ZTL di Messina,&lt;/li&gt;
-  &lt;li&gt;l’applicazione deve restituirmi le tariffe vigenti per quella via.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Procediamo per gradi.&lt;/p&gt;
-&lt;h4 id=&quot;far-capire-allapplicazione-la-posizione-del-mio-dispositivo&quot;&gt;Far capire all’applicazione la posizione del mio dispositivo&lt;/h4&gt;
-
-&lt;p&gt;Nei dispositivi con GPS, grazie alle API HTML5 di geolocalizzazione, è possibile ottenere la posizione di un utente, previo consenso dello stesso.
-La funzionalità è supportata a partire dalle seguenti versioni di browser:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/geolocation-html5-browser-support.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Il metodo da invocare per ottenere la posizione dell’utente è &lt;code class=&quot;highlighter-rouge&quot;&gt;getCurrentPosition()&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    var x = document.getElementById(&quot;demo&quot;);
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            x.innerHTML = &quot;Geolocation is not supported by this browser.&quot;;
-        }
-    }
-    function showPosition(position) {
-        x.innerHTML = &quot;Latitude: &quot; + position.coords.latitude +
-        &quot;&amp;lt;br&amp;gt;Longitude: &quot; + position.coords.longitude;
-    }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;In questo modo otteniamo la latitudine e la longitudine della posizione in cui si trova il dispositivo.&lt;/p&gt;
-
-&lt;h4 id=&quot;se-sono-allinterno-della-ztl-di-messina&quot;&gt;Se sono all’interno della ZTL di Messina&lt;/h4&gt;
-&lt;p&gt;Qui risiede il &lt;strong&gt;core&lt;/strong&gt; dell’applicazione. Anche qui procediamo per gradi.&lt;/p&gt;
-
-&lt;p&gt;Prima di addentrarci nel caso specifico della ZTL di Messina dobbiamo astrarre l’obiettivo generalizzando il problema.
-L’obiettivo è quindi adesso: dato un punto geografico qualsiasi, espresso tramite una latitudine e una longitudine,
-stabilire se si trova all’interno di un poligono chiuso, espresso come insieme di punti geografici.&lt;/p&gt;
-
-&lt;p&gt;Per la risoluzione di questo problema esistono in letteratura diversi &lt;a target=&quot;blank&quot; href=&quot;http://paulbourke.net/geometry/polygonmesh/&quot;&gt;algoritmi geometrici&lt;/a&gt;.
-In questo contesto ho scelto di implementare in PHP la soluzione presentata da Philippe Reverdy.
-Sinteticamente, l’algoritmo calcola la somma degli angoli esistenti tra il punto da valutare e ogni coppia di punti costituenti il poligono.
-Se la somma è 2*pigreco il punto è &lt;strong&gt;interno&lt;/strong&gt; al poligono, se la somma è 0 il punto è &lt;strong&gt;esterno&lt;/strong&gt; al poligono.
-Per maggiori informazioni fate riferimento alla pagina sopra menzionata.&lt;/p&gt;
-
-&lt;p&gt;Ho rilasciato la libreria &lt;code class=&quot;highlighter-rouge&quot;&gt;GPSPolygon&lt;/code&gt; sul mio repository &lt;a href=&quot;https://github.com/gpirrotta/gpspolygon&quot; target=&quot;blank&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Ho preparato anche una API Demo da invocare nel seguente modo:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-http://www.pirrotta.it/gps-polygon-api/isPointInsidePolygon.php&quot;&gt;
-**Parameters**
-
-    latitude (ex: latitude=38.19396)
-    longitude (ex: longitude=15.55599)
-    polygon (ex: polygon=38.197344511074,15.556431412697;38.197129504006,15.557370185852;38.192909334811,15.55691421032;38.193706168703,15.554140806198;)
-
-Facciamo un esempio, consideriamo il poligono avente come vertici i seguenti punti geografici:
-
-    38.197344511074,15.556431412697;
-    38.197129504006,15.557370185852;
-    38.192909334811,15.55691421032;
-    38.193706168703,15.554140806198;
-    38.197344511074,15.556431412697
-
-La mappa di riferimento è la città di Messina e il poligono identificato è delimitato dalle seguenti vie:
-**viale Boccetta - Corso Cavour - Via Consolato del Mare - Via Garibaldi**.
-
-![Image](/images/messina-polygon.jpg){: .center-image }
-
-Vogliamo sapere se piazza Unione Europea, identificata con ```latitudine=38.19396``` e ```longitudine=15.55599``` si trova
-all'interno del sopramenzionato poligono.
-
-Questa l'&amp;lt;a href=&quot;http://www.pirrotta.it/gps-polygon-api/isPointInsidePolygon.php?latitude=38.19396&amp;amp;longitude=15.55599&amp;amp;polygon=38.197344511074,15.556431412697;38.197129504006,15.557370185852;38.192909334811,15.55691421032;38.193706168703,15.554140806198;38.197344511074,15.556431412697&quot; target=&quot;blank&quot;&amp;gt;URL DEMO&amp;lt;/a&amp;gt;
-da invocare e questo il risultato:
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;{
-    info: {
-        name: “GPSPolygon tool”,
-        source: “https://github.com/gpirrotta/gpspolygon”,
-        license: “MIT License - http://opensource.org/licenses/MIT”,
-        author: {
-            name: “Giovanni Pirrotta”,
-            email: “giovanni.pirrotta@gmail.com”
-        }
-    },
-    service: {
-        point: “38.19396,15.55599”,
-        polygon: [
-                [
-                “38.197344511074”,
-                “15.556431412697”
-                ],
-                [
-                “38.197129504006”,
-                “15.557370185852”
-                ],
-                [
-                “38.192909334811”,
-                “15.55691421032”
-                ],
-                [
-                “38.193706168703”,
-                “15.554140806198”
-                ],
-                [
-                “38.197344511074”,
-                “15.556431412697”
-                ]
-                ],
-        answer: “YES”
-    }
-}&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-La risposta **YES** del file JSON ci indica che piazza Unione Europea si trova dentro il poligono, così come possiamo
-vedere anche nella figura sottostante.
-
-![Image](/images/inside-polygon.jpg){: .center-image }
-
-Per maggiori informazioni e altri esempi relativi alle  **GPSPolygon DEMO API** potete fare riferimento alla
-&amp;lt;a href=&quot;http://www.pirrotta.it/gps-polygon-api/&quot; target=&quot;blank&quot;&amp;gt;pagina&amp;lt;/a&amp;gt; del progetto.
-
-Ritorniamo adesso al nostro problema originale.
-Da una parte abbiamo l'algoritmo che fa al caso nostro. Il punto geografico da valutare ci viene fornito dal servizio API
-di geolocalizzazione HTML5, tramite Javascript.
-Da dove prendiamo invece l'insieme delle coordinate geografiche dei poligoni della ZTL di Messina?
-
-La risposta è, ovviamente, dalla mappa creata in precedenza con il tool UMAP. (Ricordate quando  ho detto che era
-possibile importare/esportare i dati di UMAP nei formati più comuni?).
-
-
-![Image](/images/umap-export-json.jpg){: .center-image }
-
-A questo punto abbiamo il file &amp;lt;a  href=&quot;/ext/ztl.json&quot; target=&quot;blank&quot;&amp;gt;GEOJSON&amp;lt;/a&amp;gt;
-con tutte le coordinate geografiche delle aree ZTL disegnate con UMAP, quindi abbiamo i dati per costruirci i poligoni.
-
-Andiamo avanti!
-
-Dell'utente abbiamo detto di avere la posizione espressa sotto forma di coordinate geografiche, nulla però sappiamo sul nome
-della via in cui si trova l'utente stesso. Per ottenere questa informazione decido di usare la libreria in
-PHP &amp;lt;a href=&quot;http://geocoder-php.org/Geocoder/&quot; target=&quot;blank&quot;&amp;gt;**Geocoder**&amp;lt;/a&amp;gt;
-sviluppata da &amp;lt;a href=&quot;http://williamdurand.fr/&quot; target=&quot;blank&quot;&amp;gt;William Durand &amp;lt;/a&amp;gt;.
-A partire da una località qualsiasi la libreria restituisce le rispettive coordinate geografiche e viceversa,
-consentendo  di scegliere &amp;lt;a href=&quot;http://geocoder-php.org/Geocoder/#providers&quot; target=&quot;blank&quot;&amp;gt;uno o più provider geografici &amp;lt;/a&amp;gt;;
- ovviamente tra i provider non poteva mancare ```OpenStreetMap```.
-
-Il codice da usare è veramente minimo:
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;&amp;lt;?
-    use Geocoder\HttpAdapter\CurlHttpAdapter;
-    use Geocoder\Provider\OpenStreetMapProvider;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$curl     = new CurlHttpAdapter();
-$geocoder = new OpenStreetMapProvider($curl);
-
-$results = $geocoder-&amp;gt;getReversedData(array(38.19245, 15.55608));
-
-$street = $results[0]['streetName'];
-
-print $street; // via San Giacomo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-A questo punto abbiamo tutti i dati:
-
-*   la latitudine e la longitudine della posizione dell'utente;
-*   il nome della via in cui si trova l'utente;
-*   le coordinate di tutti i poligoni della ZTL Messina.
-
-La logica per decidere se un punto appartiene o no ad un poligono, come già detto in precedenza, verrà
-implementata utilizzando la libreria ```GPSPolygon```.
-
-Possiamo quindi passare all'ultimo punto.
-
-#### L'applicazione deve restituirmi le tariffe vigenti per quella via.
-
-Vediamo adesso come dovranno essere presentate le informazioni calcolate all'utente.
-Il flusso di funzionamento dell'applicazione è il seguente:
-
-*   L'utente avvia l'APP;
-*   Il GPS del dispositivo comunica la latitudine e la longitudine della posizione in cui si trova;
-*   L'APP, ricevute le coordinate dell'utente, recupera la via;
-*   L'APP controlla se la posizione dell'utente si trova all'interno della ZTL di Messina;
-    *   In caso positivo recupera il piano tariffario per quella via;
-*   L'utente visualizza sul proprio dispositivo la mappa in cui si trova, all'interno della quale un marker indicherà la sua posizione;
-*   L'utente visualizza sul proprio dispositivo il nome della via in cui si trova;
-*   Se la posizione dell'utente è all'interno della ZTL di Messina, esso riceve le informazioni sul piano tariffario relativo alla sua posizione;
-*   Se la posizione dell'utente è all'esterno della ZTL di Messina, esso riceve l'avviso di trovarsi fuori ZTL e che il pagamento è quindi gratuito;
-*   Se l'utente cambia parcheggio deve avere la possibilità di ricalcolare la tariffa senza spegnere l'APP.
-
-
-Per lo sviluppo della Web-App ho deciso di usare &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://goratchet.com/&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;blank&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;**Ratchet**&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;, framework
-particolarmente indicato per lo sviluppo rapido di prototipi di applicazioni su dispositivi mobili.
-
-Per la visualizzazione della mappa geografica ho usato la libreria &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://openlayers.org/&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;blank&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;OpenLayer&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt; grazie alla quale, in maniera  semplice e immediata,
-ho inserito la mappa e il marker della posizione dell'utente in questo modo:
-
-
-``` javascript
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mapdiv&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.openlayers.org/api/OpenLayers.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OpenLayers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mapdiv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addLayer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OpenLayers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;OSM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lonLat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OpenLayers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;LonLat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1279688&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;51.5077286&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-              &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OpenLayers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Projection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;EPSG:4326&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-                &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getProjectionObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-              &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;zoom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;markers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OpenLayers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Markers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Markers&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addLayer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;markers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;nx&quot;&gt;markers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addMarker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OpenLayers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Marker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lonLat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-        &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setCenter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lonLat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;zoom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;simulazioni&quot;&gt;Simulazioni&lt;/h2&gt;
-
-&lt;h3 id=&quot;nexus-5-dentro-ztl&quot;&gt;Nexus 5 (dentro ZTL)&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/nexus5-parking.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;nokia-lumia-520-dentro-ztl&quot;&gt;Nokia Lumia 520 (dentro ZTL)&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/nokia-parking.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;iphone-5-fuori-ztl&quot;&gt;Iphone 5 (fuori ZTL)&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/iphone5-parking.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;blackberry-playbook-fuori-ztl&quot;&gt;Blackberry Playbook (fuori ZTL)&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/blackberry-playbook-parking.jpg&quot; alt=&quot;Image&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;considerazioni-finali&quot;&gt;Considerazioni finali&lt;/h2&gt;
-&lt;p&gt;L’obiettivo è stato raggiunto e la sfida è stata vinta! :-)
-L’applicazione è solo una demo ma è già di grande utilità,
-a dimostrazione di come sia possibile, partendo da semplici dati della pubblica amministrazione,
-aumentarne il valore e creare un servizio utile per la cittadinanza, attraverso software opensource a costo zero.&lt;/p&gt;
-
-&lt;p&gt;Sicuramente possono essere aggiunte altre funzionalità, come ad esempio le posizioni sulla mappa
-degli edicolanti per l’acquisto dei gratta e sosta, la possibilità di inserire un orario di arrivo e un
-orario di partenza lasciando che l’APP stessa calcoli l’ammontare totale da pagare, informazioni di contatto dell’ATM, etc…&lt;/p&gt;
-
-&lt;p&gt;Purtroppo però, come dette sopra, i dati di partenza non sono &lt;strong&gt;Open Data&lt;/strong&gt; quindi l’applicazione non potrebbe esistere.&lt;/p&gt;
-
-&lt;p&gt;Pertanto, mi auguro che questo esempio (che ribadisco essere a scopo &lt;em&gt;DIDATTICO&lt;/em&gt; e &lt;em&gt;NON A SCOPO DI LUCRO&lt;/em&gt;) possa servire da sprono alla governance amministrativa del comune di Messina e all’ATM,
-ad innescare processi e modelli organizzativi ispirati sempre più a principi di apertura e di rilascio dei dati in modalità
-&lt;strong&gt;Open Data&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;demo&quot;&gt;DEMO&lt;/h3&gt;
-&lt;p&gt;La web-app &lt;strong&gt;PARKING IN MESSINA&lt;/strong&gt; è disponibile al seguente link: &lt;a href=&quot;http://www.pirrotta.it/parking-in-messina/&quot; target=&quot;blank&quot;&gt;DEMO&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Feedback, bug, consigli, pareri e critiche costruttive sono i benvenuti!&lt;/p&gt;
-
-&lt;p&gt;That’s all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">Metti che è da una vita che non aggiorno questo blog, metti che sono sostenitore da tanti anni degli Open Data e di tutto ciò che gli gira attorno, metti che finalmente sono in ferie e ho qualche giorno libero da dedicare a qualche idea che mi porto dietro da qualche mese, bene, metti insieme tutto questo :-) Ma partiamo dall’inizio, a circa un mese fa.</summary></entry></feed>
+&lt;p&gt;That’s all folks! Stay tuned!&lt;/p&gt;</content><author><name>Giovanni Pirrotta</name></author><summary type="html">In questi ultimi tempi in rete si fa un gran parlare di BOT (abbreviazione di robot), ovvero quei programmi che fanno credere all’utente di parlare con una persona reale ma che di fatto sono risponditori automatici utili per fornire servizi vari come ad esempio il meteo, news, quiz, sondaggi, giochi, etc. Il motivo di tutto questo proliferare di BOT è dovuto principalmente all’apertura di Telegram, nella sua versione 3, al mondo degli sviluppatori. Attraverso l’utilizzo di API ufficiali, infatti, è ora possibile creare, gestire e interagire con programmi BOT, personalizzandoli secondo le proprie esigenze.</summary></entry></feed>

@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Alla scoperta di Ontopia, il Knowledge Graph della PA Italiana - Giovanni Pirrotta</title>
+  <meta name="author" content="Giovanni Pirrotta">
+
+  
+  <meta name="description" content="
+    
+        
+  
+    
+      Alla scoperta di Ontopia, il Knowledge Graph della PA Italiana
+    
+    
+      
+
+        
+
+
+ May 04, 2019
+        
+   ...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://giovanni.pirrotta.it/blog/2019/05/04/alla-scoperta-di-ontopia-il-knowledge-graph-della-pa-italiana/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Giovanni Pirrotta" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-68654531-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body  
+      >
+<header role="banner"><hgroup>
+  <h1><a href="/">Giovanni Pirrotta</a></h1>
+  
+    <h2>Just a curious person</h2>
+  
+</hgroup>
+
+</header>
+<nav role="navigation"><ul class="subscription" data-subscription="rss">
+  
+  
+</ul>
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/atom.xml">RSS</a></li>
+  <li><a href="http://github.com/gpirrotta">Github</a></li>
+  <li><a href="http://twitter.com/gpirrotta">Twitter</a></li>
+  <li><a href="https://www.linkedin.com/in/giovannipirrotta">Linkedin</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+<div id="main">
+    <div id="content">
+        <div>
+    <article class="hentry" role="article">
+        
+  <header>
+    
+      <h1 class="entry-title">Alla scoperta di Ontopia, il Knowledge Graph della PA Italiana</h1>
+    
+    
+      <p class="meta">
+
+        
+
+
+ May 04, 2019
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Cos’è <strong>Ontopia</strong>? E’ una famiglia di ontologie e di vocabolari controllati pensata per il mondo della pubbliche amministrazioni. Sì, ma cos’è un’<strong>ontologia</strong>?
+Un’ontologia è la concettualizzazione di una realtà di interesse ottenuta mediante la definizione formale di un dominio specifico attraverso un linguaggio di modellizzazione.</p>
+
+<p>Seee, vabbè, buonanotte. Giovà, me so perso… concettualizzazione, modellizzazione, linguaggio??? Ma che vor dì???</p>
+
+<!--More-->
+
+<p><img class="center-image" src="/images/ontopia/arya-meme.jpg" width="80%" /></p>
+
+<p>Ok, cominciamo dall’inizio e con una storia.</p>
+
+<p><strong>Lucy</strong> accompagna la madre dal dottore che, dopo averla visitata, le prescrive delle sedute di fisioterapia. 
+Lucy chiede al suo <strong>smartphone</strong> di trovare la lista dei dottori coperti dall’assicurazione della madre col più alto numero di feedback positivi secondo il servizio sanitario nazionale e che non siano lontani più di 20 chilometri dalla casa della madre.
+Lo smartphone di Lucy recupera l’agenda dei dottori più vicini e crea dei potenziali appuntamenti compatibili sia con l’agenda personale di Lucy sia con l’agenda del fratello <strong>Pete</strong>, con cui Lucy dovrà organizzarsi per accompagnare la madre alle sedute. Immediatamente Pete riceve sul suo smartphone l’elenco dei potenziali appuntamenti ma su alcune date non è d’accordo; Pete modifica quindi alcune date e riduce la distanza massima dei dottori da cercare a 15 chilometri. Queste restrizioni portano alla generazione di un nuovo calendario di potenziali appuntamenti. Lucy riceve le nuove date generate e le vanno bene. In questo modo le sedute di fisioterapia vengono automaticamente prenotate nell’agenda del dottore selezionato.</p>
+
+<p>Questo racconto è tratto dal famoso articolo del <a href="http://www-sop.inria.fr/acacia/cours/essi2006/Scientific%20American_%20Feature%20Article_%20The%20Semantic%20Web_%20May%202001.pdf">Scientific American del 2001</a>, in cui <strong>Tim Berners-Lee</strong>, creatore del <strong>Web</strong> e del <strong>Semantic Web</strong>, descrive la sua idea di Web, un ambiente in cui i programmi sono in grado di comprendere il significato delle parole e di prendere decisioni in modo autonomo.</p>
+
+<p>Il Web così come lo conosciamo è costituito da pagine esplorabili all’interno di applicazioni chiamate <strong>browser</strong>, utilizzate dagli utenti per navigare la rete. I browser hanno il compito di rappresentare le pagine favorendo lo <strong>scambio</strong> di informazioni tra umani. Gli stessi browser, però, non sanno nulla degli argomenti trattati nella pagine, non sono in grado di <strong>comprendere</strong> il significato delle informazioni rappresentate né sono dotati di intelligenza per improvvisare <strong>ragionamenti</strong> logici in piena autonomia. Possiamo dire quindi che le informazioni rappresentate nelle pagine Web non favoriscono lo scambio tra programmi.</p>
+
+<p>Ma come possono diventare <strong>intelligenti</strong> le macchine? Come possono capire il <strong>significato</strong> delle informazioni presenti nel Web?</p>
+
+<p>Per rendere il Web intelligente è necessario creare un <strong>ambiente</strong> in cui a tutte le “cose” esistenti vengono associate informazioni e dati (<strong>metadati</strong>) in grado di specificarne il contesto semantico in un formato adatto all’interpretazione e all’elaborazione automatica. Le macchine non hanno l’abilità di capire il significato delle parole, a meno che non si creino le <strong>condizioni</strong> affinché  possano comprendere e questo deve essere fatto in un <strong>linguaggio</strong> a loro comprensibile. Questo nuovo tipo di ambiente prende il nome di <strong>Web Semantico</strong> e, non solo consente lo scambio di informazioni tra programmi ma aumenta indirettamente ed esponenzialmente anche la quantità di informazioni che possono utilizzare gli esseri umani.</p>
+
+<p>Uno specifico ambito di conoscenza può essere rappresentato in modo comprensibile dalle macchine utilizzando gli strumenti del Web Semantico, codificando cioè le informazioni tramite i concetti del dominio (<em>classi</em>, <em>proprietà</em>, e <em>restrizioni</em>). Il risultato di queste concettualizzazioni viene definito comunemente <strong>ontologia</strong>.</p>
+
+<p>Non è scopo di questo post entrare nel dettaglio sugli strumenti tecnici del Web Semantico. Per maggiori informazioni potete fare riferimento alla serie di post presenti in questo blog: [<a href="http://giovanni.pirrotta.it/blog/2013/05/24/semantic-web-what/" target="blank">1</a>,<a href="http://giovanni.pirrotta.it/blog/2013/06/03/limits-of-the-web-today/" target="blank">2</a>,<a href="http://giovanni.pirrotta.it/blog/2013/07/04/can-machines-think/" target="blank">3</a>,<a href="http://giovanni.pirrotta.it/blog/2013/11/20/xml-limits/" target="blank">4</a>,<a href="http://giovanni.pirrotta.it/blog/2013/12/23/the-rdf-model/" target="blank">5</a>,<a href="http://giovanni.pirrotta.it/blog/2014/01/06/semantic-web-ingredients-the-rdf-schema-model/" target="blank">6</a>,<a href="http://giovanni.pirrotta.it/blog/2014/07/22/semantic-web-ingredients-the-web-ontology-language/" target="blank">7</a>,<a href="http://giovanni.pirrotta.it/blog/2014/07/30/semantic-web-ingredients-rdfa/" target="blank">8</a>,<a href="http://giovanni.pirrotta.it/blog/2014/10/27/semantic-web-ingredients-the-sparql-language/" target="blank">9</a>,<a href="http://giovanni.pirrotta.it/blog/2015/10/18/developing-an-ontology/" target="blank">10</a>]</p>
+
+<h3 id="perchè-ontopia">Perchè Ontopia</h3>
+
+<p>Per spiegare le motivazioni che hanno dato origine al progetto Ontopia prendiamo ad esempio il dominio dei <strong>servizi pubblici</strong> delle PA.</p>
+
+<p>Alcuni di essi, anche se non tantissimi, sono disponibili online. Nonostante questo, però, i servizi pubblici potrebbero essere più efficienti se non esistessero barriere tra i servizi stessi, i sistemi IT e i dati.
+Uno dei più grandi problemi delle PA avviene quando i dati dei sistemi IT <em>non possono essere scambiati</em> tra sistemi diversi perché descritti in modo <strong>incompatibile</strong>; ciò avviene quando abbiamo <strong>problemi di semantica</strong>. Per superare questo ostacolo è necessario creare delle <em>connessioni significative</em> tra dati e per fare questo è necessario seguire <strong>standard aperti</strong> e <strong>condivisi</strong>.
+Questo limite non deve riguardare però solo il territorio nazionale; il patrimonio informativo delle PA dovrebbe essere riutilizzato e condiviso tra i tutti gli stati d’Europa e collegato insieme ad altre pubbliche amministrazioni, aziende e cittadini in un unico mercato digitale europeo.</p>
+
+<p>Anche la <strong>Commissione Europea</strong>, nel documento quadro <em>European Interoperability Framework</em>, che mira a potenziare l’interoperabilità dei servizi pubblici nell’Unione Europea, afferma infatti che “<em>l’agenda digitale può decollare solo se è garantita un’interoperabilità basata su standard e piattaforme aperte</em>”.</p>
+
+<p>Purtroppo, però, nelle PA italiane si riscontrano ancora le seguenti criticità:</p>
+
+<ul>
+  <li><strong>mancanza di standard condivisi</strong> in uso alle applicazioni software che gestiscono l’attività amministrativa;</li>
+  <li>ogni applicativo, il più delle volte proprietario, gestisce i dati della PA secondo logiche che <strong>non supportano nativamente l’interoperabilità semantica</strong>, cioè lo stesso concetto di un dominio condiviso tra diverse PA viene rappresentato in modo diverso a seconda dell’applicativo che lo gestisce.  A questo costo si aggiunge spesso anche quello causato dal <strong>lock-in</strong> del fornitore, cioè quando le PA, per la difficoltà a migrare verso sistemi IT più moderni offerti da aziende terze, rimangono imprigionate allo stesso fornitore ICT;</li>
+  <li><strong>mancanza di una regia unica nazionale</strong> che proponga e imponga dall’alto l’utilizzo di una solida e stabile architettura dell’informazione dei dati pubblici e che obblighi i fornitori ICT a rilasciare i propri applicativi secondo tali standard.</li>
+</ul>
+
+<p>In realtà sull’ultimo punto è necessario aggiungere qualcosa, ma procediamo per passi.</p>
+
+<p>Dal punto di vista normativo l’Italia da anni insiste e incentiva l’adozione di standard condivisi come dimostrano i seguenti riferimenti:</p>
+
+<ul>
+  <li><strong>Art. 20 - Comunità intelligenti</strong> - della legge n. 221 del 17 dicembre 2012, recante misure urgenti per la crescita del Paese:
+    <ul>
+      <li>L’Agenzia per l’Italia Digitale (AGID) definisce strategie e obiettivi, coordina il processo di attuazione e predispone gli strumenti tecnologici ed economici per il progresso delle comunità intelligenti. A tal fine l’Agenzia: […]
+c) emana le linee guida recanti definizione di standard tecnici, compresa la determinazione delle ontologie dei servizi e dei dati delle comunità intelligenti;</li>
+    </ul>
+  </li>
+  <li><strong>Linee guida per la valorizzazione del patrimonio informativo della Pubblica Amministrazione</strong> - AGID:
+    <ul>
+      <li>Il documento,[…], approfondisce l’uso di un insieme di standard di base e di ontologie e vocabolari specifici per categorie trasversali e verticali di dati delle pubbliche amministrazioni, al fine di guidare nell’effettiva implementazione dei modelli proposti, i.e., dei dati e dei metadati, e operativo.</li>
+    </ul>
+  </li>
+  <li><strong>Vocabolari controllati e modelli di dati</strong> - Capitolo 4 del Piano Triennale ICT 2017/19</li>
+</ul>
+
+<p>Con queste premesse normative, da diversi anni l’AGID, Agenzia per l’Italia Digitale, in collaborazione con il Team per la Trasformazione Digitale, ha quindi intrapreso l’ardua sfida di <strong>standardizzare il patrimonio informativo della pubblica amministrazione</strong>, creando  una famiglia di modelli di dati, cioè <strong>ontologie</strong>, con lo scopo di identificare e definire schemi condivisi per dati trasversali e non, ai diversi domini applicativi delle PA. Contemporaneamente l’AGID ha sviluppato dei <strong>vocabolari controllati</strong>, ottenuti armonizzando e standardizzando tassonomie, codici e nomenclature, da utilizzare come categorizzazioni nelle ontologie e nelle basi di dati pubbliche.</p>
+
+<p>Questa iniziativa dell’AGID prende il nome di <strong>Ontopia</strong> e rappresenta, a mio avviso, uno dei più interessanti e ambiziosi progetti di AGID, perché costituisce la base e le fondamenta su cui, in maniera imprescindibile, dovrà essere fondata la pubblica amministrazione del futuro e da cui si dovrà partire per riuscire a dare una nuova immagine alle PA.
+Una PA che sia <strong>moderna</strong> e <strong>innovativa</strong>, <strong>trasparente</strong> e <strong>aperta</strong>, i cui dati siano <strong>semanticamente interoperabili</strong>, per facilitare lo sviluppo di nuovi sistemi informativi, per agevolare lo scambio di dati, per abilitare l’integrazione tra dati provenienti da fonti diverse.</p>
+
+<p>Standardizzare l’architettura del patrimonio informativo delle pubbliche amministrazioni significa definire un linguaggio comune per l’interscambio dei dati, significa creare un ambiente in cui poter interrogare quello che viene chiamato il <strong>grafo della conoscenza della pubblica amministrazione italiana</strong> o <strong>Knowledge Graph</strong>. E tutto questo, in Ontopia, viene fatto sfruttando le potenzialità del <strong>Web Semantico</strong>.</p>
+
+<p>Il progetto Ontopia è sviluppato con il supporto del laboratorio di tecnologie semantiche dell’<a href="https://www.istc.cnr.it/">Istituto di Scienze e Tecnologie della Cognizione (ISTC) del CNR</a> e in collaborazione con diversi enti centrali e locali; è rilasciato con licenza aperta ed è allineata ai cosiddetti Core Vocabulary del programma <a href="https://ec.europa.eu/isa2/home_en">ISA2 della Commissione Europea</a>.</p>
+
+<p>I <strong>principi</strong> cardine su cui si basa Ontopia sono:</p>
+
+<ul>
+  <li>il processo di creazione del progetto Ontopia si è avvalso di una metodologia iterativa, incrementale e collaborativa di modellazione delle ontologie basata su pattern, cioè su soluzioni di modellazione per problemi che ricorrono con frequenza. Questa pratica metodologica prende il nome di <strong>Agile eXtreme Design</strong> ed è stata associata all’uso dei <a href="http://ontologydesignpatterns.org/wiki/Main_Page">design pattern per le ontologie</a>;</li>
+  <li>il progetto ha respiro europeo e la lingua di riferimento è l’inglese; le etichette degli elementi dell’ontologia e dei vocabolari controllati sono in inglese, in italiano e a volte in tedesco;</li>
+  <li>ogni elemento dell’ontologia è identificato univocamente da una <strong>URI</strong>, resa persistente dal servizio <a href="https://w3id.org/" target="_blank">w3id.org</a>;</li>
+  <li>le ontologie e i vocabolari controllati sono disponibili in varie serializzazioni: <strong>rdf/xml</strong>, <strong>rdf/turtle</strong>, <strong>json-ld</strong>;</li>
+  <li>è possibile navigare tra le ontologie e i vocabolari controllati tramite <strong>interfaccia Web</strong>;</li>
+  <li>è possibile fare interrogazioni tramite un <strong>endpoint SPARQL</strong> disponibile al seguente <a href="ontopia.daf.teamdigitale.it/sparql" target="_blank">link</a>;</li>
+  <li>il progetto Ontopia <strong>riusa</strong> ontologie in modo indiretto ed effettua gli <strong>allineamenti</strong> in file separati.</li>
+</ul>
+
+<p>L’approccio tecnico di modellazione di Ontopia è rappresentato nella seguente figura:</p>
+
+<p><img class="center-image" src="/images/ontopia/ontopia-tecnico.png" width="80%" /></p>
+
+<p>Tipicamente, nel creare un’ontologia, i componenti più importanti sono le <strong>classi</strong> e le <strong>proprietà</strong>. Le ontologie del progetto Ontopia fanno riferimento a <strong>profili applicativi nazionali</strong>, cioè sono state sviluppate tenendo in considerazione, da un lato l’esistenza di eventuali modelli di dati europei e/o internazionali, in modo da non dover reinventare la ruota, dall’altro declinando le ontologie su <strong>profili di conformità</strong> alla realtà italiana, cioè inserendo vincoli restrittivi in grado di descrivere un dettaglio più rispondente al mondo delle PA nazionali grazie ai quali è possibile migliorare e mantenere una più alta qualità dei dati descritti.</p>
+
+<p>Inoltre, i concetti delle ontologie sono collegati esternamente ad un vocabolario controllato. 
+Un esempio fra tutti. Nell’ontologia delle <strong>Strutture Ricettive</strong> (<a href="https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/Ontologie/ACCO">ACCO</a>), la classe <code class="highlighter-rouge">Accomodation</code>, che è la classe principale che definisce la struttura ricettiva, ha la proprietà  <code class="highlighter-rouge">hasAccommodationTypology</code> il cui oggetto deve essere un concetto di tipo <code class="highlighter-rouge">AccommodationTypology</code>. Le istanze di questa classe sono concetti del vocabolario controllato <code class="highlighter-rouge">https://w3id.org/italia/controlled-vocabulary/classifications-for-accommodation-facilities/accommodation-typology</code>
+definito esternamente all’ontologia. Tra queste istanze, che sono concetti definiti formalmente e univocamente tramite URI, troviamo ad esempio <strong>Motel</strong>, <strong>Agriturismo</strong>, <strong>Ostello per la gioventù</strong>, etc.</p>
+
+<p>Le ontologie di Ontopia non sono autoreferenziali e chiuse a se stesse ma riutilizzano ontologie e vocabolari controllati esistenti, e definiscono, in un file esterno, tutti gli allineamenti del caso. Ad esempio, il concetto di <strong>Organization</strong> viene definito nell’ ontologia <a href="https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/Ontologie/COV">Core Organization Vocabulary</a> di Ontopia ma viene anche allineato al concetto <strong>Organization</strong> dell’ontologia <a href="https://www.w3.org/TR/vocab-org/">Organization</a> del consorzio <strong>W3C</strong>. Nel file esterno di allinamento troviamo infatti la definizione <code class="highlighter-rouge">covapit:Organization</code> di Ontopia <em>sottoclasse</em> di <code class="highlighter-rouge">org:Organization</code> dell’ontologia <strong>W3C</strong>.</p>
+
+<p>La possibilità di estendere e riusare i concetti delle ontologie ha un impatto molto forte in termini di integrazione dei dati di Ontopia con altri dati esterni, modellati con ontologie direttamente o indirettamente allineate con Ontopia.
+Allineare ontologie significa costruire ponti tra grafi di conoscenza diversi, supportare e favorire lo scambio di informazioni, abbattere e superare l’approccio a silos solitamente adottato nelle PA italiane.</p>
+
+<p>La seguente figura illustra invece lo <strong>stack ontologico</strong> del progetto Ontopia.</p>
+
+<p><img class="center-image" src="/images/ontopia/ontopia-stack.png" width="80%" /></p>
+
+<p>In Ontopia possiamo distinguere diversi <strong>livelli</strong> di ontologie organizzate a stack, dove le ontologie dei livelli più bassi sono riutilizzate dalle ontologie di livello più alto e mai il contrario. L’appartenenza ad uno specifico livello dipende dalle caratteristiche dell’ontologia stessa e dallo scopo per cui è stata sviluppata.</p>
+
+<p>I livelli di Ontopia sono:</p>
+
+<ul>
+  <li><strong>Livello fondazionale L0</strong> - l’ontologia <strong>L0</strong> rappresenta un’ontologia di tipo <strong>top level</strong>; sono definiti termini molto generali utilizzati in tutte le altre ontologie di Ontopia, ad esempio concetti come <em>Evento</em>, <em>Sistema</em>, <em>Caratteristica</em>, <em>Entità</em>, <em>Location</em>. L’ontologia L0 rappresenta il fulcro del progetto Ontopia e consente a tutte le altre ontologie del progetto di essere collegate tra loro.</li>
+  <li><strong>Livello core</strong> - le ontologie del livello <strong>core</strong> sono indipendenti dai concetti dei domini verticali e possono essere usati per descrivere in maniera trasversale concetti di più dataset. Fanno parte di questo livello le ontologie:
+    <ul>
+      <li>sulle <em>persone</em>, sviluppata in collaborazione con ISTAT;</li>
+      <li>sulle <em>organizzazioni</em>, sviluppata a partire dall’indice delle pubbliche amministrazioni <strong>IPA</strong>;</li>
+      <li>sui <em>luoghi</em>, sviluppato con ISTAT e l’agenzia delle Entrate.</li>
+    </ul>
+  </li>
+  <li><strong>Livello di supporto</strong> - le ontologie di questo livello modellano concetti di supporto alle altre ontologie; troviamo concetti relativi al <em>tempo</em>, ai <em>ruoli</em>, alle <em>unità di misura</em>, ai <em>prezzi</em>, ai <em>social media</em>, ai <em>punti di interesse</em>, alle <em>lingue</em>, alle <em>condizioni di accesso</em>, etc.</li>
+  <li><strong>Livello di dominio</strong> - le ontologie di questo livello modellano concetti relativi a domini specifici. Sono presenti le ontologie relative:
+    <ul>
+      <li>alle <em>Strutture Ricettive</em>;</li>
+      <li>agli <em>Eventi IOT</em>, utilizzata per modellare il traffico in tempo reale;</li>
+      <li>agli <em>Eventi pubblici</em>;</li>
+      <li>al <em>Mondo della Cultura</em>;</li>
+      <li>ai <em>Servizi Pubblici</em>, utilizzata nella piattaforma <em>servizi.gov.it</em>;</li>
+      <li>ai <em>Contratti Pubblici</em>, sviluppata insieme ad ANAC, Regione Piemonte e Synapta.</li>
+    </ul>
+  </li>
+  <li><strong>Vocabolari controllati</strong> - tassonomie di termini ricorrenti da utilizzare come istanze di dati per le ontologie di Ontopia e nelle basi di dati pubbliche;</li>
+  <li><strong>Ontologie per i metadati</strong>: in questa categoria fanno parte le ontologie <strong>DCAT-APIT</strong>, per la metadatazione dei cataloghi dati e l’ontologia <strong>ADMC-APIT</strong>, per metadatare le ontologie stesse.</li>
+</ul>
+
+<h3 id="dove-si-trova-ontopia">Dove si trova Ontopia?</h3>
+<p>Ontopia è un progetto aperto, fortemente collaborativo e partecipativo. Tutte le risorse disponibili sono su un repository <a href="https://github.com/italia/daf-ontologie-vocabolari-controllati">GitHub</a> in cui è possibile partecipare, sia aprendo o rispondendo a issues, per consigli, suggerimenti, feedback sulle ontologie e i vocabolari controllati, sia inviando, tramite PR, eventuali estensioni, modifiche e/o correzioni degli attuali schemi caricati.</p>
+
+<p><img class="center-image" src="/images/ontopia/ontopia-github.png" width="80%" /></p>
+
+<h3 id="conclusioni">Conclusioni</h3>
+
+<p>In questo post ho voluto raccontare, seppur in maniera introduttiva, il progetto <strong>Ontopia</strong>, una delle iniziative istituzionali più sfidanti degli ultimi anni. Una piattaforma di modelli di dati <strong>istituzionale</strong>, <strong>aperta</strong> e creata in modo <strong>collaborativo</strong> con centri di ricerca (CNR Roma), con pubbliche amministrazioni (ISTAT, MIBAC, Regione Piemonte, ANAC, Comune Palermo e Udine, Provincia Autonoma di Trento) e soprattutto con tutte le persone che vogliono contribuire al progetto, interagendo con GitHub.</p>
+
+<p><em>Una piccola nota personale</em>.</p>
+
+<p>Circa 10 anni fa, durante il mio dottorato di ricerca, mi appassionai di Semantic Web e creai delle ontologie per la rappresentazione sia del mondo universitario italiano (<a href="http://www.gpirrotta.tk/sw/swiup/">SWIUP</a>) sia delle statistiche dell’anagrafe studenti (<a href="http://www.gpirrotta.tk/sw/loius/">LOIUS</a>). In quella attività di ricerca descrissi in modo formale un pezzetto di pubblica amministrazione, nello specifico quella del Ministero dell’Istruzione, Università e Ricerca (<strong>MIUR</strong>). Quell’esperienza mi insegnò molte cose sul mondo del Semantic Web e dei Linked Data; appresi come definire modelli per la rappresentazione della conoscenza e come favorire l’interoperabilità semantica in contesti molto particolari come il mondo delle PA. 
+Tuttavia quel lavoro morì subito dopo la consegna della tesi e da allora sono trascorsi quasi 10 anni.</p>
+
+<p>In <strong>Ontopia</strong>, in quest’ambizioso progetto istituzionale che si impone in maniera così massiccia e trasversale sui domini applicativi delle PA, rivedo la concretizzazione reale e consistente di ciò che in una piccolissima parte avevo cercato di fare anch’io 10 anni fa, cercare cioè di rendere la PA più moderna; sono fortemente convinto che Ontopia sia la rotta giusta da seguire, supportare e incoraggiare, motivo per cui mi sento stimolato, nel mio piccolo, a contribuire al progetto.</p>
+
+<p>Da Ontopia sto imparando molto, sto studiando l’approccio utilizzato per la creazione delle ontologie e dei vocabolari controllati e ho scoperto nuove tecniche di modellazione basate sui design pattern che non conoscevo.</p>
+
+<p>Sto studiando, ho ancora tanto da imparare e sto cercando di dare il mio contributo nei seguenti modi:</p>
+
+<ul>
+  <li>ho suggerito dei vocabolari controllati per il mondo universitario confrontandomi principalmente con <a href="https://twitter.com/GiorgiaLodi">Giorgia Lodi</a>, consulente AGID, coordinatrice del progetto Ontopia, nonché esperta di Semantic Web. Sono nati <a href="https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/classifications-for-universities">due vocabolari</a> controllati che ho proposto tramite PR su GitHub e che adesso fanno parte di Ontopia;</li>
+  <li>con <a href="https://twitter.com/dataibi">Davide Taibi</a> stiamo cercando di <strong>“ontopizzare”</strong> l’ontologia <a href="http://www.openars.org">OpenARS</a>, modello di dati sviluppato per la rappresentazione dei dati sull’attività parlamentare dell’<a href="http://www.ars.sicilia.it">Assemblea Regionale Siciliana</a> (ARS), che abbiamo presentato l’anno scorso a Palermo in occasione del <a href="http://ods2018.opendatasicilia.it/">raduno annuale</a> della comunità Open Data Sicilia;</li>
+  <li>ho rispolverato il mio vecchio progetto di modellazione del dominio delle università italiane e ho intenzione di creare una nuova ontologia - integrata con Ontopia - in grado di rappresentare concetti, relazioni e proprietà delle offerte formative e dei manifesti degli studi delle Università italiane;</li>
+  <li>infine, non per importanza, sto cercando di portare Ontopia anche all’interno della PA in cui lavoro: ho progettato e implementato una piattaforma prototipo per la gestione della carta dei servizi, rendendola compliant allo standard europeo CPSV-AP nella sua declinazione italiana <a href="https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/Ontologie/CPSV">CPSV-AP_IT</a> (<em>Core Public Service Vocabolary -  Application Profile Italy</em>) di Ontopia. Il prototipo è in grado di generare <em>al volo</em> lo schema RDF della carta dei servizi e di renderlo disponibile online per poter consentire in futuro l’<strong>harvesting</strong> dal portale <em>servizi.gov.it</em>. 
+ La piattaforma è inoltre in grado di creare automaticamente i <strong>file .RST</strong> (<a href="https://it.wikipedia.org/wiki/ReStructuredText">reStructuredText</a>) necessari per generare automaticamente la documentazione tramite <a href="http://www.sphinx-doc.org/en/master/">SPHINX</a>, secondo le linee guida del progetto <a href="https://docs.italia.it/">Docs Italia</a> del Team per la Trasformazione Digitale. Ciò consentirà la pubblicazione automatica della carta dei servizi sul portale nazionale dei documenti pubblici digitali.
+ Infine, la piattaforma è in grado di dialogare con un chatbot <a href="https://www.telegram.org/">Telegram</a> sia per ottenere le informazioni dei servizi pubblici sia per fruire di servizi di geolocalizzazione e indicazioni stradali dei servizi pubblici offline. 
+ In futuro spero di poter condividere quest’esperienza di progetto attraverso i canali ufficiali della mia PA.</li>
+</ul>
+
+<p>Da diversi mesi avevo intenzione di scrivere un post sul progetto Ontopia e, complice il lungo ponte di Pasqua, finalmente ho trovato il tempo per farlo. Spero di essere riuscito a trasmettere un po’ di interesse e di entusiasmo a tutte quelle persone che hanno a che fare con il mondo delle PA a vario titolo (amministratori, dirigenti, dipendenti)  e che sono chiamate a fare scelte importanti nei propri enti in materia di innovazione e modernizzazione.</p>
+
+<p>Molto di ciò che ho scritto l’ho potuto apprendere da Giorgia Lodi, esperta di tecnologie semantiche, professionista di altissima competenza, che ringrazio.</p>
+
+<p>Per maggiori approfondimenti sul progetto Ontopia sono disponibili le seguenti risorse online, da cui sono stato fortemente ispirato.</p>
+
+<ul>
+  <li>[<strong>Homepage</strong>] - <a href="https://github.com/italia/daf-ontologie-vocabolari-controllati">Progetto Ontopia</a></li>
+  <li>[<strong>Slide</strong>] - <a href="http://ods2018.opendatasicilia.it/presentazioni/Lodi-OntoPiA.pdf">G.Lodi - OntoPiA – la rete di ontologie e vocabolari controllati per la pubblica amministrazione</a></li>
+  <li>[<strong>Webinar</strong>] - <a href="https://vimeo.com/282521928">G.Lodi OntoPiA - la rete di ontologie e vocabolari</a></li>
+</ul>
+</div>
+
+
+        <footer>
+            <p class="meta">
+                
+<span class="byline author vcard">Posted by <span class="fn">Giovanni Pirrotta</span></span>
+
+                <time pubdate>
+                May 04, 2019
+                </time>
+
+                <span class="categories">
+                
+
+                
+                <a class="category" href="/categories/semantic-web">semantic-web</a>,
+                
+                <a class="category" href="/categories/ontopia">ontopia</a>,
+                
+                <a class="category" href="/categories/pubblica-amministrazione">pubblica-amministrazione</a>
+                
+                </span>
+            </p>
+            
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://giovanni.pirrotta.it/blog/2019/05/04/alla-scoperta-di-ontopia-il-knowledge-graph-della-pa-italiana/" data-via="gpirrotta" data-counturl="http://giovanni.pirrotta.it/blog/2019/05/04/alla-scoperta-di-ontopia-il-knowledge-graph-della-pa-italiana/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+            
+            <p class="meta">
+                
+                <a class="basic-alignment left" href="/blog/2018/07/27/linked-data-the-four-rules/" title="Previous Post: Linked Data for a Better Web">&laquo; Linked Data for a Better Web</a>
+                
+                
+            </p>
+        </footer>
+    </article>
+    
+    <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+</div>
+
+<aside class="sidebar">
+  <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2019/05/04/alla-scoperta-di-ontopia-il-knowledge-graph-della-pa-italiana/">Alla scoperta di Ontopia, il Knowledge Graph della PA Italiana</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/07/27/linked-data-the-four-rules/">Linked Data for a Better Web</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/05/17/protezione-civile-pop/">Protezione Civile POP: crea gli avvisi di allerta della tua città</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/02/09/visualcad-la-mappa-interattiva-della-storia-del-cad/">VisualCAD: la mappa interattiva della storia del CAD</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/12/20/del-riutilizzo-dei-dati-meteo-ai-tempi-dei-borboni/">Del riutilizzo dei dati meteo ai tempi dei Borboni</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+
+
+
+</aside>
+
+
+
+    </div>
+</div>
+<footer role="contentinfo"><p>
+  Copyright &copy; 2019 - Giovanni Pirrotta -
+
+  <span class="credit">Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+</p>
+
+</footer>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gpirrotta';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://giovanni.pirrotta.it/blog/2019/05/04/alla-scoperta-di-ontopia-il-knowledge-graph-della-pa-italiana/';
+        var disqus_url = 'http://giovanni.pirrotta.it/blog/2019/05/04/alla-scoperta-di-ontopia-il-knowledge-graph-della-pa-italiana/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<script>
+  $(document).ready(function() {  
+  var stickyNavTop = $('nav').offset().top;  
+    
+  var stickyNav = function(){  
+  var scrollTop = $(window).scrollTop();  
+         
+  if (scrollTop > stickyNavTop) {   
+      $('nav').addClass('sticky');  
+  } else {  
+      $('nav').removeClass('sticky');   
+  }  
+  };  
+    
+  stickyNav();  
+    
+  $(window).scroll(function() {  
+      stickyNav();  
+  });  
+  });  
+</script>
+
+
+</body>
+</html>
